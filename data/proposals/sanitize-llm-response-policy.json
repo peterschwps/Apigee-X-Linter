@@ -1,0 +1,282 @@
+{
+  "source": {
+    "id": "sanitize-llm-response-policy",
+    "kind": "policy",
+    "title": "sanitize llm response policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<SanitizeModelResponse> element",
+      "contextHeading": "<SanitizeModelResponse> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#name",
+      "elements": [
+        "SanitizeModelResponse"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<SanitizeModelResponse> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "FunctionCallSource",
+        "IgnoreUnresolvedVariables",
+        "LLMResponseSource",
+        "ModelArmor",
+        "SanitizeModelResponse",
+        "TemplateName",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "contextHeading": "<SanitizeModelResponse> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "FunctionCallSource",
+        "IgnoreUnresolvedVariables",
+        "LLMResponseSource",
+        "ModelArmor",
+        "SanitizeModelResponse",
+        "TemplateName",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<TemplateName>",
+      "contextHeading": "<TemplateName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#templatename",
+      "elements": [
+        "TemplateName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<TemplateName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "ModelArmor",
+        "TemplateName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<TemplateName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "ModelArmor",
+        "TemplateName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UserPromptSource>",
+      "contextHeading": "<UserPromptSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#userpromptsource",
+      "elements": [
+        "UserPromptSource"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LLMResponseSource>",
+      "contextHeading": "<LLMResponseSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#llmresponsesource",
+      "elements": [
+        "LLMResponseSource"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FunctionCallSource>",
+      "contextHeading": "<FunctionCallSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#functioncallsource",
+      "elements": [
+        "FunctionCallSource"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<FunctionCallSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

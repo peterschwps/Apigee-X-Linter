@@ -1,0 +1,656 @@
+{
+  "source": {
+    "id": "set-integration-request-policy",
+    "kind": "policy",
+    "title": "set integration request policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<SetIntegrationRequest>",
+      "contextHeading": "<SetIntegrationRequest>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#setintegrationrequest",
+      "elements": [
+        "SetIntegrationRequest"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<SetIntegrationRequest>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "ApiTrigger",
+        "DisplayName",
+        "IntegrationName",
+        "IntegrationRegion",
+        "Parameter",
+        "ParameterArray",
+        "Parameters",
+        "ProjectId",
+        "Request",
+        "ScheduleTime",
+        "SetIntegrationRequest",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "true",
+          "false"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<SetIntegrationRequest>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "ApiTrigger",
+        "DisplayName",
+        "IntegrationName",
+        "IntegrationRegion",
+        "Parameter",
+        "ParameterArray",
+        "Parameters",
+        "ProjectId",
+        "Request",
+        "ScheduleTime",
+        "SetIntegrationRequest",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ProjectId>",
+      "contextHeading": "<ProjectId>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#projectid",
+      "elements": [
+        "ProjectId"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ProjectId>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "ProjectId"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<ProjectId>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "ProjectId"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IntegrationName>",
+      "contextHeading": "<IntegrationName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#integrationname",
+      "elements": [
+        "IntegrationName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IntegrationName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "IntegrationName"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<IntegrationName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example_2",
+      "elements": [],
+      "exampleElements": [
+        "IntegrationName"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IntegrationRegion>",
+      "contextHeading": "<IntegrationRegion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#integrationregion",
+      "elements": [
+        "IntegrationRegion"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format: https://integration."
+      ]
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IntegrationRegion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "IntegrationRegion"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<IntegrationRegion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example_3",
+      "elements": [],
+      "exampleElements": [
+        "IntegrationRegion"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ApiTrigger>",
+      "contextHeading": "<ApiTrigger>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#apitrigger",
+      "elements": [
+        "ApiTrigger"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format."
+      ]
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ApiTrigger>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "ApiTrigger"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<ApiTrigger>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example_4",
+      "elements": [],
+      "exampleElements": [
+        "ApiTrigger"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ScheduleTime>",
+      "contextHeading": "<ScheduleTime>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#scheduletime",
+      "elements": [
+        "ScheduleTime"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format where Z is the UTC timezone.",
+        "format, see Combined date and time representations."
+      ]
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ScheduleTime>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax_5",
+      "elements": [],
+      "exampleElements": [
+        "ScheduleTime"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<ScheduleTime>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example_5",
+      "elements": [],
+      "exampleElements": [
+        "ScheduleTime"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Parameters>",
+      "contextHeading": "<Parameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#parameters",
+      "elements": [
+        "Parameters"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "substitutionVariableChar",
+          "required": false,
+          "type": "Char"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Parameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax_6",
+      "elements": [],
+      "exampleElements": [
+        "Parameter",
+        "ParameterArray",
+        "Parameters",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref",
+        "substitutionVariableChar",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Parameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example_6",
+      "elements": [],
+      "exampleElements": [
+        "Parameter",
+        "ParameterArray",
+        "Parameters",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref",
+        "substitutionVariableChar",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Parameter>",
+      "contextHeading": "<Parameter>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#parameter",
+      "elements": [
+        "Parameter"
+      ],
+      "exampleElements": [
+        "Parameter",
+        "Parameters"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref",
+        "substitutionVariableChar",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ParameterArray>",
+      "contextHeading": "<ParameterArray>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#parameterarray",
+      "elements": [
+        "ParameterArray"
+      ],
+      "exampleElements": [
+        "ParameterArray",
+        "Parameters",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Request>",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#request",
+      "elements": [
+        "Request"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#syntax_10",
+      "elements": [],
+      "exampleElements": [
+        "Request"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy#example_7",
+      "elements": [],
+      "exampleElements": [
+        "Request"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

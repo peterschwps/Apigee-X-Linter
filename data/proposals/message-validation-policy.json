@@ -1,0 +1,563 @@
+{
+  "source": {
+    "id": "message-validation-policy",
+    "kind": "policy",
+    "title": "message validation policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<MessageValidation> element",
+      "contextHeading": "<MessageValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#messagevalidation",
+      "elements": [
+        "MessageValidation"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<MessageValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Element",
+        "MessageValidation",
+        "ResourceURL",
+        "SOAPMessage",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "namespace",
+        "version"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ],
+        "version": [
+          "1.1",
+          "1.2",
+          "1.1/1.2"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "contextHeading": "<MessageValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Element",
+        "MessageValidation",
+        "Properties",
+        "ResourceURL",
+        "SOAPMessage",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "namespace"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "1: XSD Validation",
+      "contextHeading": "<MessageValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#1:-xsd-validation",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "MessageValidation",
+        "Properties",
+        "ResourceURL",
+        "Source",
+        "badTag",
+        "body",
+        "from",
+        "heading",
+        "note",
+        "to",
+        "xs:complexType",
+        "xs:element",
+        "xs:schema",
+        "xs:sequence"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "type",
+        "xmlns:xs"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "2: SOAP Validation",
+      "contextHeading": "<MessageValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#2:-soap-validation",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Element",
+        "MessageValidation",
+        "Properties",
+        "ResourceURL",
+        "SOAPMessage",
+        "Source",
+        "body",
+        "complexType",
+        "element",
+        "from",
+        "heading",
+        "note",
+        "prox:getID",
+        "schema",
+        "sequence",
+        "soapenv:Body",
+        "soapenv:Envelope",
+        "soapenv:Header",
+        "to",
+        "typ:ID",
+        "typ:MyType",
+        "wsdl:binding",
+        "wsdl:definitions",
+        "wsdl:input",
+        "wsdl:message",
+        "wsdl:operation",
+        "wsdl:output",
+        "wsdl:part",
+        "wsdl:port",
+        "wsdl:portType",
+        "wsdl:service",
+        "wsdl:types",
+        "wsdlsoap:address",
+        "wsdlsoap:binding",
+        "wsdlsoap:operation",
+        "xsd:complexType",
+        "xsd:element",
+        "xsd:import",
+        "xsd:schema",
+        "xsd:sequence"
+      ],
+      "exampleAttributes": [
+        "attributeFormDefault",
+        "binding",
+        "continueOnError",
+        "element",
+        "elementFormDefault",
+        "enabled",
+        "location",
+        "maxOccurs",
+        "message",
+        "minOccurs",
+        "name",
+        "namespace",
+        "nillable",
+        "ref",
+        "soapAction",
+        "style",
+        "targetNamespace",
+        "transport",
+        "type",
+        "version",
+        "xmlns",
+        "xmlns:prox",
+        "xmlns:soapenv",
+        "xmlns:tns",
+        "xmlns:typ",
+        "xmlns:types",
+        "xmlns:wsdl",
+        "xmlns:wsdlsoap",
+        "xmlns:xsd"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "3: Well-formed XML/JSON",
+      "contextHeading": "<MessageValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#3:-well-formed-xmljson",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "MessageValidation",
+        "Properties",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Element>",
+      "contextHeading": "<Element>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#element",
+      "elements": [
+        "Element"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Element>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Element"
+      ],
+      "exampleAttributes": [
+        "namespace"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Element>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#example-1",
+      "elements": [],
+      "exampleElements": [
+        "Element"
+      ],
+      "exampleAttributes": [
+        "namespace"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Element>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#example-2",
+      "elements": [],
+      "exampleElements": [
+        "Element"
+      ],
+      "exampleAttributes": [
+        "namespace"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "namespace",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResourceURL>",
+      "contextHeading": "<ResourceURL>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#resourceurl",
+      "elements": [
+        "ResourceURL"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ResourceURL>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "ResourceURL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Examples",
+      "contextHeading": "<ResourceURL>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#examples",
+      "elements": [],
+      "exampleElements": [
+        "ResourceURL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using XSDs for validation",
+      "contextHeading": "<ResourceURL>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#using-xsds-for-validation",
+      "elements": [],
+      "exampleElements": [
+        "xs:include",
+        "xs:schema"
+      ],
+      "exampleAttributes": [
+        "attributeFormDefault",
+        "elementFormDefault",
+        "schemaLocation",
+        "xmlns:xs"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SOAPMessage>",
+      "contextHeading": "<SOAPMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#soapmessage",
+      "elements": [
+        "SOAPMessage"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<SOAPMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "SOAPMessage"
+      ],
+      "exampleAttributes": [
+        "version"
+      ],
+      "syntaxAttributeValues": {
+        "version": [
+          "1.1",
+          "1.2",
+          "1.1/1.2"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<SOAPMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "SOAPMessage"
+      ],
+      "exampleAttributes": [
+        "version"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "version",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following occurs:"
+      ],
+      "formatHints": []
+    }
+  ]
+}

@@ -1,0 +1,579 @@
+{
+  "source": {
+    "id": "publish-message-policy",
+    "kind": "policy",
+    "title": "publish message policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<PublishMessage>",
+      "contextHeading": "<PublishMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#publishmessage",
+      "elements": [
+        "PublishMessage"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<PublishMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#syntax-1",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes",
+        "CloudPubSub",
+        "DisplayName",
+        "Endpoint",
+        "IgnoreUnresolvedVariables",
+        "PublishMessage",
+        "Source",
+        "Topic"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "true",
+          "false"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example - Source",
+      "contextHeading": "<PublishMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-1",
+      "elements": [],
+      "exampleElements": [
+        "CloudPubSub",
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "PublishMessage",
+        "Source",
+        "Topic"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example - UseMessageAsSource",
+      "contextHeading": "<PublishMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-2",
+      "elements": [],
+      "exampleElements": [
+        "CloudPubSub",
+        "IgnoreUnresolvedVariables",
+        "PublishMessage",
+        "Topic",
+        "UseMessageAsSource"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example - Attributes",
+      "contextHeading": "<PublishMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-3",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes",
+        "CloudPubSub",
+        "IgnoreUnresolvedVariables",
+        "PublishMessage",
+        "Source",
+        "Topic"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example - Data residency",
+      "contextHeading": "<PublishMessage>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-3",
+      "elements": [],
+      "exampleElements": [
+        "CloudPubSub",
+        "Endpoint",
+        "IgnoreUnresolvedVariables",
+        "PublishMessage",
+        "Source",
+        "Topic"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Attributes>",
+      "contextHeading": "<Attributes>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#attributes",
+      "elements": [
+        "Attributes"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Attributes>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#syntax-attributes",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Attributes>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-attributes-1",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes",
+        "CloudPubSub",
+        "IgnoreUnresolvedVariables",
+        "PublishMessage",
+        "Source",
+        "Topic"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Attributes>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-attributes-2",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes",
+        "CloudPubSub",
+        "IgnoreUnresolvedVariables",
+        "PublishMessage",
+        "Source",
+        "Topic"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#syntax-source",
+      "elements": [],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example-1",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-source-1",
+      "elements": [],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example-2",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-source-2",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes",
+        "CloudPubSub",
+        "PublishMessage",
+        "Source",
+        "Topic"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CloudPubSub>",
+      "contextHeading": "<CloudPubSub>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#cloudpubsub",
+      "elements": [
+        "CloudPubSub"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<CloudPubSub>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#syntax-cloudpubsub",
+      "elements": [],
+      "exampleElements": [
+        "CloudPubSub",
+        "Endpoint",
+        "Topic"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<CloudPubSub>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-cloudpubsub",
+      "elements": [],
+      "exampleElements": [
+        "CloudPubSub",
+        "Endpoint",
+        "Topic"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Topic>",
+      "contextHeading": "<Topic>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#topic",
+      "elements": [
+        "Topic"
+      ],
+      "exampleElements": [
+        "Topic"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format: projects/project-id/topics/topic-name"
+      ]
+    },
+    {
+      "heading": "<Endpoint>",
+      "contextHeading": "<Endpoint>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#endpoint",
+      "elements": [
+        "Endpoint"
+      ],
+      "exampleElements": [
+        "Endpoint"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UseMessageAsSource>",
+      "contextHeading": "<UseMessageAsSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#umas",
+      "elements": [
+        "UseMessageAsSource"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<UseMessageAsSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#syntax-umas",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes",
+        "CloudPubSub",
+        "PublishMessage",
+        "Topic",
+        "UseMessageAsSource"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example-1",
+      "contextHeading": "<UseMessageAsSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example-umas",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes",
+        "CloudPubSub",
+        "IgnoreUnresolvedVariables",
+        "PublishMessage",
+        "Topic",
+        "UseMessageAsSource"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#ignoreunresolvvars",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

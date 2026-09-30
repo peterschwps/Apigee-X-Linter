@@ -1,0 +1,553 @@
+{
+  "source": {
+    "id": "response-cache-policy",
+    "kind": "policy",
+    "title": "response cache policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "10-minute cache",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#10-minute-cache",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "ExpirySettings",
+        "KeyFragment",
+        "ResponseCache",
+        "TimeoutInSeconds"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Skip cache lookup",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#skip-cache-lookup",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "ExpirySettings",
+        "KeyFragment",
+        "ResponseCache",
+        "SkipCacheLookup",
+        "TimeoutInSeconds"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#element_reference",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "CacheLookupTimeoutInSeconds",
+        "CacheResource",
+        "DisplayName",
+        "ExcludeErrorResponse",
+        "ExpiryDate",
+        "ExpirySettings",
+        "KeyFragment",
+        "Prefix",
+        "Properties",
+        "ResponseCache",
+        "Scope",
+        "SkipCacheLookup",
+        "SkipCachePopulation",
+        "TimeOfDay",
+        "TimeoutInSeconds",
+        "UseAcceptHeader",
+        "UseResponseCacheHeaders"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResponseCache> attributes",
+      "contextHeading": "<ResponseCache> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#responsecacheattributes",
+      "elements": [
+        "ResponseCache"
+      ],
+      "exampleElements": [
+        "ResponseCache"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey> element",
+      "contextHeading": "<CacheKey> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#CacheKeyElement",
+      "elements": [
+        "CacheKey"
+      ],
+      "exampleElements": [
+        "CacheKey",
+        "KeyFragment",
+        "Prefix"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheLookupTimeoutInSeconds> element",
+      "contextHeading": "<CacheLookupTimeoutInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#CacheLookupTimeoutInSeconds",
+      "elements": [
+        "CacheLookupTimeoutInSeconds"
+      ],
+      "exampleElements": [
+        "CacheLookupTimeoutInSeconds"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheResource> element",
+      "contextHeading": "<CacheResource> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#CacheResourceElement",
+      "elements": [
+        "CacheResource"
+      ],
+      "exampleElements": [
+        "CacheResource"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey>/<KeyFragment> element",
+      "contextHeading": "<CacheKey>/<KeyFragment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#KeyFragmentElement",
+      "elements": [
+        "CacheKey",
+        "KeyFragment"
+      ],
+      "exampleElements": [
+        "KeyFragment"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheKey>/<KeyFragment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#cachekeykeyfragmentelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey>/<Prefix> element",
+      "contextHeading": "<CacheKey>/<Prefix> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#PrefixElement",
+      "elements": [
+        "CacheKey",
+        "Prefix"
+      ],
+      "exampleElements": [
+        "Prefix"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExcludeErrorResponse> element",
+      "contextHeading": "<ExcludeErrorResponse> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#ExcludeErrorResponseElement",
+      "elements": [
+        "ExcludeErrorResponse"
+      ],
+      "exampleElements": [
+        "ExcludeErrorResponse"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpirySettings> element",
+      "contextHeading": "<ExpirySettings> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#ExpirySettingsElement",
+      "elements": [
+        "ExpirySettings"
+      ],
+      "exampleElements": [
+        "ExpiryDate",
+        "ExpirySettings",
+        "TimeOfDay",
+        "TimeoutInSeconds"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpirySettings>/<ExpiryDate> element",
+      "contextHeading": "<ExpirySettings>/<ExpiryDate> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#ExpiryDateElement",
+      "elements": [
+        "ExpirySettings",
+        "ExpiryDate"
+      ],
+      "exampleElements": [
+        "ExpiryDate",
+        "ExpirySettings"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<ExpirySettings>/<ExpiryDate> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#expirysettingsexpirydateelement-attributes",
+      "elements": [],
+      "exampleElements": [
+        "ExpiryDate"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpirySettings>/<TimeOfDay> element",
+      "contextHeading": "<ExpirySettings>/<TimeOfDay> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#TimeOfDayElement",
+      "elements": [
+        "ExpirySettings",
+        "TimeOfDay"
+      ],
+      "exampleElements": [
+        "ExpirySettings",
+        "TimeOfDay"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format HH:mm:ss, where HH represents the hour on a 24-hour clock."
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<ExpirySettings>/<TimeOfDay> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#expirysettingstimeofdayelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpirySettings>/<TimeoutInSec> element",
+      "contextHeading": "<ExpirySettings>/<TimeoutInSec> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#TimeoutInSecElementDprecated",
+      "elements": [
+        "ExpirySettings",
+        "TimeoutInSec"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpirySettings>/<TimeoutInSeconds> element",
+      "contextHeading": "<ExpirySettings>/<TimeoutInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#TimeoutInSecondsElement",
+      "elements": [
+        "ExpirySettings",
+        "TimeoutInSeconds"
+      ],
+      "exampleElements": [
+        "ExpirySettings",
+        "TimeoutInSeconds"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<ExpirySettings>/<TimeoutInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#expirysettingstimeoutinsecondselement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Scope> element",
+      "contextHeading": "<Scope> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#ScopeElement",
+      "elements": [
+        "Scope"
+      ],
+      "exampleElements": [
+        "Scope"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values include the enumerations below."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<SkipCacheLookup> element",
+      "contextHeading": "<SkipCacheLookup> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#SkipCacheLookupElement",
+      "elements": [
+        "SkipCacheLookup"
+      ],
+      "exampleElements": [
+        "SkipCacheLookup"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SkipCachePopulation> element",
+      "contextHeading": "<SkipCachePopulation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#SkipCachePopulationElement",
+      "elements": [
+        "SkipCachePopulation"
+      ],
+      "exampleElements": [
+        "SkipCachePopulation"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UseAcceptHeader> element",
+      "contextHeading": "<UseAcceptHeader> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#UseAcceptHeader",
+      "elements": [
+        "UseAcceptHeader"
+      ],
+      "exampleElements": [
+        "UseAcceptHeader"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UseResponseCacheHeaders> element",
+      "contextHeading": "<UseResponseCacheHeaders> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#UseResponseCacheHeaders",
+      "elements": [
+        "UseResponseCacheHeaders"
+      ],
+      "exampleElements": [
+        "UseResponseCacheHeaders"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

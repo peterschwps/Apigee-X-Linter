@@ -1,0 +1,232 @@
+{
+  "source": {
+    "id": "delete-oauth-v2-info",
+    "kind": "policy",
+    "title": "delete oauth v2 info",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Delete Access Token",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#samples-deleteaccesstoken",
+      "elements": [],
+      "exampleElements": [
+        "AccessToken",
+        "DeleteOAuthV2Info"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Delete Auth Code",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#samples-deleteauthcode",
+      "elements": [],
+      "exampleElements": [
+        "AuthorizationCode",
+        "DeleteOAuthV2Info"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element Reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "AccessToken",
+        "Attributes",
+        "AuthorizationCode",
+        "DeleteOAuthV2Info",
+        "DisplayName"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DeleteOAuthV2Info> attributes",
+      "contextHeading": "<DeleteOAuthV2Info> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#deleteoauthv2infoattributes",
+      "elements": [
+        "DeleteOAuthV2Info"
+      ],
+      "exampleElements": [
+        "DeleteOAuthV2Info"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "async",
+          "required": false
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AccessToken> element",
+      "contextHeading": "<AccessToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#accesstokenelement",
+      "elements": [
+        "AccessToken"
+      ],
+      "exampleElements": [
+        "AccessToken"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<AccessToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#accesstokenelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AuthorizationCode> element",
+      "contextHeading": "<AuthorizationCode> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#authorizationcodeelement",
+      "elements": [
+        "AuthorizationCode"
+      ],
+      "exampleElements": [
+        "AuthorizationCode"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<AuthorizationCode> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#authorizationcodeelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step",
+        "faultrule"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

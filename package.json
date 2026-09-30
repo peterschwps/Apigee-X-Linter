@@ -1,0 +1,83 @@
+{
+  "name": "apigee-x-linter",
+  "displayName": "Apigee X Linter",
+  "publisher": "peterschwps",
+  "description": "Lint and complete Apigee X proxy bundle XML using reviewed Google documentation.",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterschwps/apigee-x-linter.git"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Linters",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "apigee",
+    "apigee x",
+    "xml",
+    "linter"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onLanguage:xml"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Apigee X Linter",
+      "properties": {
+        "apigeeXLinter.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Apigee X XML diagnostics and completions."
+        },
+        "apigeeXLinter.exclude": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Glob patterns for Apigee X XML files to exclude."
+        },
+        "apigeeXLinter.ignore": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Diagnostic rule IDs to ignore, for example AX103."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit && esbuild src/extension.ts --bundle --platform=node --format=cjs --target=node18 --external:vscode --outfile=dist/extension.js",
+    "check": "tsc -p tsconfig.json --noEmit && npm run data:validate",
+    "data:validate": "tsx scripts/docs.ts validate",
+    "docs:discover": "tsx scripts/docs.ts discover",
+    "docs:extract": "tsx scripts/docs.ts extract",
+    "docs:propose": "tsx scripts/docs.ts propose",
+    "docs:refresh": "tsx scripts/docs.ts refresh",
+    "docs:status": "tsx scripts/docs.ts status",
+    "release:check": "tsx scripts/docs.ts release-check",
+    "vscode:prepublish": "npm run build"
+  },
+  "dependencies": {
+    "@xml-tools/parser": "^1.0.11",
+    "minimatch": "^10.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/vscode": "1.96.0",
+    "@vscode/vsce": "^4.0.0",
+    "cheerio": "^1.2.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

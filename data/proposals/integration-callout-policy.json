@@ -1,0 +1,307 @@
+{
+  "source": {
+    "id": "integration-callout-policy",
+    "kind": "policy",
+    "title": "integration callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<IntegrationCallout>",
+      "contextHeading": "<IntegrationCallout>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#integrationcallout",
+      "elements": [
+        "IntegrationCallout"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IntegrationCallout>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "AsyncExecution",
+        "DisplayName",
+        "IntegrationCallout",
+        "Request",
+        "Response"
+      ],
+      "exampleAttributes": [
+        "clearPayload",
+        "continueOnError",
+        "enabled"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "true",
+          "false"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ],
+        "clearPayload": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<IntegrationCallout>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "AsyncExecution",
+        "DisplayName",
+        "IntegrationCallout",
+        "Request",
+        "Response"
+      ],
+      "exampleAttributes": [
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AsyncExecution>",
+      "contextHeading": "<AsyncExecution>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#asyncexecution",
+      "elements": [
+        "AsyncExecution"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<AsyncExecution>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "AsyncExecution"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<AsyncExecution>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "AsyncExecution"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Request>",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#request",
+      "elements": [
+        "Request"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "Request"
+      ],
+      "exampleAttributes": [
+        "clearPayload"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#example_2",
+      "elements": [],
+      "exampleElements": [
+        "Request"
+      ],
+      "exampleAttributes": [
+        "clearPayload"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "clearPayload",
+          "required": false,
+          "type": "boolean"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Response>",
+      "contextHeading": "<Response>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#response",
+      "elements": [
+        "Response"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Response>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "Response"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Response>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#example_3",
+      "elements": [],
+      "exampleElements": [
+        "Response"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "source": {
+    "id": "access-control-policy",
+    "kind": "policy",
+    "title": "access control policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Core element and attribute rules are represented; review remaining conditional and deprecation details."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Deny 198.51.100.1",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#deny-198.51.100.1",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Deny using variables",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#deny-using-variables",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Deny 198.51.100.*",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#deny-198.51.100.",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "198.51.*.*",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#198.51..",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Deny 198.51.100.*, allow 192.0.2.1",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#deny-198.51.100.,-allow-192.0.2.1",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Allow 198.51.*.*",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#allow-198.51..",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Allow multiple IPs",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#allow-multiple-ips",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Deny multiple IPs",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#deny-multiple-ips",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Allow multiple IPs, deny multiple IPs",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#allow-multiple-ips,-deny-multiple-ips",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Usage notes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#usage",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of two actions (ALLOW or DENY) associated with each."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Handling of invalid IP addresses",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#handling-of-invalid-ip-addresses",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format, the policy will throw an error (for example, accesscontrol."
+      ]
+    },
+    {
+      "heading": "X-Forwarded-For header",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#x-forwarded-for-header",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format of the header is as follows:"
+      ]
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#elements",
+      "elements": [],
+      "exampleElements": [
+        "AccessControl",
+        "DisplayName",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress",
+        "ValidateBasedOn"
+      ],
+      "exampleAttributes": [
+        "action",
+        "async",
+        "continueOnError",
+        "enabled",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AccessControl> attributes",
+      "contextHeading": "<AccessControl> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#accesscontrolattributes",
+      "elements": [
+        "AccessControl"
+      ],
+      "exampleElements": [
+        "AccessControl"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ClientIPVariable> element",
+      "contextHeading": "<ClientIPVariable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#clientipvariableelement",
+      "elements": [
+        "ClientIPVariable"
+      ],
+      "exampleElements": [
+        "AccessControl",
+        "ClientIPVariable",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreTrueClientIPHeader> element",
+      "contextHeading": "<IgnoreTrueClientIPHeader> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#ignoretrueclientipheaderelement",
+      "elements": [
+        "IgnoreTrueClientIPHeader"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IPRules> element",
+      "contextHeading": "<IPRules> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#ipruleselement",
+      "elements": [
+        "IPRules"
+      ],
+      "exampleElements": [
+        "IPRules"
+      ],
+      "exampleAttributes": [
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<IPRules> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#ipruleselement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "noRuleMatchAction",
+          "required": true,
+          "type": "String",
+          "possibleValues": [
+            "ALLOW",
+            "DENY"
+          ]
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IPRules>/<MatchRule> element",
+      "contextHeading": "<IPRules>/<MatchRule> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#iprulesmatchruleelement",
+      "elements": [
+        "IPRules",
+        "MatchRule"
+      ],
+      "exampleElements": [
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<IPRules>/<MatchRule> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#iprulesmatchruleelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "action",
+          "required": true,
+          "type": "String",
+          "possibleValues": [
+            "ALLOW",
+            "DENY"
+          ]
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IPRules>/<MatchRule>/<SourceAddress> element",
+      "contextHeading": "<IPRules>/<MatchRule>/<SourceAddress> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#sourceaddress",
+      "elements": [
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleElements": [
+        "IPRules",
+        "MatchRule",
+        "SourceAddress"
+      ],
+      "exampleAttributes": [
+        "action",
+        "mask",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<IPRules>/<MatchRule>/<SourceAddress> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#iprulesmatchrulesourceaddresselement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "mask",
+          "required": true,
+          "type": "Integer",
+          "formatHint": "format, assuming the variable is named kvm."
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ValidateBasedOn> element",
+      "contextHeading": "<ValidateBasedOn> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#validatebasedon",
+      "elements": [
+        "ValidateBasedOn"
+      ],
+      "exampleElements": [
+        "AccessControl",
+        "DisplayName",
+        "IPRules",
+        "MatchRule",
+        "SourceAddress",
+        "ValidateBasedOn"
+      ],
+      "exampleAttributes": [
+        "action",
+        "async",
+        "continueOnError",
+        "enabled",
+        "mask",
+        "name",
+        "noRuleMatchAction"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<ValidateBasedOn> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

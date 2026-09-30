@@ -1,0 +1,396 @@
+{
+  "source": {
+    "id": "verify-jws-policy",
+    "kind": "policy",
+    "title": "verify jws policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Verify an attached JWS signed with the HS256 algorithm",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#verify-a-JWS-signed-with-the-hs256-algorithm",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "SecretKey",
+        "Source",
+        "Value",
+        "VerifyJWS"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Verify a detached JWS signed with the RS256 algorithm",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#verify-a-JWS-signed-with-the-rs256-algorithm",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "DetachedContent",
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "PublicKey",
+        "Source",
+        "Value",
+        "VerifyJWS"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes that apply to the top-level element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#elementreference-attributesthatapplytothetoplevelelement",
+      "elements": [],
+      "exampleElements": [
+        "VerifyJWS"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Algorithm>",
+      "contextHeading": "<Algorithm>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#algorithm",
+      "elements": [
+        "Algorithm"
+      ],
+      "exampleElements": [
+        "Algorithm"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AdditionalHeaders/Claim>",
+      "contextHeading": "<Algorithm>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#additionalheadersclaim",
+      "elements": [],
+      "exampleElements": [
+        "AdditionalHeaders",
+        "Claim"
+      ],
+      "exampleAttributes": [
+        "array",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the standard, registered JWS claim names.",
+        "One of: string (default), number, boolean, or map array - (Optional) Set to true to indicate if the value is an array of types."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<DetachedContent>",
+      "contextHeading": "<DetachedContent>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#detachedcontent",
+      "elements": [
+        "DetachedContent"
+      ],
+      "exampleElements": [
+        "DetachedContent"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreCriticalHeaders>",
+      "contextHeading": "<IgnoreCriticalHeaders>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#ignoreriticalheaders",
+      "elements": [
+        "IgnoreCriticalHeaders"
+      ],
+      "exampleElements": [
+        "IgnoreCriticalHeaders"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<KnownHeaders>",
+      "contextHeading": "<KnownHeaders>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#knownheaders",
+      "elements": [
+        "KnownHeaders"
+      ],
+      "exampleElements": [
+        "KnownHeaders"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PublicKey/JWKS>",
+      "contextHeading": "<KnownHeaders>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#publickeyjwks",
+      "elements": [],
+      "exampleElements": [
+        "JWKS",
+        "PublicKey"
+      ],
+      "exampleAttributes": [
+        "ref",
+        "uri"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of RS256/RS384/RS512, PS256/PS384/PS512, or ES256/ES384/ES512."
+      ],
+      "formatHints": [
+        "format (RFC 7517) containing a set of public keys."
+      ]
+    },
+    {
+      "heading": "<PublicKey/Value>",
+      "contextHeading": "<KnownHeaders>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#publickeyvalue",
+      "elements": [],
+      "exampleElements": [
+        "PublicKey",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of RS256/RS384/RS512, PS256/PS384/PS512, or ES256/ES384/ES512."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<SecretKey>",
+      "contextHeading": "<SecretKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#secretkey",
+      "elements": [
+        "SecretKey"
+      ],
+      "exampleElements": [
+        "SecretKey",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "encoding",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [
+        "HS256",
+        "HS384"
+      ],
+      "valueHints": [
+        "one of HS256, HS384, or HS512.",
+        "one of either the <PublicKey> or <SecretKey> element."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Children of <SecretKey>",
+      "contextHeading": "Children of <SecretKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#secretkey-child",
+      "elements": [
+        "SecretKey"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Type>",
+      "contextHeading": "<Type>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#type",
+      "elements": [
+        "Type"
+      ],
+      "exampleElements": [
+        "Type"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Flow variables",
+      "contextHeading": "<Type>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#flow-variables",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern:"
+      ]
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<Type>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#jws-example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "FaultRules",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

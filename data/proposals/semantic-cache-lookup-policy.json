@@ -1,0 +1,319 @@
+{
+  "source": {
+    "id": "semantic-cache-lookup-policy",
+    "kind": "policy",
+    "title": "semantic cache lookup policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<SemanticCacheLookup> element",
+      "contextHeading": "<SemanticCacheLookup> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#semanticcachelookup",
+      "elements": [
+        "SemanticCacheLookup"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<SemanticCacheLookup> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DeployedIndexID",
+        "DisplayName",
+        "DistanceMeasureType",
+        "Embeddings",
+        "IgnoreUnresolvedVariables",
+        "SemanticCacheLookup",
+        "SimilaritySearch",
+        "Threshold",
+        "URL",
+        "UserPromptSource",
+        "VertexAI"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "contextHeading": "<SemanticCacheLookup> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "DeployedIndexID",
+        "DisplayName",
+        "DistanceMeasureType",
+        "Embeddings",
+        "IgnoreUnresolvedVariables",
+        "SemanticCacheLookup",
+        "SimilaritySearch",
+        "Threshold",
+        "URL",
+        "UserPromptSource",
+        "VertexAI"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UserPromptSource>",
+      "contextHeading": "<UserPromptSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#userpromptsource",
+      "elements": [
+        "UserPromptSource"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Embeddings>",
+      "contextHeading": "<Embeddings>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#embeddings",
+      "elements": [
+        "Embeddings"
+      ],
+      "exampleElements": [
+        "Embeddings",
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<VertexAI> (child of <Embeddings>)",
+      "contextHeading": "<VertexAI> (child of <Embeddings>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#embeddings-vertexai",
+      "elements": [
+        "VertexAI",
+        "Embeddings"
+      ],
+      "exampleElements": [
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<URL> (child of <VertexAI>)",
+      "contextHeading": "<URL> (child of <VertexAI>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#embeddingsurl",
+      "elements": [
+        "URL",
+        "VertexAI"
+      ],
+      "exampleElements": [
+        "URL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SimilaritySearch>",
+      "contextHeading": "<SimilaritySearch>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch",
+      "elements": [
+        "SimilaritySearch"
+      ],
+      "exampleElements": [
+        "DeployedIndexID",
+        "DistanceMeasureType",
+        "GrpcEndpoint",
+        "PrivateServiceConnect",
+        "SimilaritySearch",
+        "Threshold",
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following transports in the <VertexAI> element:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<VertexAI> (child of <SimilaritySearch>)",
+      "contextHeading": "<VertexAI> (child of <SimilaritySearch>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch-vertexai",
+      "elements": [
+        "VertexAI",
+        "SimilaritySearch"
+      ],
+      "exampleElements": [
+        "DeployedIndexID",
+        "DistanceMeasureType",
+        "GrpcEndpoint",
+        "PrivateServiceConnect",
+        "Threshold",
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following transports: a <URL> element (for a public endpoint, over REST) or a <PrivateServiceConnect> element (for a private endpoint, over gRPC)."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<VertexAI> (child of <SimilaritySearch>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

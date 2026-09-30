@@ -1,0 +1,344 @@
+{
+  "source": {
+    "id": "reset-quota-policy",
+    "kind": "policy",
+    "title": "reset quota policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Reset Default Counter",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#reset-default-counter",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Interval",
+        "Quota",
+        "ResetQuota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Use a Reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#use-a-reference",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Quota",
+        "ResetQuota"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Specify the Identifier",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#specify-the-identifier",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Interval",
+        "Quota",
+        "ResetQuota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Class",
+        "DisplayName",
+        "Identifier",
+        "Quota",
+        "ResetQuota"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResetQuota> attributes",
+      "contextHeading": "<ResetQuota> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#resetquotaattributes",
+      "elements": [
+        "ResetQuota"
+      ],
+      "exampleElements": [
+        "ResetQuota"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Quota> element",
+      "contextHeading": "<Quota> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaelement",
+      "elements": [
+        "Quota"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Quota"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Quota> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false
+        },
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Quota>/<Identifier> element",
+      "contextHeading": "<Quota>/<Identifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaidentifierelement",
+      "elements": [
+        "Quota",
+        "Identifier"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Quota"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Quota>/<Identifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaidentifierelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false
+        },
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Quota>/<Identifier>/<Allow> element",
+      "contextHeading": "<Quota>/<Identifier>/<Allow> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaidentifierallowelement",
+      "elements": [
+        "Quota",
+        "Identifier",
+        "Allow"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Identifier"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Quota>/<Identifier>/<Allow> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaallowelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Quota>/<Identifier>/<Class> element",
+      "contextHeading": "<Quota>/<Identifier>/<Class> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaidentifierclasselement",
+      "elements": [
+        "Quota",
+        "Identifier",
+        "Class"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Class",
+        "Identifier"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Quota>/<Identifier>/<Class> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaidentifierclasselement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

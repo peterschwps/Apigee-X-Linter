@@ -1,0 +1,234 @@
+{
+  "source": {
+    "id": "set-oauth-v2-info-policy",
+    "kind": "policy",
+    "title": "set oauth v2 info policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Basic example",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#basic-example",
+      "elements": [],
+      "exampleElements": [
+        "AccessToken",
+        "Attribute",
+        "Attributes",
+        "SetOAuthV2Info"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element Reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "AccessToken",
+        "Attributes",
+        "DisplayName",
+        "SetOAuthV2Info"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SetOAuthV2Info> attributes",
+      "contextHeading": "<SetOAuthV2Info> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#setoauthv2infoattributes",
+      "elements": [
+        "SetOAuthV2Info"
+      ],
+      "exampleElements": [
+        "SetOAuthV2Info"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AccessToken> element",
+      "contextHeading": "<AccessToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#accesstokenelement",
+      "elements": [
+        "AccessToken"
+      ],
+      "exampleElements": [
+        "AccessToken"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<AccessToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#accesstokenelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Attributes> element",
+      "contextHeading": "<Attributes> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#attributeselement",
+      "elements": [
+        "Attributes"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Attributes>/<Attribute> element",
+      "contextHeading": "<Attributes>/<Attribute> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#attributesattributeelement",
+      "elements": [
+        "Attributes",
+        "Attribute"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Attributes"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Attributes>/<Attribute> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#attributesattributeelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false
+        },
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<Attributes>/<Attribute> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

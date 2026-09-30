@@ -1,0 +1,397 @@
+{
+  "source": {
+    "id": "json-xml-policy",
+    "kind": "policy",
+    "title": "json xml policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Converting a request",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#converting-a-request",
+      "elements": [],
+      "exampleElements": [
+        "JSONToXML",
+        "OutputVariable",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#elements",
+      "elements": [],
+      "exampleElements": [
+        "ArrayItemElementName",
+        "ArrayRootElementName",
+        "AttributeBlockName",
+        "AttributePrefix",
+        "DefaultNamespaceNodeName",
+        "DisplayName",
+        "Indent",
+        "InvalidCharsReplacement",
+        "JSONToXML",
+        "NamespaceSeparator",
+        "NullValue",
+        "ObjectRootElementName",
+        "OmitXmlDeclaration",
+        "Options",
+        "OutputVariable",
+        "Source",
+        "TextNodeName"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JSONToXML> attributes",
+      "contextHeading": "<JSONToXML> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#jsontoxmlattributes",
+      "elements": [
+        "JSONToXML"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source> element",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<OutputVariable> element",
+      "contextHeading": "<OutputVariable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#outputvariable",
+      "elements": [
+        "OutputVariable"
+      ],
+      "exampleElements": [
+        "OutputVariable"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format conversion."
+      ]
+    },
+    {
+      "heading": "<Options>/<OmitXmlDeclaration>",
+      "contextHeading": "<Options>/<OmitXmlDeclaration>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#omitxmldeclaration",
+      "elements": [
+        "Options",
+        "OmitXmlDeclaration"
+      ],
+      "exampleElements": [
+        "OmitXmlDeclaration"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>/<NamespaceBlockName> <Options>/<DefaultNamespaceNodeName> <Options>/<NamespaceSeparator> elements",
+      "contextHeading": "<Options>/<NamespaceBlockName> <Options>/<DefaultNamespaceNodeName> <Options>/<NamespaceSeparator> elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#namespace",
+      "elements": [
+        "Options",
+        "NamespaceBlockName",
+        "DefaultNamespaceNodeName",
+        "NamespaceSeparator"
+      ],
+      "exampleElements": [
+        "DefaultNamespaceNodeName",
+        "NamespaceBlockName",
+        "NamespaceSeparator",
+        "exp:person",
+        "person",
+        "population"
+      ],
+      "exampleAttributes": [
+        "xmlns",
+        "xmlns:exp"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>/<ObjectRootElementName>",
+      "contextHeading": "<Options>/<ObjectRootElementName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#optionsobjectrootelementname",
+      "elements": [
+        "Options",
+        "ObjectRootElementName"
+      ],
+      "exampleElements": [
+        "ObjectRootElementName",
+        "Root",
+        "abc",
+        "efg"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>/<AttributeBlockName> <Options>/<AttributePrefix> elements",
+      "contextHeading": "<Options>/<AttributeBlockName> <Options>/<AttributePrefix> elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#attributes",
+      "elements": [
+        "Options",
+        "AttributeBlockName",
+        "AttributePrefix"
+      ],
+      "exampleElements": [
+        "AttributeBlockName",
+        "AttributePrefix",
+        "occupation",
+        "person"
+      ],
+      "exampleAttributes": [
+        "firstName",
+        "lastName"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>/<ArrayRootElementName> <Options>/<ArrayItemElementName> element",
+      "contextHeading": "<Options>/<ArrayRootElementName> <Options>/<ArrayItemElementName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#array",
+      "elements": [
+        "Options",
+        "ArrayRootElementName",
+        "ArrayItemElementName"
+      ],
+      "exampleElements": [
+        "Array",
+        "ArrayItemElementName",
+        "ArrayRootElementName",
+        "Item",
+        "explorer"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>/<Indent>",
+      "contextHeading": "<Options>/<Indent>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#indentoption",
+      "elements": [
+        "Options",
+        "Indent"
+      ],
+      "exampleElements": [
+        "Array",
+        "Indent",
+        "n"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>/<TextNodeName> element",
+      "contextHeading": "<Options>/<TextNodeName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#textnodename",
+      "elements": [
+        "Options",
+        "TextNodeName"
+      ],
+      "exampleElements": [
+        "TextNodeName",
+        "age",
+        "firstName",
+        "lastName",
+        "person"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>/<NullValue> element",
+      "contextHeading": "<Options>/<NullValue> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#nullvalue",
+      "elements": [
+        "Options",
+        "NullValue"
+      ],
+      "exampleElements": [
+        "NullValue",
+        "person"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>/<InvalidCharsReplacement> element",
+      "contextHeading": "<Options>/<InvalidCharsReplacement> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#invalidcharsreplacement",
+      "elements": [
+        "Options",
+        "InvalidCharsReplacement"
+      ],
+      "exampleElements": [
+        "First_Name",
+        "InvalidCharsReplacement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Usage notes",
+      "contextHeading": "<Options>/<InvalidCharsReplacement> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#usage",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format of the response can be dynamically set by configuring JSON to XML and XML to JSON policies to execute conditionally."
+      ]
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<Options>/<InvalidCharsReplacement> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

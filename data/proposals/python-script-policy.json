@@ -1,0 +1,143 @@
+{
+  "source": {
+    "id": "python-script-policy",
+    "kind": "policy",
+    "title": "python script policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Python Script policy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#python-script-policy",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ResourceURL",
+        "Script"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#elements",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IncludeURL",
+        "ResourceURL",
+        "Script"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResourceURL> element",
+      "contextHeading": "<ResourceURL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#resourceurlelement",
+      "elements": [
+        "ResourceURL"
+      ],
+      "exampleElements": [
+        "ResourceURL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IncludeURL> element",
+      "contextHeading": "<IncludeURL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#includeurlelement",
+      "elements": [
+        "IncludeURL"
+      ],
+      "exampleElements": [
+        "IncludeURL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<IncludeURL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

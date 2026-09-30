@@ -1,0 +1,959 @@
+{
+  "source": {
+    "id": "llm-token-quota-policy",
+    "kind": "policy",
+    "title": "llm token quota policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "How LLMTokenQuota works with SSE responses",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#how-llmtokenquota-works-with-sse-responses",
+      "elements": [],
+      "exampleElements": [
+        "EventFlow",
+        "Name",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "content-type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "LLMTokenQuota policy types",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#quotapolicytypes",
+      "elements": [],
+      "exampleElements": [
+        "LLMTokenQuota"
+      ],
+      "exampleAttributes": [
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values of type include:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "How quotas are counted if no API products are in use",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#how-quotas-are-counted-if-no-api-products-are-in-use",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern described in Introduction to antipatterns."
+      ]
+    },
+    {
+      "heading": "Time notation",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#timenotation",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format: YYYY-MM-DD.",
+        "format: hours:minutes:seconds."
+      ]
+    },
+    {
+      "heading": "More Dynamic LLMTokenQuota",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#more-dynamic-llmtokenquota",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Interval",
+        "LLMTokenQuota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "countRef",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Start time",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#start-time",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Interval",
+        "LLMTokenQuota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Access Counter",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#access-counter",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Interval",
+        "LLMTokenQuota",
+        "Set",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "count",
+        "createNew",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Shared counters",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#shared-counters",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "BasePath",
+        "CountOnly",
+        "Distributed",
+        "EnforceOnly",
+        "Flows",
+        "HTTPProxyConnection",
+        "Interval",
+        "LLMModelSource",
+        "LLMTokenQuota",
+        "LLMTokenUsageSource",
+        "Name",
+        "PostFlow",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Response",
+        "RouteRule",
+        "SharedName",
+        "Step",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "First Request",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#first-request",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Interval",
+        "LLMTokenQuota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Set identifier",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#set-identifier",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Interval",
+        "LLMTokenQuota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Class",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#class",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Class",
+        "Interval",
+        "LLMTokenQuota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "class",
+        "count",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Calculate Tokens",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#calculate-tokens",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "CountOnly",
+        "Distributed",
+        "Interval",
+        "LLMModelSource",
+        "LLMTokenQuota",
+        "LLMTokenUsageSource",
+        "SharedName",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Count Quota Dynamic Variables using API Product, Developer, and App",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#count-quota-dynamic-variables-using-api-product,-developer,-and-app",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "CountOnly",
+        "Distributed",
+        "Interval",
+        "LLMModelSource",
+        "LLMTokenQuota",
+        "LLMTokenUsageSource",
+        "SharedName",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "countRef",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Enforce Quota without API Product",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#enforce-quota-without-api-product",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Distributed",
+        "EnforceOnly",
+        "Interval",
+        "LLMTokenQuota",
+        "SharedName",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Enforce Quota with API Product, Developer, and App",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#enforce-quota-with-api-product,-developer,-and-app",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Distributed",
+        "EnforceOnly",
+        "Interval",
+        "LLMTokenQuota",
+        "SharedName",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "countRef",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "With SSE stream",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#with-sse-stream",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "CountOnly",
+        "Distributed",
+        "EventFlow",
+        "Interval",
+        "LLMModelSource",
+        "LLMTokenQuota",
+        "LLMTokenUsageSource",
+        "Name",
+        "Response",
+        "SharedName",
+        "Step",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "content-type",
+        "count",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LLMTokenQuota> element",
+      "contextHeading": "<LLMTokenQuota> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#quota",
+      "elements": [
+        "LLMTokenQuota"
+      ],
+      "exampleElements": [
+        "Allow",
+        "AsynchronousConfiguration",
+        "Class",
+        "DefaultConfig",
+        "DisplayName",
+        "Distributed",
+        "EnforceOnly",
+        "Identifier",
+        "IgnoreUnresolvedVariables",
+        "Interval",
+        "LLMModelSource",
+        "LLMTokenQuota",
+        "LLMTokenUsageSource",
+        "SharedName",
+        "StartTime",
+        "SyncIntervalInSeconds",
+        "SyncMessageCount",
+        "Synchronous",
+        "TimeUnit",
+        "UseQuotaConfigInAPIProduct"
+      ],
+      "exampleAttributes": [
+        "class",
+        "continueOnError",
+        "count",
+        "countRef",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "type",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Allow>",
+      "contextHeading": "<Allow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#allow",
+      "elements": [
+        "Allow"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Class"
+      ],
+      "exampleAttributes": [
+        "class",
+        "count",
+        "countRef",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "count",
+          "required": false
+        },
+        {
+          "name": "countRef",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Class>",
+      "contextHeading": "<Class>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#class-element",
+      "elements": [
+        "Class"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Class"
+      ],
+      "exampleAttributes": [
+        "class",
+        "count",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the <Allow> child elements to determine the allowed count of the policy."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Allow> (child of <Class>)",
+      "contextHeading": "<Allow> (child of <Class>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#classallow",
+      "elements": [
+        "Allow",
+        "Class"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Class"
+      ],
+      "exampleAttributes": [
+        "class",
+        "count",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "class",
+          "required": true
+        },
+        {
+          "name": "count",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Interval>",
+      "contextHeading": "<Interval>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#interval",
+      "elements": [
+        "Interval"
+      ],
+      "exampleElements": [
+        "Interval"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<TimeUnit>",
+      "contextHeading": "<TimeUnit>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#timeunit",
+      "elements": [
+        "TimeUnit"
+      ],
+      "exampleElements": [
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [
+        "minute",
+        "hour",
+        "day",
+        "week",
+        "month"
+      ],
+      "valueHints": [
+        "Select from minute, hour, day, week, month, or year."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<StartTime>",
+      "contextHeading": "<StartTime>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#starttime",
+      "elements": [
+        "StartTime"
+      ],
+      "exampleElements": [
+        "StartTime"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Distributed>",
+      "contextHeading": "<Distributed>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#distributed",
+      "elements": [
+        "Distributed"
+      ],
+      "exampleElements": [
+        "Distributed",
+        "Synchronous"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Synchronous>",
+      "contextHeading": "<Synchronous>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#synchronous",
+      "elements": [
+        "Synchronous"
+      ],
+      "exampleElements": [
+        "Synchronous"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AsynchronousConfiguration>",
+      "contextHeading": "<AsynchronousConfiguration>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#asynchronousconfiguration",
+      "elements": [
+        "AsynchronousConfiguration"
+      ],
+      "exampleElements": [
+        "AsynchronousConfiguration",
+        "SyncIntervalInSeconds",
+        "SyncMessageCount"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SyncIntervalInSeconds>",
+      "contextHeading": "<SyncIntervalInSeconds>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#syncintervalinseconds",
+      "elements": [
+        "SyncIntervalInSeconds"
+      ],
+      "exampleElements": [
+        "AsynchronousConfiguration",
+        "SyncIntervalInSeconds"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SyncMessageCount>",
+      "contextHeading": "<SyncMessageCount>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#syncmessagecount",
+      "elements": [
+        "SyncMessageCount"
+      ],
+      "exampleElements": [
+        "AsynchronousConfiguration",
+        "SyncMessageCount"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LLMTokenUsageSource>",
+      "contextHeading": "<LLMTokenUsageSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#llmtokenusagesource",
+      "elements": [
+        "LLMTokenUsageSource"
+      ],
+      "exampleElements": [
+        "LLMTokenUsageSource"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LLMModelSource>",
+      "contextHeading": "<LLMModelSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#llmmodelsource",
+      "elements": [
+        "LLMModelSource"
+      ],
+      "exampleElements": [
+        "LLMModelSource"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Identifier>",
+      "contextHeading": "<Identifier>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#identifier",
+      "elements": [
+        "Identifier"
+      ],
+      "exampleElements": [
+        "Identifier"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UseQuotaConfigInAPIProduct>",
+      "contextHeading": "<UseQuotaConfigInAPIProduct>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#usequotaconfiginapiproduct",
+      "elements": [
+        "UseQuotaConfigInAPIProduct"
+      ],
+      "exampleElements": [
+        "DefaultConfig",
+        "UseQuotaConfigInAPIProduct"
+      ],
+      "exampleAttributes": [
+        "stepName"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "stepName",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DefaultConfig>",
+      "contextHeading": "<DefaultConfig>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#defaultconfig",
+      "elements": [
+        "DefaultConfig"
+      ],
+      "exampleElements": [
+        "Allow",
+        "DefaultConfig",
+        "Interval",
+        "TimeUnit",
+        "UseQuotaConfigInAPIProduct"
+      ],
+      "exampleAttributes": [
+        "stepName"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SharedName>",
+      "contextHeading": "<SharedName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#sharedname",
+      "elements": [
+        "SharedName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CountOnly>",
+      "contextHeading": "<CountOnly>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#countonly",
+      "elements": [
+        "CountOnly"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<EnforceOnly>",
+      "contextHeading": "<EnforceOnly>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#enforceonly",
+      "elements": [
+        "EnforceOnly"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<EnforceOnly>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "FaultRules",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

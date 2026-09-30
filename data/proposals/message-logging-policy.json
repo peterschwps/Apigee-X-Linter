@@ -1,0 +1,334 @@
+{
+  "source": {
+    "id": "message-logging-policy",
+    "kind": "policy",
+    "title": "message logging policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<MessageLogging> element",
+      "contextHeading": "<MessageLogging> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#messagelogging",
+      "elements": [
+        "MessageLogging"
+      ],
+      "exampleElements": [
+        "CloudLogging",
+        "DisplayName",
+        "Endpoint",
+        "Host",
+        "Key",
+        "Label",
+        "Labels",
+        "LogName",
+        "Message",
+        "MessageLogging",
+        "Port",
+        "ResourceType",
+        "Syslog",
+        "Value",
+        "logLevel"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [
+        {
+          "name": "CloudLogging",
+          "required": false
+        },
+        {
+          "name": "Syslog",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "CloudLogging",
+      "contextHeading": "<MessageLogging> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudlogging",
+      "elements": [],
+      "exampleElements": [
+        "CloudLogging",
+        "Endpoint",
+        "Key",
+        "Label",
+        "Labels",
+        "LogName",
+        "Message",
+        "MessageLogging",
+        "ResourceType",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syslog",
+      "contextHeading": "<MessageLogging> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog",
+      "elements": [],
+      "exampleElements": [
+        "DateFormat",
+        "FormatMessage",
+        "Host",
+        "Message",
+        "MessageLogging",
+        "Port",
+        "Protocol",
+        "Syslog",
+        "logLevel"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format of timestamps will be similar to 230704-13:42:17.",
+        "format specified in the DateFormat element."
+      ]
+    },
+    {
+      "heading": "Syslog over TLS/SSL",
+      "contextHeading": "<MessageLogging> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-over-tlsssl",
+      "elements": [],
+      "exampleElements": [
+        "Enabled",
+        "FormatMessage",
+        "Host",
+        "Message",
+        "MessageLogging",
+        "Port",
+        "Protocol",
+        "SSLInfo",
+        "Syslog",
+        "logLevel"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CloudLogging>",
+      "contextHeading": "<CloudLogging>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement",
+      "elements": [
+        "CloudLogging"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "LogName",
+          "required": true
+        },
+        {
+          "name": "Message",
+          "required": true
+        },
+        {
+          "name": "Label",
+          "required": false
+        },
+        {
+          "name": "ResourceType",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Syslog>",
+      "contextHeading": "<Syslog>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element",
+      "elements": [
+        "Syslog"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "Message",
+          "required": true
+        },
+        {
+          "name": "Host",
+          "required": false
+        },
+        {
+          "name": "Port",
+          "required": false
+        },
+        {
+          "name": "Protocol",
+          "required": false
+        },
+        {
+          "name": "FormatMessage",
+          "required": false
+        },
+        {
+          "name": "PayloadOnly",
+          "required": false
+        },
+        {
+          "name": "DateFormat",
+          "required": false
+        },
+        {
+          "name": "SSLInfo",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<logLevel>",
+      "contextHeading": "<logLevel>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#logLevel",
+      "elements": [
+        "logLevel"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values for the <logLevel> element are: INFO (default), ALERT, WARN, ERROR."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Usage notes",
+      "contextHeading": "<logLevel>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#usage",
+      "elements": [],
+      "exampleElements": [
+        "Name",
+        "PostClientFlow",
+        "ProxyEndpoint",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following messages in the log file:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Default values for variables in message template",
+      "contextHeading": "<logLevel>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#usagenotes-defaultvaluesforvariablesinmessagetemplate",
+      "elements": [],
+      "exampleElements": [
+        "Message"
+      ],
+      "exampleAttributes": [
+        "defaultVariableValue"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Configuring third-party log management services",
+      "contextHeading": "<logLevel>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#thirdparty",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of those services, see that service's documentation to configure the service's host, port, and protocol, then set the Syslog element on this policy accordingly."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<logLevel>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "source": {
+    "id": "parse-payload-policy",
+    "kind": "policy",
+    "title": "parse payload policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<ParsePayload> element",
+      "contextHeading": "<ParsePayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#parsepayload",
+      "elements": [
+        "ParsePayload"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ParsePayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "ParsePayload",
+        "PayloadType",
+        "Protocol",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<ParsePayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "ParsePayload",
+        "PayloadType",
+        "Protocol",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PayloadType>",
+      "contextHeading": "<PayloadType>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#payloadtype",
+      "elements": [
+        "PayloadType"
+      ],
+      "exampleElements": [
+        "PayloadType"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Protocol>",
+      "contextHeading": "<Protocol>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#protocol",
+      "elements": [
+        "Protocol"
+      ],
+      "exampleElements": [
+        "Protocol"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Extracted Flow Variables",
+      "contextHeading": "<Protocol>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#extracted-flow-variables",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern parsepayload."
+      ]
+    }
+  ]
+}

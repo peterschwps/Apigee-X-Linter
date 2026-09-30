@@ -1,0 +1,50 @@
+{
+  "kind": "policy",
+  "root": "AccessControl",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy",
+  "reviewedAt": "2026-09-30",
+  "elements": [
+    {
+      "path": "/AccessControl",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#elements",
+      "attributes": {
+        "name": { "kind": "free", "required": true },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"] },
+        "enabled": { "kind": "enum", "values": ["true", "false"] },
+        "async": { "kind": "enum", "values": ["true", "false"] }
+      },
+      "children": ["DisplayName", "ClientIPVariable", "IgnoreTrueClientIPHeader", "IPRules", "ValidateBasedOn"]
+    },
+    { "path": "/AccessControl/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#elements", "text": { "kind": "free" } },
+    { "path": "/AccessControl/ClientIPVariable", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#clientipvariableelement", "text": { "kind": "free" } },
+    { "path": "/AccessControl/IgnoreTrueClientIPHeader", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#ignoretrueclientipheaderelement", "text": { "kind": "enum", "values": ["true", "false"] } },
+    {
+      "path": "/AccessControl/IPRules",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#ipruleselement",
+      "attributes": { "noRuleMatchAction": { "kind": "enum", "required": true, "values": ["ALLOW", "DENY"] } },
+      "children": ["MatchRule"]
+    },
+    {
+      "path": "/AccessControl/IPRules/MatchRule",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#iprulesmatchruleelement",
+      "attributes": { "action": { "kind": "enum", "required": true, "values": ["ALLOW", "DENY"] } },
+      "children": ["SourceAddress"]
+    },
+    {
+      "path": "/AccessControl/IPRules/MatchRule/SourceAddress",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#sourceaddress",
+      "attributes": { "mask": { "kind": "format", "required": true, "allowTemplate": true, "format": "Use an IPv4 mask from 1 to 32 or an IPv6 mask from 1 to 128, or a message template." } },
+      "text": { "kind": "format", "allowTemplate": true, "format": "Use an IP address or a message template." }
+    },
+    {
+      "path": "/AccessControl/ValidateBasedOn",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#validatebasedon",
+      "text": { "kind": "enum", "values": ["X_FORWARDED_FOR_ALL_IP", "X_FORWARDED_FOR_FIRST_IP", "X_FORWARDED_FOR_LAST_IP"] }
+    }
+  ]
+}

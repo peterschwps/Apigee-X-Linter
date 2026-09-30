@@ -1,0 +1,101 @@
+{
+  "source": {
+    "id": "validate-saml-assertion-policy",
+    "kind": "policy",
+    "title": "validate saml assertion policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Samples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#samples",
+      "elements": [],
+      "exampleElements": [
+        "AssertionXPath",
+        "Namespace",
+        "Namespaces",
+        "RemoveAssertion",
+        "SignedElementXPath",
+        "Source",
+        "TrustStore",
+        "ValidateSAMLAssertion"
+      ],
+      "exampleAttributes": [
+        "ignoreContentType",
+        "name",
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Validate SAML Assertion",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#validate-saml-assertion",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "Source",
+          "required": false,
+          "possibleValues": [
+            "message",
+            "request"
+          ]
+        },
+        {
+          "name": "XPath",
+          "required": false
+        },
+        {
+          "name": "AssertionXPath",
+          "required": false
+        },
+        {
+          "name": "SignedElementXPath",
+          "required": false
+        },
+        {
+          "name": "TrustStore",
+          "required": false
+        },
+        {
+          "name": "RemoveAssertion",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "FaultRules",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

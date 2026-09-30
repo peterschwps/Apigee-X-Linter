@@ -1,0 +1,500 @@
+{
+  "source": {
+    "id": "access-entity-policy",
+    "kind": "policy",
+    "title": "access entity policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Getting developer email for use in other policies",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#getting-developer-email-for-use-in-other-policies",
+      "elements": [],
+      "exampleElements": [
+        "AccessEntity",
+        "AssignMessage",
+        "AssignTo",
+        "EntityIdentifier",
+        "EntityType",
+        "ExtractVariables",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Set",
+        "Source",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload",
+        "XPath",
+        "policy-name",
+        "policy-type"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "ref",
+        "type",
+        "value"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format is <policy-type>."
+      ]
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#elements",
+      "elements": [],
+      "exampleElements": [
+        "AccessEntity",
+        "EntityIdentifier",
+        "EntityType",
+        "Identifier",
+        "Identifiers",
+        "SecondaryIdentifier"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref",
+        "type",
+        "value"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AccessEntity> attributes",
+      "contextHeading": "<AccessEntity> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#access_entity_attributes",
+      "elements": [
+        "AccessEntity"
+      ],
+      "exampleElements": [
+        "AccessEntity"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<EntityIdentifier> element",
+      "contextHeading": "<EntityIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#EntityIdentifierElement",
+      "elements": [
+        "EntityIdentifier"
+      ],
+      "exampleElements": [
+        "EntityIdentifier"
+      ],
+      "exampleAttributes": [
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<EntityIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#entityidentifierelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<EntityIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#entityidentifierelement-example",
+      "elements": [],
+      "exampleElements": [
+        "AccessEntity",
+        "DisplayName",
+        "EntityIdentifier",
+        "EntityType",
+        "SecondaryIdentifier"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type",
+        "value"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<EntityType> element",
+      "contextHeading": "<EntityType> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#EntityTypeElement",
+      "elements": [
+        "EntityType"
+      ],
+      "exampleElements": [
+        "EntityType"
+      ],
+      "exampleAttributes": [
+        "value"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<EntityType> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#entitytypeelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "value",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<OutputFormat> element",
+      "contextHeading": "<OutputFormat> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#outputformat-element",
+      "elements": [
+        "OutputFormat"
+      ],
+      "exampleElements": [
+        "OutputFormat"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format the AccessEntity policy returns: XML or JSON."
+      ]
+    },
+    {
+      "heading": "<SecondaryIdentifier> element",
+      "contextHeading": "<SecondaryIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#SecondaryIdentifierElement",
+      "elements": [
+        "SecondaryIdentifier"
+      ],
+      "exampleElements": [
+        "SecondaryIdentifier"
+      ],
+      "exampleAttributes": [
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<SecondaryIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#secondaryidentifierelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<SecondaryIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#secondaryidentifierelement-example",
+      "elements": [],
+      "exampleElements": [
+        "AccessEntity",
+        "DisplayName",
+        "EntityIdentifier",
+        "EntityType",
+        "SecondaryIdentifier"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type",
+        "value"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Narrowing results with secondary identifiers",
+      "contextHeading": "<SecondaryIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#secondary_identifiers",
+      "elements": [],
+      "exampleElements": [
+        "AccessEntity",
+        "DisplayName",
+        "EntityIdentifier",
+        "EntityType",
+        "SecondaryIdentifier"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type",
+        "value"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Apps",
+      "contextHeading": "<SecondaryIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#apps",
+      "elements": [],
+      "exampleElements": [
+        "AccessType",
+        "ApiProduct",
+        "ApiProducts",
+        "App",
+        "AppFamily",
+        "AppId",
+        "Attribute",
+        "Attributes",
+        "CallbackUrl",
+        "ConsumerKey",
+        "ConsumerSecret",
+        "CreatedAt",
+        "CreatedBy",
+        "Credential",
+        "Credentials",
+        "DeveloperId",
+        "LastModifiedAt",
+        "LastModifiedBy",
+        "Name",
+        "Scopes",
+        "Status",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "API product",
+      "contextHeading": "<SecondaryIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#api-product",
+      "elements": [],
+      "exampleElements": [
+        "ApiProduct",
+        "ApiResource",
+        "ApiResources",
+        "ApprovalType",
+        "Attribute",
+        "Attributes",
+        "CreatedAt",
+        "CreatedBy",
+        "Description",
+        "DisplayName",
+        "Environments",
+        "LastModifiedAt",
+        "LastModifiedBy",
+        "Name",
+        "Proxies",
+        "Scopes",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Consumer key",
+      "contextHeading": "<SecondaryIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#consumer-key",
+      "elements": [],
+      "exampleElements": [
+        "ApiProduct",
+        "ApiProducts",
+        "Attributes",
+        "ConsumerKey",
+        "ConsumerSecret",
+        "Credential",
+        "Name",
+        "Scopes",
+        "Status"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Developer",
+      "contextHeading": "<SecondaryIdentifier> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#developer",
+      "elements": [],
+      "exampleElements": [
+        "App",
+        "Apps",
+        "Attribute",
+        "Attributes",
+        "CreatedAt",
+        "CreatedBy",
+        "Developer",
+        "DeveloperId",
+        "Email",
+        "FirstName",
+        "LastModifiedAt",
+        "LastModifiedBy",
+        "LastName",
+        "Name",
+        "OrganizationName",
+        "Status",
+        "UserName",
+        "Value"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

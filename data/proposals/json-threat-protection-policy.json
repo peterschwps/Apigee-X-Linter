@@ -1,0 +1,226 @@
+{
+  "source": {
+    "id": "json-threat-protection-policy",
+    "kind": "policy",
+    "title": "json threat protection policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "ArrayElementCount",
+        "ContainerDepth",
+        "DisplayName",
+        "JSONThreatProtection",
+        "ObjectEntryCount",
+        "ObjectEntryNameLength",
+        "Source",
+        "StringValueLength"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JSONThreatProtection> attributes",
+      "contextHeading": "<JSONThreatProtection> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#jsonthreatprotectionattributes",
+      "elements": [
+        "JSONThreatProtection"
+      ],
+      "exampleElements": [
+        "JSONThreatProtection"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ArrayElementCount> element",
+      "contextHeading": "<ArrayElementCount> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#arrayelementcountelement",
+      "elements": [
+        "ArrayElementCount"
+      ],
+      "exampleElements": [
+        "ArrayElementCount"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ContainerDepth> element",
+      "contextHeading": "<ContainerDepth> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#containerdepthelement",
+      "elements": [
+        "ContainerDepth"
+      ],
+      "exampleElements": [
+        "ContainerDepth"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ObjectEntryCount> element",
+      "contextHeading": "<ObjectEntryCount> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#objectentrycountelement",
+      "elements": [
+        "ObjectEntryCount"
+      ],
+      "exampleElements": [
+        "ObjectEntryCount"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ObjectEntryNameLength> element",
+      "contextHeading": "<ObjectEntryNameLength> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#objectentrynamelengthelement",
+      "elements": [
+        "ObjectEntryNameLength"
+      ],
+      "exampleElements": [
+        "ObjectEntryNameLength"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source> element",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#sourceelement",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StringValueLength> element",
+      "contextHeading": "<StringValueLength> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#stringvaluelengthelement",
+      "elements": [
+        "StringValueLength"
+      ],
+      "exampleElements": [
+        "StringValueLength"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<StringValueLength> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

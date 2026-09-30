@@ -1,0 +1,327 @@
+{
+  "source": {
+    "id": "trace-capture-policy",
+    "kind": "policy",
+    "title": "trace capture policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<TraceCapture>",
+      "contextHeading": "<TraceCapture>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#tracecapture",
+      "elements": [
+        "TraceCapture"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<TraceCapture>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "ThrowExceptionOnLimit",
+        "TraceCapture",
+        "Variable",
+        "Variables"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<TraceCapture>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "ThrowExceptionOnLimit",
+        "TraceCapture",
+        "Variable",
+        "Variables"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Variables>",
+      "contextHeading": "<Variables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#variables",
+      "elements": [
+        "Variables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Variables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Variable",
+        "Variables"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Variables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "Variable",
+        "Variables"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Variable>",
+      "contextHeading": "<Variable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#variable",
+      "elements": [
+        "Variable"
+      ],
+      "exampleElements": [
+        "Variable"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "ref",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#example_3",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ThrowExceptionOnLimit>",
+      "contextHeading": "<ThrowExceptionOnLimit>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#throwexceptiononlimit",
+      "elements": [
+        "ThrowExceptionOnLimit"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ThrowExceptionOnLimit>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "ThrowExceptionOnLimit"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<ThrowExceptionOnLimit>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#example_4",
+      "elements": [],
+      "exampleElements": [
+        "ThrowExceptionOnLimit"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

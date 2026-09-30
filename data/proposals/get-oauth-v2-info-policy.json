@@ -1,0 +1,276 @@
+{
+  "source": {
+    "id": "get-oauth-v2-info-policy",
+    "kind": "policy",
+    "title": "get oauth v2 info policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Access token",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#access-token",
+      "elements": [],
+      "exampleElements": [
+        "GetOAuthV2Info",
+        "m.access_tok"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Auth code",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#auth-code",
+      "elements": [],
+      "exampleElements": [
+        "GetOAuthV2Info"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Refresh token",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#refresh-token",
+      "elements": [],
+      "exampleElements": [
+        "GetOAuthV2Info"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Static",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#static",
+      "elements": [],
+      "exampleElements": [
+        "GetOAuthV2Info",
+        "cGLXBNe9vp",
+        "cessToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Client ID",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#client-id",
+      "elements": [],
+      "exampleElements": [
+        "GetOAuthV2Info",
+        "aram.clie"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element Reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "ayNameGet",
+        "ionCode",
+        "nCode",
+        "sToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<GetOAuthV2Info> attributes",
+      "contextHeading": "<GetOAuthV2Info> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#getoauthv2infoattributes",
+      "elements": [
+        "GetOAuthV2Info"
+      ],
+      "exampleElements": [
+        "GetOAuthV2Info"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AccessToken> element",
+      "contextHeading": "<AccessToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#accesstokenelement",
+      "elements": [
+        "AccessToken"
+      ],
+      "exampleElements": [
+        "AccessToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AuthorizationCode> element",
+      "contextHeading": "<AuthorizationCode> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#authorizationcodeelement",
+      "elements": [
+        "AuthorizationCode"
+      ],
+      "exampleElements": [
+        "AuthorizationCode"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ClientId> element",
+      "contextHeading": "<ClientId> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#clientidelement",
+      "elements": [
+        "ClientId"
+      ],
+      "exampleElements": [
+        "ClientId"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreAccessTokenStatus> element",
+      "contextHeading": "<IgnoreAccessTokenStatus> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#ignoreaccesstokenstatuselement",
+      "elements": [
+        "IgnoreAccessTokenStatus"
+      ],
+      "exampleElements": [
+        "IgnoreAccessTokenStatus"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<RefreshToken> element",
+      "contextHeading": "<RefreshToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#refreshtokenelement",
+      "elements": [
+        "RefreshToken"
+      ],
+      "exampleElements": [
+        "RefreshToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<RefreshToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

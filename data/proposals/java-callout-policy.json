@@ -1,0 +1,240 @@
+{
+  "source": {
+    "id": "java-callout-policy",
+    "kind": "policy",
+    "title": "java callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Retrieve properties in your Java code",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#retrieve-properties-in-your-java-code",
+      "elements": [],
+      "exampleElements": [
+        "ClassName",
+        "DisplayName",
+        "JavaCallout",
+        "Properties",
+        "Property",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "ClassName",
+        "JavaCallout",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JavaCallout> attributes",
+      "contextHeading": "<JavaCallout> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#javacalloutattributes",
+      "elements": [
+        "JavaCallout"
+      ],
+      "exampleElements": [
+        "JavaCallout"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ClassName> element",
+      "contextHeading": "<ClassName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#classnameelement",
+      "elements": [
+        "ClassName"
+      ],
+      "exampleElements": [
+        "ClassName",
+        "JavaCallout",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Properties> element",
+      "contextHeading": "<Properties> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#Property",
+      "elements": [
+        "Properties"
+      ],
+      "exampleElements": [
+        "Properties",
+        "Property"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Property> element",
+      "contextHeading": "<Property> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#Property",
+      "elements": [
+        "Property"
+      ],
+      "exampleElements": [
+        "Properties",
+        "Property"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Property> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#Property_attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResourceURL> element",
+      "contextHeading": "<ResourceURL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#resourceurlelement",
+      "elements": [
+        "ResourceURL"
+      ],
+      "exampleElements": [
+        "ClassName",
+        "JavaCallout",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<ResourceURL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

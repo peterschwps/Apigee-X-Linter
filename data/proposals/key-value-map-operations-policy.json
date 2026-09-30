@@ -1,0 +1,717 @@
+{
+  "source": {
+    "id": "key-value-map-operations-policy",
+    "kind": "policy",
+    "title": "key value map operations policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "PUT KVM with a literal",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#put-kvm-with-a-literal",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExpiryTimeInSecs",
+        "Key",
+        "KeyValueMapOperations",
+        "Parameter",
+        "Put",
+        "Scope",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "mapIdentifier",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "GET KVM from a literal",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#get-kvm-from-a-literal",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExpiryTimeInSecs",
+        "Get",
+        "Key",
+        "KeyValueMapOperations",
+        "Parameter",
+        "Scope"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "async",
+        "continueOnError",
+        "enabled",
+        "index",
+        "mapIdentifier",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Access a KVM dynamically",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#access-a-kvm-dynamically",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExpiryTimeInSecs",
+        "Get",
+        "Key",
+        "KeyValueMapOperations",
+        "MapName",
+        "Parameter",
+        "Scope"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "async",
+        "continueOnError",
+        "enabled",
+        "index",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "PUT KVM with a variable",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#put-kvm-with-a-variable",
+      "elements": [],
+      "exampleElements": [
+        "Key",
+        "KeyValueMapOperations",
+        "Parameter",
+        "Put",
+        "Scope",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "mapIdentifier",
+        "name",
+        "override",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "GET KVM from a variable",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#get-kvm-from-a-variable",
+      "elements": [],
+      "exampleElements": [
+        "Get",
+        "Key",
+        "KeyValueMapOperations",
+        "Parameter",
+        "Scope"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "index",
+        "mapIdentifier",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "GET value from KVM",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#get-encrypted",
+      "elements": [],
+      "exampleElements": [
+        "Get",
+        "Key",
+        "KeyValueMapOperations",
+        "Parameter",
+        "Scope"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "index",
+        "mapIdentifier",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<KeyValueMapOperations>",
+      "contextHeading": "<KeyValueMapOperations>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#keyvaluemapoperations",
+      "elements": [
+        "KeyValueMapOperations"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<KeyValueMapOperations>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "Delete",
+        "DisplayName",
+        "Entry",
+        "ExpiryTimeInSecs",
+        "Get",
+        "InitialEntries",
+        "Key",
+        "KeyValueMapOperations",
+        "Parameter",
+        "Put",
+        "Scope",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "async",
+        "continueOnError",
+        "enabled",
+        "index",
+        "mapIdentifier",
+        "name",
+        "override"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<KeyValueMapOperations> attributes",
+      "contextHeading": "<KeyValueMapOperations> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#keyvaluemapoperations_attributes",
+      "elements": [
+        "KeyValueMapOperations"
+      ],
+      "exampleElements": [
+        "KeyValueMapOperations"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "mapIdentifier",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "mapIdentifier",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Delete> element",
+      "contextHeading": "<Delete> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#DeleteElement",
+      "elements": [
+        "Delete"
+      ],
+      "exampleElements": [
+        "Delete",
+        "Key",
+        "Parameter"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of <Get>, <Put>, or <Delete> must be used."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Entry> element",
+      "contextHeading": "<Entry> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#InitialEntries_EntryElement",
+      "elements": [
+        "Entry"
+      ],
+      "exampleElements": [
+        "Entry",
+        "InitialEntries",
+        "Key",
+        "Parameter",
+        "Value"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExclusiveCache> element",
+      "contextHeading": "<ExclusiveCache> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#exclusivecacheelement",
+      "elements": [
+        "ExclusiveCache"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpiryTimeInSecs> element",
+      "contextHeading": "<ExpiryTimeInSecs> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#ExpiryTimeInSecsElement",
+      "elements": [
+        "ExpiryTimeInSecs"
+      ],
+      "exampleElements": [
+        "ExpiryTimeInSecs"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following occurs:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Get> element",
+      "contextHeading": "<Get> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#GetElement",
+      "elements": [
+        "Get"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of <Get>, <Put>, or <Delete> must be used."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Get> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#getelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "assignTo",
+          "required": true
+        },
+        {
+          "name": "index",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Get a single item from a KVM",
+      "contextHeading": "<Get> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#get-a-single-item-from-a-kvm",
+      "elements": [],
+      "exampleElements": [
+        "Get",
+        "Key",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "index"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Excluding retrieved data from Debug Sessions",
+      "contextHeading": "<Get> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#excluding-retrieved-data-from-debug-sessions",
+      "elements": [],
+      "exampleElements": [
+        "Get",
+        "Key",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "index"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Get multiple items from a KVM",
+      "contextHeading": "<Get> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#get-multiple-items-from-a-kvm",
+      "elements": [],
+      "exampleElements": [
+        "Get",
+        "Key",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "index",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<InitialEntries> element",
+      "contextHeading": "<InitialEntries> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#InitialEntriesElement",
+      "elements": [
+        "InitialEntries"
+      ],
+      "exampleElements": [
+        "Entry",
+        "InitialEntries",
+        "Key",
+        "Parameter",
+        "Value"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Key> element",
+      "contextHeading": "<Key> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#KeyElement",
+      "elements": [
+        "Key"
+      ],
+      "exampleElements": [
+        "Key",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<MapName> element",
+      "contextHeading": "<MapName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#MapName",
+      "elements": [
+        "MapName"
+      ],
+      "exampleElements": [
+        "MapName"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following forms --> <MapName>literal_string</MapName> <MapName ref=\"flow."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Parameter> element",
+      "contextHeading": "<Parameter> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#parameter",
+      "elements": [
+        "Parameter"
+      ],
+      "exampleElements": [
+        "Key",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Parameter> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#parameterelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Put> element",
+      "contextHeading": "<Put> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#PutElement",
+      "elements": [
+        "Put"
+      ],
+      "exampleElements": [
+        "Key",
+        "Parameter",
+        "Put",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "override",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Put> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#putelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "override",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Scope> element",
+      "contextHeading": "<Scope> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#ScopeElement",
+      "elements": [
+        "Scope"
+      ],
+      "exampleElements": [
+        "Scope"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Value> element",
+      "contextHeading": "<Value> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#InitialEntries_Entry_ValueElement",
+      "elements": [
+        "Value"
+      ],
+      "exampleElements": [
+        "Entry",
+        "InitialEntries",
+        "Key",
+        "Parameter",
+        "Put",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Value> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#valueelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Usage notes",
+      "contextHeading": "<Value> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#usagenotes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format key=value."
+      ]
+    },
+    {
+      "heading": "Specifying and retrieving key names",
+      "contextHeading": "<Value> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#specifying_key_names",
+      "elements": [],
+      "exampleElements": [
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

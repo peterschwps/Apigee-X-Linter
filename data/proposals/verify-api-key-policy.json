@@ -1,0 +1,307 @@
+{
+  "source": {
+    "id": "verify-api-key-policy",
+    "kind": "policy",
+    "title": "verify api key policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Key in query param",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#key-in-query-param",
+      "elements": [],
+      "exampleElements": [
+        "APIKey",
+        "VerifyAPIKey"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Key in header",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#key-in-header",
+      "elements": [],
+      "exampleElements": [
+        "APIKey",
+        "VerifyAPIKey"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Key in variable",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#key-in-variable",
+      "elements": [],
+      "exampleElements": [
+        "APIKey",
+        "ExtractVariables",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "QueryParam",
+        "Source",
+        "VariablePrefix",
+        "VerifyAPIKey"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "ignoreCase",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"true\">{key}</Pattern> </QueryParam> <VariablePrefix>requestAPIKey</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Access policy flow variables",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#access-policy-flow-variables",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "AssignVariable",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Ref",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element Reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#elements",
+      "elements": [],
+      "exampleElements": [
+        "APIKey",
+        "CacheExpiryInSeconds",
+        "DisplayName",
+        "VerifyAPIKey"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<VerifyAPIKey> attributes",
+      "contextHeading": "<VerifyAPIKey> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes",
+      "elements": [
+        "VerifyAPIKey"
+      ],
+      "exampleElements": [
+        "VerifyAPIKey"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<APIKey> element",
+      "contextHeading": "<APIKey> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#apikey",
+      "elements": [
+        "APIKey"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<APIKey> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Examples",
+      "contextHeading": "<APIKey> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#examples",
+      "elements": [],
+      "exampleElements": [
+        "APIKey",
+        "VerifyAPIKey"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheExpiryInSeconds> element",
+      "contextHeading": "<CacheExpiryInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#cache_expiry",
+      "elements": [
+        "CacheExpiryInSeconds"
+      ],
+      "exampleElements": [
+        "CacheExpiryInSeconds"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheExpiryInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#attributes_1",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<CacheExpiryInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

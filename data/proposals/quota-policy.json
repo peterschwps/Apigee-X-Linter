@@ -1,0 +1,769 @@
+{
+  "source": {
+    "id": "quota-policy",
+    "kind": "policy",
+    "title": "quota policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Top-level elements and selected nested values are represented; nested configuration and conditional requirements need review."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Quota policy types",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#quotapolicytypes",
+      "elements": [],
+      "exampleElements": [
+        "Quota"
+      ],
+      "exampleAttributes": [
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values of type include:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "How quotas are counted if no API products are in use",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#how-quotas-are-counted-if-no-api-products-are-in-use",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern described in Introduction to antipatterns."
+      ]
+    },
+    {
+      "heading": "Time notation",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#timenotation",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format: YYYY-MM-DD.",
+        "format: hours:minutes:seconds."
+      ]
+    },
+    {
+      "heading": "Dynamic Quotas",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#dynamic-quotas-sample",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Interval",
+        "Quota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "countRef",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Start time",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#start-time",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Interval",
+        "Quota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Access Counter",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#access-counter",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Interval",
+        "Quota",
+        "Set",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "count",
+        "createNew",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Shared counters",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#shared-counters",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "BasePath",
+        "CountOnly",
+        "Distributed",
+        "EnforceOnly",
+        "ExtractVariables",
+        "Flows",
+        "HTTPProxyConnection",
+        "Interval",
+        "JSONPath",
+        "JSONPayload",
+        "MessageWeight",
+        "Name",
+        "PostFlow",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Quota",
+        "Request",
+        "Response",
+        "RouteRule",
+        "SharedName",
+        "Source",
+        "Step",
+        "TimeUnit",
+        "Variable",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "First Request",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#first-request",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Interval",
+        "Quota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Set identifier",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#set-identifier",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Identifier",
+        "Interval",
+        "Quota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "count",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Class",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#class-example",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "Class",
+        "Interval",
+        "Quota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "class",
+        "count",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Quota> element",
+      "contextHeading": "<Quota> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#quota",
+      "elements": [
+        "Quota"
+      ],
+      "exampleElements": [
+        "Allow",
+        "AsynchronousConfiguration",
+        "Class",
+        "DefaultConfig",
+        "DisplayName",
+        "Distributed",
+        "Identifier",
+        "Interval",
+        "MessageWeight",
+        "Quota",
+        "StartTime",
+        "SyncIntervalInSeconds",
+        "SyncMessageCount",
+        "Synchronous",
+        "TimeUnit",
+        "UseQuotaConfigInAPIProduct"
+      ],
+      "exampleAttributes": [
+        "class",
+        "continueOnError",
+        "count",
+        "countRef",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "type",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Allow>",
+      "contextHeading": "<Allow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#allow",
+      "elements": [
+        "Allow"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Class"
+      ],
+      "exampleAttributes": [
+        "class",
+        "count",
+        "countRef",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "count",
+          "required": false
+        },
+        {
+          "name": "countRef",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Class>",
+      "contextHeading": "<Class>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#class",
+      "elements": [
+        "Class"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Class"
+      ],
+      "exampleAttributes": [
+        "class",
+        "count",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the <Allow> child elements to determine the allowed count of the policy."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Allow> (child of <Class>)",
+      "contextHeading": "<Allow> (child of <Class>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#classallow",
+      "elements": [
+        "Allow",
+        "Class"
+      ],
+      "exampleElements": [
+        "Allow",
+        "Class"
+      ],
+      "exampleAttributes": [
+        "count",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "class",
+          "required": true
+        },
+        {
+          "name": "count",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Interval>",
+      "contextHeading": "<Interval>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#interval",
+      "elements": [
+        "Interval"
+      ],
+      "exampleElements": [
+        "Interval"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<TimeUnit>",
+      "contextHeading": "<TimeUnit>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#timeunit",
+      "elements": [
+        "TimeUnit"
+      ],
+      "exampleElements": [
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [
+        "minute",
+        "hour",
+        "day",
+        "week",
+        "month"
+      ],
+      "valueHints": [
+        "Select from minute, hour, day, week, month, or year."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<StartTime>",
+      "contextHeading": "<StartTime>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#starttime",
+      "elements": [
+        "StartTime"
+      ],
+      "exampleElements": [
+        "StartTime"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Distributed>",
+      "contextHeading": "<Distributed>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#distributed",
+      "elements": [
+        "Distributed"
+      ],
+      "exampleElements": [
+        "Distributed",
+        "Synchronous"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Synchronous>",
+      "contextHeading": "<Synchronous>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#synchronous",
+      "elements": [
+        "Synchronous"
+      ],
+      "exampleElements": [
+        "Synchronous"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AsynchronousConfiguration>",
+      "contextHeading": "<AsynchronousConfiguration>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#asynchronousconfiguration",
+      "elements": [
+        "AsynchronousConfiguration"
+      ],
+      "exampleElements": [
+        "AsynchronousConfiguration",
+        "SyncIntervalInSeconds",
+        "SyncMessageCount"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SyncIntervalInSeconds>",
+      "contextHeading": "<SyncIntervalInSeconds>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#syncintervalinseconds",
+      "elements": [
+        "SyncIntervalInSeconds"
+      ],
+      "exampleElements": [
+        "AsynchronousConfiguration",
+        "SyncIntervalInSeconds"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SyncMessageCount>",
+      "contextHeading": "<SyncMessageCount>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#syncmessagecount",
+      "elements": [
+        "SyncMessageCount"
+      ],
+      "exampleElements": [
+        "AsynchronousConfiguration",
+        "SyncMessageCount"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Identifier>",
+      "contextHeading": "<Identifier>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#identifier",
+      "elements": [
+        "Identifier"
+      ],
+      "exampleElements": [
+        "Identifier"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<MessageWeight>",
+      "contextHeading": "<MessageWeight>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#messageweight",
+      "elements": [
+        "MessageWeight"
+      ],
+      "exampleElements": [
+        "MessageWeight"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UseQuotaConfigInAPIProduct>",
+      "contextHeading": "<UseQuotaConfigInAPIProduct>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#usequotaconfiginapiproduct",
+      "elements": [
+        "UseQuotaConfigInAPIProduct"
+      ],
+      "exampleElements": [
+        "DefaultConfig",
+        "UseQuotaConfigInAPIProduct"
+      ],
+      "exampleAttributes": [
+        "stepName"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "stepName",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DefaultConfig>",
+      "contextHeading": "<DefaultConfig>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#defaultconfig",
+      "elements": [
+        "DefaultConfig"
+      ],
+      "exampleElements": [
+        "Allow",
+        "DefaultConfig",
+        "Interval",
+        "TimeUnit",
+        "UseQuotaConfigInAPIProduct"
+      ],
+      "exampleAttributes": [
+        "stepName"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SharedName>",
+      "contextHeading": "<SharedName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#sharedname",
+      "elements": [
+        "SharedName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CountOnly>",
+      "contextHeading": "<CountOnly>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#countonly",
+      "elements": [
+        "CountOnly"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<EnforceOnly>",
+      "contextHeading": "<EnforceOnly>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#enforceonly",
+      "elements": [
+        "EnforceOnly"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<EnforceOnly>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "FaultRules",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

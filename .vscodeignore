@@ -1,0 +1,16 @@
+.git/**
+.gitignore
+.vscode/**
+.cache/**
+src/**
+scripts/**
+dist/scripts/**
+dist/src/**
+node_modules/**
+data/candidates/**
+data/proposals/**
+data/sources.json
+data/source-hashes.json
+tsconfig.json
+*.vsix
+*.tsbuildinfo

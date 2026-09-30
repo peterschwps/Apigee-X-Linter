@@ -1,0 +1,313 @@
+{
+  "source": {
+    "id": "javascript-policy",
+    "kind": "policy",
+    "title": "javascript policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Rewrite the target URL",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#rewrite-the-target-url",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Javascript",
+        "Properties",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "timeLimit"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern applies to any JavaScript source file: jsc://filename."
+      ]
+    },
+    {
+      "heading": "Retrieve property value from JavaScript",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#retrieve-property-value-from-javascript",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Javascript",
+        "Properties",
+        "Property",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "timeLimit"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "ClientAuthEnabled",
+        "DisplayName",
+        "Enabled",
+        "IncludeURL",
+        "Javascript",
+        "KeyAlias",
+        "KeyStore",
+        "Properties",
+        "Property",
+        "ResourceURL",
+        "SSLInfo",
+        "Source",
+        "TrustStore"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "timeLimit"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Javascript> Attributes",
+      "contextHeading": "<Javascript> Attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#JavaScript",
+      "elements": [
+        "Javascript"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "languageVersion",
+          "required": false
+        },
+        {
+          "name": "timeLimit",
+          "required": true
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IncludeURL> element",
+      "contextHeading": "<IncludeURL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#IncludeURL",
+      "elements": [
+        "IncludeURL"
+      ],
+      "exampleElements": [
+        "IncludeURL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Property> element",
+      "contextHeading": "<Property> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#Property",
+      "elements": [
+        "Property"
+      ],
+      "exampleElements": [
+        "Properties",
+        "Property"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Property> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#Property_attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResourceURL> element",
+      "contextHeading": "<ResourceURL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#ResourceURL",
+      "elements": [
+        "ResourceURL"
+      ],
+      "exampleElements": [
+        "ResourceURL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source> element",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#Source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#sourceelement-example",
+      "elements": [],
+      "exampleElements": [
+        "Javascript",
+        "Properties",
+        "Property",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "name",
+        "timeLimit"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SSLInfo> element",
+      "contextHeading": "<SSLInfo> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#SSLInfo",
+      "elements": [
+        "SSLInfo"
+      ],
+      "exampleElements": [
+        "ClientAuthEnabled",
+        "Enabled",
+        "KeyAlias",
+        "KeyStore",
+        "SSLInfo",
+        "TrustStore"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<SSLInfo> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

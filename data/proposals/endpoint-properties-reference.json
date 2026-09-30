@@ -1,0 +1,70 @@
+{
+  "source": {
+    "id": "endpoint-properties-reference",
+    "kind": "core",
+    "title": "Endpoint properties reference",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "TargetEndpoint Transport Properties",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#targetendpointtransportproperties",
+      "elements": [],
+      "exampleElements": [
+        "HTTPTargetConnection",
+        "Properties",
+        "Property",
+        "TargetEndpoint",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "ProxyEndpoint Transport Properties",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#proxyendpointtransportproperties",
+      "elements": [],
+      "exampleElements": [
+        "BasePath",
+        "HTTPProxyConnection",
+        "Properties",
+        "Property",
+        "ProxyEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Request headers",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#request-headers",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern are removed from incoming requests if a client sends them.",
+        "pattern is reserved for Apigee."
+      ]
+    }
+  ]
+}

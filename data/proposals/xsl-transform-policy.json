@@ -1,0 +1,223 @@
+{
+  "source": {
+    "id": "xsl-transform-policy",
+    "kind": "policy",
+    "title": "xsl transform policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "XSL policy -->",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl-policy---",
+      "elements": [],
+      "exampleElements": [
+        "ResourceURL",
+        "Source",
+        "XSL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "XSLT stylesheet -->",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xslt-stylesheet---",
+      "elements": [],
+      "exampleElements": [
+        "xsl:for-each",
+        "xsl:if",
+        "xsl:number",
+        "xsl:output",
+        "xsl:stylesheet",
+        "xsl:template",
+        "xsl:text",
+        "xsl:value-of",
+        "xsl:variable"
+      ],
+      "exampleAttributes": [
+        "format",
+        "match",
+        "method",
+        "name",
+        "select",
+        "test",
+        "version",
+        "xmlns:xsl"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format=\"1."
+      ]
+    },
+    {
+      "heading": "Message -->",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#message---",
+      "elements": [],
+      "exampleElements": [
+        "list",
+        "listitem",
+        "title"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Transformed message",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#transformed-message",
+      "elements": [],
+      "exampleElements": [
+        "Life"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XSL> element",
+      "contextHeading": "<XSL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl",
+      "elements": [
+        "XSL"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<OutputVariable>",
+      "contextHeading": "<OutputVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#outputvariable",
+      "elements": [
+        "OutputVariable"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Parameters>",
+      "contextHeading": "<Parameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#parameters",
+      "elements": [
+        "Parameters"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ignoreUnresolvedVariables",
+          "required": false,
+          "type": "Boolean"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Parameter>",
+      "contextHeading": "<Parameter>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#parameters",
+      "elements": [
+        "Parameter"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResourceURL>",
+      "contextHeading": "<ResourceURL>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#resourceurl",
+      "elements": [
+        "ResourceURL"
+      ],
+      "exampleElements": [
+        "ResourceURL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

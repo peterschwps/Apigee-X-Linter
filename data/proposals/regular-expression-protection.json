@@ -1,0 +1,720 @@
+{
+  "source": {
+    "id": "regular-expression-protection",
+    "kind": "policy",
+    "title": "regular expression protection",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "JavaScript include attack protection",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#javascript-include-attack-protection",
+      "elements": [],
+      "exampleElements": [
+        "Expression",
+        "JSONPath",
+        "JSONPayload",
+        "Pattern",
+        "RegularExpressionProtection",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "escapeSlashCharacter",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern><![CDATA[ <\\s*script\\b[^>]*>[^<]+<\\s*\\/\\s*script\\s*> ]]></Pattern> </JSONPath> </JSONPayload> </RegularExpressionProtection>",
+        "Pattern>.",
+        "Pattern> includes XML-reserved characters (\", &, ', <, or >), you must wrap it in a CDATA (character data) section, as shown in the sample above, or XML-encode the reserved characters: for example, by replacing < with &lt; and > with &gt;."
+      ]
+    },
+    {
+      "heading": "Case insensitive matching",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#case-insensitive-matching",
+      "elements": [],
+      "exampleElements": [
+        "Pattern"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>[\\s]*(?i)((delete)|(exec)|(drop\\s*table)|(insert)|(shutdown)|(update)|(\\bor\\b))</Pattern>"
+      ]
+    },
+    {
+      "heading": "Form parameter checks",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#form-parameter-checks",
+      "elements": [],
+      "exampleElements": [
+        "FormParam",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "RegularExpressionProtection",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern><![CDATA[[-+=$%&]]]></Pattern> </FormParam> <FormParam name=\"lastname\"> <Pattern><![CDATA[[-+=$%&]]]></Pattern> </FormParam> </RegularExpressionProtection>"
+      ]
+    },
+    {
+      "heading": "About the Regular Expression Protection policy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#usagenotes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern in a string."
+      ]
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Expression",
+        "FormParam",
+        "Header",
+        "IgnoreUnresolvedVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Namespace",
+        "Namespaces",
+        "Pattern",
+        "QueryParam",
+        "RegularExpressionProtection",
+        "Source",
+        "Type",
+        "URIPath",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </URIPath> <QueryParam name=\"a-query-param\"> <Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </QueryParam> <Header name=\"a-header\"> <Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </Header> <FormParam name=\"a-form-param\"> <Pattern>REGEX PATTERN</Pat",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </Variable> <XMLPayload> <Namespaces> <Namespace prefix=\"apigee\">http://www.",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </XPath> </XMLPayload> <JSONPayload> <JSONPath> <Expression>$.",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </JSONPath> </JSONPayload> </RegularExpressionProtection>"
+      ]
+    },
+    {
+      "heading": "<RegularExpressionProtection> attributes",
+      "contextHeading": "<RegularExpressionProtection> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#regularexpressionprotectionattributes",
+      "elements": [
+        "RegularExpressionProtection"
+      ],
+      "exampleElements": [
+        "RegularExpressionProtection"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source> element",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#sourceelement",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables> element",
+      "contextHeading": "<IgnoreUnresolvedVariables> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#ignoreunresolvedvariableselement",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<URIPath> element",
+      "contextHeading": "<URIPath> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#uripathelement",
+      "elements": [
+        "URIPath"
+      ],
+      "exampleElements": [
+        "Pattern",
+        "URIPath"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> element specifying a regular expression pattern to match.",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </URIPath>"
+      ]
+    },
+    {
+      "heading": "<QueryParam> element",
+      "contextHeading": "<QueryParam> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#queryparamelement",
+      "elements": [
+        "QueryParam"
+      ],
+      "exampleElements": [
+        "Pattern",
+        "QueryParam"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> element specifying a regular expression pattern to match.",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </QueryParam>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<QueryParam> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#queryparamelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Header> element",
+      "contextHeading": "<Header> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#headerelement",
+      "elements": [
+        "Header"
+      ],
+      "exampleElements": [
+        "Header",
+        "Pattern"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> element specifying a regular expression pattern to match.",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </Header>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Header> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#headerelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FormParam> element",
+      "contextHeading": "<FormParam> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#formparamelement",
+      "elements": [
+        "FormParam"
+      ],
+      "exampleElements": [
+        "FormParam",
+        "Pattern"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> element specifying a regular expression pattern to match.",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </FormParam>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<FormParam> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#formparamelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Variable> element",
+      "contextHeading": "<Variable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#variableelement",
+      "elements": [
+        "Variable"
+      ],
+      "exampleElements": [
+        "Pattern",
+        "Variable"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </Variable>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Variable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#variableelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XMLPayload> element",
+      "contextHeading": "<XMLPayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#xmlpayloadelement",
+      "elements": [
+        "XMLPayload"
+      ],
+      "exampleElements": [
+        "Expression",
+        "Namespace",
+        "Namespaces",
+        "Pattern",
+        "Type",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </XPath> </XMLPayload>"
+      ]
+    },
+    {
+      "heading": "<XMLPayload>/<Namespaces> element",
+      "contextHeading": "<XMLPayload>/<Namespaces> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#xmlpayloadnamespaceselement",
+      "elements": [
+        "XMLPayload",
+        "Namespaces"
+      ],
+      "exampleElements": [
+        "Expression",
+        "Namespace",
+        "Namespaces",
+        "Pattern",
+        "Type",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </XPath> </XMLPayload>"
+      ]
+    },
+    {
+      "heading": "<XMLPayload>/<Namespaces>/<Namespace> element",
+      "contextHeading": "<XMLPayload>/<Namespaces>/<Namespace> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#xmlpayloadnamespacesnamespaceelement",
+      "elements": [
+        "XMLPayload",
+        "Namespaces",
+        "Namespace"
+      ],
+      "exampleElements": [
+        "Namespace",
+        "Namespaces"
+      ],
+      "exampleAttributes": [
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<XMLPayload>/<Namespaces>/<Namespace> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#xmlpayloadnamespacesnamespaceelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "prefix",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XMLPayload>/<XPath> element",
+      "contextHeading": "<XMLPayload>/<XPath> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#xmlpayloadxpathelement",
+      "elements": [
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleElements": [
+        "Expression",
+        "Pattern",
+        "Type",
+        "XPath"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </XPath>"
+      ]
+    },
+    {
+      "heading": "<XMLPayload>/<XPath>/<Expression> element",
+      "contextHeading": "<XMLPayload>/<XPath>/<Expression> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#xmlpayloadxpathexpressionelement",
+      "elements": [
+        "XMLPayload",
+        "XPath",
+        "Expression"
+      ],
+      "exampleElements": [
+        "Expression",
+        "Pattern",
+        "Type",
+        "XPath"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </XPath>"
+      ]
+    },
+    {
+      "heading": "<XMLPayload>/<XPath>/<Type> element",
+      "contextHeading": "<XMLPayload>/<XPath>/<Type> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#xmlpayloadxpathtypeelement",
+      "elements": [
+        "XMLPayload",
+        "XPath",
+        "Type"
+      ],
+      "exampleElements": [
+        "Expression",
+        "Pattern",
+        "Type",
+        "XPath"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the attributes on one of the elements in the XML document, but which attribute and which element is not defined."
+      ],
+      "formatHints": [
+        "pattern matching against the value of just that single attribute.",
+        "pattern matching against each of the attribute values on each element in the XML document.",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </XPath>"
+      ]
+    },
+    {
+      "heading": "<XMLPayload>/<XPath>/<Pattern> element",
+      "contextHeading": "<XMLPayload>/<XPath>/<Pattern> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#xmlpayloadxpathpatternelement",
+      "elements": [
+        "XMLPayload",
+        "XPath",
+        "Pattern"
+      ],
+      "exampleElements": [
+        "Expression",
+        "Pattern",
+        "Type",
+        "XPath"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern.",
+        "Pattern> element includes XML-reserved characters (\", &, ', <, or .",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </XPath>"
+      ]
+    },
+    {
+      "heading": "<JSONPayload> element",
+      "contextHeading": "<JSONPayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#jsonpayloadelement",
+      "elements": [
+        "JSONPayload"
+      ],
+      "exampleElements": [
+        "Expression",
+        "JSONPath",
+        "JSONPayload",
+        "Pattern"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </JSONPath> </JSONPayload>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<JSONPayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#jsonpayloadelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "escapeSlashCharacter",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JSONPayload>/<JSONPath>/<Expression> element",
+      "contextHeading": "<JSONPayload>/<JSONPath>/<Expression> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#jsonpayloadjsonpathexpressionelement",
+      "elements": [
+        "JSONPayload",
+        "JSONPath",
+        "Expression"
+      ],
+      "exampleElements": [
+        "Expression",
+        "JSONPath",
+        "Pattern"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </JSONPath>"
+      ]
+    },
+    {
+      "heading": "<JSONPayload>/<JSONPath>/<Pattern> element",
+      "contextHeading": "<JSONPayload>/<JSONPath>/<Pattern> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection#jsonpayloadjsonpathpatternelement",
+      "elements": [
+        "JSONPayload",
+        "JSONPath",
+        "Pattern"
+      ],
+      "exampleElements": [
+        "Expression",
+        "JSONPath",
+        "Pattern"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern.",
+        "Pattern> element includes XML-reserved characters (\", &, ', <, or .",
+        "Pattern>REGEX PATTERN</Pattern> <Pattern>REGEX PATTERN</Pattern> </JSONPath>"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "source": {
+    "id": "parse-dialogflow-request-policy",
+    "kind": "policy",
+    "title": "parse dialogflow request policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<ParseDialogflowRequest>",
+      "contextHeading": "<ParseDialogflowRequest>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#parsediagrequest",
+      "elements": [
+        "ParseDialogflowRequest"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ParseDialogflowRequest>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DialogflowVersion",
+        "DisplayName",
+        "ParseDialogflowRequest",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Webhook request",
+      "contextHeading": "<ParseDialogflowRequest>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#webhook-request",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format) from a Dialogflow agent."
+      ]
+    },
+    {
+      "heading": "ParseDialogflowRequest policy",
+      "contextHeading": "<ParseDialogflowRequest>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#parsedialogflowrequest-policy",
+      "elements": [],
+      "exampleElements": [
+        "DialogflowVersion",
+        "DisplayName",
+        "ParseDialogflowRequest",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Flow variables",
+      "contextHeading": "<ParseDialogflowRequest>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#flow-variables",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<VariablePrefix>",
+      "contextHeading": "<VariablePrefix>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#varprefixelement",
+      "elements": [
+        "VariablePrefix"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<VariablePrefix>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<VariablePrefix>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DialogflowVersion>",
+      "contextHeading": "<DialogflowVersion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#dfverelement",
+      "elements": [
+        "DialogflowVersion"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DialogflowVersion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "DialogflowVersion"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DialogflowVersion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "DialogflowVersion"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

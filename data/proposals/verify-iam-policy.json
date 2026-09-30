@@ -1,0 +1,119 @@
+{
+  "source": {
+    "id": "verify-iam-policy",
+    "kind": "policy",
+    "title": "verify iam policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "CredentialSource",
+        "DisplayName",
+        "VerifyIAM"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<VerifyIAM> attributes",
+      "contextHeading": "<VerifyIAM> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#verifyiamattributes",
+      "elements": [
+        "VerifyIAM"
+      ],
+      "exampleElements": [
+        "VerifyIAM"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CredentialSource> element",
+      "contextHeading": "<CredentialSource> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#credentialsourceelement",
+      "elements": [
+        "CredentialSource"
+      ],
+      "exampleElements": [
+        "CredentialSource",
+        "DisplayName",
+        "VerifyIAM"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format \"Bearer xyz\"."
+      ]
+    }
+  ]
+}

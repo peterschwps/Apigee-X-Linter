@@ -1,0 +1,482 @@
+[
+  {
+    "id": "api-proxy-configuration-reference",
+    "kind": "core",
+    "title": "API proxy configuration reference",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Base, proxy endpoint, target endpoint, and integration endpoint roots have an initial reviewed model; nested configuration is still incomplete."
+  },
+  {
+    "id": "flow-configuration-reference",
+    "kind": "core",
+    "title": "Flow configuration reference",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Flow child names are partly represented in endpoint specifications; nested flow contexts still need review."
+  },
+  {
+    "id": "endpoint-properties-reference",
+    "kind": "core",
+    "title": "Endpoint properties reference",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "access-control-policy",
+    "kind": "policy",
+    "title": "access control policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Core element and attribute rules are represented; review remaining conditional and deprecation details."
+  },
+  {
+    "id": "access-entity-policy",
+    "kind": "policy",
+    "title": "access entity policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "assert-condition-policy",
+    "kind": "policy",
+    "title": "assert condition policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "assign-message-policy",
+    "kind": "policy",
+    "title": "assign message policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "basic-authentication-policy",
+    "kind": "policy",
+    "title": "basic authentication policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "cors-policy",
+    "kind": "policy",
+    "title": "cors policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "data-capture-policy",
+    "kind": "policy",
+    "title": "data capture policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "decode-jws-policy",
+    "kind": "policy",
+    "title": "decode jws policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "decode-jwt-policy",
+    "kind": "policy",
+    "title": "decode jwt policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "delete-oauth-v2-info",
+    "kind": "policy",
+    "title": "delete oauth v2 info",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "external-callout-policy",
+    "kind": "policy",
+    "title": "external callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "extract-variables-policy",
+    "kind": "policy",
+    "title": "extract variables policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "flow-callout-policy",
+    "kind": "policy",
+    "title": "flow callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "generate-jws-policy",
+    "kind": "policy",
+    "title": "generate jws policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jws-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "generate-jwt-policy",
+    "kind": "policy",
+    "title": "generate jwt policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "generate-saml-assertion-policy",
+    "kind": "policy",
+    "title": "generate saml assertion policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "get-oauth-v2-info-policy",
+    "kind": "policy",
+    "title": "get oauth v2 info policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "graphql-policy",
+    "kind": "policy",
+    "title": "graphql policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "hmac-policy",
+    "kind": "policy",
+    "title": "hmac policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "http-modifier-policy",
+    "kind": "policy",
+    "title": "http modifier policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/http-modifier-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "integration-callout-policy",
+    "kind": "policy",
+    "title": "integration callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "invalidate-cache-policy",
+    "kind": "policy",
+    "title": "invalidate cache policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "java-callout-policy",
+    "kind": "policy",
+    "title": "java callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "javascript-policy",
+    "kind": "policy",
+    "title": "javascript policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "json-threat-protection-policy",
+    "kind": "policy",
+    "title": "json threat protection policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "json-xml-policy",
+    "kind": "policy",
+    "title": "json xml policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "key-value-map-operations-policy",
+    "kind": "policy",
+    "title": "key value map operations policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "llm-token-quota-policy",
+    "kind": "policy",
+    "title": "llm token quota policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "lookup-cache-policy",
+    "kind": "policy",
+    "title": "lookup cache policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "message-logging-policy",
+    "kind": "policy",
+    "title": "message logging policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "message-validation-policy",
+    "kind": "policy",
+    "title": "message validation policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "monetization-limits-check-policy",
+    "kind": "policy",
+    "title": "monetization limits check policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "oas-validation-policy",
+    "kind": "policy",
+    "title": "oas validation policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "oauthv2-policy",
+    "kind": "policy",
+    "title": "oauthv2 policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "parse-dialogflow-request-policy",
+    "kind": "policy",
+    "title": "parse dialogflow request policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "parse-payload-policy",
+    "kind": "policy",
+    "title": "parse payload policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "populate-cache-policy",
+    "kind": "policy",
+    "title": "populate cache policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "prompt-token-limit-policy",
+    "kind": "policy",
+    "title": "prompt token limit policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "publish-message-policy",
+    "kind": "policy",
+    "title": "publish message policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "python-script-policy",
+    "kind": "policy",
+    "title": "python script policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "quota-policy",
+    "kind": "policy",
+    "title": "quota policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Top-level elements and selected nested values are represented; nested configuration and conditional requirements need review."
+  },
+  {
+    "id": "raise-fault-policy",
+    "kind": "policy",
+    "title": "raise fault policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "read-property-set-policy",
+    "kind": "policy",
+    "title": "read property set policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "regular-expression-protection",
+    "kind": "policy",
+    "title": "regular expression protection",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "reset-quota-policy",
+    "kind": "policy",
+    "title": "reset quota policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "response-cache-policy",
+    "kind": "policy",
+    "title": "response cache policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "revoke-oauth-v2-policy",
+    "kind": "policy",
+    "title": "revoke oauth v2 policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "sanitize-llm-response-policy",
+    "kind": "policy",
+    "title": "sanitize llm response policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "sanitize-user-prompt-policy",
+    "kind": "policy",
+    "title": "sanitize user prompt policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "semantic-cache-lookup-policy",
+    "kind": "policy",
+    "title": "semantic cache lookup policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "semantic-cache-populate-policy",
+    "kind": "policy",
+    "title": "semantic cache populate policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "service-callout-policy",
+    "kind": "policy",
+    "title": "service callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "set-dialogflow-response-policy",
+    "kind": "policy",
+    "title": "set dialogflow response policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "set-integration-request-policy",
+    "kind": "policy",
+    "title": "set integration request policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "set-oauth-v2-info-policy",
+    "kind": "policy",
+    "title": "set oauth v2 info policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "spike-arrest-policy",
+    "kind": "policy",
+    "title": "spike arrest policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "trace-capture-policy",
+    "kind": "policy",
+    "title": "trace capture policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "validate-saml-assertion-policy",
+    "kind": "policy",
+    "title": "validate saml assertion policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "verify-api-key-policy",
+    "kind": "policy",
+    "title": "verify api key policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "verify-iam-policy",
+    "kind": "policy",
+    "title": "verify iam policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "verify-jws-policy",
+    "kind": "policy",
+    "title": "verify jws policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "verify-jwt-policy",
+    "kind": "policy",
+    "title": "verify jwt policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jwt-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "xml-json-policy",
+    "kind": "policy",
+    "title": "xml json policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-json-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "xml-threat-protection-policy",
+    "kind": "policy",
+    "title": "xml threat protection policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy",
+    "reviewStatus": "pending"
+  },
+  {
+    "id": "xsl-transform-policy",
+    "kind": "policy",
+    "title": "xsl transform policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
+    "reviewStatus": "pending"
+  }
+]

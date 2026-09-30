@@ -1,0 +1,348 @@
+{
+  "source": {
+    "id": "basic-authentication-policy",
+    "kind": "policy",
+    "title": "basic authentication policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Outbound encoding",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#outbound-encoding",
+      "elements": [],
+      "exampleElements": [
+        "AssignTo",
+        "BasicAuthentication",
+        "DisplayName",
+        "Get",
+        "IgnoreUnresolvedVariables",
+        "Key",
+        "KeyValueMapOperations",
+        "Operation",
+        "Parameter",
+        "Password",
+        "Scope",
+        "User"
+      ],
+      "exampleAttributes": [
+        "assignTo",
+        "createNew",
+        "index",
+        "mapIdentifier",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Inbound decoding",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#inbound-decoding",
+      "elements": [],
+      "exampleElements": [
+        "BasicAuthentication",
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "Operation",
+        "Password",
+        "Source",
+        "User"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "AssignTo",
+        "BasicAuthentication",
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "Operation",
+        "Password",
+        "Source",
+        "User"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<BasicAuthentication> attributes",
+      "contextHeading": "<BasicAuthentication> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#basicauthenticationattributes",
+      "elements": [
+        "BasicAuthentication"
+      ],
+      "exampleElements": [
+        "BasicAuthentication"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Operation> element",
+      "contextHeading": "<Operation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#operationelement",
+      "elements": [
+        "Operation"
+      ],
+      "exampleElements": [
+        "Operation"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables> element",
+      "contextHeading": "<IgnoreUnresolvedVariables> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#ignoreunresolvedvariableselement",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<User> element",
+      "contextHeading": "<User> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#userelement",
+      "elements": [
+        "User"
+      ],
+      "exampleElements": [
+        "User"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<User> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#userelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Password> element",
+      "contextHeading": "<Password> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#passwordelement",
+      "elements": [
+        "Password"
+      ],
+      "exampleElements": [
+        "Password"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Password> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#passwordelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AssignTo> element",
+      "contextHeading": "<AssignTo> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#assigntoelement",
+      "elements": [
+        "AssignTo"
+      ],
+      "exampleElements": [
+        "AssignTo"
+      ],
+      "exampleAttributes": [
+        "createNew"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<AssignTo> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#assigntoelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "createNew",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source> element",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#sourceelement",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

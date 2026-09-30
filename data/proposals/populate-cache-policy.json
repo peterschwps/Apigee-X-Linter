@@ -1,0 +1,296 @@
+{
+  "source": {
+    "id": "populate-cache-policy",
+    "kind": "policy",
+    "title": "populate cache policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#element_reference",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "CacheResource",
+        "DisplayName",
+        "ExpirySettings",
+        "KeyFragment",
+        "PopulateCache",
+        "Prefix",
+        "Properties",
+        "Scope",
+        "Source",
+        "TimeoutInSeconds"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PopulateCache> attributes",
+      "contextHeading": "<PopulateCache> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#populatecacheattributes",
+      "elements": [
+        "PopulateCache"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey> element",
+      "contextHeading": "<CacheKey> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#CacheKeyElement",
+      "elements": [
+        "CacheKey"
+      ],
+      "exampleElements": [
+        "CacheKey",
+        "KeyFragment",
+        "Prefix"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheResource> element",
+      "contextHeading": "<CacheResource> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#cacheresourceelement",
+      "elements": [
+        "CacheResource"
+      ],
+      "exampleElements": [
+        "CacheResource"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey>/<KeyFragment> element",
+      "contextHeading": "<CacheKey>/<KeyFragment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#KeyFragmentElement",
+      "elements": [
+        "CacheKey",
+        "KeyFragment"
+      ],
+      "exampleElements": [
+        "KeyFragment"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheKey>/<KeyFragment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#cachekeykeyfragmentelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey>/<Prefix> element",
+      "contextHeading": "<CacheKey>/<Prefix> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#PrefixElement",
+      "elements": [
+        "CacheKey",
+        "Prefix"
+      ],
+      "exampleElements": [
+        "Prefix"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpirySettings> element",
+      "contextHeading": "<ExpirySettings> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#ExpirySettingsElement",
+      "elements": [
+        "ExpirySettings"
+      ],
+      "exampleElements": [
+        "ExpiryDate",
+        "ExpirySettings",
+        "TimeOfDay",
+        "TimeoutInSeconds"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following child elements --> <TimeoutInSeconds ref=\"duration_variable\">seconds_until_expiration</TimeoutInSeconds> <ExpiryDate ref=\"date_variable\">expiration_date</ExpiryDate> <TimeOfDay ref=\"time_variable\">expiration_time</TimeOfDay> </ExpirySettings>"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Child elements of <ExpirySettings>",
+      "contextHeading": "Child elements of <ExpirySettings>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#ExpirySettingsElement-child",
+      "elements": [
+        "ExpirySettings"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the possible child elements."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Scope> element",
+      "contextHeading": "<Scope> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#ScopeElement",
+      "elements": [
+        "Scope"
+      ],
+      "exampleElements": [
+        "Scope"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values include the enumerations below."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source> element",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#SourceElement",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

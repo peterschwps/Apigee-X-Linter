@@ -1,0 +1,624 @@
+{
+  "source": {
+    "id": "prompt-token-limit-policy",
+    "kind": "policy",
+    "title": "prompt token limit policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Syntax",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Identifier",
+        "IgnoreUnresolvedVariables",
+        "PromptTokenLimit",
+        "Properties",
+        "Rate",
+        "UseEffectiveCount",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Identifier",
+        "IgnoreUnresolvedVariables",
+        "PromptTokenLimit",
+        "Properties",
+        "Rate",
+        "UseEffectiveCount",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-1",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Identifier",
+        "PromptTokenLimit",
+        "Properties",
+        "Rate",
+        "UseEffectiveCount",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-2",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Identifier",
+        "PromptTokenLimit",
+        "Properties",
+        "Rate",
+        "UseEffectiveCount",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-3",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Identifier",
+        "PromptTokenLimit",
+        "Properties",
+        "Rate",
+        "UseEffectiveCount",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 4",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-4",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "Identifier",
+        "PromptTokenLimit",
+        "Properties",
+        "Rate",
+        "UseEffectiveCount"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Identifier>",
+      "contextHeading": "<Identifier>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#identifier",
+      "elements": [
+        "Identifier"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Identifier>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Identifier",
+        "PromptTokenLimit"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Identifier>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-1_1",
+      "elements": [],
+      "exampleElements": [
+        "Identifier",
+        "PromptTokenLimit",
+        "Rate",
+        "UseEffectiveCount"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": true
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Rate>",
+      "contextHeading": "<Rate>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#rate",
+      "elements": [
+        "Rate"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Rate>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "PromptTokenLimit",
+        "Rate"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following ways:"
+      ],
+      "formatHints": [
+        "format:"
+      ]
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Rate>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-1_2",
+      "elements": [],
+      "exampleElements": [
+        "PromptTokenLimit",
+        "Rate",
+        "UseEffectiveCount"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Rate>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-2_1",
+      "elements": [],
+      "exampleElements": [
+        "PromptTokenLimit",
+        "Rate",
+        "UseEffectiveCount"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        },
+        {
+          "name": "messagesPerPeriod",
+          "required": false
+        },
+        {
+          "name": "periodInMicroseconds",
+          "required": false
+        },
+        {
+          "name": "maxBurstMessageCount",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UseEffectiveCount>",
+      "contextHeading": "<UseEffectiveCount>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#useeffectivecount",
+      "elements": [
+        "UseEffectiveCount"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "true",
+      "contextHeading": "<UseEffectiveCount>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#true",
+      "elements": [],
+      "exampleElements": [
+        "Identifier",
+        "PromptTokenLimit",
+        "Rate",
+        "UseEffectiveCount"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "false (default)",
+      "contextHeading": "<UseEffectiveCount>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#false-default",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UserPromptSource>",
+      "contextHeading": "<UserPromptSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#userpromptsource",
+      "elements": [
+        "UserPromptSource"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<UserPromptSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "PromptTokenLimit",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<UserPromptSource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-1_3",
+      "elements": [],
+      "exampleElements": [
+        "PromptTokenLimit",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables",
+        "PromptTokenLimit"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables",
+        "PromptTokenLimit",
+        "Rate"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "FaultRules",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "source": {
+    "id": "graphql-policy",
+    "kind": "policy",
+    "title": "graphql policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<GraphQL> element",
+      "contextHeading": "<GraphQL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#graphql",
+      "elements": [
+        "GraphQL"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<GraphQL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "Action",
+        "GraphQL",
+        "MaxCount",
+        "MaxDepth",
+        "MaxPayloadSizeInBytes",
+        "OperationType",
+        "ResourceURL",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "contextHeading": "<GraphQL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "Action",
+        "GraphQL",
+        "MaxCount",
+        "MaxDepth",
+        "MaxPayloadSizeInBytes",
+        "OperationType",
+        "ResourceURL",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Action>",
+      "contextHeading": "<Action>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#action",
+      "elements": [
+        "Action"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following GraphQL actions:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Action>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Action",
+        "GraphQL"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<MaxCount>",
+      "contextHeading": "<MaxCount>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#maxcount",
+      "elements": [
+        "MaxCount"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<MaxCount>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "GraphQL",
+        "MaxCount"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<MaxDepth>",
+      "contextHeading": "<MaxDepth>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#maxdepth",
+      "elements": [
+        "MaxDepth"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<MaxDepth>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "GraphQL",
+        "MaxDepth"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<MaxPayloadSizeInBytes>",
+      "contextHeading": "<MaxPayloadSizeInBytes>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#maxpayloadsize",
+      "elements": [
+        "MaxPayloadSizeInBytes"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<MaxPayloadSizeInBytes>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "GraphQL",
+        "MaxPayloadSizeInBytes"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<OperationType>",
+      "contextHeading": "<OperationType>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#operationtype",
+      "elements": [
+        "OperationType"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<OperationType>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#syntax_5",
+      "elements": [],
+      "exampleElements": [
+        "GraphQL",
+        "OperationType"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResourceURL>",
+      "contextHeading": "<ResourceURL>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#resourceurl",
+      "elements": [
+        "ResourceURL"
+      ],
+      "exampleElements": [
+        "ResourceURL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ResourceURL>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#syntax_6",
+      "elements": [],
+      "exampleElements": [
+        "GraphQL",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#syntax_7",
+      "elements": [],
+      "exampleElements": [
+        "GraphQL",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

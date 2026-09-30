@@ -1,0 +1,35 @@
+{
+  "kind": "proxyEndpoint",
+  "root": "ProxyEndpoint",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
+  "reviewedAt": "2026-09-30",
+  "elements": [
+    {
+      "path": "/ProxyEndpoint",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-proxyendpointconfigurationelements",
+      "attributes": { "name": { "kind": "free", "required": true } },
+      "children": ["Description", "PreFlow", "Flows", "PostFlow", "PostClientFlow", "HTTPProxyConnection", "FaultRules", "DefaultFaultRule", "RouteRule"]
+    },
+    { "path": "/ProxyEndpoint/Description", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference", "text": { "kind": "free" } },
+    { "path": "/ProxyEndpoint/PreFlow", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#preflow", "children": ["Request", "Response"] },
+    { "path": "/ProxyEndpoint/Flows", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference", "children": ["Flow"] },
+    { "path": "/ProxyEndpoint/PostFlow", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#postflow", "children": ["Request", "Response"] },
+    { "path": "/ProxyEndpoint/PostClientFlow", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference", "children": ["Request", "Response"] },
+    { "path": "/ProxyEndpoint/HTTPProxyConnection", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-proxyendpointconfigurationelements", "children": ["BasePath", "Properties", "VirtualHost"] },
+    { "path": "/ProxyEndpoint/HTTPProxyConnection/BasePath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-proxyendpointconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/ProxyEndpoint/FaultRules", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference" },
+    { "path": "/ProxyEndpoint/DefaultFaultRule", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference" },
+    {
+      "path": "/ProxyEndpoint/RouteRule",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules",
+      "attributes": { "name": { "kind": "free", "required": true } },
+      "children": ["Condition", "TargetEndpoint", "URL", "IntegrationEndpoint"]
+    },
+    { "path": "/ProxyEndpoint/RouteRule/Condition", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules", "text": { "kind": "free" } },
+    { "path": "/ProxyEndpoint/RouteRule/TargetEndpoint", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules", "text": { "kind": "free" } },
+    { "path": "/ProxyEndpoint/RouteRule/URL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules", "text": { "kind": "free" } },
+    { "path": "/ProxyEndpoint/RouteRule/IntegrationEndpoint", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#configuring-integrationendpoint", "text": { "kind": "free" } }
+  ]
+}

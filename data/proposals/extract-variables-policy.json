@@ -1,0 +1,1161 @@
+{
+  "source": {
+    "id": "extract-variables-policy",
+    "kind": "policy",
+    "title": "extract variables policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "URIs",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#uris",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "DisplayName",
+        "ExtractVariables",
+        "IdExtractedFromURI",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "Payload",
+        "Set",
+        "Source",
+        "URIPath",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "contentType",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "ignoreCase",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"true\">/accounts/{id}</Pattern> </URIPath> <VariablePrefix>urirequest</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>",
+        "Pattern> element specifies the pattern to apply to the URI path.",
+        "pattern is treated as a simple template, with the curly braces denoting the varying portion of the URI path.",
+        "Pattern> element."
+      ]
+    },
+    {
+      "heading": "Query params",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#query-params",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "DisplayName",
+        "ExtractQP",
+        "ExtractVariables",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "Payload",
+        "QueryParam",
+        "Set",
+        "Source",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "contentType",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "ignoreCase",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"true\">DBN{dbncode}</Pattern> </QueryParam> <VariablePrefix>queryinfo</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Multiple parameters",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#multiple-parameters",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "DisplayName",
+        "ExtractQP1",
+        "ExtractQP2",
+        "ExtractVariables",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "Payload",
+        "QueryParam",
+        "Set",
+        "Source",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "contentType",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "ignoreCase",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"true\">{firstWeather}</Pattern> </QueryParam> <QueryParam name=\"w.",
+        "Pattern ignoreCase=\"true\">{secondWeather}</Pattern> </QueryParam> <VariablePrefix>queryinfo</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Headers",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#headers",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "DisplayName",
+        "ExtractHeader",
+        "ExtractVariables",
+        "Header",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "Payload",
+        "Set",
+        "Source",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "contentType",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "ignoreCase",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"false\">Bearer {oauthtoken}</Pattern> </Header> <VariablePrefix>clientrequest</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "JSON",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#json",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "DisplayName",
+        "ExtractVariables",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Source",
+        "Variable",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "XML",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#xml",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "Directions",
+        "DisplayName",
+        "ExtractVariables",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Namespace",
+        "Namespaces",
+        "Source",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload",
+        "XPath",
+        "duration",
+        "end_location",
+        "lat",
+        "leg",
+        "lng",
+        "route",
+        "start_location",
+        "status",
+        "step",
+        "summary",
+        "text",
+        "value"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "mode",
+        "name",
+        "prefix",
+        "transport",
+        "type",
+        "xmlns"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Matching and variable creation",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#about-matching-variable-creation",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern to match and the name of the variable used to hold the extracted information.",
+        "pattern matching works depends on the source of the extraction."
+      ]
+    },
+    {
+      "heading": "Matching URI paths, query parameters, headers, form parameters, and variables",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#aboutmatchingandvariablecreation-matchinguripathsqueryparametersheadersformparametersandvariables",
+      "elements": [],
+      "exampleElements": [
+        "ExtractVariables",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "Source",
+        "URIPath",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> tag to specify one or more patterns to match.",
+        "pattern for the URI path:",
+        "Pattern ignoreCase=\"true\">/a/{pathSeg}</Pattern> </URIPath> <VariablePrefix>urirequest</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Specifying multiple patterns",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#specifying-multiple-patterns",
+      "elements": [],
+      "exampleElements": [
+        "ExtractVariables",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "Source",
+        "URIPath",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the patterns match, the policy does nothing and the variable(s) is not created."
+      ],
+      "formatHints": [
+        "Pattern> tags, where:",
+        "pattern matches, the pattern with longest path segments is used for extraction.",
+        "pattern specified first in the policy is used for extraction.",
+        "Pattern ignoreCase=\"true\">/a/{pathSeg}</Pattern> <Pattern ignoreCase=\"true\">/a/b/{pathSeg}</Pattern> <Pattern ignoreCase=\"true\">/a/b/c/{pathSeg}</Pattern> </URIPath> <VariablePrefix>urirequest</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>",
+        "pattern matches the URI and the urirequest.",
+        "pattern matches and the urirequest."
+      ]
+    },
+    {
+      "heading": "Specifying patterns with multiple variables",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#specifying-patterns-with-multiple-variables",
+      "elements": [],
+      "exampleElements": [
+        "ExtractVariables",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "Source",
+        "URIPath",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern.",
+        "pattern with two variables:",
+        "Pattern ignoreCase=\"true\">/a/{pathSeg}</Pattern> <Pattern ignoreCase=\"true\">/a/b/{pathSeg}</Pattern> <Pattern ignoreCase=\"true\">/a/{pathSeg1}/c/{pathSeg2}</Pattern> </URIPath> <VariablePrefix>urirequest</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Matching multiple instances in the pattern",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#matching-multiple-instances-in-the-pattern",
+      "elements": [],
+      "exampleElements": [
+        "ExtractVariables",
+        "IgnoreUnresolvedVariables",
+        "Pattern",
+        "QueryParam",
+        "Source",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"true\">{secondW}</Pattern> </QueryParam> <VariablePrefix>urirequest</VariablePrefix> <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Using special characters in the pattern",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#using-special-characters-in-the-pattern",
+      "elements": [],
+      "exampleElements": [
+        "Pattern",
+        "QueryParam",
+        "URIPath"
+      ],
+      "exampleAttributes": [
+        "ignoreCase"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern, where:",
+        "Pattern ignoreCase=\"true\">/a/*/{id}</Pattern> <Pattern ignoreCase=\"true\">/a/**/{id}</Pattern> </URIPath>",
+        "pattern matches requests with pathsuffixes (the portion of the URI path following the basepath) such as \"/a/b/c\", \"/a/foo/bar\", etc.",
+        "pattern matches any number of path segments after \"/a/\", such as \"/a/foo/bar/baz/c\", as well as \"/a/b/c\" and \"/a/foo/bar\".",
+        "pattern as:",
+        "pattern matches the values \"text/xml;charset=UTF-16\" and \"application/xml;charset=ASCII\".",
+        "pattern because they are used as literal characters in the value of the query parameter:",
+        "Pattern ignoreCase=\"true\">%{user%} {name}</Pattern> </QueryParam>",
+        "pattern matches the value \"{user} Steve\" but not the value \"user Steve\"."
+      ]
+    },
+    {
+      "heading": "Matching JSON and XML",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#aboutmatchingandvariablecreation-matchingjsonandxml",
+      "elements": [],
+      "exampleElements": [
+        "ExtractVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Source",
+        "Variable",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Writing to the same variable in multiple places",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#aboutmatchingandvariablecreation-writingtothesamevariableinmultipleplaces",
+      "elements": [],
+      "exampleElements": [
+        "Header",
+        "Pattern",
+        "QueryParam"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern to the last.",
+        "Pattern ignoreCase=\"true\">{tokenValue}</Pattern> </QueryParam> <!-- Overwrite tokenValue even if it was found in query parameter.",
+        "Pattern ignoreCase=\"true\">{tokenValue}</Pattern> </Header>"
+      ]
+    },
+    {
+      "heading": "Controlling what happens when no match occurs",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern does not match, then the corresponding variable is not created."
+      ]
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "FormParam",
+        "Header",
+        "IgnoreUnresolvedVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Namespaces",
+        "Pattern",
+        "QueryParam",
+        "Source",
+        "URIPath",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "ignoreCase",
+        "name",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"false\">/accounts/{id}</Pattern> </URIPath> <QueryParam name=\"code\"> <Pattern ignoreCase=\"true\">DBN{dbncode}</Pattern> </QueryParam> <Header name=\"Authorization\"> <Pattern ignoreCase=\"false\">Bearer {oauthtoken}</Pattern> </Header> <FormParam name=\"greeting\"> <Pattern>hello {user}</Pattern> </FormParam> <Variable name=\"request.",
+        "Pattern>hello {user}</Pattern> </Variable> <JSONPayload> <Variable name=\"name\"> <JSONPath>{example}</JSONPath> </Variable> </JSONPayload> <XMLPayload stopPayloadProcessing=\"false\"> <Namespaces/> <Variable name=\"name\" type=\"boolean\"> <XPath>/test/example</XPath> </Variable> </XMLPayload> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "<ExtractVariables> attributes",
+      "contextHeading": "<ExtractVariables> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes",
+      "elements": [
+        "ExtractVariables"
+      ],
+      "exampleElements": [
+        "ExtractVariables"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source> element",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#sourceelement",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [
+        "clearPayload"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#sourceelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "clearPayload",
+          "required": false,
+          "type": "Boolean"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<VariablePrefix> element",
+      "contextHeading": "<VariablePrefix> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#variableprefixelement",
+      "elements": [
+        "VariablePrefix"
+      ],
+      "exampleElements": [
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> element or <Variable> element."
+      ]
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables> element",
+      "contextHeading": "<IgnoreUnresolvedVariables> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#ignoreunresolvedvariableselement",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<URIPath> element",
+      "contextHeading": "<URIPath> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#uripathelement",
+      "elements": [
+        "URIPath"
+      ],
+      "exampleElements": [
+        "Pattern",
+        "URIPath"
+      ],
+      "exampleAttributes": [
+        "ignoreCase"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern is the proxy.",
+        "Pattern ignoreCase=\"false\">/accounts/{id}</Pattern> </URIPath>",
+        "Pattern> elements:",
+        "Pattern ignoreCase=\"false\">/accounts/{id}</Pattern> <Pattern ignoreCase=\"false\">/accounts/{id}/transactions/{index}</Pattern> </URIPath>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<URIPath> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#uripathelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ignoreCase",
+          "required": false,
+          "type": "Boolean"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<QueryParam> element",
+      "contextHeading": "<QueryParam> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#queryparamelement",
+      "elements": [
+        "QueryParam"
+      ],
+      "exampleElements": [
+        "Pattern",
+        "QueryParam"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"true\">DBN{dbncode}</Pattern> </QueryParam>",
+        "Pattern ignoreCase=\"true\">{secondW}</Pattern> </QueryParam>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<QueryParam> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#queryparamelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Header> element",
+      "contextHeading": "<Header> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#headerelement",
+      "elements": [
+        "Header"
+      ],
+      "exampleElements": [
+        "Header",
+        "Pattern"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"false\">Bearer {oauthtoken}</Pattern> </Header>",
+        "Pattern ignoreCase=\"true\">{secondHeader}</Pattern> </Header>",
+        "Pattern ignoreCase=\"true\">{myHeaders}</Pattern> </Header>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Header> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#headerelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FormParam> element",
+      "contextHeading": "<FormParam> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#formparamelement",
+      "elements": [
+        "FormParam"
+      ],
+      "exampleElements": [
+        "FormParam",
+        "Pattern"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>hello {user}</Pattern> </FormParam>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<FormParam> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#formparamelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Variable> element",
+      "contextHeading": "<Variable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#variableelement",
+      "elements": [
+        "Variable"
+      ],
+      "exampleElements": [
+        "Pattern",
+        "Variable"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>hello {user}</Pattern> </Variable>",
+        "Pattern>hello {firstName} {lastName}</Pattern> </Variable>"
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Variable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#variableelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JSONPayload> element",
+      "contextHeading": "<JSONPayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#jsonpayloadelement",
+      "elements": [
+        "JSONPayload"
+      ],
+      "exampleElements": [
+        "JSONPath",
+        "JSONPayload",
+        "Variable"
+      ],
+      "exampleAttributes": [
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JSONPayload>/<Variable> element",
+      "contextHeading": "<JSONPayload>/<Variable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#jsonpayloadelement-jsonpayloadvariableelement",
+      "elements": [
+        "JSONPayload",
+        "Variable"
+      ],
+      "exampleElements": [
+        "JSONPath",
+        "Variable"
+      ],
+      "exampleAttributes": [
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<JSONPayload>/<Variable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "String. Select from: string boolean integer long float double nodeset (returns JSON fragment)"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JSONPayload>/<Variable>/<JSONPath> element",
+      "contextHeading": "<JSONPayload>/<Variable>/<JSONPath> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#jsonpayloadelement-jsonpayloadvariablejsonpathelement",
+      "elements": [
+        "JSONPayload",
+        "Variable",
+        "JSONPath"
+      ],
+      "exampleElements": [
+        "JSONPath",
+        "Variable"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XMLPayload> element",
+      "contextHeading": "<XMLPayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#xmlpayloadelement",
+      "elements": [
+        "XMLPayload"
+      ],
+      "exampleElements": [
+        "Namespace",
+        "Namespaces",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "name",
+        "prefix",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<XMLPayload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#xmlpayloadelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "stopPayloadProcessing",
+          "required": false,
+          "type": "Boolean"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XMLPayload>/<Namespaces> element",
+      "contextHeading": "<XMLPayload>/<Namespaces> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#xmlpayloadelement-xmlpayloadnamespaceselement",
+      "elements": [
+        "XMLPayload",
+        "Namespaces"
+      ],
+      "exampleElements": [
+        "Namespace",
+        "Namespaces",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "name",
+        "prefix",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<XMLPayload>/<Namespaces> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#attributes_1",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "prefix",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XMLPayload>/<Variable> element",
+      "contextHeading": "<XMLPayload>/<Variable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#xmlpayloadelement-xmlpayloadvariableelement",
+      "elements": [
+        "XMLPayload",
+        "Variable"
+      ],
+      "exampleElements": [
+        "Variable",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<XMLPayload>/<Variable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#attributes_2",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "String. Select from: string boolean integer long float double nodeset (returns an XML fragment)"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XMLPayload>/<Variable>/<XPath> element",
+      "contextHeading": "<XMLPayload>/<Variable>/<XPath> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#xmlpayloadelement-xmlpayloadvariablexpathelement",
+      "elements": [
+        "XMLPayload",
+        "Variable",
+        "XPath"
+      ],
+      "exampleElements": [
+        "Variable",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<XMLPayload>/<Variable>/<XPath> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

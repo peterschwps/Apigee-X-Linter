@@ -1,0 +1,234 @@
+{
+  "source": {
+    "id": "revoke-oauth-v2-policy",
+    "kind": "policy",
+    "title": "revoke oauth v2 policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Developer app ID",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#developer-app-id",
+      "elements": [],
+      "exampleElements": [
+        "AppId",
+        "DisplayName",
+        "RevokeOAuthV2"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Revoke before timestamp",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#revoke-before-timestamp",
+      "elements": [],
+      "exampleElements": [
+        "AppId",
+        "DisplayName",
+        "RevokeBeforeTimestamp",
+        "RevokeOAuthV2"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element Reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "AppId",
+        "Cascade",
+        "DisplayName",
+        "EndUserId",
+        "RevokeBeforeTimestamp",
+        "RevokeOAuthV2"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<RevokeOAuthV2> attributes",
+      "contextHeading": "<RevokeOAuthV2> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#getoauthv2infoattributes",
+      "elements": [
+        "RevokeOAuthV2"
+      ],
+      "exampleElements": [
+        "RevokeOAuthV2"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AppId> element",
+      "contextHeading": "<AppId> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#appidelement",
+      "elements": [
+        "AppId"
+      ],
+      "exampleElements": [
+        "AppId"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Cascade> element",
+      "contextHeading": "<Cascade> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#cascadeelement",
+      "elements": [
+        "Cascade"
+      ],
+      "exampleElements": [
+        "Cascade"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<EndUserId> element",
+      "contextHeading": "<EndUserId> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#enduseridelement",
+      "elements": [
+        "EndUserId"
+      ],
+      "exampleElements": [
+        "EndUserId"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<RevokeBeforeTimestamp> element",
+      "contextHeading": "<RevokeBeforeTimestamp> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#revokebeforetimestampelement",
+      "elements": [
+        "RevokeBeforeTimestamp"
+      ],
+      "exampleElements": [
+        "RevokeBeforeTimestamp"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<RevokeBeforeTimestamp> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

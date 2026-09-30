@@ -1,0 +1,26 @@
+{
+  "kind": "targetEndpoint",
+  "root": "TargetEndpoint",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
+  "reviewedAt": "2026-09-30",
+  "elements": [
+    {
+      "path": "/TargetEndpoint",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements",
+      "attributes": { "name": { "kind": "free", "required": true } },
+      "children": ["Description", "PreFlow", "Flows", "PostFlow", "EventFlow", "HTTPTargetConnection", "LocalTargetConnection", "ScriptTarget", "FaultRules", "DefaultFaultRule"]
+    },
+    { "path": "/TargetEndpoint/Description", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference", "text": { "kind": "free" } },
+    { "path": "/TargetEndpoint/PreFlow", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#preflow", "children": ["Request", "Response"] },
+    { "path": "/TargetEndpoint/Flows", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference", "children": ["Flow"] },
+    { "path": "/TargetEndpoint/PostFlow", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#postflow", "children": ["Request", "Response"] },
+    { "path": "/TargetEndpoint/EventFlow", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements" },
+    { "path": "/TargetEndpoint/HTTPTargetConnection", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements", "children": ["URL", "LoadBalancer", "Properties", "SSLInfo", "Authentication"] },
+    { "path": "/TargetEndpoint/HTTPTargetConnection/URL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/TargetEndpoint/LocalTargetConnection", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements", "children": ["APIProxy", "ProxyEndpoint", "Path"] },
+    { "path": "/TargetEndpoint/ScriptTarget", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements" },
+    { "path": "/TargetEndpoint/FaultRules", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference" },
+    { "path": "/TargetEndpoint/DefaultFaultRule", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference" }
+  ]
+}

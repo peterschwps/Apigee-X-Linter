@@ -1,0 +1,650 @@
+{
+  "source": {
+    "id": "xml-threat-protection-policy",
+    "kind": "policy",
+    "title": "xml threat protection policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "AttributeCountPerElement",
+        "ChildCount",
+        "Comment",
+        "DisplayName",
+        "Element",
+        "NameLimits",
+        "NamespaceCountPerElement",
+        "NamespacePrefix",
+        "NamespaceURI",
+        "NodeDepth",
+        "ProcessingInstructionData",
+        "ProcessingInstructionTarget",
+        "Source",
+        "StructureLimits",
+        "Text",
+        "ValueLimits",
+        "XMLThreatProtection"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "includeComment",
+        "includeElement",
+        "includeProcessingInstruction",
+        "includeText",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XMLThreatProtection> attributes",
+      "contextHeading": "<XMLThreatProtection> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#xmlthreatprotectionattributes",
+      "elements": [
+        "XMLThreatProtection"
+      ],
+      "exampleElements": [
+        "XMLThreatProtection"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<NameLimits> element",
+      "contextHeading": "<NameLimits> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#namelimitselement",
+      "elements": [
+        "NameLimits"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Element",
+        "NameLimits",
+        "NamespacePrefix",
+        "ProcessingInstructionTarget"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<NameLimits>/<Element> element",
+      "contextHeading": "<NameLimits>/<Element> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#namelimitselementelement",
+      "elements": [
+        "NameLimits",
+        "Element"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Element",
+        "NameLimits",
+        "NamespacePrefix",
+        "ProcessingInstructionTarget",
+        "author",
+        "book",
+        "title",
+        "year"
+      ],
+      "exampleAttributes": [
+        "category"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<NameLimits>/<Attribute> element",
+      "contextHeading": "<NameLimits>/<Attribute> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#namelimitsattributeelement",
+      "elements": [
+        "NameLimits",
+        "Attribute"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Element",
+        "NameLimits",
+        "NamespacePrefix",
+        "ProcessingInstructionTarget",
+        "author",
+        "book",
+        "title",
+        "year"
+      ],
+      "exampleAttributes": [
+        "category"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<NameLimits>/<NamespacePrefix> element",
+      "contextHeading": "<NameLimits>/<NamespacePrefix> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#namelimitsnamespaceprefixelement",
+      "elements": [
+        "NameLimits",
+        "NamespacePrefix"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Element",
+        "NameLimits",
+        "NamespacePrefix",
+        "ProcessingInstructionTarget",
+        "ns1:myelem"
+      ],
+      "exampleAttributes": [
+        "xmlns:ns1"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<NameLimits>/<ProcessingInstructionTarget> element",
+      "contextHeading": "<NameLimits>/<ProcessingInstructionTarget> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#namelimitsprocessinginstructiontargetelement",
+      "elements": [
+        "NameLimits",
+        "ProcessingInstructionTarget"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Element",
+        "NameLimits",
+        "NamespacePrefix",
+        "ProcessingInstructionTarget"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source> element",
+      "contextHeading": "<Source> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#sourceelement",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StructuralLimits> element",
+      "contextHeading": "<StructuralLimits> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#structurallimitselement",
+      "elements": [
+        "StructuralLimits"
+      ],
+      "exampleElements": [
+        "AttributeCountPerElement",
+        "ChildCount",
+        "NamespaceCountPerElement",
+        "NodeDepth",
+        "StructureLimits"
+      ],
+      "exampleAttributes": [
+        "includeComment",
+        "includeElement",
+        "includeProcessingInstruction",
+        "includeText"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StructuralLimits>/<NodeDepth> element",
+      "contextHeading": "<StructuralLimits>/<NodeDepth> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#structurallimitsnodedepthelement",
+      "elements": [
+        "StructuralLimits",
+        "NodeDepth"
+      ],
+      "exampleElements": [
+        "AttributeCountPerElement",
+        "ChildCount",
+        "NamespaceCountPerElement",
+        "NodeDepth",
+        "StructureLimits"
+      ],
+      "exampleAttributes": [
+        "includeComment",
+        "includeElement",
+        "includeProcessingInstruction",
+        "includeText"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StructuralLimits>/<AttributeCountPerElement> element",
+      "contextHeading": "<StructuralLimits>/<AttributeCountPerElement> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#structurallimitsattributecountperelementelement",
+      "elements": [
+        "StructuralLimits",
+        "AttributeCountPerElement"
+      ],
+      "exampleElements": [
+        "AttributeCountPerElement",
+        "ChildCount",
+        "NamespaceCountPerElement",
+        "NodeDepth",
+        "StructureLimits",
+        "author",
+        "book",
+        "title",
+        "year"
+      ],
+      "exampleAttributes": [
+        "category",
+        "includeComment",
+        "includeElement",
+        "includeProcessingInstruction",
+        "includeText"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StructuralLimits>/<NameSpaceCountPerElement> element",
+      "contextHeading": "<StructuralLimits>/<NameSpaceCountPerElement> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#structurallimitsnamespacecountperelementelement",
+      "elements": [
+        "StructuralLimits",
+        "NameSpaceCountPerElement"
+      ],
+      "exampleElements": [
+        "AttributeCountPerElement",
+        "ChildCount",
+        "NamespaceCountPerElement",
+        "NodeDepth",
+        "StructureLimits",
+        "e1",
+        "e2"
+      ],
+      "exampleAttributes": [
+        "attr1",
+        "attr2",
+        "includeComment",
+        "includeElement",
+        "includeProcessingInstruction",
+        "includeText",
+        "one",
+        "xmlns",
+        "xmlns:yahoo",
+        "yahoo:two"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StructuralLimits>/<ChildCount> element",
+      "contextHeading": "<StructuralLimits>/<ChildCount> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#structurallimitschildcountelement",
+      "elements": [
+        "StructuralLimits",
+        "ChildCount"
+      ],
+      "exampleElements": [
+        "AttributeCountPerElement",
+        "ChildCount",
+        "NamespaceCountPerElement",
+        "NodeDepth",
+        "StructureLimits"
+      ],
+      "exampleAttributes": [
+        "includeComment",
+        "includeElement",
+        "includeProcessingInstruction",
+        "includeText"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<StructuralLimits>/<ChildCount> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#structurallimitschildcountelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "includeComment",
+          "required": false
+        },
+        {
+          "name": "includeElement",
+          "required": false
+        },
+        {
+          "name": "includeProcessingInstructions",
+          "required": false
+        },
+        {
+          "name": "includeText",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ValueLimits> element",
+      "contextHeading": "<ValueLimits> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#valuelimitselement",
+      "elements": [
+        "ValueLimits"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Comment",
+        "NamespaceURI",
+        "ProcessingInstructionData",
+        "Text",
+        "ValueLimits"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ValueLimits>/<Text> element",
+      "contextHeading": "<ValueLimits>/<Text> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#valuelimitstextelement",
+      "elements": [
+        "ValueLimits",
+        "Text"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Comment",
+        "NamespaceURI",
+        "ProcessingInstructionData",
+        "Text",
+        "ValueLimits",
+        "author",
+        "book",
+        "title",
+        "year"
+      ],
+      "exampleAttributes": [
+        "category"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ValueLimits>/<Attribute> element",
+      "contextHeading": "<ValueLimits>/<Attribute> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#valuelimitsattributeelement",
+      "elements": [
+        "ValueLimits",
+        "Attribute"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Comment",
+        "NamespaceURI",
+        "ProcessingInstructionData",
+        "Text",
+        "ValueLimits",
+        "author",
+        "book",
+        "title",
+        "year"
+      ],
+      "exampleAttributes": [
+        "category"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ValueLimits>/<NamespaceURI> element",
+      "contextHeading": "<ValueLimits>/<NamespaceURI> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#valuelimitsnamespaceurielement",
+      "elements": [
+        "ValueLimits",
+        "NamespaceURI"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Comment",
+        "NamespaceURI",
+        "ProcessingInstructionData",
+        "Text",
+        "ValueLimits",
+        "ns1:myelem"
+      ],
+      "exampleAttributes": [
+        "xmlns:ns1"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ValueLimits>/<Comment> element",
+      "contextHeading": "<ValueLimits>/<Comment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#valuelimitscommentelement",
+      "elements": [
+        "ValueLimits",
+        "Comment"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Comment",
+        "NamespaceURI",
+        "ProcessingInstructionData",
+        "Text",
+        "ValueLimits",
+        "author",
+        "book",
+        "title",
+        "year"
+      ],
+      "exampleAttributes": [
+        "category"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ValueLimits>/<ProcessingInstructionData> element",
+      "contextHeading": "<ValueLimits>/<ProcessingInstructionData> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#valuelimitsprocessinginstructiondataelement",
+      "elements": [
+        "ValueLimits",
+        "ProcessingInstructionData"
+      ],
+      "exampleElements": [
+        "Attribute",
+        "Comment",
+        "NamespaceURI",
+        "ProcessingInstructionData",
+        "Text",
+        "ValueLimits"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<ValueLimits>/<ProcessingInstructionData> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Threat protection error configuration",
+      "contextHeading": "<ValueLimits>/<ProcessingInstructionData> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#usagenotes-threatprotectionerrorconfiguration",
+      "elements": [],
+      "exampleElements": [
+        "Environments",
+        "Organization",
+        "Properties",
+        "Property"
+      ],
+      "exampleAttributes": [
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the corresponding policy error codes is thrown (rather than just ExecutionFailed)."
+      ],
+      "formatHints": []
+    }
+  ]
+}

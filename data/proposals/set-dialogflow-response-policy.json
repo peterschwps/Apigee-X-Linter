@@ -1,0 +1,925 @@
+{
+  "source": {
+    "id": "set-dialogflow-response-policy",
+    "kind": "policy",
+    "title": "set dialogflow response policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<SetDialogflowResponse>",
+      "contextHeading": "<SetDialogflowResponse>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#setdiagresponse",
+      "elements": [
+        "SetDialogflowResponse"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<SetDialogflowResponse>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DialogflowVersion",
+        "DisplayName",
+        "Header",
+        "IgnoreUnresolvedVariables",
+        "JSONPath",
+        "MergeBehavior",
+        "NaturalLanguageResponse",
+        "Parameter",
+        "Parameters",
+        "Phrase",
+        "Phrases",
+        "Ref",
+        "SetDialogflowResponse",
+        "Source",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "SetDialogflowResponse policy",
+      "contextHeading": "<SetDialogflowResponse>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#setdialogflowresponse-policy",
+      "elements": [],
+      "exampleElements": [
+        "DialogflowVersion",
+        "DisplayName",
+        "Header",
+        "IgnoreUnresolvedVariables",
+        "JSONPath",
+        "MergeBehavior",
+        "NaturalLanguageResponse",
+        "Parameter",
+        "Parameters",
+        "Phrase",
+        "Phrases",
+        "Ref",
+        "SetDialogflowResponse",
+        "Source",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Webhook response",
+      "contextHeading": "<SetDialogflowResponse>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#webhook-response",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DialogflowVersion>",
+      "contextHeading": "<DialogflowVersion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#dfverelement",
+      "elements": [
+        "DialogflowVersion"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DialogflowVersion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "DialogflowVersion"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DialogflowVersion>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "DialogflowVersion"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#ignoreunresolvvars",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example_2",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<MergeBehavior>",
+      "contextHeading": "<MergeBehavior>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#mergebehavior",
+      "elements": [
+        "MergeBehavior"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<MergeBehavior>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "MergeBehavior"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<MergeBehavior>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example_3",
+      "elements": [],
+      "exampleElements": [
+        "MergeBehavior"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<NaturalLanguageResponse>",
+      "contextHeading": "<NaturalLanguageResponse>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#nlresponse",
+      "elements": [
+        "NaturalLanguageResponse"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Parameters>",
+      "contextHeading": "<Parameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#parameters",
+      "elements": [
+        "Parameters"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Parameter>",
+      "contextHeading": "<Parameter>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#parameter",
+      "elements": [
+        "Parameter"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Parameter>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_5",
+      "elements": [],
+      "exampleElements": [
+        "Header",
+        "JSONPath",
+        "Parameter",
+        "Parameters",
+        "Ref",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Extract Header field value",
+      "contextHeading": "<Parameter>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#extract-header-field-value",
+      "elements": [],
+      "exampleElements": [
+        "Header",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Extract JSON path value",
+      "contextHeading": "<Parameter>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#extract-json-path-value",
+      "elements": [],
+      "exampleElements": [
+        "JSONPath",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Extract flow variable value",
+      "contextHeading": "<Parameter>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#extract-flow-variable-value",
+      "elements": [],
+      "exampleElements": [
+        "Parameter",
+        "Ref"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Set custom text",
+      "contextHeading": "<Parameter>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#set-custom-text",
+      "elements": [],
+      "exampleElements": [
+        "Parameter",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Phrases>",
+      "contextHeading": "<Phrases>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#phrases",
+      "elements": [
+        "Phrases"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Phrase>",
+      "contextHeading": "<Phrase>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#phrase",
+      "elements": [
+        "Phrase"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Phrase>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_6",
+      "elements": [],
+      "exampleElements": [
+        "Header",
+        "JSONPath",
+        "Phrase",
+        "Phrases",
+        "Ref",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Extract Header field value",
+      "contextHeading": "<Phrase>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#extract-header-field-value_1",
+      "elements": [],
+      "exampleElements": [
+        "Header",
+        "Phrase"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Extract JSON path value",
+      "contextHeading": "<Phrase>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#extract-json-path-value_1",
+      "elements": [],
+      "exampleElements": [
+        "JSONPath",
+        "Phrase"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Extract flow variable value",
+      "contextHeading": "<Phrase>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#extract-flow-variable-value_1",
+      "elements": [],
+      "exampleElements": [
+        "Phrase",
+        "Ref"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Set custom text",
+      "contextHeading": "<Phrase>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#set-custom-text_1",
+      "elements": [],
+      "exampleElements": [
+        "Phrase",
+        "Value"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Header>",
+      "contextHeading": "<Header>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#header",
+      "elements": [
+        "Header"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Header>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_7",
+      "elements": [],
+      "exampleElements": [
+        "Header"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Header>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example-1",
+      "elements": [],
+      "exampleElements": [
+        "Header",
+        "Phrase"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Header>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example-2",
+      "elements": [],
+      "exampleElements": [
+        "Header",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JSONPath>",
+      "contextHeading": "<JSONPath>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#jsonpath",
+      "elements": [
+        "JSONPath"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<JSONPath>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_8",
+      "elements": [],
+      "exampleElements": [
+        "JSONPath"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<JSONPath>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example-1_1",
+      "elements": [],
+      "exampleElements": [
+        "JSONPath",
+        "Phrase"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<JSONPath>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example-2_1",
+      "elements": [],
+      "exampleElements": [
+        "JSONPath",
+        "Parameter"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Ref>",
+      "contextHeading": "<Ref>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#ref",
+      "elements": [
+        "Ref"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Ref>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_9",
+      "elements": [],
+      "exampleElements": [
+        "Ref"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Ref>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example-1_2",
+      "elements": [],
+      "exampleElements": [
+        "Phrase",
+        "Ref"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Ref>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example-2_2",
+      "elements": [],
+      "exampleElements": [
+        "Parameter",
+        "Ref"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Value>",
+      "contextHeading": "<Value>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#value",
+      "elements": [
+        "Value"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Value>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#syntax_10",
+      "elements": [],
+      "exampleElements": [
+        "Value"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Value>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example-1_3",
+      "elements": [],
+      "exampleElements": [
+        "Phrase",
+        "Value"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Value>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#example-2_3",
+      "elements": [],
+      "exampleElements": [
+        "Parameter",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

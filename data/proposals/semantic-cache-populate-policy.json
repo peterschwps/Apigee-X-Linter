@@ -1,0 +1,284 @@
+{
+  "source": {
+    "id": "semantic-cache-populate-policy",
+    "kind": "policy",
+    "title": "semantic cache populate policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<SemanticCachePopulate> element",
+      "contextHeading": "<SemanticCachePopulate> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#semanticcachepopulate",
+      "elements": [
+        "SemanticCachePopulate"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<SemanticCachePopulate> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "SemanticCachePopulate",
+        "SimilaritySearch",
+        "TTLInSeconds",
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "contextHeading": "<SemanticCachePopulate> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "SemanticCachePopulate",
+        "SimilaritySearch",
+        "TTLInSeconds",
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<SemanticCachePopulate> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#samples",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "SemanticCachePopulate",
+        "SimilaritySearch",
+        "TTLInSeconds",
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SimilaritySearch>",
+      "contextHeading": "<SimilaritySearch>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#similaritysearch",
+      "elements": [
+        "SimilaritySearch"
+      ],
+      "exampleElements": [
+        "SimilaritySearch",
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<VertexAI> (child of <SimilaritySearch>)",
+      "contextHeading": "<VertexAI> (child of <SimilaritySearch>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#vertexai",
+      "elements": [
+        "VertexAI",
+        "SimilaritySearch"
+      ],
+      "exampleElements": [
+        "URL",
+        "VertexAI"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<URL> (child of <VertexAI>)",
+      "contextHeading": "<URL> (child of <VertexAI>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#url",
+      "elements": [
+        "URL",
+        "VertexAI"
+      ],
+      "exampleElements": [
+        "URL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<TTLInSeconds>",
+      "contextHeading": "<TTLInSeconds>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#ttl",
+      "elements": [
+        "TTLInSeconds"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<TTLInSeconds>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

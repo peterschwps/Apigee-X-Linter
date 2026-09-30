@@ -1,0 +1,358 @@
+{
+  "source": {
+    "id": "monetization-limits-check-policy",
+    "kind": "policy",
+    "title": "monetization limits check policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<MonetizationLimitsCheck>",
+      "contextHeading": "<MonetizationLimitsCheck>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#monetizationlimitscheck",
+      "elements": [
+        "MonetizationLimitsCheck"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<MonetizationLimitsCheck>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#syntax-1",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignVariable",
+        "Copy",
+        "DisplayName",
+        "FaultResponse",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "MonetizationLimitsCheck",
+        "Name",
+        "Payload",
+        "Remove",
+        "Set",
+        "StatusCode",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "true",
+          "false"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<MonetizationLimitsCheck>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#example-1",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "FaultResponse",
+        "IgnoreUnresolvedVariables",
+        "MonetizationLimitsCheck",
+        "Payload",
+        "Set",
+        "StatusCode",
+        "error",
+        "message",
+        "messages"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse>",
+      "contextHeading": "<FaultResponse>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#faultresponse",
+      "elements": [
+        "FaultResponse"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AssignVariable>",
+      "contextHeading": "<AssignVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#assignvariable",
+      "elements": [
+        "AssignVariable"
+      ],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "AssignVariable",
+        "FaultResponse",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "enabled",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Add>",
+      "contextHeading": "<Add>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#add",
+      "elements": [
+        "Add"
+      ],
+      "exampleElements": [
+        "Add",
+        "Copy",
+        "Header",
+        "Headers",
+        "Remove",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Copy>",
+      "contextHeading": "<Copy>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#copy",
+      "elements": [
+        "Copy"
+      ],
+      "exampleElements": [
+        "Copy",
+        "Set",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "source",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Remove>",
+      "contextHeading": "<Remove>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#remove",
+      "elements": [
+        "Remove"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Set>",
+      "contextHeading": "<Set>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set",
+      "elements": [
+        "Set"
+      ],
+      "exampleElements": [
+        "Payload",
+        "Set",
+        "e1",
+        "e2",
+        "e3",
+        "root"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "variablePrefix",
+        "variableSuffix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

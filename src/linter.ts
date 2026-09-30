@@ -1,0 +1,119 @@
+import { elementMap, type DocumentSpec, type ElementSpec, type ValueSpec } from './spec';
+import { parseXml, type XmlNode } from './xml';
+
+export type LintIssue = {
+  rule: string;
+  message: string;
+  start: number;
+  end: number;
+  source?: string;
+};
+
+export type DocumentKind = DocumentSpec['kind'];
+
+export function classifyDocument(filePath: string): DocumentKind | undefined {
+  const normalized = filePath.replace(/\\/g, '/').toLowerCase();
+  if (/\/apiproxy\/policies\/[^/]+\.xml$/.test(normalized)) return 'policy';
+  if (/\/apiproxy\/proxies\/[^/]+\.xml$/.test(normalized)) return 'proxyEndpoint';
+  if (/\/apiproxy\/targets\/[^/]+\.xml$/.test(normalized)) return 'targetEndpoint';
+  if (/\/apiproxy\/integration-endpoints\/[^/]+\.xml$/.test(normalized)) return 'integrationEndpoint';
+  if (/\/apiproxy\/[^/]+\.xml$/.test(normalized)) return 'apiProxy';
+  return undefined;
+}
+
+export function chooseSpec(filePath: string, rootName: string, specs: DocumentSpec[]): DocumentSpec | undefined {
+  const kind = classifyDocument(filePath);
+  if (kind) return specs.find(spec => spec.kind === kind && spec.root === rootName);
+  return specs.find(spec => spec.root === rootName);
+}
+
+function valueIssue(value: string, rule: ValueSpec, start: number, end: number, source: string): LintIssue | undefined {
+  if (rule.allowTemplate && /\{[^{}]+\}/.test(value)) return undefined;
+  if (rule.kind === 'enum' && rule.values && !rule.values.includes(value)) {
+    return { rule: 'AX105', message: `Expected one of: ${rule.values.join(', ')}.`, start, end, source };
+  }
+  if (rule.kind === 'format' && rule.pattern && !new RegExp(rule.pattern).test(value)) {
+    return { rule: 'AX106', message: rule.format || 'Value does not match the documented format.', start, end, source };
+  }
+  return undefined;
+}
+
+function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, ElementSpec>, path: string, xml: string, checkRequired: boolean, issues: LintIssue[]): void {
+  const definition = rules.get(path);
+  if (!definition) return;
+  const attributes = definition.attributes || {};
+  const presentAttributes = new Set(node.attributes.map(attribute => attribute.name));
+
+  for (const attribute of node.attributes) {
+    const attributeRule = attributes[attribute.name];
+    if (!attributeRule) {
+      if (definition.complete && attribute.name !== 'xmlns' && !attribute.name.startsWith('xmlns:')) {
+        issues.push({ rule: 'AX103', message: `Unknown attribute "${attribute.name}" on <${node.name}>.`, start: attribute.start, end: attribute.end, source: definition.source });
+      }
+      continue;
+    }
+    if (attribute.value !== undefined && attribute.valueStart !== undefined && attribute.valueEnd !== undefined) {
+      const issue = valueIssue(attribute.value, attributeRule, attribute.valueStart, attribute.valueEnd, attributeRule.source || definition.source);
+      if (issue) issues.push(issue);
+    }
+  }
+
+  if (checkRequired) {
+    for (const [name, attribute] of Object.entries(attributes)) {
+      if (attribute.required && !presentAttributes.has(name)) {
+        issues.push({ rule: 'AX104', message: `Missing required attribute "${name}" on <${node.name}>.`, start: node.nameStart, end: node.nameEnd, source: attribute.source || definition.source });
+      }
+    }
+    for (const child of definition.requiredChildren || []) {
+      if (!node.children.some(item => item.name === child)) {
+        issues.push({ rule: 'AX104', message: `Missing required <${child}> inside <${node.name}>.`, start: node.nameStart, end: node.nameEnd, source: definition.source });
+      }
+    }
+  }
+
+  if (definition.text && node.startTagEnd !== undefined && node.endTagStart !== undefined && !node.children.length) {
+    const raw = xml.slice(node.startTagEnd, node.endTagStart);
+    const value = raw.trim();
+    if (value) {
+      const relativeStart = raw.indexOf(value);
+      const start = node.startTagEnd + relativeStart;
+      const issue = valueIssue(value, definition.text, start, start + value.length, definition.source);
+      if (issue) issues.push(issue);
+    }
+  }
+
+  const knownNames = new Set(spec.elements.map(element => element.path.split('/').at(-1)));
+  for (const child of node.children) {
+    const childPath = `${path}/${child.name}`;
+    if (!rules.has(childPath) && definition.complete && !(definition.children || []).includes(child.name)) {
+      const misplaced = knownNames.has(child.name);
+      issues.push({
+        rule: misplaced ? 'AX102' : 'AX101',
+        message: misplaced ? `<${child.name}> is not allowed inside <${node.name}>.` : `Unknown element <${child.name}> inside <${node.name}>.`,
+        start: child.nameStart, end: child.nameEnd, source: definition.source,
+      });
+    } else {
+      checkNode(child, spec, rules, childPath, xml, checkRequired, issues);
+    }
+  }
+}
+
+export function lint(xml: string, filePath: string, specs: DocumentSpec[], ignoredRules: ReadonlySet<string> = new Set()): LintIssue[] {
+  const parsed = parseXml(xml);
+  const issues: LintIssue[] = parsed.syntaxIssues.map(issue => ({ rule: 'AX001', ...issue }));
+  const root = parsed.root;
+  if (!root) return issues.filter(issue => !ignoredRules.has(issue.rule));
+  const kind = classifyDocument(filePath);
+  const spec = chooseSpec(filePath, root.name, specs);
+  if (!spec) {
+    const expectedRoot: Partial<Record<DocumentKind, string>> = {
+      apiProxy: 'APIProxy', proxyEndpoint: 'ProxyEndpoint', targetEndpoint: 'TargetEndpoint', integrationEndpoint: 'IntegrationEndpoint',
+    };
+    if (kind && expectedRoot[kind]) {
+      issues.push({ rule: 'AX101', message: `Expected <${expectedRoot[kind]}> as the document root.`, start: root.nameStart, end: root.nameEnd });
+    }
+    return issues.filter(issue => !ignoredRules.has(issue.rule));
+  }
+  checkNode(root, spec, elementMap(spec), `/${root.name}`, xml, !parsed.syntaxIssues.length, issues);
+  return issues.filter(issue => !ignoredRules.has(issue.rule));
+}

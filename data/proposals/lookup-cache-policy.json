@@ -1,0 +1,248 @@
+{
+  "source": {
+    "id": "lookup-cache-policy",
+    "kind": "policy",
+    "title": "lookup cache policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#element_reference",
+      "elements": [],
+      "exampleElements": [
+        "AssignTo",
+        "CacheKey",
+        "CacheLookupTimeoutInSeconds",
+        "CacheResource",
+        "DisplayName",
+        "KeyFragment",
+        "LookupCache",
+        "Prefix",
+        "Scope"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LookupCache> attributes",
+      "contextHeading": "<LookupCache> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#lookupcacheattributes",
+      "elements": [
+        "LookupCache"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AssignTo> element",
+      "contextHeading": "<AssignTo> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#LookupCache_AssignTo",
+      "elements": [
+        "AssignTo"
+      ],
+      "exampleElements": [
+        "AssignTo"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey> element",
+      "contextHeading": "<CacheKey> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#CacheKeyElement",
+      "elements": [
+        "CacheKey"
+      ],
+      "exampleElements": [
+        "CacheKey",
+        "KeyFragment",
+        "Prefix"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheLookupTimeoutInSeconds> element",
+      "contextHeading": "<CacheLookupTimeoutInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#CacheLookupTimeoutInSeconds",
+      "elements": [
+        "CacheLookupTimeoutInSeconds"
+      ],
+      "exampleElements": [
+        "CacheLookupTimeoutInSeconds"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheResource> element",
+      "contextHeading": "<CacheResource> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#cacheresourceelement",
+      "elements": [
+        "CacheResource"
+      ],
+      "exampleElements": [
+        "CacheResource"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey>/<KeyFragment> element",
+      "contextHeading": "<CacheKey>/<KeyFragment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#KeyFragmentElement",
+      "elements": [
+        "CacheKey",
+        "KeyFragment"
+      ],
+      "exampleElements": [
+        "KeyFragment"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheKey>/<KeyFragment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#cachekeykeyfragmentelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "string"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey>/<Prefix> element",
+      "contextHeading": "<CacheKey>/<Prefix> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#PrefixElement",
+      "elements": [
+        "CacheKey",
+        "Prefix"
+      ],
+      "exampleElements": [
+        "Prefix"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Scope> element",
+      "contextHeading": "<Scope> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#ScopeElement",
+      "elements": [
+        "Scope"
+      ],
+      "exampleElements": [
+        "Scope"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values include the enumerations below."
+      ],
+      "formatHints": []
+    }
+  ]
+}

@@ -1,0 +1,908 @@
+{
+  "source": {
+    "id": "service-callout-policy",
+    "kind": "policy",
+    "title": "service callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Local call to an internal proxy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#local-call-to-an-internal-proxy",
+      "elements": [],
+      "exampleElements": [
+        "APIProxy",
+        "LocalTargetConnection",
+        "ProxyEndpoint"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "URL as a variable",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#url-as-a-variable",
+      "elements": [],
+      "exampleElements": [
+        "HTTPTargetConnection",
+        "URL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Google geocoding / define request",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#google-geocoding-define-request",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "HTTPTargetConnection",
+        "QueryParam",
+        "QueryParams",
+        "Request",
+        "Response",
+        "ServiceCallout",
+        "Set",
+        "Timeout",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "clearPayload",
+        "name",
+        "variable"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Call target servers",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#call-target-servers",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "DisplayName",
+        "HTTPTargetConnection",
+        "IgnoreUnresolvedVariables",
+        "LoadBalancer",
+        "Path",
+        "Properties",
+        "Request",
+        "Response",
+        "Server",
+        "ServiceCallout"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "variable"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#elements",
+      "elements": [],
+      "exampleElements": [
+        "APIProxy",
+        "Add",
+        "Audience",
+        "Authentication",
+        "Copy",
+        "DisplayName",
+        "FormParams",
+        "GoogleAccessToken",
+        "GoogleIDToken",
+        "HTTPTargetConnection",
+        "HeaderName",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "IncludeEmail",
+        "LifetimeInSeconds",
+        "LoadBalancer",
+        "LocalTargetConnection",
+        "Path",
+        "Payload",
+        "Properties",
+        "ProxyEndpoint",
+        "QueryParams",
+        "Remove",
+        "Request",
+        "Response",
+        "SSLInfo",
+        "Scope",
+        "Scopes",
+        "ServiceCallout",
+        "Set",
+        "StatusCode",
+        "Timeout",
+        "URL",
+        "Verb",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "useTargetUrl",
+        "variable"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ServiceCallout> attributes",
+      "contextHeading": "<ServiceCallout> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#servicecalloutattributes",
+      "elements": [
+        "ServiceCallout"
+      ],
+      "exampleElements": [
+        "ServiceCallout"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Request> element",
+      "contextHeading": "<Request> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#request",
+      "elements": [
+        "Request"
+      ],
+      "exampleElements": [
+        "Add",
+        "Copy",
+        "FormParams",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Path",
+        "Payload",
+        "QueryParams",
+        "Remove",
+        "Request",
+        "Set",
+        "StatusCode",
+        "Verb",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "clearPayload",
+        "contentType",
+        "name",
+        "variable"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Request> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#requestelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "variable",
+          "required": false
+        },
+        {
+          "name": "clearPayload",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Request>/<IgnoreUnresolvedVariables> element",
+      "contextHeading": "<Request>/<IgnoreUnresolvedVariables> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#ignoreunresolvedvariables",
+      "elements": [
+        "Request",
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables",
+        "Request"
+      ],
+      "exampleAttributes": [
+        "clearPayload",
+        "variable"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Response> element",
+      "contextHeading": "<Response> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#response",
+      "elements": [
+        "Response"
+      ],
+      "exampleElements": [
+        "Response"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Timeout> element",
+      "contextHeading": "<Timeout> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#timeout",
+      "elements": [
+        "Timeout"
+      ],
+      "exampleElements": [
+        "Timeout"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPTargetConnection> element",
+      "contextHeading": "<HTTPTargetConnection> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#httptargetconnection",
+      "elements": [
+        "HTTPTargetConnection"
+      ],
+      "exampleElements": [
+        "HTTPTargetConnection",
+        "LoadBalancer",
+        "Properties",
+        "SSLInfo",
+        "URL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPTargetConnection>/<Authentication> element",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#authentication",
+      "elements": [
+        "HTTPTargetConnection",
+        "Authentication"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of these child elements depending on the type of service you wish to call."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleAccessToken",
+        "GoogleIDToken",
+        "HTTPTargetConnection",
+        "HeaderName",
+        "IncludeEmail",
+        "LifetimeInSeconds",
+        "Scope",
+        "Scopes",
+        "ServiceCallout"
+      ],
+      "exampleAttributes": [
+        "ref",
+        "useTargetUrl"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using GoogleAccessToken",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#using-googleaccesstoken",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using GoogleIDToken",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#using-googleidtoken",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken",
+        "IncludeEmail"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using HeaderName",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#using-headername",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "HeaderName",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using LifetimeInSeconds",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#using-lifetimeinseconds",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "LifetimeInSeconds",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "HeaderName",
+        "ServiceCallout"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "With static string",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#with-static-string",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "HeaderName",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "With variable reference",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#with-variable-reference",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "HeaderName",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "LifetimeInSeconds",
+        "Scope",
+        "Scopes",
+        "ServiceCallout"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#example-1",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#example-2",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "HTTPTargetConnection",
+        "Response",
+        "Scope",
+        "Scopes",
+        "ServiceCallout",
+        "Timeout",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#example-3",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken",
+        "HTTPTargetConnection",
+        "Response",
+        "ServiceCallout",
+        "Timeout",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken",
+        "IncludeEmail",
+        "ServiceCallout"
+      ],
+      "exampleAttributes": [
+        "ref",
+        "useTargetUrl"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#example-1_1",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken",
+        "IncludeEmail"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Audience child element",
+      "contextHeading": "<HTTPTargetConnection>/<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#audience",
+      "elements": [],
+      "exampleElements": [
+        "Audience"
+      ],
+      "exampleAttributes": [
+        "ref",
+        "useTargetUrl"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPTargetConnection>/<URL> element",
+      "contextHeading": "<HTTPTargetConnection>/<URL> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#url",
+      "elements": [
+        "HTTPTargetConnection",
+        "URL"
+      ],
+      "exampleElements": [
+        "HTTPTargetConnection",
+        "URL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPTargetConnection>/<SSLInfo> element",
+      "contextHeading": "<HTTPTargetConnection>/<SSLInfo> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#sslinfo",
+      "elements": [
+        "HTTPTargetConnection",
+        "SSLInfo"
+      ],
+      "exampleElements": [
+        "Ciphers",
+        "ClientAuthEnabled",
+        "Enabled",
+        "HTTPTargetConnection",
+        "KeyAlias",
+        "KeyStore",
+        "Protocols",
+        "SSLInfo",
+        "TrustStore",
+        "URL"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPTargetConnection>/<Properties> element",
+      "contextHeading": "<HTTPTargetConnection>/<Properties> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#properties",
+      "elements": [
+        "HTTPTargetConnection",
+        "Properties"
+      ],
+      "exampleElements": [
+        "HTTPTargetConnection",
+        "Properties",
+        "Property",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPTargetConnection>/<LoadBalancer> element",
+      "contextHeading": "<HTTPTargetConnection>/<LoadBalancer> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#properties",
+      "elements": [
+        "HTTPTargetConnection",
+        "LoadBalancer"
+      ],
+      "exampleElements": [
+        "Algorithm",
+        "HTTPTargetConnection",
+        "LoadBalancer",
+        "Path",
+        "Server"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LocalTargetConnection> element",
+      "contextHeading": "<LocalTargetConnection> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#localtargetconnection",
+      "elements": [
+        "LocalTargetConnection"
+      ],
+      "exampleElements": [
+        "APIProxy",
+        "LocalTargetConnection",
+        "Path",
+        "ProxyEndpoint"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LocalTargetConnection>/<APIProxy> element",
+      "contextHeading": "<LocalTargetConnection>/<APIProxy> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#apiproxy",
+      "elements": [
+        "LocalTargetConnection",
+        "APIProxy"
+      ],
+      "exampleElements": [
+        "APIProxy",
+        "LocalTargetConnection",
+        "ProxyEndpoint"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LocalTargetConnection>/<ProxyEndpoint> element",
+      "contextHeading": "<LocalTargetConnection>/<ProxyEndpoint> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#proxyendpoint",
+      "elements": [
+        "LocalTargetConnection",
+        "ProxyEndpoint"
+      ],
+      "exampleElements": [
+        "APIProxy",
+        "LocalTargetConnection",
+        "ProxyEndpoint"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<LocalTargetConnection>/<Path> element",
+      "contextHeading": "<LocalTargetConnection>/<Path> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#localtargetconnection-path",
+      "elements": [
+        "LocalTargetConnection",
+        "Path"
+      ],
+      "exampleElements": [
+        "LocalTargetConnection",
+        "Path"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<LocalTargetConnection>/<Path> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

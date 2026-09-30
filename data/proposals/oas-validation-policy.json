@@ -1,0 +1,645 @@
+{
+  "source": {
+    "id": "oas-validation-policy",
+    "kind": "policy",
+    "title": "oas validation policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Validate request message",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#validate-request-message",
+      "elements": [],
+      "exampleElements": [
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Source",
+        "ValidateMessageBody"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Validate parameters",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#validate-parameters",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Cookie",
+        "Header",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<OASValidation> element",
+      "contextHeading": "<OASValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#oasvalidation",
+      "elements": [
+        "OASValidation"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<OASValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Cookie",
+        "DisplayName",
+        "Header",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query",
+        "Source",
+        "ValidateMessageBody"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "true",
+          "false"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "contextHeading": "<OASValidation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "OASResource",
+        "OASValidation",
+        "Properties",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<OASResource>",
+      "contextHeading": "<OASResource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#oasresource",
+      "elements": [
+        "OASResource"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<OASResource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "OASResource",
+        "OASValidation"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<OASResource>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "OASResource",
+        "OASValidation"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Options>",
+      "contextHeading": "<Options>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#options",
+      "elements": [
+        "Options"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Options>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Cookie",
+        "Header",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query",
+        "ValidateMessageBody"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Options>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Cookie",
+        "Header",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query",
+        "ValidateMessageBody"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ValidateMessageBody>",
+      "contextHeading": "<ValidateMessageBody>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#validatemessagebody",
+      "elements": [
+        "ValidateMessageBody"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ValidateMessageBody>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "ValidateMessageBody"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<ValidateMessageBody>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example_2",
+      "elements": [],
+      "exampleElements": [
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "ValidateMessageBody"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AllowUnspecifiedParameters>",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#allowunspecified",
+      "elements": [
+        "AllowUnspecifiedParameters"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Cookie",
+        "Header",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example_3",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Cookie",
+        "Header",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax_5",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Header",
+        "OASResource",
+        "OASValidation",
+        "Options"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example_4",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Header",
+        "OASResource",
+        "OASValidation",
+        "Options"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax_6",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example_5",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax_7",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "OASResource",
+        "OASValidation",
+        "Options",
+        "Query"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<AllowUnspecifiedParameters>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example_6",
+      "elements": [],
+      "exampleElements": [
+        "AllowUnspecifiedParameters",
+        "Cookie",
+        "OASResource",
+        "OASValidation",
+        "Options"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#source",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#syntax_8",
+      "elements": [],
+      "exampleElements": [
+        "OASResource",
+        "OASValidation",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#example_7",
+      "elements": [],
+      "exampleElements": [
+        "OASResource",
+        "OASValidation",
+        "Source"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using patterns in schema",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#openapi-patterns-in-schema",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern, which is a regular expression (regex) that defines valid forms for the string.",
+        "pattern: '^\\w{3}-\\d{4}$'",
+        "pattern in validating the string value, and to the JSON Schema Core standard for recommendations to schema authors regarding the restricted set of regular expression syntax."
+      ]
+    }
+  ]
+}

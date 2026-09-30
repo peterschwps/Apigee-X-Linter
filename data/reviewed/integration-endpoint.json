@@ -1,0 +1,21 @@
+{
+  "kind": "integrationEndpoint",
+  "root": "IntegrationEndpoint",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
+  "reviewedAt": "2026-09-30",
+  "elements": [
+    {
+      "path": "/IntegrationEndpoint",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#integrationendpoint-configuration-elements",
+      "attributes": { "name": { "kind": "free", "required": true } },
+      "children": ["AsyncExecution"]
+    },
+    {
+      "path": "/IntegrationEndpoint/AsyncExecution",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#integrationendpoint-configuration-elements",
+      "text": { "kind": "enum", "values": ["true", "false"] }
+    }
+  ]
+}

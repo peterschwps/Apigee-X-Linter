@@ -1,0 +1,373 @@
+{
+  "source": {
+    "id": "invalidate-cache-policy",
+    "kind": "policy",
+    "title": "invalidate cache policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#element_reference",
+      "elements": [],
+      "exampleElements": [
+        "APIProxyName",
+        "CacheContext",
+        "CacheKey",
+        "CacheResource",
+        "DisplayName",
+        "InvalidateCache",
+        "KeyFragment",
+        "Prefix",
+        "ProxyName",
+        "PurgeChildEntries",
+        "Scope",
+        "TargetName"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<InvalidateCache> attributes",
+      "contextHeading": "<InvalidateCache> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#invalidatecacheattributes",
+      "elements": [
+        "InvalidateCache"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheContext>/<APIProxyName> element",
+      "contextHeading": "<CacheContext>/<APIProxyName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#APIProxyNameElement",
+      "elements": [
+        "CacheContext",
+        "APIProxyName"
+      ],
+      "exampleElements": [
+        "APIProxyName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheContext>/<APIProxyName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachecontextapiproxynameelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheContext> element",
+      "contextHeading": "<CacheContext> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheContextElement",
+      "elements": [
+        "CacheContext"
+      ],
+      "exampleElements": [
+        "APIProxyName",
+        "CacheContext",
+        "ProxyName",
+        "TargetName"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey> element",
+      "contextHeading": "<CacheKey> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheKeyElement",
+      "elements": [
+        "CacheKey"
+      ],
+      "exampleElements": [
+        "CacheKey",
+        "KeyFragment",
+        "Prefix"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheResource> element",
+      "contextHeading": "<CacheResource> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheResourceElement",
+      "elements": [
+        "CacheResource"
+      ],
+      "exampleElements": [
+        "CacheResource"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey>/<KeyFragment> element",
+      "contextHeading": "<CacheKey>/<KeyFragment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#KeyFragmentElement",
+      "elements": [
+        "CacheKey",
+        "KeyFragment"
+      ],
+      "exampleElements": [
+        "KeyFragment"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheKey>/<KeyFragment> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachekeykeyfragmentelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheKey>/<Prefix> element",
+      "contextHeading": "<CacheKey>/<Prefix> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#PrefixElement",
+      "elements": [
+        "CacheKey",
+        "Prefix"
+      ],
+      "exampleElements": [
+        "Prefix"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheContext>/<ProxyName> element",
+      "contextHeading": "<CacheContext>/<ProxyName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#ProxyNameElement",
+      "elements": [
+        "CacheContext",
+        "ProxyName"
+      ],
+      "exampleElements": [
+        "ProxyName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheContext>/<ProxyName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachecontextproxynameelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PurgeChildEntries> element",
+      "contextHeading": "<PurgeChildEntries> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#PurgeChildEntriesElement",
+      "elements": [
+        "PurgeChildEntries"
+      ],
+      "exampleElements": [
+        "PurgeChildEntries"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Scope> element",
+      "contextHeading": "<Scope> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#ScopeElement",
+      "elements": [
+        "Scope"
+      ],
+      "exampleElements": [
+        "Scope"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values for the <Scope> element are shown below."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheContext>/<TargetName> element",
+      "contextHeading": "<CacheContext>/<TargetName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#TargetNameElement",
+      "elements": [
+        "CacheContext",
+        "TargetName"
+      ],
+      "exampleElements": [
+        "TargetName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheContext>/<TargetName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachecontexttargetnameelement-attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

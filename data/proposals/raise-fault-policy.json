@@ -1,0 +1,542 @@
+{
+  "source": {
+    "id": "raise-fault-policy",
+    "kind": "policy",
+    "title": "raise fault policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Return FaultResponse",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#return-faultresponse",
+      "elements": [],
+      "exampleElements": [
+        "FaultResponse",
+        "IgnoreUnresolvedVariables",
+        "RaiseFault",
+        "Set",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Return FaultResponse Payload",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#return-faultresponse-payload",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "FaultResponse",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Payload",
+        "RaiseFault",
+        "Set",
+        "StatusCode",
+        "root"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignVariable",
+        "Copy",
+        "DisplayName",
+        "FaultResponse",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Payload",
+        "RaiseFault",
+        "Remove",
+        "Set",
+        "StatusCode",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<RaiseFault> attributes",
+      "contextHeading": "<RaiseFault> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#raisefaultattributes",
+      "elements": [
+        "RaiseFault"
+      ],
+      "exampleElements": [
+        "RaiseFault"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables> element",
+      "contextHeading": "<IgnoreUnresolvedVariables> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#ignoreunresolvedvariableselement",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values: true/false."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse> element",
+      "contextHeading": "<FaultResponse> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement",
+      "elements": [
+        "FaultResponse"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse><AssignVariable> element",
+      "contextHeading": "<FaultResponse><AssignVariable> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-assignvar",
+      "elements": [
+        "FaultResponse",
+        "AssignVariable"
+      ],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignVariable",
+        "FaultResponse",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse><Add>/<Headers> element",
+      "contextHeading": "<FaultResponse><Add>/<Headers> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponseaddheaderselement",
+      "elements": [
+        "FaultResponse",
+        "Add",
+        "Headers"
+      ],
+      "exampleElements": [
+        "Add",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse><Copy> element",
+      "contextHeading": "<FaultResponse><Copy> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponsecopyelement",
+      "elements": [
+        "FaultResponse",
+        "Copy"
+      ],
+      "exampleElements": [
+        "Copy",
+        "Headers",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<FaultResponse><Copy> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#attributes",
+      "elements": [],
+      "exampleElements": [
+        "Copy"
+      ],
+      "exampleAttributes": [
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "source",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse><Copy>/<Headers> element",
+      "contextHeading": "<FaultResponse><Copy>/<Headers> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponsecopyheaderselement",
+      "elements": [
+        "FaultResponse",
+        "Copy",
+        "Headers"
+      ],
+      "exampleElements": [
+        "Copy",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse><Copy>/<StatusCode> element",
+      "contextHeading": "<FaultResponse><Copy>/<StatusCode> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponsecopystatuscodeelement",
+      "elements": [
+        "FaultResponse",
+        "Copy",
+        "StatusCode"
+      ],
+      "exampleElements": [
+        "Copy",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse><Remove>/<Headers> element",
+      "contextHeading": "<FaultResponse><Remove>/<Headers> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponseremoveheaderselement",
+      "elements": [
+        "FaultResponse",
+        "Remove",
+        "Headers"
+      ],
+      "exampleElements": [
+        "Header",
+        "Headers",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse><Set> element",
+      "contextHeading": "<FaultResponse><Set> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponsesetelement",
+      "elements": [
+        "FaultResponse",
+        "Set"
+      ],
+      "exampleElements": [
+        "Headers",
+        "Payload",
+        "Set",
+        "StatusCode"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse>/<Set>/<Headers> element",
+      "contextHeading": "<FaultResponse>/<Set>/<Headers> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponsesetheaderselement",
+      "elements": [
+        "FaultResponse",
+        "Set",
+        "Headers"
+      ],
+      "exampleElements": [
+        "Header",
+        "Headers",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse>/<Set>/<Payload> element",
+      "contextHeading": "<FaultResponse>/<Set>/<Payload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponsesetpayloadelement",
+      "elements": [
+        "FaultResponse",
+        "Set",
+        "Payload"
+      ],
+      "exampleElements": [
+        "Payload",
+        "Set",
+        "e1",
+        "e2",
+        "e3",
+        "root"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "variablePrefix",
+        "variableSuffix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<FaultResponse>/<Set>/<Payload> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#attributes_1",
+      "elements": [],
+      "exampleElements": [
+        "Payload"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "variablePrefix",
+        "variableSuffix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "contentType",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "variablePrefix",
+          "required": false,
+          "type": "Char"
+        },
+        {
+          "name": "variableSuffix",
+          "required": false,
+          "type": "Char"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FaultResponse>/<Set>/<StatusCode> element",
+      "contextHeading": "<FaultResponse>/<Set>/<StatusCode> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#faultresponseelement-faultresponsesetstatuscodeelement",
+      "elements": [
+        "FaultResponse",
+        "Set",
+        "StatusCode"
+      ],
+      "exampleElements": [
+        "Set",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ShortFaultReason> element",
+      "contextHeading": "<ShortFaultReason> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#shortfaultreason",
+      "elements": [
+        "ShortFaultReason"
+      ],
+      "exampleElements": [
+        "ShortFaultReason"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Valid values: true/false(default)."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Example use of RaiseFault",
+      "contextHeading": "<ShortFaultReason> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy#example-use-of-raisefault",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultResponse",
+        "Flow",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Payload",
+        "RaiseFault",
+        "Request",
+        "Set",
+        "StatusCode",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

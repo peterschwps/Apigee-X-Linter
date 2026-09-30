@@ -1,0 +1,1062 @@
+{
+  "source": {
+    "id": "flow-configuration-reference",
+    "kind": "core",
+    "title": "Flow configuration reference",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Flow child names are partly represented in endpoint specifications; nested flow contexts still need review."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Element Hierarchy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#element-hierarchy",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Flow",
+        "Flows",
+        "Name",
+        "PostClientFlow",
+        "PostFlow",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Flow",
+        "Flows",
+        "Name",
+        "PostClientFlow",
+        "PostFlow",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Response",
+        "Step",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Condition>",
+      "contextHeading": "<Condition>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#condition",
+      "elements": [
+        "Condition"
+      ],
+      "exampleElements": [
+        "Condition",
+        "Flow",
+        "Flows",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Condition>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Condition"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Condition>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-1",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Condition>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-2",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Description>",
+      "contextHeading": "<Description>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#description",
+      "elements": [
+        "Description"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Description>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "Description"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Description>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Flow",
+        "Flows",
+        "Name",
+        "ProxyEndpoint",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Flow>",
+      "contextHeading": "<Flow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#flow",
+      "elements": [
+        "Flow"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the other conditional flows do)."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Flow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Flow",
+        "Name",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Flow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-1_1",
+      "elements": [],
+      "exampleElements": [
+        "Flow",
+        "Flows",
+        "Name",
+        "ProxyEndpoint",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Flow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-2_1",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Flow",
+        "Flows",
+        "Name",
+        "ProxyEndpoint",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Flow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-3",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Flow",
+        "Flows",
+        "Name",
+        "ProxyEndpoint",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Flow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#attributes_2",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Flows>",
+      "contextHeading": "<Flows>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#flows",
+      "elements": [
+        "Flows"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the other flows do)."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Flows>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Flow",
+        "Flows",
+        "Name",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Flows>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-1_2",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Flow",
+        "Flows",
+        "Name",
+        "ProxyEndpoint",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of these policies based on the path suffix that it gathers from the proxy flow variable."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Flows>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-2_2",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Flow",
+        "Flows",
+        "Name",
+        "ProxyEndpoint",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Flows>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-3_1",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Flow",
+        "Flows",
+        "Name",
+        "ProxyEndpoint",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Name>",
+      "contextHeading": "<Name>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#name",
+      "elements": [
+        "Name"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Name>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_5",
+      "elements": [],
+      "exampleElements": [
+        "Name"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Name>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example_1",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Flow",
+        "Flows",
+        "Name",
+        "ProxyEndpoint",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PostFlow>",
+      "contextHeading": "<PostFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#postflow",
+      "elements": [
+        "PostFlow"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<PostFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_6",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PostFlow",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<PostFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example_2",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PostFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<PostFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#attributes_5",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<EventFlow>",
+      "contextHeading": "<EventFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#eventflow",
+      "elements": [
+        "EventFlow"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<EventFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_7",
+      "elements": [],
+      "exampleElements": [
+        "Description",
+        "EventFlow",
+        "Name",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "content-type",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<EventFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example_3",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "EventFlow",
+        "HTTPTargetConnection",
+        "Name",
+        "Response",
+        "Step",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "content-type",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<EventFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#attributes_6",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "content-type",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PostClientFlow>",
+      "contextHeading": "<PostClientFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#postclientflow",
+      "elements": [
+        "PostClientFlow"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<PostClientFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_8",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PostClientFlow",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<PostClientFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example_4",
+      "elements": [],
+      "exampleElements": [
+        "Description",
+        "Name",
+        "PostClientFlow",
+        "ProxyEndpoint",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<PostClientFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#attributes_7",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PreFlow>",
+      "contextHeading": "<PreFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#preflow",
+      "elements": [
+        "PreFlow"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<PreFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_9",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PreFlow",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<PreFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example_5",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<PreFlow>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#attributes_8",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Request>",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#request",
+      "elements": [
+        "Request"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_10",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Name",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Request>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example_6",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PostFlow",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Response>",
+      "contextHeading": "<Response>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#response",
+      "elements": [
+        "Response"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Response>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_11",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Name",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Response>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example_7",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PostFlow",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Step>",
+      "contextHeading": "<Step>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#step",
+      "elements": [
+        "Step"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Step>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#syntax_12",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Step>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-1_3",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Description",
+        "Name",
+        "PostFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Step>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#example-2_3",
+      "elements": [],
+      "exampleElements": [
+        "Name",
+        "PostFlow",
+        "ProxyEndpoint",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

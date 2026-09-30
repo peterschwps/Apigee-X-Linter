@@ -1,0 +1,4428 @@
+{
+  "source": {
+    "id": "assign-message-policy",
+    "kind": "policy",
+    "title": "assign message policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<AssignMessage> element",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignmessage",
+      "elements": [
+        "AssignMessage"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "AssignVariable",
+        "Audience",
+        "Authentication",
+        "Copy",
+        "DisplayName",
+        "FormParam",
+        "FormParams",
+        "GoogleAccessToken",
+        "GoogleIDToken",
+        "Header",
+        "HeaderName",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Path",
+        "Payload",
+        "PropertySetRef",
+        "QueryParam",
+        "QueryParams",
+        "Ref",
+        "Remove",
+        "ResourceURL",
+        "Scope",
+        "Scopes",
+        "Set",
+        "StatusCode",
+        "Template",
+        "Value",
+        "Verb",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "ref",
+        "source",
+        "transport",
+        "type",
+        "variablePrefix",
+        "variableSuffix"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ],
+        "createNew": [
+          "true",
+          "false"
+        ],
+        "type": [
+          "request",
+          "response"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "AssignVariable",
+        "Copy",
+        "DisplayName",
+        "FormParam",
+        "FormParams",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Path",
+        "Payload",
+        "Properties",
+        "QueryParam",
+        "QueryParams",
+        "Ref",
+        "Remove",
+        "Set",
+        "StatusCode",
+        "Value",
+        "Verb"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "1: Add header",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#1:-add-header",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "2: Remove payload",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#2:-remove-payload",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "DisplayName",
+        "Payload",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "3: Modify response",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#3:-modify-response",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "4: Set dynamic content",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#4:-set-dynamic-content",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "IgnoreUnresolvedVariables",
+        "Payload",
+        "Set",
+        "User-agent"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name",
+        "variablePrefix",
+        "variableSuffix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "5: Remove query param",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#5:-remove-query-param",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "QueryParam",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "6: Set/get variables",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#6:-setget-variables",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "AssignVariable",
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Payload",
+        "Ref",
+        "Set",
+        "Value",
+        "config",
+        "environment",
+        "protocol",
+        "secret",
+        "wrapper"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format - The body of the response should look like the following: 42 test gopher",
+        "format -"
+      ]
+    },
+    {
+      "heading": "7: Get ServiceCallout response headers",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#7:-get-servicecallout-response-headers",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "IgnoreUnresolvedVariables",
+        "Payload",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "8: Store and remove form params, headers, query params",
+      "contextHeading": "<AssignMessage> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#8:-store-and-remove-form-params,-headers,-query-params",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "AssignVariable",
+        "DisplayName",
+        "FormParams",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Payload",
+        "Ref",
+        "Remove",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Add>",
+      "contextHeading": "<Add>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#add",
+      "elements": [
+        "Add"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Add>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "FormParam",
+        "FormParams",
+        "Header",
+        "Headers",
+        "QueryParam",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Add>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "FormParam",
+        "FormParams",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Add>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Add>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "QueryParam",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FormParams> (child of <Add>)",
+      "contextHeading": "<FormParams> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#add-formparams",
+      "elements": [
+        "FormParams",
+        "Add"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<FormParams> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "FormParam",
+        "FormParams"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ],
+        "createNew": [
+          "true",
+          "false"
+        ],
+        "type": [
+          "request",
+          "response"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<FormParams> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_1",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "FormParam",
+        "FormParams"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<FormParams> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_1",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "FormParam",
+        "QueryParam",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<FormParams> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_1",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "FormParam",
+        "FormParams",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Headers> (child of <Add>)",
+      "contextHeading": "<Headers> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#add-headers",
+      "elements": [
+        "Headers",
+        "Add"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Headers> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_3",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Headers> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_2",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<QueryParams> (child of <Add>)",
+      "contextHeading": "<QueryParams> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#add-queryparams",
+      "elements": [
+        "QueryParams",
+        "Add"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<QueryParams> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_4",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "QueryParam",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<QueryParams> (child of <Add>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_3",
+      "elements": [],
+      "exampleElements": [
+        "Add",
+        "AssignMessage",
+        "AssignTo",
+        "QueryParam",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AssignTo>",
+      "contextHeading": "<AssignTo>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignto",
+      "elements": [
+        "AssignTo"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<AssignTo>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_5",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ],
+        "createNew": [
+          "true",
+          "false"
+        ],
+        "type": [
+          "request",
+          "response"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<AssignTo>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_4",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<AssignTo>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_2",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<AssignTo>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_2",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "createNew",
+          "required": false,
+          "type": "Boolean"
+        },
+        {
+          "name": "transport",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "String",
+          "possibleValues": [
+            "request",
+            "response"
+          ]
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AssignVariable>",
+      "contextHeading": "<AssignVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignvariable",
+      "elements": [
+        "AssignVariable"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<AssignVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_6",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "PropertySetRef",
+        "Ref",
+        "ResourceURL",
+        "Template",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<AssignVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_5",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<AssignVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_3",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Ref",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<AssignVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_3",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Template",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 4",
+      "contextHeading": "<AssignVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-4",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Name> (child of <AssignVariable>)",
+      "contextHeading": "<Name> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignvariable-name",
+      "elements": [
+        "Name",
+        "AssignVariable"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Name> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_7",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Name> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_6",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PropertySetRef> (child of <AssignVariable>)",
+      "contextHeading": "<PropertySetRef> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignvariable-propset",
+      "elements": [
+        "PropertySetRef",
+        "AssignVariable"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<PropertySetRef> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_8",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "PropertySetRef"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<PropertySetRef> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_7",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "DisplayName",
+        "Name",
+        "Properties",
+        "PropertySetRef"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<PropertySetRef> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_4",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "DisplayName",
+        "Name",
+        "Properties",
+        "PropertySetRef"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Ref> (child of <AssignVariable>)",
+      "contextHeading": "<Ref> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignvariable-ref",
+      "elements": [
+        "Ref",
+        "AssignVariable"
+      ],
+      "exampleElements": [
+        "Ref"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the pre-defined flow variables (as listed in the Flow variables reference), or a custom flow variable that you created."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Ref> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_9",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Ref"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Ref> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_8",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Ref"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Ref> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_5",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Ref",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Ref> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_4",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "AssignVariable",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Ref",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResourceURL> (child of <AssignVariable>)",
+      "contextHeading": "<ResourceURL> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignvariable-resourceurl",
+      "elements": [
+        "ResourceURL",
+        "AssignVariable"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ResourceURL> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_10",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<ResourceURL> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_9",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "ResourceURL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<ResourceURL> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_6",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Payload",
+        "ResourceURL",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Template> (child of <AssignVariable>)",
+      "contextHeading": "<Template> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignvariable-template",
+      "elements": [
+        "Template",
+        "AssignVariable"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Template> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_11",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Template"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Template> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_10",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Template",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Template> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_7",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Template",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Template> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_5",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Template"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern is useful to provide an override value, where in some cases you want to override the default template (the text part) with values that are set dynamically."
+      ]
+    },
+    {
+      "heading": "<Value> (child of <AssignVariable>)",
+      "contextHeading": "<Value> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#assignvariable-value",
+      "elements": [
+        "Value",
+        "AssignVariable"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Value> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_12",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Value> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_11",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Value> (child of <AssignVariable>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_8",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignVariable",
+        "Name",
+        "Ref",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Copy>",
+      "contextHeading": "<Copy>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy",
+      "elements": [
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Copy>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_13",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "FormParam",
+        "FormParams",
+        "Header",
+        "Headers",
+        "Path",
+        "Payload",
+        "QueryParam",
+        "QueryParams",
+        "StatusCode",
+        "Verb",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "createNew",
+        "enabled",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ],
+        "createNew": [
+          "true",
+          "false"
+        ],
+        "type": [
+          "request",
+          "response"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Copy>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_12",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "FormParam",
+        "FormParams",
+        "Header",
+        "Headers",
+        "Path",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Copy>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_9",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "source",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FormParams> (child of <Copy>)",
+      "contextHeading": "<FormParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy-formparams",
+      "elements": [
+        "FormParams",
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<FormParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_14",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Copy",
+        "FormParam",
+        "FormParams"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<FormParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_13",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "FormParam",
+        "FormParams"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<FormParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_10",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "FormParams"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<FormParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_6",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "FormParam",
+        "FormParams"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 4",
+      "contextHeading": "<FormParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-4_1",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "FormParam",
+        "FormParams"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Headers> (child of <Copy>)",
+      "contextHeading": "<Headers> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy-headers",
+      "elements": [
+        "Headers",
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Headers> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_15",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Copy",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Headers> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_14",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Headers> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_11",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Headers> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_7",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Header",
+        "Headers"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Path> (child of <Copy>)",
+      "contextHeading": "<Path> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy-path",
+      "elements": [
+        "Path",
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Path> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_16",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Copy",
+        "Path"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Path> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_15",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Path"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Payload> (child of <Copy>)",
+      "contextHeading": "<Payload> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy-payload",
+      "elements": [
+        "Payload",
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Payload> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_17",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Copy",
+        "Payload"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Payload> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_16",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Payload"
+      ],
+      "exampleAttributes": [
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<QueryParams> (child of <Copy>)",
+      "contextHeading": "<QueryParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy-queryparams",
+      "elements": [
+        "QueryParams",
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<QueryParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_18",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Copy",
+        "QueryParam",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<QueryParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_17",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "QueryParam",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<QueryParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_12",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<QueryParams> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_8",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "QueryParam",
+        "QueryParams"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StatusCode> (child of <Copy>)",
+      "contextHeading": "<StatusCode> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy-statuscode",
+      "elements": [
+        "StatusCode",
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<StatusCode> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_19",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Copy",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<StatusCode> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_18",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Verb> (child of <Copy>)",
+      "contextHeading": "<Verb> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy-verb",
+      "elements": [
+        "Verb",
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Verb> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_20",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Copy",
+        "Verb"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Verb> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_19",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Verb"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Version> (child of <Copy>)",
+      "contextHeading": "<Version> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#copy-version",
+      "elements": [
+        "Version",
+        "Copy"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Version> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_21",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Copy",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "source"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Version> (child of <Copy>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_20",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "source",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "PolicyElement"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_22",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_21",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Remove>",
+      "contextHeading": "<Remove>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#remove",
+      "elements": [
+        "Remove"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Remove>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_23",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "FormParam",
+        "FormParams",
+        "Header",
+        "Headers",
+        "Payload",
+        "QueryParam",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Remove>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_22",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "DisplayName",
+        "Payload",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Remove>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_13",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "FormParams",
+        "QueryParam",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Remove>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_9",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FormParams> (child of <Remove>)",
+      "contextHeading": "<FormParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#remove-formparams",
+      "elements": [
+        "FormParams",
+        "Remove"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<FormParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_24",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "FormParam",
+        "FormParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<FormParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_23",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "FormParam",
+        "FormParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<FormParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_14",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "FormParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<FormParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_10",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "FormParam",
+        "FormParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Headers> (child of <Remove>)",
+      "contextHeading": "<Headers> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#remove-headers",
+      "elements": [
+        "Headers",
+        "Remove"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Headers> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_25",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Header",
+        "Headers",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Headers> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_24",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Headers> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_15",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Headers",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Headers> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_11",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Payload> (child of <Remove>)",
+      "contextHeading": "<Payload> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#remove-payload",
+      "elements": [
+        "Payload",
+        "Remove"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Payload> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_26",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Payload",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Payload> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_25",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Payload",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<QueryParams> (child of <Remove>)",
+      "contextHeading": "<QueryParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#remove-queryparams",
+      "elements": [
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<QueryParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_27",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "QueryParam",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<QueryParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_26",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "QueryParam",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<QueryParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_16",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<QueryParams> (child of <Remove>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_12",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "QueryParam",
+        "QueryParams",
+        "Remove"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Set>",
+      "contextHeading": "<Set>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set",
+      "elements": [
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Set>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_28",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Audience",
+        "Authentication",
+        "FormParam",
+        "FormParams",
+        "GoogleAccessToken",
+        "GoogleIDToken",
+        "Header",
+        "HeaderName",
+        "Headers",
+        "Path",
+        "Payload",
+        "QueryParam",
+        "QueryParams",
+        "Scope",
+        "Scopes",
+        "Set",
+        "StatusCode",
+        "Verb",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "continueOnError",
+        "enabled",
+        "name",
+        "variablePrefix",
+        "variableSuffix"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Set>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_27",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Set>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_17",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Payload",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Authentication> (child of <Set>)",
+      "contextHeading": "<Authentication> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-auth",
+      "elements": [
+        "Authentication",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of these child elements based on the requirement of the service you wish to call."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Authentication> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_29",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Audience",
+        "Authentication",
+        "GoogleAccessToken",
+        "GoogleIDToken",
+        "HeaderName",
+        "Scope",
+        "Scopes",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using Access Token",
+      "contextHeading": "<Authentication> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#using-access-token",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using ID Token",
+      "contextHeading": "<Authentication> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#using-id-token",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using HeaderName",
+      "contextHeading": "<Authentication> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#using-headername",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "HeaderName",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HeaderName> (child of <Authentication>)",
+      "contextHeading": "<HeaderName> (child of <Authentication>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-headername",
+      "elements": [
+        "HeaderName",
+        "Authentication"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<HeaderName> (child of <Authentication>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_30",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Authentication",
+        "GoogleAccessToken",
+        "HeaderName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "With static string",
+      "contextHeading": "<HeaderName> (child of <Authentication>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#with-static-string",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "HeaderName",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "With variable reference",
+      "contextHeading": "<HeaderName> (child of <Authentication>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#with-variable-reference",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "HeaderName",
+        "Scopes"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<GoogleAccessToken> (child of <Authentication>)",
+      "contextHeading": "<GoogleAccessToken> (child of <Authentication>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-goog-token",
+      "elements": [
+        "GoogleAccessToken",
+        "Authentication"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<GoogleAccessToken> (child of <Authentication>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_31",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Authentication",
+        "GoogleAccessToken",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<GoogleAccessToken> (child of <Authentication>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_28",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Scopes> (child of <GoogleAccessToken>)",
+      "contextHeading": "<Scopes> (child of <GoogleAccessToken>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-scopes",
+      "elements": [
+        "Scopes",
+        "GoogleAccessToken"
+      ],
+      "exampleElements": [
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Scope> (child of <Scopes>)",
+      "contextHeading": "<Scope> (child of <Scopes>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#scope-child-of-scopes",
+      "elements": [
+        "Scope",
+        "Scopes"
+      ],
+      "exampleElements": [
+        "Scope"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<GoogleIDToken> (child of <GoogleAccessToken>)",
+      "contextHeading": "<GoogleIDToken> (child of <GoogleAccessToken>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-googID-token",
+      "elements": [
+        "GoogleIDToken",
+        "GoogleAccessToken"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<GoogleIDToken> (child of <GoogleAccessToken>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_32",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Audience",
+        "Authentication",
+        "GoogleIDToken"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<GoogleIDToken> (child of <GoogleAccessToken>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_29",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Audience> (child of <GoogleAccessToken>)",
+      "contextHeading": "<Audience> (child of <GoogleAccessToken>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#setaudience",
+      "elements": [
+        "Audience",
+        "GoogleAccessToken"
+      ],
+      "exampleElements": [
+        "Audience"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<FormParams> (child of <Set>)",
+      "contextHeading": "<FormParams> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-formparams",
+      "elements": [
+        "FormParams",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<FormParams> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_33",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "FormParam",
+        "FormParams",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<FormParams> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_30",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "FormParam",
+        "FormParams",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Headers> (child of <Set>)",
+      "contextHeading": "<Headers> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-headers",
+      "elements": [
+        "Headers",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Headers> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_34",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Header",
+        "Headers",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Headers> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_31",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Path> (child of <Set>)",
+      "contextHeading": "<Path> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-path",
+      "elements": [
+        "Path",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Payload> (child of <Set>)",
+      "contextHeading": "<Payload> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-payload",
+      "elements": [
+        "Payload",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Payload> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_35",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Payload",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "continueOnError",
+        "enabled",
+        "name",
+        "variablePrefix",
+        "variableSuffix"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Payload> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_32",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Payload",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Payload> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_18",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Payload",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 3",
+      "contextHeading": "<Payload> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-3_13",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Payload",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name",
+        "variablePrefix",
+        "variableSuffix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 4",
+      "contextHeading": "<Payload> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-4_2",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Payload",
+        "Set",
+        "e1",
+        "e2",
+        "e3",
+        "root"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "contentType",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "variablePrefix",
+          "required": false,
+          "type": "Char"
+        },
+        {
+          "name": "variableSuffix",
+          "required": false,
+          "type": "Char"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<QueryParams> (child of <Set>)",
+      "contextHeading": "<QueryParams> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-queryparams",
+      "elements": [
+        "QueryParams",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<QueryParams> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_36",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "QueryParam",
+        "QueryParams",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<QueryParams> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_33",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "QueryParam",
+        "QueryParams",
+        "Set"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StatusCode> (child of <Set>)",
+      "contextHeading": "<StatusCode> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-statuscode",
+      "elements": [
+        "StatusCode",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<StatusCode> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_37",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Set",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<StatusCode> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_34",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Set",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<StatusCode> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_19",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Set",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Verb> (child of <Set>)",
+      "contextHeading": "<Verb> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-verb",
+      "elements": [
+        "Verb",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Verb> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_38",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Set",
+        "Verb"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Verb> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_35",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Set",
+        "Verb"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Verb> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_20",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Set",
+        "Verb"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Version> (child of <Set>)",
+      "contextHeading": "<Version> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#set-version",
+      "elements": [
+        "Version",
+        "Set"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Version> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#syntax_39",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Set",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {
+        "continueOnError": [
+          "false",
+          "true"
+        ],
+        "enabled": [
+          "true",
+          "false"
+        ]
+      },
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Version> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_36",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "Set",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Version> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_21",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Set",
+        "Version"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Create custom request messages",
+      "contextHeading": "<Version> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#customrequests",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "transport",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<Version> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-1_37",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Copy",
+        "Header",
+        "Headers",
+        "IgnoreUnresolvedVariables",
+        "QueryParam",
+        "QueryParams",
+        "Set",
+        "Verb"
+      ],
+      "exampleAttributes": [
+        "createNew",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the variables referenced in the policy configuration does not exist, Apigee will enter fault state in the API flow."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<Version> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-2_22",
+      "elements": [],
+      "exampleElements": [
+        "AssignMessage",
+        "AssignTo",
+        "Header",
+        "Headers",
+        "Payload",
+        "Set",
+        "Verb",
+        "operation",
+        "request"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "createNew",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<Version> (child of <Set>)",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

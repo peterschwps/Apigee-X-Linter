@@ -1,0 +1,27 @@
+{
+  "kind": "apiProxy",
+  "root": "APIProxy",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
+  "reviewedAt": "2026-09-30",
+  "elements": [
+    {
+      "path": "/APIProxy",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements",
+      "attributes": {
+        "name": { "kind": "format", "required": true, "format": "Use only letters, digits, underscores, and hyphens.", "pattern": "^[A-Za-z0-9_-]+$" },
+        "revision": { "kind": "free" }
+      },
+      "children": ["ConfigurationVersion", "Description", "DisplayName", "Policies", "ProxyEndpoints", "Resources", "Spec", "TargetServers", "TargetEndpoints"]
+    },
+    { "path": "/APIProxy/ConfigurationVersion", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
+    { "path": "/APIProxy/Description", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/APIProxy/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/APIProxy/Policies", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
+    { "path": "/APIProxy/ProxyEndpoints", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
+    { "path": "/APIProxy/Resources", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
+    { "path": "/APIProxy/Spec", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/APIProxy/TargetServers", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
+    { "path": "/APIProxy/TargetEndpoints", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" }
+  ]
+}

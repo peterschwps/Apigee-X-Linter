@@ -1,0 +1,917 @@
+{
+  "source": {
+    "id": "oauthv2-policy",
+    "kind": "policy",
+    "title": "oauthv2 policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "VerifyAccessToken",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#verifyaccesstoken_1",
+      "elements": [],
+      "exampleElements": [
+        "OAuthV2",
+        "Operation"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Generate an access token on the response flow",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#generate-an-access-token-on-the-response-flow",
+      "elements": [],
+      "exampleElements": [
+        "AppEndUser",
+        "ClientId",
+        "GrantType",
+        "OAuthV2",
+        "Operation",
+        "PassWord",
+        "SupportedGrantTypes",
+        "UserName"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Element reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#elementreference",
+      "elements": [],
+      "exampleElements": [
+        "ExpiresIn",
+        "GenerateResponse",
+        "GrantType",
+        "OAuthV2",
+        "Operation",
+        "SupportedGrantTypes"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of many possible configurations."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<OAuthV2> attributes",
+      "contextHeading": "<OAuthV2> attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#oauthv2attributes",
+      "elements": [
+        "OAuthV2"
+      ],
+      "exampleElements": [
+        "OAuthV2"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName> element",
+      "contextHeading": "<DisplayName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#displaynameelement",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AccessToken> element",
+      "contextHeading": "<AccessToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#accesstokenelement",
+      "elements": [
+        "AccessToken"
+      ],
+      "exampleElements": [
+        "AccessToken",
+        "OAuthV2",
+        "Operation"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AccessTokenPrefix> element",
+      "contextHeading": "<AccessTokenPrefix> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#accesstokenprefixelement",
+      "elements": [
+        "AccessTokenPrefix"
+      ],
+      "exampleElements": [
+        "AccessToken",
+        "AccessTokenPrefix",
+        "OAuthV2",
+        "Operation"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Algorithm>",
+      "contextHeading": "<Algorithm>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#algorithm",
+      "elements": [
+        "Algorithm"
+      ],
+      "exampleElements": [
+        "Algorithm"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<AppEndUser> element",
+      "contextHeading": "<AppEndUser> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#appenduserelement",
+      "elements": [
+        "AppEndUser"
+      ],
+      "exampleElements": [
+        "AppEndUser"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Attributes/Attribute>",
+      "contextHeading": "<AppEndUser> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#attributesattribute",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes"
+      ],
+      "exampleAttributes": [
+        "display",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Displaying or hiding custom attributes in the response",
+      "contextHeading": "<AppEndUser> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#attributesattribute-displayingorhidingcustomattributesintheresponse",
+      "elements": [],
+      "exampleElements": [
+        "Attribute",
+        "Attributes"
+      ],
+      "exampleAttributes": [
+        "display",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CacheExpiryInSeconds> element",
+      "contextHeading": "<CacheExpiryInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#cache_expiry",
+      "elements": [
+        "CacheExpiryInSeconds"
+      ],
+      "exampleElements": [
+        "CacheExpiryInSeconds"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<CacheExpiryInSeconds> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#attributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ClientId> element",
+      "contextHeading": "<ClientId> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#clientidelement",
+      "elements": [
+        "ClientId"
+      ],
+      "exampleElements": [
+        "ClientId"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Code> element",
+      "contextHeading": "<Code> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#codeelement",
+      "elements": [
+        "Code"
+      ],
+      "exampleElements": [
+        "Code"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpiresIn> element",
+      "contextHeading": "<ExpiresIn> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#expiresinelement",
+      "elements": [
+        "ExpiresIn"
+      ],
+      "exampleElements": [
+        "ExpiresIn"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExternalAccessToken> element",
+      "contextHeading": "<ExternalAccessToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#externalaccesstoken-element",
+      "elements": [
+        "ExternalAccessToken"
+      ],
+      "exampleElements": [
+        "ExternalAccessToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExternalAuthorization> element",
+      "contextHeading": "<ExternalAuthorization> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#externalauthorization-element",
+      "elements": [
+        "ExternalAuthorization"
+      ],
+      "exampleElements": [
+        "ExternalAuthorization"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExternalAuthorizationCode> element",
+      "contextHeading": "<ExternalAuthorizationCode> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#externalauthorizationcode-element",
+      "elements": [
+        "ExternalAuthorizationCode"
+      ],
+      "exampleElements": [
+        "ExternalAuthorizationCode"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExternalRefreshToken> element",
+      "contextHeading": "<ExternalRefreshToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#externalrefreshtoken-element",
+      "elements": [
+        "ExternalRefreshToken"
+      ],
+      "exampleElements": [
+        "ExternalRefreshToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<GenerateResponse> element",
+      "contextHeading": "<GenerateResponse> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#generateresponseelement",
+      "elements": [
+        "GenerateResponse"
+      ],
+      "exampleElements": [
+        "GenerateResponse"
+      ],
+      "exampleAttributes": [
+        "enabled"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<GenerateErrorResponse> element",
+      "contextHeading": "<GenerateErrorResponse> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#generateerrorresponseelement",
+      "elements": [
+        "GenerateErrorResponse"
+      ],
+      "exampleElements": [
+        "GenerateErrorResponse"
+      ],
+      "exampleAttributes": [
+        "enabled"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<GrantType>",
+      "contextHeading": "<GrantType>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#granttype",
+      "elements": [
+        "GrantType"
+      ],
+      "exampleElements": [
+        "GrantType"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Operation> element",
+      "contextHeading": "<Operation> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#operationelement",
+      "elements": [
+        "Operation"
+      ],
+      "exampleElements": [
+        "Operation"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PassWord> element",
+      "contextHeading": "<PassWord> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#passwordelement",
+      "elements": [
+        "PassWord"
+      ],
+      "exampleElements": [
+        "PassWord"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PrivateKey>/<Value>",
+      "contextHeading": "<PrivateKey>/<Value>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#privatekeyvalue",
+      "elements": [
+        "PrivateKey",
+        "Value"
+      ],
+      "exampleElements": [
+        "PrivateKey",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [
+        "RS256",
+        "RS384"
+      ],
+      "valueHints": [
+        "one of RS256, RS384, or RS512."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<PublicKey>/<Value>",
+      "contextHeading": "<PublicKey>/<Value>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#publickeyvalue",
+      "elements": [
+        "PublicKey",
+        "Value"
+      ],
+      "exampleElements": [
+        "PublicKey",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [
+        "RS256",
+        "RS384"
+      ],
+      "valueHints": [
+        "one of RS256, RS384, or RS512."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<RedirectUri> element",
+      "contextHeading": "<RedirectUri> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#redirecturielement",
+      "elements": [
+        "RedirectUri"
+      ],
+      "exampleElements": [
+        "RedirectUri"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<RefreshToken> element",
+      "contextHeading": "<RefreshToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#refreshtokenelement",
+      "elements": [
+        "RefreshToken"
+      ],
+      "exampleElements": [
+        "RefreshToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<RefreshTokenExpiresIn> element",
+      "contextHeading": "<RefreshTokenExpiresIn> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#refreshtokenexpiresinelement",
+      "elements": [
+        "RefreshTokenExpiresIn"
+      ],
+      "exampleElements": [
+        "RefreshTokenExpiresIn"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ResponseType> element",
+      "contextHeading": "<ResponseType> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#responsetypeelement",
+      "elements": [
+        "ResponseType"
+      ],
+      "exampleElements": [
+        "ResponseType"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ReuseRefreshToken> element",
+      "contextHeading": "<ReuseRefreshToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#reuserefreshtoken",
+      "elements": [
+        "ReuseRefreshToken"
+      ],
+      "exampleElements": [
+        "ReuseRefreshToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<RFCCompliantRequestResponse> element",
+      "contextHeading": "<RFCCompliantRequestResponse> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#RFCCompliantRequestResponseElement",
+      "elements": [
+        "RFCCompliantRequestResponse"
+      ],
+      "exampleElements": [
+        "RFCCompliantRequestResponse"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SecretKey>/<Value>",
+      "contextHeading": "<SecretKey>/<Value>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#secretkeyvalue",
+      "elements": [
+        "SecretKey",
+        "Value"
+      ],
+      "exampleElements": [
+        "SecretKey",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [
+        "HS256",
+        "HS384"
+      ],
+      "valueHints": [
+        "one of HS256, HS384, or HS512."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Scope> element",
+      "contextHeading": "<Scope> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#scopeelement",
+      "elements": [
+        "Scope"
+      ],
+      "exampleElements": [
+        "Scope"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the GenerateAccessToken or GenerateAuthorizationCode policies, it is used to specify which scopes to grant the token or code."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<State> element",
+      "contextHeading": "<State> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#stateelement",
+      "elements": [
+        "State"
+      ],
+      "exampleElements": [
+        "State"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<StoreToken> element",
+      "contextHeading": "<StoreToken> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#storetokenelement",
+      "elements": [
+        "StoreToken"
+      ],
+      "exampleElements": [
+        "StoreToken"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SupportedGrantTypes>/<GrantType> element",
+      "contextHeading": "<SupportedGrantTypes>/<GrantType> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#supportedgranttypesgranttypeelement",
+      "elements": [
+        "SupportedGrantTypes",
+        "GrantType"
+      ],
+      "exampleElements": [
+        "GrantType",
+        "SupportedGrantTypes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the supported grant types)."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Tokens>/<Token> element",
+      "contextHeading": "<Tokens>/<Token> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#tokenstokenelement",
+      "elements": [
+        "Tokens",
+        "Token"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<UserName> element",
+      "contextHeading": "<UserName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#usernameelement",
+      "elements": [
+        "UserName"
+      ],
+      "exampleElements": [
+        "UserName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Verifying access tokens",
+      "contextHeading": "<UserName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#verifyingaccesstokens",
+      "elements": [],
+      "exampleElements": [
+        "Name",
+        "OAuthV2",
+        "Operation",
+        "PreFlow",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "Scope",
+          "required": false
+        },
+        {
+          "name": "AccessToken",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Specifying request variable locations",
+      "contextHeading": "<UserName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#specifyingrequestvariablelocations",
+      "elements": [],
+      "exampleElements": [
+        "ClientId",
+        "Code",
+        "GrantType",
+        "RedirectUri",
+        "Scope"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example error response",
+      "contextHeading": "<UserName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#example-error-response",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format for operations that generate tokens and codes.",
+        "format for verify and validate operations."
+      ]
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<UserName> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

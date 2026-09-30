@@ -1,0 +1,790 @@
+{
+  "source": {
+    "id": "generate-jwt-policy",
+    "kind": "policy",
+    "title": "generate jwt policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "HS256 algorithm",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#hs256-algorithm",
+      "elements": [],
+      "exampleElements": [
+        "AdditionalClaims",
+        "Algorithm",
+        "Audience",
+        "Claim",
+        "DisplayName",
+        "ExpiresIn",
+        "GenerateJWT",
+        "Id",
+        "IgnoreUnresolvedVariables",
+        "Issuer",
+        "OutputVariable",
+        "SecretKey",
+        "Subject",
+        "Type",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "RS256 algorithm",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#rs256-algorithm",
+      "elements": [],
+      "exampleElements": [
+        "AdditionalClaims",
+        "Algorithm",
+        "Audience",
+        "Claim",
+        "ExpiresIn",
+        "GenerateJWT",
+        "Id",
+        "IgnoreUnresolvedVariables",
+        "Issuer",
+        "OutputVariable",
+        "Password",
+        "PrivateKey",
+        "Subject",
+        "Type",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Setting the key elements for a signed JWT",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#setting-the-key-elements-for-a-signed-jwt",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following elements to specify the key used to generate a signed JWT:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "RSA-OAEP-256",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#rsa-oaep-256",
+      "elements": [],
+      "exampleElements": [
+        "AdditionalHeaders",
+        "Algorithms",
+        "Claim",
+        "Content",
+        "ExpiresIn",
+        "GenerateJWT",
+        "Issuer",
+        "Key",
+        "OutputVariable",
+        "PublicKey",
+        "Subject",
+        "Type",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "A128KW",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#a128kw",
+      "elements": [],
+      "exampleElements": [
+        "Algorithms",
+        "Content",
+        "ExpiresIn",
+        "GenerateJWT",
+        "IgnoreUnresolvedVariables",
+        "Issuer",
+        "Key",
+        "OutputVariable",
+        "SecretKey",
+        "Subject",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Setting the key elements for an encrypted JWT",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#setting-the-key-elements-for-an-encrypted-jwt",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following elements to specify the encryption key for GenerateJWT, when you want to generate an encrypted JWT:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes that apply to the top-level element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#elementreferenceforgeneratejwt-attributesthatapplytothetoplevelelement",
+      "elements": [],
+      "exampleElements": [
+        "GenerateJWT"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Algorithm>",
+      "contextHeading": "<Algorithm>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#algorithm",
+      "elements": [
+        "Algorithm"
+      ],
+      "exampleElements": [
+        "Algorithm"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Algorithms>",
+      "contextHeading": "<Algorithms>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#algorithms",
+      "elements": [
+        "Algorithms"
+      ],
+      "exampleElements": [
+        "Algorithms",
+        "Content",
+        "Key"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Child elements of <Algorithms>",
+      "contextHeading": "Child elements of <Algorithms>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#algorithms-child",
+      "elements": [
+        "Algorithms"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Audience>",
+      "contextHeading": "<Audience>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#audience",
+      "elements": [
+        "Audience"
+      ],
+      "exampleElements": [
+        "Audience"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the registered claims mentioned in RFC7519."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<AdditionalClaims/Claim>",
+      "contextHeading": "<Audience>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalclaimsclaim",
+      "elements": [],
+      "exampleElements": [
+        "AdditionalClaims",
+        "Claim"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "One of: string (default), number, boolean, or map array - (Optional) Set to true to indicate if the value is an array of types."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<AdditionalHeaders/Claim>",
+      "contextHeading": "<Audience>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalheadersclaim",
+      "elements": [],
+      "exampleElements": [
+        "AdditionalHeaders",
+        "Claim"
+      ],
+      "exampleAttributes": [
+        "array",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "One of: string (default), number, boolean, or map array - (Optional) Set to true to indicate if the value is an array of types."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Compress>",
+      "contextHeading": "<Compress>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#compress",
+      "elements": [
+        "Compress"
+      ],
+      "exampleElements": [
+        "Compress"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CriticalHeaders>",
+      "contextHeading": "<CriticalHeaders>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#criticalheaders",
+      "elements": [
+        "CriticalHeaders"
+      ],
+      "exampleElements": [
+        "CriticalHeaders"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<CustomClaims>",
+      "contextHeading": "<CustomClaims>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#customclaims",
+      "elements": [
+        "CustomClaims"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DirectKey>",
+      "contextHeading": "<DirectKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#directkey",
+      "elements": [
+        "DirectKey"
+      ],
+      "exampleElements": [
+        "DirectKey",
+        "Id",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "encoding",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Child elements of <DirectKey>",
+      "contextHeading": "Child elements of <DirectKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#directkey-child",
+      "elements": [
+        "DirectKey"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ExpiresIn>",
+      "contextHeading": "<ExpiresIn>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#expiresin",
+      "elements": [
+        "ExpiresIn"
+      ],
+      "exampleElements": [
+        "ExpiresIn"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Id>",
+      "contextHeading": "<Id>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#id",
+      "elements": [
+        "Id"
+      ],
+      "exampleElements": [
+        "Id"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Issuer>",
+      "contextHeading": "<Issuer>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#issuer",
+      "elements": [
+        "Issuer"
+      ],
+      "exampleElements": [
+        "Issuer"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the registered set of claims mentioned in RFC7519."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<NotBefore>",
+      "contextHeading": "<NotBefore>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#notbefore",
+      "elements": [
+        "NotBefore"
+      ],
+      "exampleElements": [
+        "NotBefore"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "sortable",
+          "required": false
+        },
+        {
+          "name": "ANCI-C",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<OutputVariable>",
+      "contextHeading": "<OutputVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#outputvariable",
+      "elements": [
+        "OutputVariable"
+      ],
+      "exampleElements": [
+        "OutputVariable"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PasswordKey>",
+      "contextHeading": "<PasswordKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#passwordkey",
+      "elements": [
+        "PasswordKey"
+      ],
+      "exampleElements": [
+        "Id",
+        "PBKDF2Iterations",
+        "PasswordKey",
+        "SaltLength",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Child elements of <PasswordKey>",
+      "contextHeading": "Child elements of <PasswordKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#passwordkey-child",
+      "elements": [
+        "PasswordKey"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PrivateKey>",
+      "contextHeading": "<PrivateKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey",
+      "elements": [
+        "PrivateKey"
+      ],
+      "exampleElements": [
+        "Id",
+        "Password",
+        "PrivateKey",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of RS256/RS384/RS512, PS256/PS384/PS512, or ES256/ES384/ES512."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Child elements of <PrivateKey>",
+      "contextHeading": "Child elements of <PrivateKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey-child",
+      "elements": [
+        "PrivateKey"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<PublicKey>",
+      "contextHeading": "<PublicKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey",
+      "elements": [
+        "PublicKey"
+      ],
+      "exampleElements": [
+        "Certificate",
+        "JWKS",
+        "PublicKey",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "ref",
+        "uri",
+        "uriRef"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following --> <Value ref=\"variable-containing-encoded-publickey\"/> <Value>PEM encoded public key</Value> <Certificate ref=\"variable-containing-encoded-x509-certificate\"/> <Certificate>PEM encoded X509 certificate</Certificate> <JWKS>jwks-content</JWKS> <JWKS ref=\"variable-containing-jwks-content\"/> <JWKS uri=\"variable-containing-jwks-con"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Child elements of <PublicKey>",
+      "contextHeading": "Child elements of <PublicKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child",
+      "elements": [
+        "PublicKey"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [
+        "Value",
+        "Certificate"
+      ],
+      "valueHints": [
+        "one of Value, Certificate, or JWKS."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<SecretKey>",
+      "contextHeading": "<SecretKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#secretkey",
+      "elements": [
+        "SecretKey"
+      ],
+      "exampleElements": [
+        "Id",
+        "SecretKey",
+        "Value"
+      ],
+      "exampleAttributes": [
+        "encoding",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Children of <SecretKey>",
+      "contextHeading": "Children of <SecretKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#secretkey-child",
+      "elements": [
+        "SecretKey"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Subject>",
+      "contextHeading": "<Subject>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#subject",
+      "elements": [
+        "Subject"
+      ],
+      "exampleElements": [
+        "Subject"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the standard set of claims mentioned in IETF RFC 7519."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Type>",
+      "contextHeading": "<Type>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#type",
+      "elements": [
+        "Type"
+      ],
+      "exampleElements": [
+        "Type"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<Type>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#jwt-example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "FaultRules",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

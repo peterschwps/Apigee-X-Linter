@@ -1,0 +1,151 @@
+{
+  "source": {
+    "id": "generate-saml-assertion-policy",
+    "kind": "policy",
+    "title": "generate saml assertion policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Samples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples",
+      "elements": [],
+      "exampleElements": [
+        "Alias",
+        "CanonicalizationAlgorithm",
+        "FlowVariable",
+        "GenerateSAMLAssertion",
+        "Issuer",
+        "KeyStore",
+        "Message",
+        "Name",
+        "Namespace",
+        "Namespaces",
+        "OutputVariable",
+        "SignatureAlgorithm",
+        "Subject",
+        "Template",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "ignoreContentType",
+        "ignoreUnresolvedVariables",
+        "name",
+        "prefix",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes that apply to the top-level element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#top-level-element-attributes",
+      "elements": [],
+      "exampleElements": [
+        "GenerateSAMLAssertion"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Elements and attributes for SAML assertion generation",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "Issuer",
+          "required": false
+        },
+        {
+          "name": "KeyStore",
+          "required": false
+        },
+        {
+          "name": "OutputVariable",
+          "required": false
+        },
+        {
+          "name": "FlowVariable",
+          "required": false
+        },
+        {
+          "name": "Message",
+          "required": false,
+          "possibleValues": [
+            "message",
+            "request"
+          ]
+        },
+        {
+          "name": "XPath",
+          "required": false
+        },
+        {
+          "name": "SignatureAlgorithm",
+          "required": false
+        },
+        {
+          "name": "Subject",
+          "required": false
+        },
+        {
+          "name": "Template",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "FaultRules",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

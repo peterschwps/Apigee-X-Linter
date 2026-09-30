@@ -1,0 +1,407 @@
+{
+  "source": {
+    "id": "external-callout-policy",
+    "kind": "policy",
+    "title": "external callout policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<ExternalCallout>",
+      "contextHeading": "<ExternalCallout>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#elements",
+      "elements": [
+        "ExternalCallout"
+      ],
+      "exampleElements": [
+        "ExternalCallout"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 1",
+      "contextHeading": "<ExternalCallout>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#example-1",
+      "elements": [],
+      "exampleElements": [
+        "Configurations",
+        "DisplayName",
+        "ExternalCallout",
+        "FlowVariable",
+        "GrpcConnection",
+        "Property",
+        "Server",
+        "TimeoutMs"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example 2",
+      "contextHeading": "<ExternalCallout>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#example-2",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "Configurations",
+        "DisplayName",
+        "ExternalCallout",
+        "FlowVariable",
+        "GoogleIDToken",
+        "GrpcConnection",
+        "Property",
+        "Server",
+        "TimeoutMs"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "useTargetUrl"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<TimeoutMs>",
+      "contextHeading": "<TimeoutMs>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#timeoutms",
+      "elements": [
+        "TimeoutMs"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<GrpcConnection>",
+      "contextHeading": "<GrpcConnection>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#grpcconnection",
+      "elements": [
+        "GrpcConnection"
+      ],
+      "exampleElements": [
+        "GrpcConnection",
+        "Server"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Server> element",
+      "contextHeading": "<Server> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#server",
+      "elements": [
+        "Server"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Authentication> element",
+      "contextHeading": "<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication",
+      "elements": [
+        "Authentication"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "ExternalCallout",
+        "GoogleIDToken",
+        "GrpcConnection",
+        "HeaderName",
+        "IncludeEmail",
+        "Server"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "Configurations",
+        "DisplayName",
+        "ExternalCallout",
+        "FlowVariable",
+        "GoogleIDToken",
+        "GrpcConnection",
+        "HeaderName",
+        "Property",
+        "Server",
+        "TimeoutMs"
+      ],
+      "exampleAttributes": [
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "ExternalCallout",
+        "GoogleIDToken",
+        "HeaderName"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "With static string",
+      "contextHeading": "<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#with-static-string",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken",
+        "HeaderName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "With variable reference",
+      "contextHeading": "<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#with-variable-reference",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken",
+        "HeaderName"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#syntax_2",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "ExternalCallout",
+        "GoogleIDToken",
+        "GrpcConnection",
+        "IncludeEmail",
+        "Server"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref",
+        "useTargetUrl"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Authentication> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleIDToken",
+        "IncludeEmail"
+      ],
+      "exampleAttributes": [
+        "ref",
+        "useTargetUrl"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Configurations>",
+      "contextHeading": "<Configurations>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#configurations",
+      "elements": [
+        "Configurations"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Property>",
+      "contextHeading": "<Property>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#property",
+      "elements": [
+        "Property"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "Possible values are true (the item will be sent) or false (the item won't be sent)."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<FlowVariable>",
+      "contextHeading": "<FlowVariable>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#flow-variable",
+      "elements": [
+        "FlowVariable"
+      ],
+      "exampleElements": [
+        "Configurations",
+        "FlowVariable"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

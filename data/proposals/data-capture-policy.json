@@ -1,0 +1,567 @@
+{
+  "source": {
+    "id": "data-capture-policy",
+    "kind": "policy",
+    "title": "data capture policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<DataCapture>",
+      "contextHeading": "<DataCapture>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#elements",
+      "elements": [
+        "DataCapture"
+      ],
+      "exampleElements": [
+        "Capture",
+        "Collect",
+        "DataCapture",
+        "DataCollector",
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Pattern",
+        "Source",
+        "ThrowExceptionOnLimit",
+        "URIPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "default",
+        "enabled",
+        "ignoreCase",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"false\">/foo/{$}</Pattern> <Pattern ignoreCase=\"false\">/foo/bar/{$}</Pattern> </URIPath> </Collect> </Capture> </DataCapture>"
+      ]
+    },
+    {
+      "heading": "Capturing data for a built-in variable",
+      "contextHeading": "<DataCapture>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#capturing-data-for-a-built-in-variable",
+      "elements": [],
+      "exampleElements": [
+        "Capture",
+        "Collect",
+        "DataCapture",
+        "DataCollector"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Capturing data inline",
+      "contextHeading": "<DataCapture>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#capturing-data-inline",
+      "elements": [],
+      "exampleElements": [
+        "Capture",
+        "Collect",
+        "DataCapture",
+        "DataCollector",
+        "JSONPath",
+        "JSONPayload"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Capture>",
+      "contextHeading": "<Capture>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#acaptureattributes",
+      "elements": [
+        "Capture"
+      ],
+      "exampleElements": [
+        "Capture"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DataCollector>",
+      "contextHeading": "<DataCollector>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#datacollector",
+      "elements": [
+        "DataCollector"
+      ],
+      "exampleElements": [
+        "DataCollector"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "scope",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Collect>",
+      "contextHeading": "<Collect>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#collect",
+      "elements": [
+        "Collect"
+      ],
+      "exampleElements": [
+        "Collect"
+      ],
+      "exampleAttributes": [
+        "default",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ref",
+          "required": false,
+          "type": "String"
+        },
+        {
+          "name": "default",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Child elements of <Collect>",
+      "contextHeading": "Child elements of <Collect>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#collect-child",
+      "elements": [
+        "Collect"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Source>",
+      "contextHeading": "<Source>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#sourceelement",
+      "elements": [
+        "Source"
+      ],
+      "exampleElements": [
+        "Source"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<URIPath>",
+      "contextHeading": "<URIPath>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#uripathelement",
+      "elements": [
+        "URIPath"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern is the proxy."
+      ]
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<URIPath>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#uripathelement-attributes",
+      "elements": [],
+      "exampleElements": [
+        "Collect",
+        "Pattern",
+        "URIPath"
+      ],
+      "exampleAttributes": [
+        "ignoreCase"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "ignoreCase",
+          "required": false,
+          "type": "Boolean"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"false\">/foo/{$}</Pattern> </URIPath> </Collect>",
+        "Pattern> elements:",
+        "Pattern ignoreCase=\"false\">/foo/{$}</Pattern> <Pattern ignoreCase=\"false\">/foo/bar/{$}</Pattern> </URIPath>"
+      ]
+    },
+    {
+      "heading": "<QueryParam>",
+      "contextHeading": "<QueryParam>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#queryparamelement",
+      "elements": [
+        "QueryParam"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<QueryParam>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#queryparamelement-attributes",
+      "elements": [],
+      "exampleElements": [
+        "Collect",
+        "Pattern",
+        "QueryParam"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"true\">{$}</Pattern> </QueryParam> </Collect>",
+        "Pattern elements, but the first matching pattern will resolve for a particular request."
+      ]
+    },
+    {
+      "heading": "<Header>",
+      "contextHeading": "<Header>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#headerelement",
+      "elements": [
+        "Header"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Header>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#headerelement-attributes",
+      "elements": [],
+      "exampleElements": [
+        "Collect",
+        "Header",
+        "Pattern"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern ignoreCase=\"false\">Bearer {$}</Pattern> </Header> </Collect>",
+        "Pattern ignoreCase=\"true\">{$}</Pattern> </Header> </Collect>"
+      ]
+    },
+    {
+      "heading": "<FormParam>",
+      "contextHeading": "<FormParam>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#formparamelement",
+      "elements": [
+        "FormParam"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<FormParam>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#formparamelement-attributes",
+      "elements": [],
+      "exampleElements": [
+        "Collect",
+        "FormParam",
+        "Pattern"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": false,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>hello {$}</Pattern> </FormParam> </Collect>"
+      ]
+    },
+    {
+      "heading": "<JSONPayload>",
+      "contextHeading": "<JSONPayload>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#jsonpayloadelement",
+      "elements": [
+        "JSONPayload"
+      ],
+      "exampleElements": [
+        "Collect",
+        "JSONPath",
+        "JSONPayload"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<JSONPath>",
+      "contextHeading": "<JSONPath>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#jsonpayloadelement-jsonpayloadvariablejsonpathelement",
+      "elements": [
+        "JSONPath"
+      ],
+      "exampleElements": [
+        "JSONPath"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XMLPayload>",
+      "contextHeading": "<XMLPayload>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#xmlpayloadelement",
+      "elements": [
+        "XMLPayload"
+      ],
+      "exampleElements": [
+        "Collect",
+        "Namespace",
+        "Namespaces",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Namespaces>",
+      "contextHeading": "<Namespaces>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#xmlpayloadelement-xmlpayloadnamespaceselement",
+      "elements": [
+        "Namespaces"
+      ],
+      "exampleElements": [
+        "Collect",
+        "Namespace",
+        "Namespaces",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Namespace>",
+      "contextHeading": "<Namespace>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#xmlpayloadelement-xmlpayloadnamespacesnamespaceelement",
+      "elements": [
+        "Namespace"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes",
+      "contextHeading": "<Namespace>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#attributes",
+      "elements": [],
+      "exampleElements": [
+        "Collect",
+        "Namespace",
+        "Namespaces",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "prefix",
+          "required": true,
+          "type": "String"
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<XPath>",
+      "contextHeading": "<XPath>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#xmlpayloadelement-xmlpayloadvariablexpathelement",
+      "elements": [
+        "XPath"
+      ],
+      "exampleElements": [
+        "XPath"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<ThrowExceptionOnLimit>",
+      "contextHeading": "<ThrowExceptionOnLimit>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#throwexceptiononlimit",
+      "elements": [
+        "ThrowExceptionOnLimit"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following:"
+      ],
+      "formatHints": []
+    }
+  ]
+}

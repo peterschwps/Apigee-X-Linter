@@ -1,0 +1,275 @@
+{
+  "source": {
+    "id": "hmac-policy",
+    "kind": "policy",
+    "title": "hmac policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Generate HMAC",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#generate-hmac",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "HMAC",
+        "IgnoreUnresolvedVariables",
+        "Message",
+        "Output",
+        "SecretKey"
+      ],
+      "exampleAttributes": [
+        "encoding",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Verify HMAC",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#verify-hmac",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "HMAC",
+        "IgnoreUnresolvedVariables",
+        "Message",
+        "Output",
+        "SecretKey",
+        "VerificationValue"
+      ],
+      "exampleAttributes": [
+        "encoding",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Attributes that apply to the top-level element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#elementreferenceforhmac-attributesthatapplytothetoplevelelement",
+      "elements": [],
+      "exampleElements": [
+        "HMAC"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Algorithm>",
+      "contextHeading": "<Algorithm>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#algorithm",
+      "elements": [
+        "Algorithm"
+      ],
+      "exampleElements": [
+        "Algorithm"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<DisplayName>",
+      "contextHeading": "<DisplayName>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#displayname",
+      "elements": [
+        "DisplayName"
+      ],
+      "exampleElements": [
+        "DisplayName"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Message>",
+      "contextHeading": "<Message>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#message",
+      "elements": [
+        "Message"
+      ],
+      "exampleElements": [
+        "Message"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Output>",
+      "contextHeading": "<Output>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#output",
+      "elements": [
+        "Output"
+      ],
+      "exampleElements": [
+        "Output"
+      ],
+      "exampleAttributes": [
+        "encoding"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<SecretKey>",
+      "contextHeading": "<SecretKey>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#secretkey",
+      "elements": [
+        "SecretKey"
+      ],
+      "exampleElements": [
+        "SecretKey"
+      ],
+      "exampleAttributes": [
+        "encoding",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<VerificationValue>",
+      "contextHeading": "<VerificationValue>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#verificationvalue",
+      "elements": [
+        "VerificationValue"
+      ],
+      "exampleElements": [
+        "VerificationValue"
+      ],
+      "exampleAttributes": [
+        "encoding",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Whitespace Differences",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#whitespace-differences",
+      "elements": [],
+      "exampleElements": [
+        "HMAC",
+        "Message"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#hmac-example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "FaultRules",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

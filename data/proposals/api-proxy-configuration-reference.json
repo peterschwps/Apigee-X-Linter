@@ -1,0 +1,842 @@
+{
+  "source": {
+    "id": "api-proxy-configuration-reference",
+    "kind": "core",
+    "title": "API proxy configuration reference",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Base, proxy endpoint, target endpoint, and integration endpoint roots have an initial reviewed model; nested configuration is still incomplete."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "/apiproxy/weatherapi.xml",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-apiproxyweatherapixml",
+      "elements": [],
+      "exampleElements": [
+        "APIProxy"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Base configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "APIProxy",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "revision",
+          "required": false
+        },
+        {
+          "name": "ConfigurationVersion",
+          "required": false
+        },
+        {
+          "name": "Description",
+          "required": false
+        },
+        {
+          "name": "DisplayName",
+          "required": false
+        },
+        {
+          "name": "Policies",
+          "required": false
+        },
+        {
+          "name": "ProxyEndpoints",
+          "required": false
+        },
+        {
+          "name": "Resources",
+          "required": false
+        },
+        {
+          "name": "Spec",
+          "required": false
+        },
+        {
+          "name": "TargetServers",
+          "required": false
+        },
+        {
+          "name": "TargetEndpoints",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "/apiproxy/proxies/default.xml",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-apiproxyproxiesdefaultxml",
+      "elements": [],
+      "exampleElements": [
+        "BasePath",
+        "DefaultFaultRule",
+        "FaultRules",
+        "Flows",
+        "HTTPProxyConnection",
+        "PostFlow",
+        "PreFlow",
+        "Properties",
+        "ProxyEndpoint",
+        "RouteRule",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "ProxyEndpoint configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-proxyendpointconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "ProxyEndpoint",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "PreFlow",
+          "required": true
+        },
+        {
+          "name": "Flows",
+          "required": true
+        },
+        {
+          "name": "PostFlow",
+          "required": true
+        },
+        {
+          "name": "HTTPProxyConnection",
+          "required": false
+        },
+        {
+          "name": "BasePath",
+          "required": true
+        },
+        {
+          "name": "Properties",
+          "required": false
+        },
+        {
+          "name": "FaultRules",
+          "required": false
+        },
+        {
+          "name": "DefaultFaultRule",
+          "required": false
+        },
+        {
+          "name": "RouteRule",
+          "required": false
+        },
+        {
+          "name": "Name",
+          "required": true
+        },
+        {
+          "name": "Condition",
+          "required": false
+        },
+        {
+          "name": "TargetEndpoint",
+          "required": false
+        },
+        {
+          "name": "URL",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "How to configure RouteRules",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules",
+      "elements": [],
+      "exampleElements": [
+        "RouteRule",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Direct URL invocation",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-directurlinvocation",
+      "elements": [],
+      "exampleElements": [
+        "RouteRule",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Conditional routes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-conditionalroutes",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "RouteRule",
+        "TargetEndpoint",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Null routes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-nullroutes",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "RouteRule"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "/targets/default.xml",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetsdefaultxml",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "DefaultFaultRule",
+        "EventFlow",
+        "FaultRules",
+        "Flows",
+        "HTTPTargetConnection",
+        "LocalTargetConnection",
+        "PostFlow",
+        "PreFlow",
+        "SSLInfo",
+        "ScriptTarget",
+        "TargetEndpoint",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "TargetEndpoint configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "TargetEndpoint",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "PreFlow",
+          "required": true
+        },
+        {
+          "name": "Flows",
+          "required": true
+        },
+        {
+          "name": "PostFlow",
+          "required": true
+        },
+        {
+          "name": "EventFlow",
+          "required": false
+        },
+        {
+          "name": "HTTPTargetConnection",
+          "required": false
+        },
+        {
+          "name": "URL",
+          "required": false
+        },
+        {
+          "name": "LoadBalancer",
+          "required": false
+        },
+        {
+          "name": "Properties",
+          "required": false
+        },
+        {
+          "name": "SSLInfo",
+          "required": false
+        },
+        {
+          "name": "LocalTargetConnection",
+          "required": false
+        },
+        {
+          "name": "APIProxy",
+          "required": false
+        },
+        {
+          "name": "ProxyEndpoint",
+          "required": false
+        },
+        {
+          "name": "Path",
+          "required": false
+        },
+        {
+          "name": "FaultRules",
+          "required": false
+        },
+        {
+          "name": "DefaultFaultRule",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following ways:",
+        "one of these in a target endpoint."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<Authentication> element usage",
+      "contextHeading": "<Authentication> element usage",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#authentication-element-usage",
+      "elements": [
+        "Authentication"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Authentication> element error reference",
+      "contextHeading": "<Authentication> element error reference",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#authentication-element-error-reference",
+      "elements": [
+        "Authentication"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Authentication> element examples",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#authentication-element-examples",
+      "elements": [
+        "Authentication"
+      ],
+      "exampleElements": [
+        "Audience",
+        "Authentication",
+        "GoogleAccessToken",
+        "GoogleIDToken",
+        "HTTPTargetConnection",
+        "HeaderName",
+        "LoadBalancer",
+        "Properties",
+        "Scope",
+        "Scopes",
+        "Server",
+        "TargetEndpoint",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref",
+        "useTargetUrl"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "TLS/SSL TargetEndpoint configuration elements",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#tlsssltargetendpointconfiguration-tlsssltargetendpointconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "SSLInfo",
+          "required": false
+        },
+        {
+          "name": "Enabled",
+          "required": false
+        },
+        {
+          "name": "Enforce",
+          "required": false
+        },
+        {
+          "name": "TrustStore",
+          "required": false
+        },
+        {
+          "name": "ClientAuthEnabled",
+          "required": false
+        },
+        {
+          "name": "KeyStore",
+          "required": false
+        },
+        {
+          "name": "KeyAlias",
+          "required": false
+        },
+        {
+          "name": "IgnoreValidationErrors",
+          "required": false
+        },
+        {
+          "name": "Ciphers",
+          "required": false
+        },
+        {
+          "name": "Protocols",
+          "required": false
+        },
+        {
+          "name": "CommonName",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Sample target endpoint with outbound client authentication enabled",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#tlsssltargetendpointconfiguration-sampletargetendpointwithoutboundclientauthenticationenabled",
+      "elements": [],
+      "exampleElements": [
+        "ClientAuthEnabled",
+        "Enabled",
+        "Enforce",
+        "HttpTargetConnection",
+        "KeyAlias",
+        "KeyStore",
+        "SSLInfo",
+        "TargetEndpoint",
+        "TrustStore",
+        "URL"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using flow variables to set TLS/SSL values dynamically",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#tlsssltargetendpointconfiguration-usingflowvariablestosettlssslvaluesdynamically",
+      "elements": [],
+      "exampleElements": [
+        "ClientAuthEnabled",
+        "Enabled",
+        "KeyAlias",
+        "KeyStore",
+        "SSLInfo",
+        "TrustStore"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Using references to set TLS/SSL values dynamically",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#tlsssltargetendpointconfiguration-usingreferencestosettlssslvaluesdynamically",
+      "elements": [],
+      "exampleElements": [
+        "ClientAuthEnabled",
+        "Enabled",
+        "KeyAlias",
+        "KeyStore",
+        "Refers",
+        "ResourceReference",
+        "ResourceType",
+        "SSLInfo"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Configuring IntegrationEndpoint",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#configuring-integrationendpoint",
+      "elements": [],
+      "exampleElements": [
+        "AsyncExecution",
+        "BasePath",
+        "Description",
+        "FaultRules",
+        "Flows",
+        "HTTPProxyConnection",
+        "IntegrationEndpoint",
+        "Name",
+        "PostFlow",
+        "PreFlow",
+        "Properties",
+        "ProxyEndpoint",
+        "Request",
+        "RouteRule",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "IntegrationEndpoint configuration elements",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#integrationendpoint-configuration-elements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "IntegrationEndpoint",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "AsyncExecution",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Synchronous vs Asynchronous execution",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#ie-sync-async",
+      "elements": [],
+      "exampleElements": [
+        "AsyncExecution",
+        "IntegrationEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Policy configuration elements",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#policies-policyconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "Policy",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "enabled",
+          "required": false
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "async",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Policy attachment",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#policies-policyattachment",
+      "elements": [],
+      "exampleElements": [
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format of a policy attachment is the following:"
+      ]
+    },
+    {
+      "heading": "Policy attachment configuration elements",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#policies-policyattachmentconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "Step",
+          "required": false
+        },
+        {
+          "name": "Name",
+          "required": true
+        },
+        {
+          "name": "Condition",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Flows",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#flows",
+      "elements": [],
+      "exampleElements": [
+        "Name",
+        "PostClientFlow",
+        "PostFlow",
+        "Request",
+        "Response",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Conditional flows",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#watchaquickhowtovideo-conditionalflows",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Flow",
+        "Flows",
+        "Name",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Flow configuration elements",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#watchaquickhowtovideo-flowconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "Flow",
+          "required": false
+        },
+        {
+          "name": "Name",
+          "required": true
+        },
+        {
+          "name": "Condition",
+          "required": true
+        },
+        {
+          "name": "Request",
+          "required": false
+        },
+        {
+          "name": "Response",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Step processing",
+      "contextHeading": "<Authentication> element examples",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#watchaquickhowtovideo-stepprocessing",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "Flow",
+        "Flows",
+        "Name",
+        "Request",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

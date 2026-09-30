@@ -1,0 +1,216 @@
+{
+  "source": {
+    "id": "read-property-set-policy",
+    "kind": "policy",
+    "title": "read property set policy",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "<ReadPropertySet> element",
+      "contextHeading": "<ReadPropertySet> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#readpropertyset",
+      "elements": [
+        "ReadPropertySet"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<ReadPropertySet> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#syntax",
+      "elements": [],
+      "exampleElements": [
+        "AssignTo",
+        "DefaultValue",
+        "IgnoreUnresolvedVariables",
+        "Key",
+        "Name",
+        "Read",
+        "ReadPropertySet"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default Policy",
+      "contextHeading": "<ReadPropertySet> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#default-policy",
+      "elements": [],
+      "exampleElements": [
+        "AssignTo",
+        "DefaultValue",
+        "IgnoreUnresolvedVariables",
+        "Key",
+        "Name",
+        "Read",
+        "ReadPropertySet"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "continueOnError",
+          "required": false
+        },
+        {
+          "name": "enabled",
+          "required": false
+        }
+      ],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<ReadPropertySet> element",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#example",
+      "elements": [],
+      "exampleElements": [
+        "AssignTo",
+        "DefaultValue",
+        "IgnoreUnresolvedVariables",
+        "Key",
+        "Name",
+        "Read",
+        "ReadPropertySet"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<Read>",
+      "contextHeading": "<Read>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#read",
+      "elements": [
+        "Read"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Syntax",
+      "contextHeading": "<Read>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#syntax_1",
+      "elements": [],
+      "exampleElements": [
+        "AssignTo",
+        "DefaultValue",
+        "Key",
+        "Name",
+        "Read"
+      ],
+      "exampleAttributes": [
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example",
+      "contextHeading": "<Read>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#example_1",
+      "elements": [],
+      "exampleElements": [
+        "AssignTo",
+        "DefaultValue",
+        "IgnoreUnresolvedVariables",
+        "Key",
+        "Name",
+        "Read",
+        "ReadPropertySet"
+      ],
+      "exampleAttributes": [
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<IgnoreUnresolvedVariables>",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#ignoreunresolvedvariables",
+      "elements": [
+        "IgnoreUnresolvedVariables"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Example fault rule",
+      "contextHeading": "<IgnoreUnresolvedVariables>",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#example-fault-rule",
+      "elements": [],
+      "exampleElements": [
+        "Condition",
+        "FaultRule",
+        "Name",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}
