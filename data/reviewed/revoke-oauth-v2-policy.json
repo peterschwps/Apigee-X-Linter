@@ -1,0 +1,14 @@
+{
+  "kind": "policy",
+  "root": "RevokeOAuthV2",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/RevokeOAuthV2", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#getoauthv2infoattributes", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] } }, "children": ["DisplayName", "AppId", "EndUserId", "RevokeBeforeTimestamp", "Cascade"] },
+    { "path": "/RevokeOAuthV2/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/RevokeOAuthV2/AppId", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#appidelement", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/RevokeOAuthV2/EndUserId", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#enduseridelement", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/RevokeOAuthV2/RevokeBeforeTimestamp", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#revokebeforetimestampelement", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "format", "format": "Expected UTC epoch milliseconds as an integer.", "pattern": "^[0-9]+$" } },
+    { "path": "/RevokeOAuthV2/Cascade", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy#cascadeelement", "text": { "kind": "enum", "values": ["true", "false"] } }
+  ]
+}

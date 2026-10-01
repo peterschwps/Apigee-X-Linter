@@ -1,0 +1,15 @@
+{
+  "kind": "policy",
+  "root": "ReadPropertySet",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/ReadPropertySet", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#readpropertyset", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["Read", "IgnoreUnresolvedVariables"], "requiredChildren": ["Read"] },
+    { "path": "/ReadPropertySet/Read", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#read", "children": ["Name", "Key", "AssignTo", "DefaultValue"], "requiredChildren": ["Name", "Key", "AssignTo"] },
+    { "path": "/ReadPropertySet/Read/Name", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#read", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/ReadPropertySet/Read/Key", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#read", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/ReadPropertySet/Read/AssignTo", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#read", "text": { "kind": "free" } },
+    { "path": "/ReadPropertySet/Read/DefaultValue", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#read", "text": { "kind": "free" } },
+    { "path": "/ReadPropertySet/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } }
+  ]
+}

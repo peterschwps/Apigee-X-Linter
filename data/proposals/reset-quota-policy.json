@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "reset quota policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed target Quota name/ref, mandatory Identifier, integer Allow adjustment, and optional class-specific counter adjustment. At least one of name/ref and one of direct Allow/Class is semantically needed, but these alternatives are not expressible by the static requiredChildren model."
   },
   "reviewStatus": "unreviewed",
   "sections": [

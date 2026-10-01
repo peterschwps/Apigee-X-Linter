@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "read property set policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed repeatable Read operations, Name/Key ref-or-literal values, required AssignTo, optional DefaultValue, and IgnoreUnresolvedVariables. The deployment EmptyReads error establishes at least one Read despite the Read subsection's contradictory optional label; ref-or-literal nonempty conditions are not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

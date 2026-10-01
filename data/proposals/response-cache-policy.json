@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "response cache policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed cache keys, expiry alternatives, scope, flags, conditions, and documented attributes. The element-reference sample includes Properties but gives no definition of its possible children or attributes, so that subtree remains incomplete. Text formats may instead come from ref at runtime; condition expressions are not parsed."
   },
   "reviewStatus": "unreviewed",
   "sections": [

@@ -1,0 +1,15 @@
+{
+  "kind": "policy",
+  "root": "ResetQuota",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/ResetQuota", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#resetquotaattributes", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "Quota"], "requiredChildren": ["Quota"] },
+    { "path": "/ResetQuota/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/ResetQuota/Quota", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaelement-attributes", "attributes": { "name": { "kind": "free" }, "ref": { "kind": "free" } }, "children": ["Identifier"], "requiredChildren": ["Identifier"] },
+    { "path": "/ResetQuota/Quota/Identifier", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaidentifierelement-attributes", "attributes": { "name": { "kind": "free" }, "ref": { "kind": "free" } }, "children": ["Allow", "Class"] },
+    { "path": "/ResetQuota/Quota/Identifier/Allow", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaallowelement-attributes", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "format", "format": "Expected an integer quota adjustment.", "pattern": "^-?[0-9]+$" } },
+    { "path": "/ResetQuota/Quota/Identifier/Class", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaidentifierclasselement-attributes", "attributes": { "ref": { "kind": "free" } }, "children": ["Allow"] },
+    { "path": "/ResetQuota/Quota/Identifier/Class/Allow", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy#quotaidentifierclasselement", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "format", "format": "Expected an integer quota adjustment.", "pattern": "^-?[0-9]+$" } }
+  ]
+}

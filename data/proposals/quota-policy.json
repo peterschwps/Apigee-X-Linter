@@ -4,8 +4,8 @@
     "kind": "policy",
     "title": "quota policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy",
-    "reviewStatus": "in-progress",
-    "reviewNotes": "Top-level elements and selected nested values are represented; nested configuration and conditional requirements need review."
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed nested Class and API-product default quota structures, counter options, numeric formats, and documented enums. Type default appears in the deployment error table though omitted from the introductory type list; second TimeUnit is documented for non-distributed counters. StartTime examples allow unpadded month/day despite yyyy-MM-dd prose. Conditional calendar StartTime, Class/Identifier exclusivity, CountOnly/EnforceOnly relationships, and API-product overrides are not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

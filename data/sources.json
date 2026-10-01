@@ -346,50 +346,56 @@
     "kind": "policy",
     "title": "quota policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy",
-    "reviewStatus": "in-progress",
-    "reviewNotes": "Top-level elements and selected nested values are represented; nested configuration and conditional requirements need review."
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed nested Class and API-product default quota structures, counter options, numeric formats, and documented enums. Type default appears in the deployment error table though omitted from the introductory type list; second TimeUnit is documented for non-distributed counters. StartTime examples allow unpadded month/day despite yyyy-MM-dd prose. Conditional calendar StartTime, Class/Identifier exclusivity, CountOnly/EnforceOnly relationships, and API-product overrides are not cross-validated."
   },
   {
     "id": "raise-fault-policy",
     "kind": "policy",
     "title": "raise fault policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed RaiseFault response branches, headers, payload attributes, booleans, and ShortFaultReason. Payload deliberately allows arbitrary embedded XML and is left open to avoid false unknown-element errors; conditional fault behavior requires flow context."
   },
   {
     "id": "read-property-set-policy",
     "kind": "policy",
     "title": "read property set policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/read-property-set-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed repeatable Read operations, Name/Key ref-or-literal values, required AssignTo, optional DefaultValue, and IgnoreUnresolvedVariables. The deployment EmptyReads error establishes at least one Read despite the Read subsection's contradictory optional label; ref-or-literal nonempty conditions are not cross-validated."
   },
   {
     "id": "regular-expression-protection",
     "kind": "policy",
     "title": "regular expression protection",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed all element-reference paths, named parameter attributes, XML namespace prefix, XPath result types, JSON slash escaping, and deployment errors. The root requires one of several target selectors, but this cross-field alternative is not expressible as requiredChildren. Java regular-expression and XPath/JSONPath syntax are not validated."
   },
   {
     "id": "reset-quota-policy",
     "kind": "policy",
     "title": "reset quota policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reset-quota-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed target Quota name/ref, mandatory Identifier, integer Allow adjustment, and optional class-specific counter adjustment. At least one of name/ref and one of direct Allow/Class is semantically needed, but these alternatives are not expressible by the static requiredChildren model."
   },
   {
     "id": "response-cache-policy",
     "kind": "policy",
     "title": "response cache policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed cache keys, expiry alternatives, scope, flags, conditions, and documented attributes. The element-reference sample includes Properties but gives no definition of its possible children or attributes, so that subtree remains incomplete. Text formats may instead come from ref at runtime; condition expressions are not parsed."
   },
   {
     "id": "revoke-oauth-v2-policy",
     "kind": "policy",
     "title": "revoke oauth v2 policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed AppId and EndUserId variable/literal forms, Cascade boolean, and epoch-millisecond RevokeBeforeTimestamp. The runtime EmptyAppAndEndUserId fault establishes a cross-element condition that the current static model cannot enforce; timestamp range and future checks remain runtime concerns."
   },
   {
     "id": "sanitize-llm-response-policy",

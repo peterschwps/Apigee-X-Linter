@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "raise fault policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed RaiseFault response branches, headers, payload attributes, booleans, and ShortFaultReason. Payload deliberately allows arbitrary embedded XML and is left open to avoid false unknown-element errors; conditional fault behavior requires flow context."
   },
   "reviewStatus": "unreviewed",
   "sections": [

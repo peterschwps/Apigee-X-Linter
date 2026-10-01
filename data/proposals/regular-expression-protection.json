@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "regular expression protection",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/regular-expression-protection",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed all element-reference paths, named parameter attributes, XML namespace prefix, XPath result types, JSON slash escaping, and deployment errors. The root requires one of several target selectors, but this cross-field alternative is not expressible as requiredChildren. Java regular-expression and XPath/JSONPath syntax are not validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

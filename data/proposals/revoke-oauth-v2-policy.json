@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "revoke oauth v2 policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/revoke-oauth-v2-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed AppId and EndUserId variable/literal forms, Cascade boolean, and epoch-millisecond RevokeBeforeTimestamp. The runtime EmptyAppAndEndUserId fault establishes a cross-element condition that the current static model cannot enforce; timestamp range and future checks remain runtime concerns."
   },
   "reviewStatus": "unreviewed",
   "sections": [
