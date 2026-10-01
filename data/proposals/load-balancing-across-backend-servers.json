@@ -1,0 +1,434 @@
+{
+  "source": {
+    "id": "load-balancing-across-backend-servers",
+    "kind": "core",
+    "title": "Load balancing across backend servers",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers",
+    "reviewStatus": "in-progress",
+    "reviewNotes": "Supplemental Apigee X guide for TargetEndpoint and ServiceCallout load-balancer XML; target-server API and health-monitor administration are outside this extension's proxy-bundle XML scope."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Configuring a target endpoint to load balance across named target servers",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#configuringatargetendpointtoloadbalanceacrossnamedtargetservers",
+      "elements": [],
+      "exampleElements": [
+        "HTTPTargetConnection",
+        "LoadBalancer",
+        "Path",
+        "Server",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Round robin",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#round-robin",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "HTTPTargetConnection",
+        "LoadBalancer",
+        "Path",
+        "Server",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Weighted",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#weighted",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "HTTPTargetConnection",
+        "LoadBalancer",
+        "Path",
+        "Server",
+        "TargetEndpoint",
+        "Weight"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Least Connections",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#least-connections",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "HTTPTargetConnection",
+        "LoadBalancer",
+        "Path",
+        "Server",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Maximum failures",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#settingloadbalanceroptions-maximumfailures",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "HTTPTargetConnection",
+        "LoadBalancer",
+        "MaxFailures",
+        "Path",
+        "ResponseCode",
+        "Server",
+        "ServerUnhealthyResponse",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Retry",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#settingloadbalanceroptions-retry",
+      "elements": [],
+      "exampleElements": [
+        "RetryEnabled"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "IsFallback",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#settingloadbalanceroptions-isfallback",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "HTTPTargetConnection",
+        "IsFallback",
+        "LoadBalancer",
+        "Path",
+        "Server",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the other target servers reports as healthy again and is returned to rotation."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Path",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#settingloadbalanceroptions-path",
+      "elements": [],
+      "exampleElements": [
+        "Enabled",
+        "HTTPTargetConnection",
+        "LoadBalancer",
+        "Path",
+        "SSLInfo",
+        "Server"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Successes and failures",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#successes-and-failures",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of two possible results:"
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "<HealthMonitor> configuration elements",
+      "contextHeading": "<HealthMonitor> configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#healthmonitor-configuration-elements",
+      "elements": [
+        "HealthMonitor"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "IsEnabled",
+          "required": false
+        },
+        {
+          "name": "IntervalInSec",
+          "required": true
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Health monitor using TCP monitor",
+      "contextHeading": "<HealthMonitor> configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#healthmonitoring-tcpmonitor",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "ConnectTimeoutInSec",
+        "HTTPTargetConnection",
+        "HealthMonitor",
+        "IntervalInSec",
+        "IsEnabled",
+        "LoadBalancer",
+        "MaxFailures",
+        "Path",
+        "Port",
+        "Server",
+        "TCPMonitor",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<TCPMonitor> configuration elements",
+      "contextHeading": "<TCPMonitor> configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#tcpmonitor-configuration-elements",
+      "elements": [
+        "TCPMonitor"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "ConnectTimeoutInSec",
+          "required": true
+        },
+        {
+          "name": "Port",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Health monitor using HTTP monitor",
+      "contextHeading": "<TCPMonitor> configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#healthmonitoring-httpmonitor",
+      "elements": [],
+      "exampleElements": [
+        "Algorithm",
+        "ConnectTimeoutInSec",
+        "HTTPMonitor",
+        "HTTPTargetConnection",
+        "Header",
+        "HealthMonitor",
+        "IncludeHealthCheckIdHeader",
+        "IntervalInSec",
+        "IsEnabled",
+        "LoadBalancer",
+        "MaxFailures",
+        "Path",
+        "Port",
+        "Request",
+        "ResponseCode",
+        "Server",
+        "SocketReadTimeoutInSec",
+        "SuccessResponse",
+        "TargetEndpoint",
+        "UseTargetServerSSLInfo",
+        "Verb"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPMonitor> configuration elements",
+      "contextHeading": "<HTTPMonitor> configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#httpmonitor-configuration-elements",
+      "elements": [
+        "HTTPMonitor"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "Request",
+          "required": true
+        },
+        {
+          "name": "SuccessResponse",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPMonitor>/<Request> configuration elements",
+      "contextHeading": "<HTTPMonitor>/<Request> configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#httpmonitorrequest-configuration-elements",
+      "elements": [
+        "HTTPMonitor",
+        "Request"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "ConnectTimeoutInSec",
+          "required": false
+        },
+        {
+          "name": "SocketReadTimeoutInSec",
+          "required": false
+        },
+        {
+          "name": "Port",
+          "required": false
+        },
+        {
+          "name": "Verb",
+          "required": false
+        },
+        {
+          "name": "Path",
+          "required": false
+        },
+        {
+          "name": "UseTargetServerSSLInfo",
+          "required": false
+        },
+        {
+          "name": "IncludeHealthCheckIdHeader",
+          "required": false
+        },
+        {
+          "name": "Payload",
+          "required": false
+        },
+        {
+          "name": "Header",
+          "required": false
+        },
+        {
+          "name": "IsSSL",
+          "required": false
+        },
+        {
+          "name": "TrustAllSSL",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "<HTTPMonitor>/<SuccessResponse> configuration elements",
+      "contextHeading": "<HTTPMonitor>/<SuccessResponse> configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers#httpmonitorsuccessresponse-configuration-elements",
+      "elements": [
+        "HTTPMonitor",
+        "SuccessResponse"
+      ],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "ResponseCode",
+          "required": false
+        },
+        {
+          "name": "Header",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

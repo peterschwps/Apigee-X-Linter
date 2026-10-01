@@ -39,6 +39,7 @@ const coreSources: Source[] = [
   { id: 'api-proxy-configuration-reference', kind: 'core', title: 'API proxy configuration reference', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference' },
   { id: 'flow-configuration-reference', kind: 'core', title: 'Flow configuration reference', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference' },
   { id: 'endpoint-properties-reference', kind: 'core', title: 'Endpoint properties reference', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference' },
+  { id: 'load-balancing-across-backend-servers', kind: 'core', title: 'Load balancing across backend servers', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers' },
 ];
 const supplementalPolicies: Source[] = [
   { id: 'generate-saml-assertion-policy', kind: 'policy', title: 'generate saml assertion policy', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy' },

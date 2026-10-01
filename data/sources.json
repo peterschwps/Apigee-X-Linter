@@ -5,7 +5,7 @@
     "title": "API proxy configuration reference",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed base, proxy, target, and integration endpoint sections, including allowed name characters, ConfigurationVersion values, route rules, local target routing, TLS settings, and authentication examples. Manifest containers, HTTP connection details, load balancing, ScriptTarget, and delegated Authentication subtrees are not fully specified here; conditional connection alternatives and TLS dependencies are not linted. The ProxyEndpoint charset property is documented here but absent from the endpoint property table and is included. Flow and fault subtrees are tracked by the flow reference."
+    "reviewNotes": "Reviewed base, proxy, target, and integration endpoint sections, including allowed name characters, ConfigurationVersion values, route rules, local target routing, TLS settings, and authentication. TargetEndpoint Authentication is explicitly identical to ServiceCallout Authentication, so its nested rules are shared. LoadBalancer is supplemented by the separate load-balancing guide. Manifest containers, remaining HTTP connection details, and ScriptTarget are not fully specified here; conditional connection alternatives and TLS dependencies are not linted. The ProxyEndpoint charset property is documented here but absent from the endpoint property table and is included. Flow and fault subtrees are tracked by the flow reference."
   },
   {
     "id": "flow-configuration-reference",
@@ -22,6 +22,14 @@
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference",
     "reviewStatus": "reviewed",
     "reviewNotes": "Apigee X TargetEndpoint and ProxyEndpoint transport property names and documented value types are modeled in their respective XML contexts. The hybrid-only use.proxy and use.proxy.tunneling properties are deliberately excluded. Property values are literals; enum and documented format checks depend on the Property name attribute."
+  },
+  {
+    "id": "load-balancing-across-backend-servers",
+    "kind": "core",
+    "title": "Load balancing across backend servers",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers",
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed TargetEndpoint and ServiceCallout LoadBalancer XML, including algorithms, servers, weights, fallback, failure handling, retry, and path. The Weighted prose calls weight an attribute but its XML example uses a Weight child; the child is modeled and Server remains incomplete to avoid rejecting a potentially valid attribute. A LeastConnections example places Path outside HTTPTargetConnection, whereas other examples place it inside; only the latter is modeled. Weight value range, algorithm-dependent requirements, and the single-fallback condition are not statically checked. Target-server API and health-monitor administration are outside proxy-bundle XML scope."
   },
   {
     "id": "access-control-policy",
@@ -260,8 +268,8 @@
     "kind": "policy",
     "title": "message logging policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy",
-    "reviewStatus": "gap",
-    "reviewNotes": "Reviewed CloudLogging and Syslog fields, enums, message attributes, and log levels. Syslog SSLInfo delegates to the proxy TLS configuration reference, so its full child structure is not yet represented. CloudLogging/Syslog mutual exclusion and TLS-protocol conditions are not cross-validated."
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed CloudLogging and Syslog fields, enums, message attributes, and log levels. The page explicitly delegates Syslog SSLInfo to the TargetEndpoint TLS reference, so that nested structure is now modeled. CloudLogging/Syslog mutual exclusion and the TLS-requires-TCP condition are known cross-field limitations, not missing documentation."
   },
   {
     "id": "message-validation-policy",
@@ -437,7 +445,7 @@
     "title": "service callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed callout root, request/response/timeout, HTTP versus local targets, and Google authentication subtree. Request Remove/Copy/Add/Set inherits AssignMessage syntax, while SSLInfo, load balancing, and transport Properties delegate to separate references; those subtrees remain incomplete. Root Properties appears only in a sample. HTTP/local target and authentication token alternatives are not enforceable by static requiredChildren."
+    "reviewNotes": "Reviewed callout root, request/response/timeout, HTTP versus local targets, and Google authentication subtree. SSLInfo is now modeled from the explicitly referenced TargetEndpoint TLS contract, and LoadBalancer is supplemented by the separate load-balancing guide. Request Remove/Copy/Add/Set inherits AssignMessage syntax and remains incomplete; transport Properties is not fully documented for ServiceCallout, and root Properties appears only in a sample. HTTP/local target and authentication token alternatives are not enforceable by static requiredChildren."
   },
   {
     "id": "set-dialogflow-response-policy",
