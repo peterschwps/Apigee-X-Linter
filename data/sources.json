@@ -250,35 +250,40 @@
     "kind": "policy",
     "title": "lookup cache policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee LookupCache required CacheKey/AssignTo elements, cache-key fragments, Scope values, and nonnegative lookup timeout. CacheResource existence and matching PopulateCache key configuration are cross-policy/environment concerns."
   },
   {
     "id": "message-logging-policy",
     "kind": "policy",
     "title": "message logging policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed CloudLogging and Syslog fields, enums, message attributes, and log levels. Syslog SSLInfo delegates to the proxy TLS configuration reference, so its full child structure is not yet represented. CloudLogging/Syslog mutual exclusion and TLS-protocol conditions are not cross-validated."
   },
   {
     "id": "message-validation-policy",
     "kind": "policy",
     "title": "message validation policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed MessageValidation root, Element namespace, SOAP versions, Source, and xsd/wsdl ResourceURL format. Properties appears in official default examples but has no described structure on this page, so it remains incomplete. Conditional SOAP/XSD requirements are not cross-validated."
   },
   {
     "id": "monetization-limits-check-policy",
     "kind": "policy",
     "title": "monetization limits check policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed MonetizationLimitsCheck and documented FaultResponse branches. Payload may contain arbitrary XML (shown in official examples), so its nested content is deliberately open rather than treated as unknown Apigee tags. Monetization enablement is an environment prerequisite, not a static XML rule."
   },
   {
     "id": "oas-validation-policy",
     "kind": "policy",
     "title": "oas validation policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed OASResource formats and template allowance, required OASResource, option booleans, and Source values. Properties appears in the official default example without a described structure, so it remains incomplete. Existence and validity of the referenced OAS file require bundle/runtime context."
   },
   {
     "id": "oauthv2-policy",

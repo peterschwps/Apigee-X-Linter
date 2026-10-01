@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "message logging policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed CloudLogging and Syslog fields, enums, message attributes, and log levels. Syslog SSLInfo delegates to the proxy TLS configuration reference, so its full child structure is not yet represented. CloudLogging/Syslog mutual exclusion and TLS-protocol conditions are not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "lookup cache policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee LookupCache required CacheKey/AssignTo elements, cache-key fragments, Scope values, and nonnegative lookup timeout. CacheResource existence and matching PopulateCache key configuration are cross-policy/environment concerns."
   },
   "reviewStatus": "unreviewed",
   "sections": [

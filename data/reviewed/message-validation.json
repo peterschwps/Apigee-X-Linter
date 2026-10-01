@@ -1,0 +1,25 @@
+{
+  "kind": "policy",
+  "root": "MessageValidation",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/MessageValidation", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#messagevalidation",
+      "attributes": {
+        "name": { "kind": "free", "required": true },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"] },
+        "enabled": { "kind": "enum", "values": ["true", "false"] },
+        "async": { "kind": "unknown" }
+      },
+      "children": ["DisplayName", "Element", "ResourceURL", "SOAPMessage", "Source", "Properties"]
+    },
+    { "path": "/MessageValidation/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/MessageValidation/Element", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#element", "attributes": { "namespace": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/MessageValidation/ResourceURL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#resourceurl", "text": { "kind": "format", "format": "Expected an xsd:// or wsdl:// resource URL.", "pattern": "^(?:xsd|wsdl)://.+$" } },
+    { "path": "/MessageValidation/SOAPMessage", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#soapmessage", "attributes": { "version": { "kind": "enum", "values": ["1.1", "1.2", "1.1/1.2"] } } },
+    { "path": "/MessageValidation/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#source", "text": { "kind": "free" } },
+    { "path": "/MessageValidation/Properties", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy#default-policy" }
+  ]
+}

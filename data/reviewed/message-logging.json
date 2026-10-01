@@ -1,0 +1,40 @@
+{
+  "kind": "policy",
+  "root": "MessageLogging",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/MessageLogging", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#messagelogging",
+      "attributes": {
+        "name": { "kind": "free", "required": true },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"] },
+        "enabled": { "kind": "enum", "values": ["true", "false"] },
+        "async": { "kind": "unknown" }
+      },
+      "children": ["DisplayName", "CloudLogging", "Syslog", "logLevel"]
+    },
+    { "path": "/MessageLogging/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#messagelogging", "text": { "kind": "free" } },
+    { "path": "/MessageLogging/logLevel", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#logLevel", "text": { "kind": "enum", "values": ["INFO", "ALERT", "WARN", "ERROR"] } },
+    { "path": "/MessageLogging/CloudLogging", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement", "children": ["LogName", "Message", "Labels", "ResourceType", "Endpoint"], "requiredChildren": ["LogName", "Message"] },
+    { "path": "/MessageLogging/CloudLogging/LogName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement", "text": { "kind": "free" } },
+    { "path": "/MessageLogging/CloudLogging/Message", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement", "attributes": { "contentType": { "kind": "enum", "values": ["text/plain", "application/json"] }, "defaultVariableValue": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#usagenotes-defaultvaluesforvariablesinmessagetemplate" } }, "text": { "kind": "free" } },
+    { "path": "/MessageLogging/CloudLogging/Labels", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement", "children": ["Label"] },
+    { "path": "/MessageLogging/CloudLogging/Labels/Label", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement", "children": ["Key", "Value"], "requiredChildren": ["Key", "Value"] },
+    { "path": "/MessageLogging/CloudLogging/Labels/Label/Key", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement", "text": { "kind": "free" } },
+    { "path": "/MessageLogging/CloudLogging/Labels/Label/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement", "text": { "kind": "free" } },
+    { "path": "/MessageLogging/CloudLogging/ResourceType", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudloggingelement", "text": { "kind": "free" } },
+    { "path": "/MessageLogging/CloudLogging/Endpoint", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#cloudlogging", "text": { "kind": "free" } },
+    { "path": "/MessageLogging/Syslog", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "children": ["Message", "Host", "Port", "Protocol", "FormatMessage", "PayloadOnly", "DateFormat", "SSLInfo"], "requiredChildren": ["Message"] },
+    { "path": "/MessageLogging/Syslog/Message", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "attributes": { "contentType": { "kind": "enum", "values": ["text/plain", "application/json"] }, "defaultVariableValue": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#usagenotes-defaultvaluesforvariablesinmessagetemplate" } }, "text": { "kind": "free" } },
+    { "path": "/MessageLogging/Syslog/Host", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "text": { "kind": "free" } },
+    { "path": "/MessageLogging/Syslog/Port", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "text": { "kind": "format", "format": "Expected a numeric port.", "pattern": "^[0-9]+$" } },
+    { "path": "/MessageLogging/Syslog/Protocol", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "text": { "kind": "enum", "values": ["TCP", "UDP"] } },
+    { "path": "/MessageLogging/Syslog/FormatMessage", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/MessageLogging/Syslog/PayloadOnly", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/MessageLogging/Syslog/DateFormat", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "text": { "kind": "free" } },
+    { "path": "/MessageLogging/Syslog/SSLInfo", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "children": ["Enabled"] },
+    { "path": "/MessageLogging/Syslog/SSLInfo/Enabled", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-logging-policy#syslog-element", "text": { "kind": "enum", "values": ["true", "false"] } }
+  ]
+}

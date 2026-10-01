@@ -1,0 +1,19 @@
+{
+  "kind": "policy",
+  "root": "OASValidation",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/OASValidation", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#oasvalidation", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "OASResource", "Options", "Source", "Properties"], "requiredChildren": ["OASResource"] },
+    { "path": "/OASValidation/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/OASValidation/OASResource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#oasresource", "text": { "kind": "format", "format": "Expected oas:// followed by a .json, .yaml, or .yml specification, or a message template.", "pattern": "^oas://.+\\.(?:json|yaml|yml)$", "allowTemplate": true } },
+    { "path": "/OASValidation/Options", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#options", "children": ["ValidateMessageBody", "AllowUnspecifiedParameters"] },
+    { "path": "/OASValidation/Options/ValidateMessageBody", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#validatemessagebody", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/OASValidation/Options/AllowUnspecifiedParameters", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#allowunspecified", "children": ["Header", "Query", "Cookie"] },
+    { "path": "/OASValidation/Options/AllowUnspecifiedParameters/Header", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#allowunspecified", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/OASValidation/Options/AllowUnspecifiedParameters/Query", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#allowunspecified", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/OASValidation/Options/AllowUnspecifiedParameters/Cookie", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#allowunspecified", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/OASValidation/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#source", "text": { "kind": "enum", "values": ["message", "request", "response"] } },
+    { "path": "/OASValidation/Properties", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy#default-policy" }
+  ]
+}
