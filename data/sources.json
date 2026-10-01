@@ -47,12 +47,13 @@
     "reviewStatus": "reviewed",
     "reviewNotes": "Reviewed the policy's documented elements, common attributes, and required Condition child for Apigee. Condition expression syntax is free text and not validated."
   },
-  {
-    "id": "assign-message-policy",
-    "kind": "policy",
-    "title": "assign message policy",
-    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy",
-    "reviewStatus": "pending"
+    {
+      "id": "assign-message-policy",
+      "kind": "policy",
+      "title": "assign message policy",
+      "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy",
+      "reviewStatus": "gap",
+      "reviewNotes": "Apigee X AssignMessage operations are modeled by path: Add, Copy, Remove, Set, AssignTo, and AssignVariable. The UI default example includes an undocumented Properties subtree; Set/Payload permits arbitrary XML and is deliberately open. An Add/FormParam direct-child example conflicts with the grouped FormParams syntax, so both documented forms are accepted. Google authentication examples contain malformed closing tags; the consistently described nested forms are modeled. Cross-field request/response restrictions and AssignVariable precedence remain contextual rules not enforced statically."
   },
   {
     "id": "basic-authentication-policy",
