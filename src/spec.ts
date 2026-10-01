@@ -40,6 +40,7 @@ export type ElementSpec = {
   uniqueChildAttribute?: { child: string; attribute: string; source: string };
   childTextLimit?: { child: string; descendant: string; value: string; max: number; source: string };
   conditionalRequiredChildren?: { selector: string[]; values?: string[]; required: string; source: string }[];
+  conflicts?: { attribute?: string; child?: string; withChild: string; source: string }[];
   text?: ValueSpec;
   textByAttribute?: { attribute: string; values: Record<string, ValueSpec> };
 };

@@ -128,6 +128,16 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
         issues.push({ rule: 'AX104', message: `<${condition.required}> is required when <${condition.selector.join('/')}> has this value.`, start: node.nameStart, end: node.nameEnd, source: condition.source });
       }
     }
+    for (const conflict of definition.conflicts || []) {
+      const first = conflict.attribute
+        ? node.attributes.find(attribute => attribute.name === conflict.attribute)
+        : node.children.find(child => child.name === conflict.child);
+      const second = node.children.find(child => child.name === conflict.withChild);
+      if (first && second) {
+        const label = conflict.attribute ? `attribute "${conflict.attribute}"` : `<${conflict.child}>`;
+        issues.push({ rule: 'AX107', message: `${label} cannot be combined with <${conflict.withChild}>.`, start: second.nameStart, end: second.nameEnd, source: conflict.source });
+      }
+    }
   }
 
   const selector = definition.textByAttribute;

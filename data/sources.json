@@ -165,7 +165,7 @@
     "title": "generate saml assertion policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed documented Apigee SAML generation structure, example attributes, and fixed signature/message values. CanonicalizationAlgorithm is shown but no value set is specified; its value is left unvalidated. OutputVariable branches and template conditions are not cross-validated."
+    "reviewNotes": "Rechecked the current Apigee SAML generation reference. CanonicalizationAlgorithm appears only as an empty sample element; no accepted values are specified, so its text remains unknown. FlowVariable is described as an alternative to Message, but the official sample places both under one OutputVariable; exclusivity is therefore not linted. Message/XPath is described but no explicit presence rule is stated. Template changes runtime assertion generation and missing-variable behavior, not a proven static required-child rule. The page also contains ValidateSAMLAssertion deployment-error text, so those errors are not applied to this policy."
   },
   {
     "id": "get-oauth-v2-info-policy",
@@ -197,7 +197,7 @@
     "title": "http modifier policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/http-modifier-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed Apigee Add/Remove/Set paths, AssignTo attributes, and documented HTTP verb/version values. UI template contains an unexplained Properties element, kept incomplete. Set/Path is documented as not working as designed. Context-dependent request/response constraints and templates are not cross-validated."
+    "reviewNotes": "Rechecked the current Apigee HTTPModifier reference. Add, Remove, Set, AssignTo, verbs, and versions remain modeled. The sole Properties occurrence is an empty UI-default stub and has no child or attribute contract on this page; JavaScript/JavaCallout Properties descriptions do not establish HTTPModifier semantics. Set/Path is documented as not working as designed. Request/response effects and templates depend on flow context, so no speculative static constraint was added."
   },
   {
     "id": "integration-callout-policy",
@@ -253,7 +253,7 @@
     "title": "key value map operations policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed Apigee KVM operations, scope, cache interval, and context-specific literal versus ref values. Deprecated ExclusiveCache has no documented structure and remains incomplete. At-least-one operation, mapIdentifier/MapName exclusivity, and ref-versus-literal conditions are not cross-validated."
+    "reviewNotes": "Rechecked the current Apigee KVM reference. At least one Get, Put, or Delete and the documented MapName conflicts with mapIdentifier and InitialEntries are now linted. Deprecated ExclusiveCache is named but has no documented structure or value contract, so remains incomplete. Literal-versus-ref resolution and KVM existence are runtime-dependent and are not statically enforced."
   },
   {
     "id": "llm-token-quota-policy",

@@ -14,7 +14,12 @@
         "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#keyvaluemapoperations_attributes" },
         "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#keyvaluemapoperations_attributes" }
       },
-      "children": ["DisplayName", "Scope", "ExpiryTimeInSecs", "ExclusiveCache", "MapName", "InitialEntries", "Get", "Put", "Delete"]
+      "children": ["DisplayName", "Scope", "ExpiryTimeInSecs", "ExclusiveCache", "MapName", "InitialEntries", "Get", "Put", "Delete"],
+      "childGroups": [{ "children": ["Get", "Put", "Delete"], "min": 1, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#DeleteElement" }],
+      "conflicts": [
+        { "attribute": "mapIdentifier", "withChild": "MapName", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#keyvaluemapoperations_attributes" },
+        { "child": "MapName", "withChild": "InitialEntries", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#InitialEntriesElement" }
+      ]
     },
     { "path": "/KeyValueMapOperations/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#displaynameelement", "text": { "kind": "free" } },
     { "path": "/KeyValueMapOperations/Scope", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#ScopeElement", "text": { "kind": "enum", "values": ["organization", "environment", "apiproxy", "policy"] } },

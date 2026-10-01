@@ -433,6 +433,16 @@ async function validate(): Promise<Map<string, boolean>> {
         if (!document.elements.some(item => item.path === selectedPath)) throw new Error(`${file}: ${element.path} has an undefined conditional selector.`);
         validateLink(condition.source, `${file}: ${element.path} conditional child rule`);
       }
+      for (const conflict of element.conflicts || []) {
+        if (Boolean(conflict.attribute) === Boolean(conflict.child)
+          || conflict.attribute && !element.attributes?.[conflict.attribute]
+          || conflict.child && !children.includes(conflict.child)
+          || !children.includes(conflict.withChild)
+          || conflict.child === conflict.withChild) {
+          throw new Error(`${file}: ${element.path} has an invalid child conflict.`);
+        }
+        validateLink(conflict.source, `${file}: ${element.path} child conflict`);
+      }
       for (const group of element.childGroups || []) {
         if (!group.children.length || new Set(group.children).size !== group.children.length || group.children.some(child => !children.includes(child))) {
           throw new Error(`${file}: ${element.path} has an invalid child group.`);
