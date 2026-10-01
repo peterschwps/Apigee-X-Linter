@@ -14,7 +14,7 @@
       },
       "children": ["ConfigurationVersion", "Description", "DisplayName", "Policies", "ProxyEndpoints", "Resources", "Spec", "TargetServers", "TargetEndpoints"]
     },
-    { "path": "/APIProxy/ConfigurationVersion", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
+    { "path": "/APIProxy/ConfigurationVersion", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "attributes": { "majorVersion": { "kind": "enum", "values": ["4"] }, "minorVersion": { "kind": "enum", "values": ["0"] } } },
     { "path": "/APIProxy/Description", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
     { "path": "/APIProxy/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
     { "path": "/APIProxy/Policies", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },

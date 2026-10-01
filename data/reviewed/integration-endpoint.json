@@ -8,7 +8,7 @@
       "path": "/IntegrationEndpoint",
       "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#integrationendpoint-configuration-elements",
-      "attributes": { "name": { "kind": "free", "required": true } },
+      "attributes": { "name": { "kind": "format", "required": true, "format": "Use only letters, digits, periods, underscores, hyphens, dollar signs, spaces, and percent signs.", "pattern": "^[A-Za-z0-9._$ %\\-]+$" } },
       "children": ["AsyncExecution"]
     },
     {

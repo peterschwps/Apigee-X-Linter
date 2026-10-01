@@ -4,8 +4,8 @@
     "kind": "core",
     "title": "API proxy configuration reference",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
-    "reviewStatus": "in-progress",
-    "reviewNotes": "Base, proxy endpoint, target endpoint, and integration endpoint roots have an initial reviewed model; nested configuration is still incomplete."
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed base, proxy, target, and integration endpoint sections, including allowed name characters, ConfigurationVersion values, route rules, local target routing, TLS settings, and authentication examples. Manifest containers, HTTP connection details, load balancing, ScriptTarget, and delegated Authentication subtrees are not fully specified here; conditional connection alternatives and TLS dependencies are not linted. The ProxyEndpoint charset property is documented here but absent from the endpoint property table and is included. Flow and fault subtrees are tracked by the flow reference."
   },
   {
     "id": "flow-configuration-reference",

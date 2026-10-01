@@ -8,7 +8,7 @@
       "path": "/ProxyEndpoint",
       "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-proxyendpointconfigurationelements",
-      "attributes": { "name": { "kind": "free", "required": true } },
+      "attributes": { "name": { "kind": "format", "required": true, "format": "Use only letters, digits, periods, underscores, hyphens, dollar signs, spaces, and percent signs.", "pattern": "^[A-Za-z0-9._$ %\\-]+$" } },
       "children": ["Description", "PreFlow", "Flows", "PostFlow", "PostClientFlow", "HTTPProxyConnection", "FaultRules", "DefaultFaultRule", "RouteRule"]
     },
     { "path": "/ProxyEndpoint/Description", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference", "text": { "kind": "free" } },
@@ -22,7 +22,7 @@
     {
       "path": "/ProxyEndpoint/HTTPProxyConnection/Properties/Property", "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#proxyendpointtransportpropertyspecification",
-      "attributes": { "name": { "kind": "enum", "required": true, "values": ["X-Forwarded-For", "request.streaming.enabled", "request.payload.parse.limit", "response.streaming.enabled", "compression.algorithm", "api.timeout", "HTTPHeader.allowDuplicates", "HTTPHeader.multiValued"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#proxyendpointtransportpropertyspecification" } },
+      "attributes": { "name": { "kind": "enum", "required": true, "values": ["X-Forwarded-For", "request.streaming.enabled", "request.payload.parse.limit", "request.queryparams.ignore.content.type.charset", "response.streaming.enabled", "compression.algorithm", "api.timeout", "HTTPHeader.allowDuplicates", "HTTPHeader.multiValued"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#proxyendpointtransportpropertyspecification" } },
       "text": { "kind": "free" },
       "textByAttribute": {
         "attribute": "name",
@@ -30,6 +30,7 @@
           "X-Forwarded-For": { "kind": "enum", "values": ["true", "false"] },
           "request.streaming.enabled": { "kind": "enum", "values": ["true", "false"] },
           "request.payload.parse.limit": { "kind": "format", "format": "Payload limit from 10M through 30M.", "pattern": "^(?:1[0-9]|2[0-9]|30)M$" },
+          "request.queryparams.ignore.content.type.charset": { "kind": "enum", "values": ["true", "false"] },
           "response.streaming.enabled": { "kind": "enum", "values": ["true", "false"] },
           "compression.algorithm": { "kind": "enum", "values": ["gzip", "deflate", "none"] },
           "api.timeout": { "kind": "format", "format": "Timeout in milliseconds.", "pattern": "^[0-9]+$" },
@@ -44,7 +45,7 @@
       "path": "/ProxyEndpoint/RouteRule",
       "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules",
-      "attributes": { "name": { "kind": "free", "required": true } },
+      "attributes": { "name": { "kind": "format", "required": true, "format": "Use only letters, digits, periods, underscores, hyphens, dollar signs, spaces, and percent signs.", "pattern": "^[A-Za-z0-9._$ %\\-]+$" } },
       "children": ["Condition", "TargetEndpoint", "URL", "IntegrationEndpoint"]
     },
     { "path": "/ProxyEndpoint/RouteRule/Condition", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules", "text": { "kind": "free" } },
