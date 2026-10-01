@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "access entity policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee policy elements, attributes, and supported entity and identifier values. OutputFormat is hybrid-only and excluded. EntityIdentifier versus Identifiers and type combinations are conditional, so those relationships are not linted."
   },
   "reviewStatus": "unreviewed",
   "sections": [

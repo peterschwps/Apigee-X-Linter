@@ -1,0 +1,22 @@
+{
+  "kind": "policy",
+  "root": "DecodeJWS",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/DecodeJWS",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy#elementreferencefordecodeJWS-attributesthatapplytothetoplevelelement",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy#elementreferencefordecodeJWS-attributesthatapplytothetoplevelelement" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy#elementreferencefordecodeJWS-attributesthatapplytothetoplevelelement" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy#elementreferencefordecodeJWS-attributesthatapplytothetoplevelelement" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy#elementreferencefordecodeJWS-attributesthatapplytothetoplevelelement" }
+      },
+      "children": ["DisplayName", "Source"]
+    },
+    { "path": "/DecodeJWS/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/DecodeJWS/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy#source", "text": { "kind": "free" } }
+  ]
+}

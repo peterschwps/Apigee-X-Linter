@@ -1,0 +1,22 @@
+{
+  "kind": "policy",
+  "root": "DecodeJWT",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/DecodeJWT",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy#elementreferencefordecodejwt-attributesthatapplytothetoplevelelement",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy#elementreferencefordecodejwt-attributesthatapplytothetoplevelelement" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy#elementreferencefordecodejwt-attributesthatapplytothetoplevelelement" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy#elementreferencefordecodejwt-attributesthatapplytothetoplevelelement" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy#elementreferencefordecodejwt-attributesthatapplytothetoplevelelement" }
+      },
+      "children": ["DisplayName", "Source"]
+    },
+    { "path": "/DecodeJWT/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/DecodeJWT/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy#source", "text": { "kind": "free" } }
+  ]
+}

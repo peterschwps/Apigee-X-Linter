@@ -1,0 +1,70 @@
+{
+  "kind": "policy",
+  "root": "BasicAuthentication",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/BasicAuthentication",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#elementreference",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#basicauthenticationattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#basicauthenticationattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#basicauthenticationattributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#basicauthenticationattributes" }
+      },
+      "children": ["DisplayName", "Operation", "IgnoreUnresolvedVariables", "User", "Password", "AssignTo", "Source"],
+      "requiredChildren": ["Operation", "User", "Password"]
+    },
+    {
+      "path": "/BasicAuthentication/DisplayName",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#displaynameelement",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/BasicAuthentication/Operation",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#operationelement",
+      "text": { "kind": "enum", "values": ["Encode", "Decode"] }
+    },
+    {
+      "path": "/BasicAuthentication/IgnoreUnresolvedVariables",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#ignoreunresolvedvariableselement",
+      "text": { "kind": "enum", "values": ["true", "false"] }
+    },
+    {
+      "path": "/BasicAuthentication/User",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#userelement",
+      "attributes": {
+        "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#userelement-attributes" }
+      }
+    },
+    {
+      "path": "/BasicAuthentication/Password",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#passwordelement",
+      "attributes": {
+        "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#passwordelement-attributes" }
+      }
+    },
+    {
+      "path": "/BasicAuthentication/AssignTo",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#assigntoelement",
+      "attributes": {
+        "createNew": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#assigntoelement-attributes" }
+      },
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/BasicAuthentication/Source",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy#sourceelement",
+      "text": { "kind": "free" }
+    }
+  ]
+}

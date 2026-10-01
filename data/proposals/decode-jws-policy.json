@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "decode jws policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the Apigee DecodeJWS root attributes and optional DisplayName and Source elements. Signature and token contents are runtime concerns and are not linted."
   },
   "reviewStatus": "unreviewed",
   "sections": [

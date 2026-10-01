@@ -1,0 +1,75 @@
+{
+  "kind": "policy",
+  "root": "CORS",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/CORS",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#cors",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#cors" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#cors" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#cors" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#cors" }
+      },
+      "children": ["DisplayName", "AllowOrigins", "AllowMethods", "AllowHeaders", "ExposeHeaders", "MaxAge", "AllowCredentials", "GeneratePreflightResponse", "IgnoreUnresolvedVariables"],
+      "requiredChildren": ["AllowOrigins"]
+    },
+    {
+      "path": "/CORS/DisplayName",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#displayname",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/CORS/AllowOrigins",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#allow-origins",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/CORS/AllowMethods",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#allow-methods",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/CORS/AllowHeaders",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#allow-headers",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/CORS/ExposeHeaders",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#expose-headers",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/CORS/MaxAge",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#max-age",
+      "text": { "kind": "format", "format": "Use a nonnegative integer or -1 seconds.", "pattern": "^(?:-1|[0-9]+)$" }
+    },
+    {
+      "path": "/CORS/AllowCredentials",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#allow-credentials",
+      "text": { "kind": "enum", "values": ["true", "false"] }
+    },
+    {
+      "path": "/CORS/GeneratePreflightResponse",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#generate-preflight",
+      "text": { "kind": "enum", "values": ["true", "false"] }
+    },
+    {
+      "path": "/CORS/IgnoreUnresolvedVariables",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy#ignore-unresolved",
+      "text": { "kind": "enum", "values": ["true", "false"] }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "kind": "policy",
+  "root": "DataCapture",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/DataCapture",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#elements",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#elements" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#elements" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#elements" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#elements" }
+      },
+      "children": ["DisplayName", "IgnoreUnresolvedVariables", "ThrowExceptionOnLimit", "Capture"],
+      "requiredChildren": ["Capture"]
+    },
+    { "path": "/DataCapture/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#elements", "text": { "kind": "free" } },
+    { "path": "/DataCapture/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#elements", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/DataCapture/ThrowExceptionOnLimit", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#throwexceptiononlimit", "text": { "kind": "enum", "values": ["true", "false"] } },
+    {
+      "path": "/DataCapture/Capture",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#acaptureattributes",
+      "children": ["DataCollector", "Collect"],
+      "requiredChildren": ["DataCollector", "Collect"]
+    },
+    {
+      "path": "/DataCapture/Capture/DataCollector",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#datacollector",
+      "attributes": {
+        "scope": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#datacollector" }
+      },
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/DataCapture/Capture/Collect",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#collect",
+      "attributes": {
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#collect" },
+        "default": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#collect" }
+      },
+      "children": ["Source", "URIPath", "QueryParam", "Header", "FormParam", "JSONPayload", "XMLPayload"]
+    },
+    { "path": "/DataCapture/Capture/Collect/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#sourceelement", "text": { "kind": "free" } },
+    {
+      "path": "/DataCapture/Capture/Collect/URIPath",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#uripathelement",
+      "attributes": {
+        "ignoreCase": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#uripathelement-attributes" }
+      },
+      "children": ["Pattern"]
+    },
+    { "path": "/DataCapture/Capture/Collect/URIPath/Pattern", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#uripathelement", "attributes": { "ignoreCase": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#uripathelement" } }, "text": { "kind": "free" } },
+    {
+      "path": "/DataCapture/Capture/Collect/QueryParam",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#queryparamelement",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#queryparamelement-attributes" }
+      },
+      "children": ["Pattern"]
+    },
+    { "path": "/DataCapture/Capture/Collect/QueryParam/Pattern", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#queryparamelement", "attributes": { "ignoreCase": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#queryparamelement" } }, "text": { "kind": "free" } },
+    {
+      "path": "/DataCapture/Capture/Collect/Header",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#headerelement",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#headerelement-attributes" }
+      },
+      "children": ["Pattern"]
+    },
+    { "path": "/DataCapture/Capture/Collect/Header/Pattern", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#headerelement", "attributes": { "ignoreCase": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#headerelement" } }, "text": { "kind": "free" } },
+    {
+      "path": "/DataCapture/Capture/Collect/FormParam",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#formparamelement",
+      "attributes": {
+        "name": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#formparamelement-attributes" }
+      },
+      "children": ["Pattern"]
+    },
+    { "path": "/DataCapture/Capture/Collect/FormParam/Pattern", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#formparamelement", "attributes": { "ignoreCase": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#formparamelement" } }, "text": { "kind": "free" } },
+    {
+      "path": "/DataCapture/Capture/Collect/JSONPayload",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#jsonpayloadelement",
+      "children": ["JSONPath"],
+      "requiredChildren": ["JSONPath"]
+    },
+    { "path": "/DataCapture/Capture/Collect/JSONPayload/JSONPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#jsonpayloadelement-jsonpayloadvariablejsonpathelement", "text": { "kind": "free" } },
+    {
+      "path": "/DataCapture/Capture/Collect/XMLPayload",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#xmlpayloadelement",
+      "children": ["Namespaces", "XPath"],
+      "requiredChildren": ["XPath"]
+    },
+    {
+      "path": "/DataCapture/Capture/Collect/XMLPayload/Namespaces",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#xmlpayloadelement-xmlpayloadnamespaceselement",
+      "children": ["Namespace"]
+    },
+    {
+      "path": "/DataCapture/Capture/Collect/XMLPayload/Namespaces/Namespace",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#xmlpayloadelement-xmlpayloadnamespacesnamespaceelement",
+      "attributes": {
+        "prefix": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#attributes" }
+      },
+      "text": { "kind": "free" }
+    },
+    { "path": "/DataCapture/Capture/Collect/XMLPayload/XPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy#xmlpayloadelement-xmlpayloadvariablexpathelement", "text": { "kind": "free" } }
+  ]
+}

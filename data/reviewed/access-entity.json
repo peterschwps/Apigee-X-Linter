@@ -1,0 +1,85 @@
+{
+  "kind": "policy",
+  "root": "AccessEntity",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/AccessEntity",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#elements",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#access_entity_attributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#access_entity_attributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#access_entity_attributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#access_entity_attributes" }
+      },
+      "children": ["DisplayName", "EntityType", "EntityIdentifier", "SecondaryIdentifier", "Identifiers"],
+      "requiredChildren": ["EntityType"]
+    },
+    {
+      "path": "/AccessEntity/DisplayName",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#displaynameelement",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/AccessEntity/EntityType",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#EntityTypeElement",
+      "attributes": {
+        "value": { "kind": "enum", "required": true, "values": ["apiproduct", "app", "authorizationcode", "appgroupname", "consumerkey", "consumerkey_scope", "developer", "requesttoken", "verifier"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#Entities" }
+      }
+    },
+    {
+      "path": "/AccessEntity/EntityIdentifier",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#EntityIdentifierElement",
+      "attributes": {
+        "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#entityidentifierelement-attributes" },
+        "type": { "kind": "enum", "required": true, "values": ["appid", "apiproductname", "appname", "developeremail", "developerid", "appgroupname", "consumerkey", "authorizationcode", "requesttoken", "verifier"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#Entities" }
+      }
+    },
+    {
+      "path": "/AccessEntity/SecondaryIdentifier",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#SecondaryIdentifierElement",
+      "attributes": {
+        "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#secondaryidentifierelement-attributes" },
+        "type": { "kind": "enum", "required": true, "values": ["apiresource", "developeremail", "developerid", "appgroupname", "consumerkey"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#Entities" }
+      }
+    },
+    {
+      "path": "/AccessEntity/Identifiers",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#elements",
+      "children": ["Identifier"],
+      "requiredChildren": ["Identifier"]
+    },
+    {
+      "path": "/AccessEntity/Identifiers/Identifier",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#elements",
+      "children": ["EntityIdentifier", "SecondaryIdentifier"],
+      "requiredChildren": ["EntityIdentifier"]
+    },
+    {
+      "path": "/AccessEntity/Identifiers/Identifier/EntityIdentifier",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#entityidentifierelement-attributes",
+      "attributes": {
+        "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#entityidentifierelement-attributes" },
+        "type": { "kind": "enum", "required": true, "values": ["appid", "apiproductname", "appname", "developeremail", "developerid", "appgroupname", "consumerkey", "authorizationcode", "requesttoken", "verifier"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#Entities" }
+      }
+    },
+    {
+      "path": "/AccessEntity/Identifiers/Identifier/SecondaryIdentifier",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#secondaryidentifierelement-attributes",
+      "attributes": {
+        "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#secondaryidentifierelement-attributes" },
+        "type": { "kind": "enum", "required": true, "values": ["apiresource", "developeremail", "developerid", "appgroupname", "consumerkey"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#Entities" }
+      }
+    }
+  ]
+}

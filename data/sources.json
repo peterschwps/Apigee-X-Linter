@@ -35,7 +35,8 @@
     "kind": "policy",
     "title": "access entity policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee policy elements, attributes, and supported entity and identifier values. OutputFormat is hybrid-only and excluded. EntityIdentifier versus Identifiers and type combinations are conditional, so those relationships are not linted."
   },
   {
     "id": "assert-condition-policy",
@@ -57,35 +58,40 @@
     "kind": "policy",
     "title": "basic authentication policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee policy elements, required attributes, and documented values. AssignTo and Source are operation-dependent; the current rule model does not enforce their conditional requiredness."
   },
   {
     "id": "cors-policy",
     "kind": "policy",
     "title": "cors policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee CORS elements, required AllowOrigins, boolean values, and MaxAge integer format. Free-form header, method, and origin lists remain unconstrained."
   },
   {
     "id": "data-capture-policy",
     "kind": "policy",
     "title": "data capture policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the documented nested capture elements and attributes for Apigee. Collect default is not enforced as required because the same page describes behavior when it is omitted. Conditional source selection and unique DataCollector references are not modeled."
   },
   {
     "id": "decode-jws-policy",
     "kind": "policy",
     "title": "decode jws policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jws-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the Apigee DecodeJWS root attributes and optional DisplayName and Source elements. Signature and token contents are runtime concerns and are not linted."
   },
   {
     "id": "decode-jwt-policy",
     "kind": "policy",
     "title": "decode jwt policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the Apigee DecodeJWT root attributes and optional DisplayName and Source elements. JWT decoding and signature semantics are runtime concerns and are not linted."
   },
   {
     "id": "delete-oauth-v2-info",

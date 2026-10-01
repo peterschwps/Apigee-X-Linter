@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "data capture policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/data-capture-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the documented nested capture elements and attributes for Apigee. Collect default is not enforced as required because the same page describes behavior when it is omitted. Conditional source selection and unique DataCollector references are not modeled."
   },
   "reviewStatus": "unreviewed",
   "sections": [

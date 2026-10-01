@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "basic authentication policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/basic-authentication-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee policy elements, required attributes, and documented values. AssignTo and Source are operation-dependent; the current rule model does not enforce their conditional requiredness."
   },
   "reviewStatus": "unreviewed",
   "sections": [

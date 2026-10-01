@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "decode jwt policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/decode-jwt-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the Apigee DecodeJWT root attributes and optional DisplayName and Source elements. JWT decoding and signature semantics are runtime concerns and are not linted."
   },
   "reviewStatus": "unreviewed",
   "sections": [

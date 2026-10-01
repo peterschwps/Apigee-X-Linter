@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "cors policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/cors-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee CORS elements, required AllowOrigins, boolean values, and MaxAge integer format. Free-form header, method, and origin lists remain unconstrained."
   },
   "reviewStatus": "unreviewed",
   "sections": [
