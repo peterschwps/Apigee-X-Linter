@@ -117,7 +117,7 @@
     "title": "delete oauth v2 info",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed documented Apigee elements and attributes. The example includes <Attributes/> but the page does not define its structure, so that context stays incomplete. AccessToken versus AuthorizationCode is an either/or requirement not represented by the current data model."
+    "reviewNotes": "Reviewed documented Apigee elements and attributes. Exactly one AccessToken or AuthorizationCode is now enforced from the element-presence rules. The default example includes <Attributes/> but the page does not define its structure or purpose, so that context remains incomplete; the same example also has malformed XML, so it cannot justify stricter assumptions."
   },
   {
     "id": "external-callout-policy",

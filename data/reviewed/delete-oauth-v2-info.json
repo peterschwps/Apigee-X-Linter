@@ -14,7 +14,8 @@
         "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#deleteoauthv2infoattributes" },
         "async": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#deleteoauthv2infoattributes" }
       },
-      "children": ["DisplayName", "AccessToken", "AuthorizationCode", "Attributes"]
+      "children": ["DisplayName", "AccessToken", "AuthorizationCode", "Attributes"],
+      "childGroups": [{ "children": ["AccessToken", "AuthorizationCode"], "min": 1, "max": 1, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#accesstokenelement" }]
     },
     {
       "path": "/DeleteOAuthV2Info/DisplayName",
