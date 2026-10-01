@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "spike arrest policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed Rate syntax and ref, Identifier/MessageWeight references, and Apigee X-only UseEffectiveCount support. Although examples and documented default show false, the page explicitly states rate smoothing/false is unsupported for Apigee organizations, so only true is proposed for X. Properties appears in the default XML but has no element reference and remains incomplete. Rate ref-only is valid and does not need literal text."
   },
   "reviewStatus": "unreviewed",
   "sections": [

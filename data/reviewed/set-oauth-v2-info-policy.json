@@ -1,0 +1,13 @@
+{
+  "kind": "policy",
+  "root": "SetOAuthV2Info",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/SetOAuthV2Info", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#setoauthv2infoattributes", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "AccessToken", "Attributes"], "requiredChildren": ["AccessToken", "Attributes"] },
+    { "path": "/SetOAuthV2Info/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/SetOAuthV2Info/AccessToken", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#accesstokenelement-attributes", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/SetOAuthV2Info/Attributes", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#attributeselement", "children": ["Attribute"] },
+    { "path": "/SetOAuthV2Info/Attributes/Attribute", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy#attributesattributeelement-attributes", "attributes": { "name": { "kind": "free", "required": true }, "ref": { "kind": "free" } }, "text": { "kind": "free" } }
+  ]
+}

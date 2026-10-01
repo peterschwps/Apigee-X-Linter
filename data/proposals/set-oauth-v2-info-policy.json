@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "set oauth v2 info policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-oauth-v2-info-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed required AccessToken and Attributes, variable-or-literal access token, and repeatable custom Attribute with name/ref or literal value. The Attribute name presence cell is blank, but the prose says it identifies the custom property; name is therefore required for useful configuration."
   },
   "reviewStatus": "unreviewed",
   "sections": [

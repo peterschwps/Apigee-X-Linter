@@ -1,0 +1,17 @@
+{
+  "kind": "policy",
+  "root": "ValidateSAMLAssertion",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/ValidateSAMLAssertion", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#validate-saml-assertion", "attributes": { "name": { "kind": "free", "required": true }, "ignoreContentType": { "kind": "enum", "values": ["true", "false"] }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] } }, "children": ["Source", "TrustStore", "RemoveAssertion"], "requiredChildren": ["Source", "TrustStore"] },
+    { "path": "/ValidateSAMLAssertion/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#samples", "attributes": { "name": { "kind": "enum", "values": ["message", "request", "response"] } }, "children": ["Namespaces", "XPath", "AssertionXPath", "SignedElementXPath"] },
+    { "path": "/ValidateSAMLAssertion/Source/Namespaces", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#samples", "children": ["Namespace"] },
+    { "path": "/ValidateSAMLAssertion/Source/Namespaces/Namespace", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#samples", "attributes": { "prefix": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/ValidateSAMLAssertion/Source/XPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#validate-saml-assertion", "text": { "kind": "free" } },
+    { "path": "/ValidateSAMLAssertion/Source/AssertionXPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#validate-saml-assertion", "text": { "kind": "free" } },
+    { "path": "/ValidateSAMLAssertion/Source/SignedElementXPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#validate-saml-assertion", "text": { "kind": "free" } },
+    { "path": "/ValidateSAMLAssertion/TrustStore", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#validate-saml-assertion", "text": { "kind": "free" } },
+    { "path": "/ValidateSAMLAssertion/RemoveAssertion", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy#validate-saml-assertion", "text": { "kind": "enum", "values": ["true", "false"] } }
+  ]
+}

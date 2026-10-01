@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "validate saml assertion policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed root options, Source name choices, namespace/XPath configuration, required TrustStore, and RemoveAssertion. The page gives only a field table rather than full element/attribute descriptions; its SourceNotConfigured deployment error still names deprecated XPath even though the sample uses AssertionXPath and SignedElementXPath. Those child requiredness rules and namespace prefix requiredness are left conservative."
   },
   "reviewStatus": "unreviewed",
   "sections": [
