@@ -556,7 +556,7 @@
     "kind": "policy",
     "title": "xsl transform policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
-    "reviewStatus": "gap",
-    "reviewNotes": "Rechecked the Apigee XSL policy XML. Parameter now requires exactly one of ref or value as explicitly documented; OutputVariable already rejects message, request, and response. The page lists only root name although common policy attributes are included provisionally to avoid false unknown-attribute diagnostics. XSLT stylesheet contents and their xsl:param matches remain outside the extension's proxy-XML scope."
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Rechecked the Apigee XSL policy XML. Parameter requires exactly one of ref or value, and OutputVariable rejects message, request, and response. The XSL page lists only root name; enabled, continueOnError, and async are now sourced from Google's general Apigee policy-configuration reference instead of inferred. XSLT stylesheet contents and their xsl:param matches are outside the extension's proxy-XML scope."
   }
 ]

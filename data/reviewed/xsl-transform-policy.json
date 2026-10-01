@@ -9,9 +9,9 @@
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl",
       "attributes": {
         "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl" },
-        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl" },
-        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl" },
-        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl" }
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#policies" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#policies" },
+        "async": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#policies" }
       },
       "children": ["DisplayName", "OutputVariable", "Parameters", "ResourceURL", "Source"],
       "requiredChildren": ["ResourceURL"]

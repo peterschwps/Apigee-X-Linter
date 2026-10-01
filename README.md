@@ -2,7 +2,7 @@
 
 A TypeScript VS Code extension for Apigee X proxy bundle XML. It provides diagnostics and context-aware completions from reviewed facts in the [Google Cloud Apigee documentation](https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reference-overview-policy).
 
-The project is under development and has no public release yet. All 70 inventoried Apigee X documentation pages have been assessed, including supplemental load-balancing and proxy-bundle examples; 21 retain explicit documentation or modeling gaps in `data/sources.json`. Rules apply only to reviewed contexts, so an unsupported element is not automatically treated as invalid.
+The project is under development and has no public release yet. All 70 inventoried Apigee X documentation pages have been assessed, including supplemental load-balancing and proxy-bundle examples; 20 retain explicit documentation or modeling gaps in `data/sources.json`. Rules apply only to reviewed contexts, so an unsupported element is not automatically treated as invalid.
 
 ## Intended scope
 
