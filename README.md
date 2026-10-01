@@ -7,7 +7,8 @@ The project is under development and has no public release yet. All 70 inventori
 ## Intended scope
 
 - Policy XML and proxy bundle base, proxy endpoint, target endpoint, and flow configuration.
-- XML syntax, unknown or misplaced elements, unknown or required attributes and children, and verified fixed values or formats.
+- XML syntax, unknown or misplaced elements, unknown or required attributes and children, verified fixed values or formats, and documented child cardinality.
+- Local policy references in flow steps are checked against policy XML names within the same proxy bundle.
 - Suggestions for child elements, attributes, and documented fixed attribute or element-text values.
 
 Apigee Edge, hybrid-only behavior, XSLT resources, and arbitrary XML payloads are outside the scope.
@@ -27,7 +28,7 @@ Run `npm exec -- vsce package --no-dependencies` to create a local VSIX. The run
 
 Official pages sometimes cover both Apigee and Apigee hybrid or link to Edge documentation. That does not imply a feature is valid for Apigee X. Archived policy schemas are supplementary, not authoritative.
 
-Diagnostic IDs: `AX001` XML syntax, `AX101` unknown element or wrong root, `AX102` misplaced element, `AX103` unknown attribute, `AX104` missing required attribute or child, `AX105` invalid fixed value, `AX106` invalid documented format, and `AX107` invalid child-group cardinality.
+Diagnostic IDs: `AX001` XML syntax, `AX101` unknown element or wrong root, `AX102` misplaced element, `AX103` unknown attribute, `AX104` missing required attribute or child, `AX105` invalid fixed value, `AX106` invalid documented format, `AX107` invalid child cardinality or duplicate flow name, and `AX108` missing local bundle reference.
 
 ## Settings
 

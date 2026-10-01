@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { minimatch } from 'minimatch';
 import { complete } from './completion';
+import { lintBundleReferences } from './bundle';
 import { classifyDocument, lint } from './linter';
 import { loadSpecifications, type DocumentSpec } from './spec';
 
@@ -24,13 +25,18 @@ export function activate(context: vscode.ExtensionContext): void {
   const timers = new Map<string, ReturnType<typeof setTimeout>>();
   context.subscriptions.push(diagnostics);
 
-  function update(document: vscode.TextDocument): void {
+  async function update(document: vscode.TextDocument): Promise<void> {
     if (!applicable(document, specs)) {
       diagnostics.delete(document.uri);
       return;
     }
     const ignored = new Set(vscode.workspace.getConfiguration(setting, document.uri).get<string[]>('ignore', []));
-    const results = lint(document.getText(), document.uri.fsPath, specs, ignored);
+    const version = document.version;
+    const xml = document.getText();
+    const results = lint(xml, document.uri.fsPath, specs, ignored);
+    const bundleResults = await lintBundleReferences(xml, document.uri.fsPath);
+    if (document.version !== version || !applicable(document, specs)) return;
+    results.push(...bundleResults.filter(issue => !ignored.has(issue.rule)));
     diagnostics.set(document.uri, results.map(issue => {
       const range = new vscode.Range(document.positionAt(issue.start), document.positionAt(issue.end));
       const diagnostic = new vscode.Diagnostic(range, issue.message, vscode.DiagnosticSeverity.Error);
@@ -49,11 +55,23 @@ export function activate(context: vscode.ExtensionContext): void {
     const version = document.version;
     timers.set(key, setTimeout(() => {
       timers.delete(key);
-      if (document.version === version) update(document);
+      if (document.version === version) void update(document);
     }, delay));
   }
 
+  const policyWatcher = vscode.workspace.createFileSystemWatcher('**/apiproxy/policies/*.xml');
+  const refreshEndpoints = () => {
+    for (const document of vscode.workspace.textDocuments) {
+      const kind = classifyDocument(document.uri.fsPath);
+      if (kind === 'proxyEndpoint' || kind === 'targetEndpoint') schedule(document);
+    }
+  };
+
   context.subscriptions.push(
+    policyWatcher,
+    policyWatcher.onDidCreate(refreshEndpoints),
+    policyWatcher.onDidChange(refreshEndpoints),
+    policyWatcher.onDidDelete(refreshEndpoints),
     vscode.workspace.onDidOpenTextDocument(document => schedule(document, 0)),
     vscode.workspace.onDidChangeTextDocument(event => schedule(event.document)),
     vscode.workspace.onDidSaveTextDocument(document => schedule(document, 0)),

@@ -83,6 +83,24 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
         issues.push({ rule: 'AX107', message: `Expected at most ${group.max} of: ${group.children.join(', ')}.`, start: excess.nameStart, end: excess.nameEnd, source: group.source });
       }
     }
+    for (const name of definition.singleChildren || []) {
+      const matching = node.children.filter(child => child.name === name);
+      if (matching.length > 1) {
+        issues.push({ rule: 'AX107', message: `Only one <${name}> is allowed inside <${node.name}>.`, start: matching[1].nameStart, end: matching[1].nameEnd, source: definition.source });
+      }
+    }
+    const unique = definition.uniqueChildAttribute;
+    if (unique) {
+      const seen = new Set<string>();
+      for (const child of node.children.filter(item => item.name === unique.child)) {
+        const value = child.attributes.find(attribute => attribute.name === unique.attribute);
+        if (!value?.value) continue;
+        if (seen.has(value.value)) {
+          issues.push({ rule: 'AX107', message: `Duplicate ${unique.child} ${unique.attribute} "${value.value}".`, start: value.valueStart ?? child.nameStart, end: value.valueEnd ?? child.nameEnd, source: unique.source });
+        }
+        seen.add(value.value);
+      }
+    }
   }
 
   const selector = definition.textByAttribute;

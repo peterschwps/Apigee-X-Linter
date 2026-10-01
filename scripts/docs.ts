@@ -392,6 +392,17 @@ async function validate(): Promise<Map<string, boolean>> {
       const children = element.children || [];
       if (new Set(children).size !== children.length || children.some(child => !/^[A-Za-z_][\w.-]*$/.test(child))) throw new Error(`${file}: ${element.path} has invalid or duplicate children.`);
       if (element.requiredChildren?.some(child => !children.includes(child))) throw new Error(`${file}: ${element.path} has a required child absent from children.`);
+      if (element.singleChildren && (new Set(element.singleChildren).size !== element.singleChildren.length || element.singleChildren.some(child => !children.includes(child)))) {
+        throw new Error(`${file}: ${element.path} has invalid singleton children.`);
+      }
+      if (element.uniqueChildAttribute) {
+        const unique = element.uniqueChildAttribute;
+        const childPath = `${element.path}/${unique.child}`;
+        if (!children.includes(unique.child) || !document.elements.some(item => item.path === childPath && item.attributes?.[unique.attribute])) {
+          throw new Error(`${file}: ${element.path} has an invalid unique child attribute.`);
+        }
+        validateLink(unique.source, `${file}: ${element.path} unique child attribute`);
+      }
       for (const group of element.childGroups || []) {
         if (!group.children.length || new Set(group.children).size !== group.children.length || group.children.some(child => !children.includes(child))) {
           throw new Error(`${file}: ${element.path} has an invalid child group.`);
