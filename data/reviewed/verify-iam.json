@@ -1,0 +1,32 @@
+{
+  "kind": "policy",
+  "root": "VerifyIAM",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/VerifyIAM",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#elementreference",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#verifyiamattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#verifyiamattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#verifyiamattributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#verifyiamattributes" }
+      },
+      "children": ["DisplayName", "CredentialSource"]
+    },
+    {
+      "path": "/VerifyIAM/DisplayName",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#displaynameelement",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/VerifyIAM/CredentialSource",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy#credentialsourceelement",
+      "text": { "kind": "free" }
+    }
+  ]
+}

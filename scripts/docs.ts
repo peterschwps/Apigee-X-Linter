@@ -221,6 +221,16 @@ function extractSections(html: string): CandidateSection[] {
   return sections;
 }
 
+function sectionHashes(sections: CandidateSection[]): Record<string, string> {
+  const occurrences = new Map<string, number>();
+  return Object.fromEntries(sections.map(section => {
+    const base = section.anchor || section.heading;
+    const occurrence = (occurrences.get(base) || 0) + 1;
+    occurrences.set(base, occurrence);
+    return [occurrence === 1 ? base : `${base}~${occurrence}`, section.hash];
+  }));
+}
+
 async function extract(ids: string[]): Promise<void> {
   const sources = await readSources();
   const selected = ids.length ? sources.filter(source => ids.includes(source.id)) : sources;
@@ -232,7 +242,7 @@ async function extract(ids: string[]): Promise<void> {
     try {
       const sections = extractSections(await fetchHtml(source.url));
       if (!sections.length) throw new Error('No sections found; this might be a moved or deprecated page.');
-      baseline[source.id] = Object.fromEntries(sections.map(section => [section.anchor || section.heading, section.hash]));
+      baseline[source.id] = sectionHashes(sections);
       await writeFile(path.join(candidateDir, `${source.id}.json`), `${JSON.stringify({ source, sections }, null, 2)}\n`);
       console.log(`${index + 1}/${selected.length} ${source.id}: ${sections.length} sections`);
     } catch (error) {
@@ -249,7 +259,7 @@ async function refresh(): Promise<void> {
   const baseline = await readBaseline();
   let changes = 0;
   for (const [index, source] of sources.entries()) {
-    const current = Object.fromEntries(extractSections(await fetchHtml(source.url)).map(section => [section.anchor || section.heading, section.hash]));
+    const current = sectionHashes(extractSections(await fetchHtml(source.url)));
     const previous = baseline[source.id];
     const changedSections = [...new Set([...Object.keys(current), ...Object.keys(previous || {})])]
       .filter(key => current[key] !== previous?.[key]);
@@ -339,6 +349,14 @@ async function validate(): Promise<Map<string, boolean>> {
       if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
     }
   }
+  const validateLink = (value: string, label: string) => {
+    const link = new URL(value);
+    const page = canonical(value);
+    if (!sourceUrls.has(page)) throw new Error(`${label}: source is not in the inventory.`);
+    if (link.hash && candidateAnchors.has(page) && !candidateAnchors.get(page)?.has(decodeURIComponent(link.hash.slice(1)))) {
+      throw new Error(`${label}: stale documentation anchor ${link.hash}.`);
+    }
+  };
   const reviewedDir = path.join(dataDir, 'reviewed');
   const files = (await readdir(reviewedDir)).filter(name => name.endsWith('.json'));
   if (!files.length) throw new Error('No reviewed rule files found.');
@@ -347,7 +365,7 @@ async function validate(): Promise<Map<string, boolean>> {
   const documentRoots = new Set<string>();
   for (const file of files) {
     const document = JSON.parse(await readFile(path.join(reviewedDir, file), 'utf8')) as DocumentSpec;
-    if (!sourceUrls.has(canonical(document.source))) throw new Error(`${file}: document source is not in the inventory.`);
+    validateLink(document.source, file);
     if (!/^[A-Za-z_][\w.-]*$/.test(document.root || '') || !document.elements?.length) throw new Error(`${file}: missing or invalid root or elements.`);
     if (!['policy', 'apiProxy', 'proxyEndpoint', 'targetEndpoint', 'integrationEndpoint'].includes(document.kind)) throw new Error(`${file}: invalid document kind.`);
     const rootKey = `${document.kind}:${document.root}`;
@@ -356,11 +374,7 @@ async function validate(): Promise<Map<string, boolean>> {
     const paths = new Set<string>();
     for (const element of document.elements) {
       if (!(element.path === `/${document.root}` || element.path.startsWith(`/${document.root}/`)) || paths.has(element.path)) throw new Error(`${file}: invalid or duplicate path ${element.path}.`);
-      if (!sourceUrls.has(canonical(element.source))) throw new Error(`${file}: ${element.path} has no inventoried source.`);
-      const link = new URL(element.source);
-      if (link.hash && candidateAnchors.has(canonical(element.source)) && !candidateAnchors.get(canonical(element.source))?.has(decodeURIComponent(link.hash.slice(1)))) {
-        throw new Error(`${file}: ${element.path} has a stale documentation anchor ${link.hash}.`);
-      }
+      validateLink(element.source, `${file}: ${element.path}`);
       if (typeof element.complete !== 'boolean') throw new Error(`${file}: ${element.path} has no review completeness flag.`);
       const source = canonical(element.source);
       coverage.set(source, (coverage.get(source) ?? true) && element.complete);
@@ -370,6 +384,7 @@ async function validate(): Promise<Map<string, boolean>> {
       for (const [name, value] of Object.entries(element.attributes || {})) {
         if (!/^[A-Za-z_][\w:.-]*$/.test(name)) throw new Error(`${file}: ${element.path} has invalid attribute ${name}.`);
         validateValue(value, `${file}: ${element.path}@${name}`);
+        if (value.source) validateLink(value.source, `${file}: ${element.path}@${name}`);
       }
       if (element.text) validateValue(element.text, `${file}: ${element.path} text`);
       paths.add(element.path);

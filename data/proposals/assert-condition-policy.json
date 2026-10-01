@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "assert condition policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the policy's documented elements, common attributes, and required Condition child for Apigee. Condition expression syntax is free text and not validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

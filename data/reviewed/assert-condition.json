@@ -1,0 +1,33 @@
+{
+  "kind": "policy",
+  "root": "AssertCondition",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/AssertCondition",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy#assertcondition",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy#example" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy#example" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy#example" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy#example" }
+      },
+      "children": ["Condition", "DisplayName"],
+      "requiredChildren": ["Condition"]
+    },
+    {
+      "path": "/AssertCondition/Condition",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy#condition",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/AssertCondition/DisplayName",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy#displayname",
+      "text": { "kind": "free" }
+    }
+  ]
+}

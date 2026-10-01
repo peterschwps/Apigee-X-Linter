@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "verify api key policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed policy elements, attributes, requiredness, and the documented cache-expiry range for Apigee. The deprecated async attribute is recognized without validating an undocumented value set."
   },
   "reviewStatus": "unreviewed",
   "sections": [

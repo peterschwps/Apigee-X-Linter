@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "verify iam policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Apigee-only (not hybrid) policy. Reviewed all documented configuration elements, attributes, and optional CredentialSource behavior."
   },
   "reviewStatus": "unreviewed",
   "sections": [

@@ -42,7 +42,8 @@
     "kind": "policy",
     "title": "assert condition policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assert-condition-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the policy's documented elements, common attributes, and required Condition child for Apigee. Condition expression syntax is free text and not validated."
   },
   {
     "id": "assign-message-policy",
@@ -435,14 +436,16 @@
     "kind": "policy",
     "title": "verify api key policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed policy elements, attributes, requiredness, and the documented cache-expiry range for Apigee. The deprecated async attribute is recognized without validating an undocumented value set."
   },
   {
     "id": "verify-iam-policy",
     "kind": "policy",
     "title": "verify iam policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-iam-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Apigee-only (not hybrid) policy. Reviewed all documented configuration elements, attributes, and optional CredentialSource behavior."
   },
   {
     "id": "verify-jws-policy",
