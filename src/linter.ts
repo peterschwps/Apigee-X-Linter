@@ -43,7 +43,7 @@ function valueIssue(value: string, rule: ValueSpec, start: number, end: number, 
   return undefined;
 }
 
-function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, ElementSpec>, path: string, xml: string, checkRequired: boolean, issues: LintIssue[]): void {
+function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: ReadonlySet<string>, path: string, xml: string, checkRequired: boolean, issues: LintIssue[]): void {
   const definition = rules.get(path);
   if (!definition) return;
   const attributes = definition.attributes || {};
@@ -165,7 +165,6 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
     }
   }
 
-  const knownNames = new Set(spec.elements.map(element => element.path.split('/').at(-1)));
   for (const child of node.children) {
     const childPath = `${path}/${child.name}`;
     if (!rules.has(childPath) && definition.complete && !definition.allowAnyChildren && !(definition.children || []).includes(child.name)) {
@@ -176,7 +175,7 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
         start: child.nameStart, end: child.nameEnd, source: definition.source,
       });
     } else {
-      checkNode(child, spec, rules, childPath, xml, checkRequired, issues);
+      checkNode(child, rules, knownNames, childPath, xml, checkRequired, issues);
     }
   }
 }
@@ -197,6 +196,8 @@ export function lint(xml: string, filePath: string, specs: DocumentSpec[], ignor
     }
     return issues.filter(issue => !ignoredRules.has(issue.rule));
   }
-  checkNode(root, spec, elementMap(spec), `/${root.name}`, xml, !parsed.syntaxIssues.length, issues);
+  const rules = elementMap(spec);
+  const knownNames = new Set(spec.elements.map(element => element.path.slice(element.path.lastIndexOf('/') + 1)));
+  checkNode(root, rules, knownNames, `/${root.name}`, xml, !parsed.syntaxIssues.length, issues);
   return issues.filter(issue => !ignoredRules.has(issue.rule));
 }
