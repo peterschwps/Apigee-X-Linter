@@ -1,3 +1,4 @@
+import { isIP } from 'node:net';
 import { elementMap, normalizeEnumValue, type DocumentSpec, type ElementSpec, type ValueSpec } from './spec';
 import { parseXml, type XmlNode } from './xml';
 
@@ -34,6 +35,9 @@ function valueIssue(value: string, rule: ValueSpec, start: number, end: number, 
   }
   if (rule.kind === 'format' && rule.pattern && !new RegExp(rule.pattern).test(value)) {
     return { rule: 'AX106', message: rule.format || 'Value does not match the documented format.', start, end, source };
+  }
+  if (rule.kind === 'format' && rule.formatType === 'ip' && isIP(value) === 0) {
+    return { rule: 'AX106', message: rule.format || 'Value is not a valid IP address.', start, end, source };
   }
   return undefined;
 }

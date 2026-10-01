@@ -5,6 +5,7 @@ export type ValueSpec = {
   kind: 'free' | 'enum' | 'format' | 'unknown';
   values?: string[];
   pattern?: string;
+  formatType?: 'ip';
   format?: string;
   allowTemplate?: boolean;
   caseInsensitive?: boolean;

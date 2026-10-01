@@ -334,6 +334,9 @@ function validateValue(value: ValueSpec, label: string): void {
   if (value.kind === 'enum' && value.values && new Set(value.values.map(item => normalizeEnumValue(item, value))).size !== value.values.length) {
     throw new Error(`${label}: enum values must be unique after normalization.`);
   }
+  if (value.formatType !== undefined && (value.kind !== 'format' || value.formatType !== 'ip')) {
+    throw new Error(`${label}: invalid format type.`);
+  }
   if (value.pattern) {
     try { new RegExp(value.pattern); } catch { throw new Error(`${label}: invalid format pattern.`); }
   }

@@ -37,8 +37,8 @@
       "path": "/AccessControl/IPRules/MatchRule/SourceAddress",
       "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/access-control-policy#sourceaddress",
-      "attributes": { "mask": { "kind": "format", "required": true, "allowTemplate": true, "format": "Use an IPv4 mask from 1 to 32 or an IPv6 mask from 1 to 128, or a message template." } },
-      "text": { "kind": "format", "allowTemplate": true, "format": "Use an IP address or a message template." }
+      "attributes": { "mask": { "kind": "format", "required": true, "allowTemplate": true, "format": "Use an IPv4 mask from 1 to 32 or an IPv6 mask from 1 to 128 (0 only with 0.0.0.0), or a message template.", "pattern": "^(?:0|[1-9]|[1-9][0-9]|1[01][0-9]|12[0-8])$" } },
+      "text": { "kind": "format", "formatType": "ip", "allowTemplate": true, "format": "Use a valid IPv4 or IPv6 address, or a message template." }
     },
     {
       "path": "/AccessControl/ValidateBasedOn",

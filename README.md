@@ -2,7 +2,7 @@
 
 A TypeScript VS Code extension for Apigee X proxy bundle XML. It provides diagnostics and context-aware completions from reviewed facts in the [Google Cloud Apigee documentation](https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reference-overview-policy).
 
-The project is under development. No public release is available yet, and documentation coverage is incomplete. Rules apply only to reviewed contexts, so an unsupported element is not automatically treated as invalid.
+The project is under development and has no public release yet. All 68 inventoried Apigee X reference pages have been reviewed, but 24 retain explicit documentation or modeling gaps in `data/sources.json`. Rules apply only to reviewed contexts, so an unsupported element is not automatically treated as invalid.
 
 ## Intended scope
 
@@ -16,7 +16,7 @@ Apigee Edge, hybrid-only behavior, XSLT resources, and arbitrary XML payloads ar
 
 Run `npm install`, then `npm run check` and `npm run build`. Press F5 in VS Code to launch the Extension Development Host. Open an Apigee proxy bundle and edit an XML file under `apiproxy`.
 
-Run `npm exec -- vsce package --no-dependencies` to create a local VSIX. The runtime is bundled into one file, so production dependencies are not copied into the package. This does not publish the extension. `npm run docs:status` shows review progress; `npm run release:check` blocks publication while source review is incomplete. The extension never fetches documentation at runtime.
+Run `npm exec -- vsce package --no-dependencies` to create a local VSIX. The runtime is bundled into one file, so production dependencies are not copied into the package. This does not publish the extension. `npm run docs:status` shows review progress; `npm run release:check` verifies inventory status and reviewed-data integrity, but does not resolve documented gaps or replace final performance and editor checks. The extension never fetches documentation at runtime.
 
 ## Documentation maintenance
 
