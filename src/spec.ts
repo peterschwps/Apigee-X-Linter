@@ -19,6 +19,13 @@ export function normalizeEnumValue(value: string, rule: ValueSpec): string {
 
 export type AttributeSpec = ValueSpec & { required?: boolean; source?: string };
 
+export type ChildGroup = {
+  children: string[];
+  min?: number;
+  max?: number;
+  source: string;
+};
+
 export type ElementSpec = {
   path: string;
   complete: boolean;
@@ -26,6 +33,7 @@ export type ElementSpec = {
   attributes?: Record<string, AttributeSpec>;
   children?: string[];
   requiredChildren?: string[];
+  childGroups?: ChildGroup[];
   text?: ValueSpec;
   textByAttribute?: { attribute: string; values: Record<string, ValueSpec> };
 };

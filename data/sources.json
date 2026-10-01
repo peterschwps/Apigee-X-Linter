@@ -5,7 +5,7 @@
     "title": "API proxy configuration reference",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed base, proxy, target, and integration endpoint sections, including allowed name characters, ConfigurationVersion values, route rules, local target routing, TLS settings, and authentication. TargetEndpoint Authentication is explicitly identical to ServiceCallout Authentication, so its nested rules are shared. LoadBalancer is supplemented by the separate load-balancing guide. Manifest containers, remaining HTTP connection details, and ScriptTarget are not fully specified here; conditional connection alternatives and TLS dependencies are not linted. The ProxyEndpoint charset property is documented here but absent from the endpoint property table and is included. Flow and fault subtrees are tracked by the flow reference."
+    "reviewNotes": "Reviewed base, proxy, target, and integration endpoint sections, including names, versions, routes, local routing, TLS, and authentication. The supplemental Apigee tutorial now supports BasePaths and Policy/ProxyEndpoint/TargetEndpoint manifest children; Resources and TargetServers manifest children remain unspecified. TargetEndpoint connection and RouteRule alternatives are now checked for at-most-one selection. Authentication follows the explicitly identical ServiceCallout contract, and LoadBalancer follows the separate guide. Remaining HTTP connection details and ScriptTarget are not fully specified; TLS dependencies are not linted. The ProxyEndpoint charset property is included although absent from the endpoint property table. Flow and fault subtrees are tracked by the flow reference."
   },
   {
     "id": "flow-configuration-reference",
@@ -30,6 +30,14 @@
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers",
     "reviewStatus": "gap",
     "reviewNotes": "Reviewed TargetEndpoint and ServiceCallout LoadBalancer XML, including algorithms, servers, weights, fallback, failure handling, retry, and path. The Weighted prose calls weight an attribute but its XML example uses a Weight child; the child is modeled and Server remains incomplete to avoid rejecting a potentially valid attribute. A LeastConnections example places Path outside HTTPTargetConnection, whereas other examples place it inside; only the latter is modeled. Weight value range, algorithm-dependent requirements, and the single-fallback condition are not statically checked. Target-server API and health-monitor administration are outside proxy-bundle XML scope."
+  },
+  {
+    "id": "semantic-caching-psc-tutorial",
+    "kind": "core",
+    "title": "Semantic caching with a private endpoint",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc",
+    "reviewStatus": "reviewed",
+    "reviewNotes": "The current Apigee tutorial's proxy-bundle descriptor example confirms Policies/Policy, ProxyEndpoints/ProxyEndpoint, TargetEndpoints/TargetEndpoint, and BasePaths syntax. These manifest paths are modeled in the APIProxy document; the tutorial's semantic-caching setup and environment guidance are not XML lint rules."
   },
   {
     "id": "access-control-policy",

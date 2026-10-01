@@ -40,6 +40,7 @@ const coreSources: Source[] = [
   { id: 'flow-configuration-reference', kind: 'core', title: 'Flow configuration reference', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference' },
   { id: 'endpoint-properties-reference', kind: 'core', title: 'Endpoint properties reference', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference' },
   { id: 'load-balancing-across-backend-servers', kind: 'core', title: 'Load balancing across backend servers', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers' },
+  { id: 'semantic-caching-psc-tutorial', kind: 'core', title: 'Semantic caching with a private endpoint', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc' },
 ];
 const supplementalPolicies: Source[] = [
   { id: 'generate-saml-assertion-policy', kind: 'policy', title: 'generate saml assertion policy', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy' },
@@ -391,6 +392,17 @@ async function validate(): Promise<Map<string, boolean>> {
       const children = element.children || [];
       if (new Set(children).size !== children.length || children.some(child => !/^[A-Za-z_][\w.-]*$/.test(child))) throw new Error(`${file}: ${element.path} has invalid or duplicate children.`);
       if (element.requiredChildren?.some(child => !children.includes(child))) throw new Error(`${file}: ${element.path} has a required child absent from children.`);
+      for (const group of element.childGroups || []) {
+        if (!group.children.length || new Set(group.children).size !== group.children.length || group.children.some(child => !children.includes(child))) {
+          throw new Error(`${file}: ${element.path} has an invalid child group.`);
+        }
+        if ((group.min === undefined && group.max === undefined)
+          || [group.min, group.max].some(limit => limit !== undefined && (!Number.isInteger(limit) || limit < 0))
+          || (group.min !== undefined && group.max !== undefined && group.min > group.max)) {
+          throw new Error(`${file}: ${element.path} has invalid child group bounds.`);
+        }
+        validateLink(group.source, `${file}: ${element.path} child group`);
+      }
       for (const [name, value] of Object.entries(element.attributes || {})) {
         if (!/^[A-Za-z_][\w:.-]*$/.test(name)) throw new Error(`${file}: ${element.path} has invalid attribute ${name}.`);
         validateValue(value, `${file}: ${element.path}@${name}`);

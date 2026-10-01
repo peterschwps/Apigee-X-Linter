@@ -1,0 +1,100 @@
+{
+  "source": {
+    "id": "semantic-caching-psc-tutorial",
+    "kind": "core",
+    "title": "Semantic caching with a private endpoint",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc",
+    "reviewStatus": "reviewed",
+    "reviewNotes": "The current Apigee tutorial's proxy-bundle descriptor example confirms Policies/Policy, ProxyEndpoints/ProxyEndpoint, TargetEndpoints/TargetEndpoint, and BasePaths syntax. These manifest paths are modeled in the APIProxy document; the tutorial's semantic-caching setup and environment guidance are not XML lint rules."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Vector Search index prerequisites",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#vector-search-prerequisites",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Format and structure your input data."
+      ]
+    },
+    {
+      "heading": "Step 1: Verify your resources and get the values Apigee needs",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#verify-resources",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format=\"value(deployedIndexes."
+      ]
+    },
+    {
+      "heading": "Create the proxy bundle",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#bundle-details",
+      "elements": [],
+      "exampleElements": [
+        "APIProxy",
+        "Authentication",
+        "BasePath",
+        "BasePaths",
+        "DeployedIndexID",
+        "DisplayName",
+        "Embeddings",
+        "GoogleAccessToken",
+        "GrpcEndpoint",
+        "HTTPProxyConnection",
+        "HTTPTargetConnection",
+        "IgnoreUnresolvedVariables",
+        "Name",
+        "Policies",
+        "Policy",
+        "PostFlow",
+        "PreFlow",
+        "PrivateServiceConnect",
+        "ProxyEndpoint",
+        "ProxyEndpoints",
+        "Request",
+        "Response",
+        "RouteRule",
+        "Scope",
+        "Scopes",
+        "SemanticCacheLookup",
+        "SemanticCachePopulate",
+        "SimilaritySearch",
+        "Step",
+        "TTLInSeconds",
+        "TargetEndpoint",
+        "TargetEndpoints",
+        "Threshold",
+        "URL",
+        "UserPromptSource",
+        "VertexAI"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format is grpc://TARGET_HOST:PORT; the scheme must be grpc://."
+      ]
+    }
+  ]
+}

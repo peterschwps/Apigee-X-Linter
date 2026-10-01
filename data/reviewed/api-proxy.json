@@ -12,16 +12,20 @@
         "name": { "kind": "format", "required": true, "format": "Use only letters, digits, underscores, and hyphens.", "pattern": "^[A-Za-z0-9_-]+$" },
         "revision": { "kind": "free" }
       },
-      "children": ["ConfigurationVersion", "Description", "DisplayName", "Policies", "ProxyEndpoints", "Resources", "Spec", "TargetServers", "TargetEndpoints"]
+      "children": ["ConfigurationVersion", "Description", "DisplayName", "BasePaths", "Policies", "ProxyEndpoints", "Resources", "Spec", "TargetServers", "TargetEndpoints"]
     },
     { "path": "/APIProxy/ConfigurationVersion", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "attributes": { "majorVersion": { "kind": "enum", "values": ["4"] }, "minorVersion": { "kind": "enum", "values": ["0"] } } },
     { "path": "/APIProxy/Description", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
     { "path": "/APIProxy/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
-    { "path": "/APIProxy/Policies", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
-    { "path": "/APIProxy/ProxyEndpoints", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
+    { "path": "/APIProxy/BasePaths", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#bundle-details", "text": { "kind": "free" } },
+    { "path": "/APIProxy/Policies", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#bundle-details", "children": ["Policy"] },
+    { "path": "/APIProxy/Policies/Policy", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#bundle-details", "text": { "kind": "free" } },
+    { "path": "/APIProxy/ProxyEndpoints", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#bundle-details", "children": ["ProxyEndpoint"] },
+    { "path": "/APIProxy/ProxyEndpoints/ProxyEndpoint", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#bundle-details", "text": { "kind": "free" } },
     { "path": "/APIProxy/Resources", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
     { "path": "/APIProxy/Spec", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
     { "path": "/APIProxy/TargetServers", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" },
-    { "path": "/APIProxy/TargetEndpoints", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#baseconfiguration-baseconfigurationelements" }
+    { "path": "/APIProxy/TargetEndpoints", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#bundle-details", "children": ["TargetEndpoint"] },
+    { "path": "/APIProxy/TargetEndpoints/TargetEndpoint", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc#bundle-details", "text": { "kind": "free" } }
   ]
 }

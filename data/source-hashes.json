@@ -2372,5 +2372,28 @@
     "httpmonitor-configuration-elements": "b2b0d1ff3091c6d1266996333176db5541da9978452c437eca9d963d4cb7591c",
     "httpmonitorrequest-configuration-elements": "7435060c638bc79acd54b5a510dacb50228467b7dc828f865c545ec9b5083017",
     "httpmonitorsuccessresponse-configuration-elements": "17ddef71536044384ee396047bd3b77f86484a9b893531f56edbe6ec39bc47da"
+  },
+  "semantic-caching-psc-tutorial": {
+    "before-you-begin": "743da932d5812573f06d95057d7f1ff8bef84d9654ad0ac4e5cbddcd4cb6af5c",
+    "required-roles": "8391cb0790e5ccf020b5c5dfa0972d3d081286d9331e33e12383a9df9ec00ef8",
+    "set-env-vars": "d93af8e3d796df0a85ed52fcc1c7e26bde0376af306cd4e6ef3ccd3cffdf20aa",
+    "set-project": "52d184b5a8f23cc0e9c0362e77edede0dfda16bcb566d36a85e9280b44101d2b",
+    "vector-search-prerequisites": "1049493271e9492d9e1e2ecc660b254f95f499c51b2994363b849b16b31f4451",
+    "create-service-account": "a9fbf283b38e9758d782850f7c54d9f968df95e53ccf8cead190565bc9198191",
+    "hybrid-prerequisites": "81161ddfd7caa7c311e7ecb162debe32194c5679a31e8292cc82b81da7c3bbea",
+    "set-up-hybrid": "fbd5bec128cbdd3304359c433454a8525b7b100b69c932ae14fa252827907960",
+    "hybrid-networking": "64fcf43e7a19e45860b9da07201a30105191f7ee72914353f8b5263d1aa8bd85",
+    "overview": "5c3fc472294b3c28b8ea4c2daced40f23d5a62e025a221715c17beff13fb745c",
+    "verify-resources": "9bb90826034dd469aca12b2594d58266e8643f907fb21eafb154301531cffb53",
+    "connect-service-attachment": "e6b99e642bcd63682b7f160ae10643a5248ebde00a52bcd9f197f1a81e7b86be",
+    "connect-apigee": "e2847abb17c3011fd38e05136c2c8e4486cc1a05370a7781c3de2f3405ef9405",
+    "connect-hybrid": "027cd95bb7fbe081c76b2012d28aaca714c03311e7ce5e770164da26b8449ded",
+    "create-proxy": "f146d8d9776a5007cf39063cd1e4c3ce1efad672df3ec833c6ad60f222252ac7",
+    "bundle-details": "609dc01d77a7271afadfe4017443ce3fc8c1afd7762ad88cd358c3ca748c0ee6",
+    "deploy-api-proxy": "468e74975ead26dbe719471a7b06fbd173e490a715fadc68f7e9a96c4282ca32",
+    "test-policies": "6541cb84eda7799bfee038ee8e4b53d7b7345fbd39234b371eef574ccee654b0",
+    "troubleshooting": "5e4e5df186243a8a2c26ad03e44dfde565a375ec872333f7c427cb1d9d181300",
+    "limitations": "8fd64b4e639fc1aa360f54d16bce29b3138fd3e9aa2f17f8fef754bd6c2eb726",
+    "whats-next": "2a2cd21a688340f0b7a45e1645eaea7f676b7688951b3ba8a176227ede6771a3"
   }
 }

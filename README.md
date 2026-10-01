@@ -2,7 +2,7 @@
 
 A TypeScript VS Code extension for Apigee X proxy bundle XML. It provides diagnostics and context-aware completions from reviewed facts in the [Google Cloud Apigee documentation](https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reference-overview-policy).
 
-The project is under development and has no public release yet. All 69 inventoried Apigee X documentation pages have been assessed, including a supplemental load-balancing guide; 24 retain explicit documentation or modeling gaps in `data/sources.json`. Rules apply only to reviewed contexts, so an unsupported element is not automatically treated as invalid.
+The project is under development and has no public release yet. All 70 inventoried Apigee X documentation pages have been assessed, including supplemental load-balancing and proxy-bundle examples; 24 retain explicit documentation or modeling gaps in `data/sources.json`. Rules apply only to reviewed contexts, so an unsupported element is not automatically treated as invalid.
 
 ## Intended scope
 
@@ -27,7 +27,7 @@ Run `npm exec -- vsce package --no-dependencies` to create a local VSIX. The run
 
 Official pages sometimes cover both Apigee and Apigee hybrid or link to Edge documentation. That does not imply a feature is valid for Apigee X. Archived policy schemas are supplementary, not authoritative.
 
-Diagnostic IDs: `AX001` XML syntax, `AX101` unknown element or wrong root, `AX102` misplaced element, `AX103` unknown attribute, `AX104` missing required attribute or child, `AX105` invalid fixed value, and `AX106` invalid documented format.
+Diagnostic IDs: `AX001` XML syntax, `AX101` unknown element or wrong root, `AX102` misplaced element, `AX103` unknown attribute, `AX104` missing required attribute or child, `AX105` invalid fixed value, `AX106` invalid documented format, and `AX107` invalid child-group cardinality.
 
 ## Settings
 

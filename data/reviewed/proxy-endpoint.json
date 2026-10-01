@@ -85,7 +85,8 @@
       "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules",
       "attributes": { "name": { "kind": "format", "required": true, "format": "Use only letters, digits, periods, underscores, hyphens, dollar signs, spaces, and percent signs.", "pattern": "^[A-Za-z0-9._$ %\\-]+$" } },
-      "children": ["Condition", "TargetEndpoint", "URL", "IntegrationEndpoint"]
+      "children": ["Condition", "TargetEndpoint", "URL", "IntegrationEndpoint"],
+      "childGroups": [{ "children": ["TargetEndpoint", "URL", "IntegrationEndpoint"], "max": 1, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules" }]
     },
     { "path": "/ProxyEndpoint/RouteRule/Condition", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules", "text": { "kind": "free" } },
     { "path": "/ProxyEndpoint/RouteRule/TargetEndpoint", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-howtoconfigurerouterules", "text": { "kind": "free" } },

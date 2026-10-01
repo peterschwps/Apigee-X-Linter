@@ -73,6 +73,16 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
         issues.push({ rule: 'AX104', message: `Missing required <${child}> inside <${node.name}>.`, start: node.nameStart, end: node.nameEnd, source: definition.source });
       }
     }
+    for (const group of definition.childGroups || []) {
+      const matching = node.children.filter(child => group.children.includes(child.name));
+      if (group.min !== undefined && matching.length < group.min) {
+        issues.push({ rule: 'AX107', message: `Expected at least ${group.min} of: ${group.children.join(', ')}.`, start: node.nameStart, end: node.nameEnd, source: group.source });
+      }
+      if (group.max !== undefined && matching.length > group.max) {
+        const excess = matching[group.max];
+        issues.push({ rule: 'AX107', message: `Expected at most ${group.max} of: ${group.children.join(', ')}.`, start: excess.nameStart, end: excess.nameEnd, source: group.source });
+      }
+    }
   }
 
   const selector = definition.textByAttribute;
