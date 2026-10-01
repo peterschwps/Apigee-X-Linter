@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "sanitize llm response policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the SanitizeModelResponse XML root, nested ModelArmor/TemplateName, prompt and response sources, optional function-call fallback, and boolean unresolved-variable setting. The high-level child table incorrectly implies TemplateName is directly under the root; syntax and deployment error confirm ModelArmor nesting. Message-template expressions remain free text."
   },
   "reviewStatus": "unreviewed",
   "sections": [

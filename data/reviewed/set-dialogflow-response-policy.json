@@ -1,0 +1,27 @@
+{
+  "kind": "policy",
+  "root": "SetDialogflowResponse",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/SetDialogflowResponse", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#setdiagresponse", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "Source", "DialogflowVersion", "NaturalLanguageResponse", "Parameters", "IgnoreUnresolvedVariables"] },
+    { "path": "/SetDialogflowResponse/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/SetDialogflowResponse/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#source", "text": { "kind": "free" } },
+    { "path": "/SetDialogflowResponse/DialogflowVersion", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#dfverelement", "text": { "kind": "enum", "values": ["CX"] } },
+    { "path": "/SetDialogflowResponse/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#ignoreunresolvvars", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/SetDialogflowResponse/NaturalLanguageResponse", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#nlresponse", "children": ["MergeBehavior", "Phrases"] },
+    { "path": "/SetDialogflowResponse/NaturalLanguageResponse/MergeBehavior", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#mergebehavior", "text": { "kind": "enum", "values": ["APPEND", "REPLACE"] } },
+    { "path": "/SetDialogflowResponse/NaturalLanguageResponse/Phrases", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#phrases", "children": ["Phrase"] },
+    { "path": "/SetDialogflowResponse/NaturalLanguageResponse/Phrases/Phrase", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#phrase", "children": ["Header", "JSONPath", "Ref", "Value"] },
+    { "path": "/SetDialogflowResponse/NaturalLanguageResponse/Phrases/Phrase/Header", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#header", "attributes": { "name": { "kind": "free", "required": true } } },
+    { "path": "/SetDialogflowResponse/NaturalLanguageResponse/Phrases/Phrase/JSONPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#jsonpath", "text": { "kind": "free" } },
+    { "path": "/SetDialogflowResponse/NaturalLanguageResponse/Phrases/Phrase/Ref", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#ref", "text": { "kind": "free" } },
+    { "path": "/SetDialogflowResponse/NaturalLanguageResponse/Phrases/Phrase/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#value", "text": { "kind": "free" } },
+    { "path": "/SetDialogflowResponse/Parameters", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#parameters", "children": ["Parameter"] },
+    { "path": "/SetDialogflowResponse/Parameters/Parameter", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#parameter", "attributes": { "name": { "kind": "free", "required": true } }, "children": ["Header", "JSONPath", "Ref", "Value"] },
+    { "path": "/SetDialogflowResponse/Parameters/Parameter/Header", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#header", "attributes": { "name": { "kind": "free", "required": true } } },
+    { "path": "/SetDialogflowResponse/Parameters/Parameter/JSONPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#jsonpath", "text": { "kind": "free" } },
+    { "path": "/SetDialogflowResponse/Parameters/Parameter/Ref", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#ref", "text": { "kind": "free" } },
+    { "path": "/SetDialogflowResponse/Parameters/Parameter/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy#value", "text": { "kind": "free" } }
+  ]
+}

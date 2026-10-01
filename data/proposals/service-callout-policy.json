@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "service callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed callout root, request/response/timeout, HTTP versus local targets, and Google authentication subtree. Request Remove/Copy/Add/Set inherits AssignMessage syntax, while SSLInfo, load balancing, and transport Properties delegate to separate references; those subtrees remain incomplete. Root Properties appears only in a sample. HTTP/local target and authentication token alternatives are not enforceable by static requiredChildren."
   },
   "reviewStatus": "unreviewed",
   "sections": [

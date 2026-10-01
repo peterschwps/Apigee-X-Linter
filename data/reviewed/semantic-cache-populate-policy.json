@@ -1,0 +1,15 @@
+{
+  "kind": "policy",
+  "root": "SemanticCachePopulate",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/SemanticCachePopulate", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#semanticcachepopulate", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "IgnoreUnresolvedVariables", "SimilaritySearch", "TTLInSeconds"], "requiredChildren": ["SimilaritySearch"] },
+    { "path": "/SemanticCachePopulate/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/SemanticCachePopulate/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/SemanticCachePopulate/SimilaritySearch", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#similaritysearch", "children": ["VertexAI"], "requiredChildren": ["VertexAI"] },
+    { "path": "/SemanticCachePopulate/SimilaritySearch/VertexAI", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#vertexai", "children": ["URL"], "requiredChildren": ["URL"] },
+    { "path": "/SemanticCachePopulate/SimilaritySearch/VertexAI/URL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#url", "text": { "kind": "free" } },
+    { "path": "/SemanticCachePopulate/TTLInSeconds", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy#ttl", "text": { "kind": "free" } }
+  ]
+}

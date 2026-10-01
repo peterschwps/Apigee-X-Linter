@@ -1,0 +1,15 @@
+{
+  "kind": "policy",
+  "root": "SanitizeUserPrompt",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/SanitizeUserPrompt", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy#name", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "IgnoreUnresolvedVariables", "ModelArmor", "UserPromptSource", "FunctionResponseSource"], "requiredChildren": ["ModelArmor"] },
+    { "path": "/SanitizeUserPrompt/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/SanitizeUserPrompt/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/SanitizeUserPrompt/ModelArmor", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy#modelarmor", "children": ["TemplateName"], "requiredChildren": ["TemplateName"] },
+    { "path": "/SanitizeUserPrompt/ModelArmor/TemplateName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy#modelarmor", "text": { "kind": "free" } },
+    { "path": "/SanitizeUserPrompt/UserPromptSource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy#userpromptsource", "text": { "kind": "free" } },
+    { "path": "/SanitizeUserPrompt/FunctionResponseSource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy#functionresponsesource", "text": { "kind": "free" } }
+  ]
+}

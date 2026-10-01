@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "semantic cache lookup policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed embedding and similarity-search VertexAI paths, public URL versus Apigee-supported PrivateServiceConnect/GrpcEndpoint, DeployedIndexID, and the four exact DistanceMeasureType values. The overview calls Embeddings required while its own detailed section says optional; no root requiredness diagnostic is emitted for it. Exactly one search transport is required but the current static model cannot enforce alternatives."
   },
   "reviewStatus": "unreviewed",
   "sections": [

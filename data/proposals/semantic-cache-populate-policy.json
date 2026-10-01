@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "semantic cache populate policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed required SimilaritySearch/VertexAI/URL, optional TTLInSeconds, and boolean IgnoreUnresolvedVariables. Unlike lookup, PrivateServiceConnect is explicitly unsupported in populate and is not modeled. The TTL deployment description contradicts itself on zero (must be >=0 yet says zero fails), so no static range diagnostic is emitted."
   },
   "reviewStatus": "unreviewed",
   "sections": [

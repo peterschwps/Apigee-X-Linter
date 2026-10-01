@@ -1,0 +1,23 @@
+{
+  "kind": "policy",
+  "root": "SemanticCacheLookup",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/SemanticCacheLookup", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#semanticcachelookup", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "IgnoreUnresolvedVariables", "UserPromptSource", "Embeddings", "SimilaritySearch"], "requiredChildren": ["SimilaritySearch"] },
+    { "path": "/SemanticCacheLookup/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/SemanticCacheLookup/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/SemanticCacheLookup/UserPromptSource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#userpromptsource", "text": { "kind": "free" } },
+    { "path": "/SemanticCacheLookup/Embeddings", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#embeddings", "children": ["VertexAI"], "requiredChildren": ["VertexAI"] },
+    { "path": "/SemanticCacheLookup/Embeddings/VertexAI", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#embeddings-vertexai", "children": ["URL"], "requiredChildren": ["URL"] },
+    { "path": "/SemanticCacheLookup/Embeddings/VertexAI/URL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#embeddingsurl", "text": { "kind": "free" } },
+    { "path": "/SemanticCacheLookup/SimilaritySearch", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch", "children": ["VertexAI"], "requiredChildren": ["VertexAI"] },
+    { "path": "/SemanticCacheLookup/SimilaritySearch/VertexAI", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch-vertexai", "children": ["URL", "PrivateServiceConnect", "Threshold", "DeployedIndexID", "DistanceMeasureType"], "requiredChildren": ["DeployedIndexID"] },
+    { "path": "/SemanticCacheLookup/SimilaritySearch/VertexAI/URL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch-vertexai", "text": { "kind": "free" } },
+    { "path": "/SemanticCacheLookup/SimilaritySearch/VertexAI/PrivateServiceConnect", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch-vertexai", "children": ["GrpcEndpoint"], "requiredChildren": ["GrpcEndpoint"] },
+    { "path": "/SemanticCacheLookup/SimilaritySearch/VertexAI/PrivateServiceConnect/GrpcEndpoint", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch-vertexai", "text": { "kind": "free" } },
+    { "path": "/SemanticCacheLookup/SimilaritySearch/VertexAI/Threshold", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch-vertexai", "text": { "kind": "free" } },
+    { "path": "/SemanticCacheLookup/SimilaritySearch/VertexAI/DeployedIndexID", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch-vertexai", "text": { "kind": "free" } },
+    { "path": "/SemanticCacheLookup/SimilaritySearch/VertexAI/DistanceMeasureType", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy#similaritysearch-vertexai", "text": { "kind": "enum", "values": ["DOT_PRODUCT_DISTANCE", "COSINE_DISTANCE", "SQUARED_L2_DISTANCE", "L1_DISTANCE"] } }
+  ]
+}

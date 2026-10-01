@@ -402,49 +402,56 @@
     "kind": "policy",
     "title": "sanitize llm response policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the SanitizeModelResponse XML root, nested ModelArmor/TemplateName, prompt and response sources, optional function-call fallback, and boolean unresolved-variable setting. The high-level child table incorrectly implies TemplateName is directly under the root; syntax and deployment error confirm ModelArmor nesting. Message-template expressions remain free text."
   },
   {
     "id": "sanitize-user-prompt-policy",
     "kind": "policy",
     "title": "sanitize user prompt policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the SanitizeUserPrompt root, required ModelArmor/TemplateName, optional prompt extraction override and function-response fallback, and boolean unresolved-variable setting. The high-level child list incorrectly presents TemplateName directly under the root; examples and deployment error confirm nesting. Message-template expressions are free text."
   },
   {
     "id": "semantic-cache-lookup-policy",
     "kind": "policy",
     "title": "semantic cache lookup policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-lookup-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed embedding and similarity-search VertexAI paths, public URL versus Apigee-supported PrivateServiceConnect/GrpcEndpoint, DeployedIndexID, and the four exact DistanceMeasureType values. The overview calls Embeddings required while its own detailed section says optional; no root requiredness diagnostic is emitted for it. Exactly one search transport is required but the current static model cannot enforce alternatives."
   },
   {
     "id": "semantic-cache-populate-policy",
     "kind": "policy",
     "title": "semantic cache populate policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/semantic-cache-populate-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed required SimilaritySearch/VertexAI/URL, optional TTLInSeconds, and boolean IgnoreUnresolvedVariables. Unlike lookup, PrivateServiceConnect is explicitly unsupported in populate and is not modeled. The TTL deployment description contradicts itself on zero (must be >=0 yet says zero fails), so no static range diagnostic is emitted."
   },
   {
     "id": "service-callout-policy",
     "kind": "policy",
     "title": "service callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed callout root, request/response/timeout, HTTP versus local targets, and Google authentication subtree. Request Remove/Copy/Add/Set inherits AssignMessage syntax, while SSLInfo, load balancing, and transport Properties delegate to separate references; those subtrees remain incomplete. Root Properties appears only in a sample. HTTP/local target and authentication token alternatives are not enforceable by static requiredChildren."
   },
   {
     "id": "set-dialogflow-response-policy",
     "kind": "policy",
     "title": "set dialogflow response policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed CX-only DialogflowVersion, APPEND/REPLACE MergeBehavior, and both phrase and parameter extraction branches with required Header/Parameter name attributes. The requirement to choose one of Header, JSONPath, Ref, or Value per Phrase/Parameter is not expressible by the static requiredChildren model."
   },
   {
     "id": "set-integration-request-policy",
     "kind": "policy",
     "title": "set integration request policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed required IntegrationRegion/ApiTrigger, ref-or-literal variants, input parameters and arrays, data-type enums, schedule and request variable. ApiTrigger prefix and ScheduleTime format prose conflict with unprefixed/spaced examples, so those text formats remain free. ParameterArray type includes json because a dedicated JSON-array example contradicts the narrower attribute table."
   },
   {
     "id": "set-oauth-v2-info-policy",

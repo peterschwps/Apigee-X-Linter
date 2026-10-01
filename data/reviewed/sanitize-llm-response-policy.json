@@ -1,0 +1,16 @@
+{
+  "kind": "policy",
+  "root": "SanitizeModelResponse",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/SanitizeModelResponse", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#name", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "IgnoreUnresolvedVariables", "ModelArmor", "UserPromptSource", "LLMResponseSource", "FunctionCallSource"], "requiredChildren": ["ModelArmor", "UserPromptSource", "LLMResponseSource"] },
+    { "path": "/SanitizeModelResponse/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/SanitizeModelResponse/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/SanitizeModelResponse/ModelArmor", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#syntax", "children": ["TemplateName"], "requiredChildren": ["TemplateName"] },
+    { "path": "/SanitizeModelResponse/ModelArmor/TemplateName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#templatename", "text": { "kind": "free" } },
+    { "path": "/SanitizeModelResponse/UserPromptSource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#userpromptsource", "text": { "kind": "free" } },
+    { "path": "/SanitizeModelResponse/LLMResponseSource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#llmresponsesource", "text": { "kind": "free" } },
+    { "path": "/SanitizeModelResponse/FunctionCallSource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-llm-response-policy#functioncallsource", "text": { "kind": "free" } }
+  ]
+}

@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "sanitize user prompt policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/sanitize-user-prompt-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the SanitizeUserPrompt root, required ModelArmor/TemplateName, optional prompt extraction override and function-response fallback, and boolean unresolved-variable setting. The high-level child list incorrectly presents TemplateName directly under the root; examples and deployment error confirm nesting. Message-template expressions are free text."
   },
   "reviewStatus": "unreviewed",
   "sections": [

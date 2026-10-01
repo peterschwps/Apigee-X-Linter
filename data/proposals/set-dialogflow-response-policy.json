@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "set dialogflow response policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-dialogflow-response-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed CX-only DialogflowVersion, APPEND/REPLACE MergeBehavior, and both phrase and parameter extraction branches with required Header/Parameter name attributes. The requirement to choose one of Header, JSONPath, Ref, or Value per Phrase/Parameter is not expressible by the static requiredChildren model."
   },
   "reviewStatus": "unreviewed",
   "sections": [

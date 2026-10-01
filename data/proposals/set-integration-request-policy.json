@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "set integration request policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/set-integration-request-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed required IntegrationRegion/ApiTrigger, ref-or-literal variants, input parameters and arrays, data-type enums, schedule and request variable. ApiTrigger prefix and ScheduleTime format prose conflict with unprefixed/spaced examples, so those text formats remain free. ParameterArray type includes json because a dedicated JSON-array example contradicts the narrower attribute table."
   },
   "reviewStatus": "unreviewed",
   "sections": [
