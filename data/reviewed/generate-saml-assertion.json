@@ -1,0 +1,37 @@
+{
+  "kind": "policy",
+  "root": "GenerateSAMLAssertion",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/GenerateSAMLAssertion",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#elements",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#top-level-element-attributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#top-level-element-attributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#top-level-element-attributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#top-level-element-attributes" },
+        "ignoreContentType": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements" }
+      },
+      "children": ["DisplayName", "CanonicalizationAlgorithm", "Issuer", "KeyStore", "OutputVariable", "SignatureAlgorithm", "Subject", "Template"],
+      "requiredChildren": ["Issuer", "KeyStore"]
+    },
+    { "path": "/GenerateSAMLAssertion/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#top-level-element-attributes", "text": { "kind": "free" } },
+    { "path": "/GenerateSAMLAssertion/CanonicalizationAlgorithm", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples", "text": { "kind": "unknown" } },
+    { "path": "/GenerateSAMLAssertion/Issuer", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateSAMLAssertion/KeyStore", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "children": ["Name", "Alias"], "requiredChildren": ["Name", "Alias"] },
+    { "path": "/GenerateSAMLAssertion/KeyStore/Name", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateSAMLAssertion/KeyStore/Alias", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateSAMLAssertion/OutputVariable", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "children": ["FlowVariable", "Message"] },
+    { "path": "/GenerateSAMLAssertion/OutputVariable/FlowVariable", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "text": { "kind": "free" } },
+    { "path": "/GenerateSAMLAssertion/OutputVariable/Message", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "attributes": { "name": { "kind": "enum", "values": ["message", "request", "response"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements" } }, "children": ["Namespaces", "XPath"] },
+    { "path": "/GenerateSAMLAssertion/OutputVariable/Message/Namespaces", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples", "children": ["Namespace"] },
+    { "path": "/GenerateSAMLAssertion/OutputVariable/Message/Namespaces/Namespace", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples", "attributes": { "prefix": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateSAMLAssertion/OutputVariable/Message/XPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "text": { "kind": "free" } },
+    { "path": "/GenerateSAMLAssertion/SignatureAlgorithm", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "text": { "kind": "enum", "values": ["SHA1", "SHA256"] } },
+    { "path": "/GenerateSAMLAssertion/Subject", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateSAMLAssertion/Template", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#generateSAMLAssertion-elements", "attributes": { "ignoreUnresolvedVariables": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy#samples" } }, "text": { "kind": "free" } }
+  ]
+}

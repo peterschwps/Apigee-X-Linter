@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "flow callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee FlowCallout elements, required SharedFlowBundle, and Parameter attributes. The alternative parameter value sources (ref, value, or text) are documented but not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

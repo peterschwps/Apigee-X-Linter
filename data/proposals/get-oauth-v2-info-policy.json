@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "get oauth v2 info policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee token selectors, their ref/literal forms, common policy attributes, and IgnoreAccessTokenStatus boolean. At-least-one selector and the AccessToken-only condition for IgnoreAccessTokenStatus are not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

@@ -1,0 +1,26 @@
+{
+  "kind": "policy",
+  "root": "GetOAuthV2Info",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/GetOAuthV2Info",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#elementreference",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#getoauthv2infoattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#getoauthv2infoattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#getoauthv2infoattributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#getoauthv2infoattributes" }
+      },
+      "children": ["DisplayName", "AccessToken", "AuthorizationCode", "ClientId", "RefreshToken", "IgnoreAccessTokenStatus"]
+    },
+    { "path": "/GetOAuthV2Info/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/GetOAuthV2Info/AccessToken", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#accesstokenelement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#accesstokenelement" } }, "text": { "kind": "free" } },
+    { "path": "/GetOAuthV2Info/AuthorizationCode", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#authorizationcodeelement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#authorizationcodeelement" } }, "text": { "kind": "free" } },
+    { "path": "/GetOAuthV2Info/ClientId", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#clientidelement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#clientidelement" } }, "text": { "kind": "free" } },
+    { "path": "/GetOAuthV2Info/RefreshToken", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#refreshtokenelement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#refreshtokenelement" } }, "text": { "kind": "free" } },
+    { "path": "/GetOAuthV2Info/IgnoreAccessTokenStatus", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy#ignoreaccesstokenstatuselement", "text": { "kind": "enum", "values": ["true", "false"] } }
+  ]
+}

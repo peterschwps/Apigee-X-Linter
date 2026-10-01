@@ -1,0 +1,41 @@
+{
+  "kind": "policy",
+  "root": "FlowCallout",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/FlowCallout",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#elements",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#flowcalloutattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#flowcalloutattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#flowcalloutattributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#flowcalloutattributes" }
+      },
+      "children": ["DisplayName", "SharedFlowBundle", "Parameters"],
+      "requiredChildren": ["SharedFlowBundle"]
+    },
+    { "path": "/FlowCallout/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/FlowCallout/SharedFlowBundle", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#request", "text": { "kind": "free" } },
+    {
+      "path": "/FlowCallout/Parameters",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#parameterselement",
+      "children": ["Parameter"],
+      "requiredChildren": ["Parameter"]
+    },
+    {
+      "path": "/FlowCallout/Parameters/Parameter",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#parameterelement",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#parameterelement-attributes" },
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#parameterelement-attributes" },
+        "value": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy#parameterelement-attributes" }
+      },
+      "text": { "kind": "free" }
+    }
+  ]
+}

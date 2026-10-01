@@ -1,0 +1,49 @@
+{
+  "kind": "policy",
+  "root": "DeleteOAuthV2Info",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/DeleteOAuthV2Info",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#elementreference",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#deleteoauthv2infoattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#deleteoauthv2infoattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#deleteoauthv2infoattributes" },
+        "async": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#deleteoauthv2infoattributes" }
+      },
+      "children": ["DisplayName", "AccessToken", "AuthorizationCode", "Attributes"]
+    },
+    {
+      "path": "/DeleteOAuthV2Info/DisplayName",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#displaynameelement",
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/DeleteOAuthV2Info/AccessToken",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#accesstokenelement",
+      "attributes": {
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#accesstokenelement-attributes" }
+      },
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/DeleteOAuthV2Info/AuthorizationCode",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#authorizationcodeelement",
+      "attributes": {
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#authorizationcodeelement-attributes" }
+      },
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/DeleteOAuthV2Info/Attributes",
+      "complete": false,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info#elementreference"
+    }
+  ]
+}

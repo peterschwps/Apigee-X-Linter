@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "generate jws policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jws-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee GenerateJWS elements, algorithms, fixed header/key values, and key references. Exactly one key branch and its algorithm match are conditional and not enforced by the current rule model."
   },
   "reviewStatus": "unreviewed",
   "sections": [

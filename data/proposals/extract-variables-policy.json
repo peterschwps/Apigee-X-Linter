@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "extract variables policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed all documented Apigee element contexts, required attributes, and fixed variable types. At-least-one extraction source is an either/or constraint not expressible by the current rule model. Pattern and XPath expression semantics are not validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "external callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee gRPC callout elements, authentication options, required server and timeout, and fixed Property names. Configurations child requiredness is not enforced because the page's FlowVariable-only example conflicts with its required-child table."
   },
   "reviewStatus": "unreviewed",
   "sections": [

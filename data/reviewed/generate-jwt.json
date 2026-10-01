@@ -1,0 +1,95 @@
+{
+  "kind": "policy",
+  "root": "GenerateJWT",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/GenerateJWT",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#elementreferenceforgeneratejwt-attributesthatapplytothetoplevelelement",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#elementreferenceforgeneratejwt-attributesthatapplytothetoplevelelement" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#elementreferenceforgeneratejwt-attributesthatapplytothetoplevelelement" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#elementreferenceforgeneratejwt-attributesthatapplytothetoplevelelement" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#elementreferenceforgeneratejwt-attributesthatapplytothetoplevelelement" }
+      },
+      "children": ["DisplayName", "Algorithm", "Algorithms", "Audience", "AdditionalClaims", "AdditionalHeaders", "Compress", "CriticalHeaders", "CustomClaims", "DirectKey", "ExpiresIn", "Id", "IgnoreUnresolvedVariables", "Issuer", "NotBefore", "OutputVariable", "PasswordKey", "PrivateKey", "PublicKey", "SecretKey", "Subject", "Type"]
+    },
+    { "path": "/GenerateJWT/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/Algorithm", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#algorithm", "text": { "kind": "enum", "values": ["HS256", "HS384", "HS512", "RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "PS256", "PS384", "PS512"] } },
+    {
+      "path": "/GenerateJWT/Algorithms",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#algorithms",
+      "children": ["Key", "Content"],
+      "requiredChildren": ["Key", "Content"]
+    },
+    { "path": "/GenerateJWT/Algorithms/Key", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#algorithms-child", "text": { "kind": "enum", "values": ["dir", "RSA-OAEP-256", "A128KW", "A192KW", "A256KW", "A128GCMKW", "A192GCMKW", "A256GCMKW", "PBES2-HS256+A128KW", "PBES2-HS384+A192KW", "PBES2-HS512+A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"] } },
+    { "path": "/GenerateJWT/Algorithms/Content", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#algorithms-child", "text": { "kind": "enum", "values": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"] } },
+    { "path": "/GenerateJWT/Audience", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#audience", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#audience" } }, "text": { "kind": "free" } },
+    {
+      "path": "/GenerateJWT/AdditionalClaims",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalclaimsclaim",
+      "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalclaimsclaim" } },
+      "children": ["Claim"]
+    },
+    {
+      "path": "/GenerateJWT/AdditionalClaims/Claim",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalclaimsclaim",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalclaimsclaim" },
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalclaimsclaim" },
+        "type": { "kind": "enum", "values": ["string", "number", "boolean", "map"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalclaimsclaim" },
+        "array": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalclaimsclaim" }
+      },
+      "text": { "kind": "free" }
+    },
+    { "path": "/GenerateJWT/AdditionalHeaders", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalheadersclaim", "children": ["Claim"], "requiredChildren": ["Claim"] },
+    {
+      "path": "/GenerateJWT/AdditionalHeaders/Claim",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalheadersclaim",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalheadersclaim" },
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalheadersclaim" },
+        "type": { "kind": "enum", "values": ["string", "number", "boolean", "map"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalheadersclaim" },
+        "array": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#additionalheadersclaim" }
+      },
+      "text": { "kind": "free" }
+    },
+    { "path": "/GenerateJWT/Compress", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#compress", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/GenerateJWT/CriticalHeaders", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#criticalheaders", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#criticalheaders" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/CustomClaims", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#customclaims" },
+    { "path": "/GenerateJWT/DirectKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#directkey", "children": ["Id", "Value"], "requiredChildren": ["Value"] },
+    { "path": "/GenerateJWT/DirectKey/Id", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#directkey-child", "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/DirectKey/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#directkey-child", "attributes": { "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#directkey-child" }, "encoding": { "kind": "enum", "values": ["hex", "base16", "base64", "base64url"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#directkey-child" } } },
+    { "path": "/GenerateJWT/ExpiresIn", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#expiresin", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#expiresin" } }, "text": { "kind": "format", "format": "Use an integer optionally followed by ms, s, m, h, or d.", "pattern": "^-?[0-9]+(?:ms|s|m|h|d)?$" } },
+    { "path": "/GenerateJWT/Id", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#id", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#id" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/GenerateJWT/Issuer", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#issuer", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#issuer" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/NotBefore", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#notbefore", "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/OutputVariable", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#outputvariable", "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/PasswordKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#passwordkey", "children": ["Id", "Value", "SaltLength", "PBKDF2Iterations"], "requiredChildren": ["Value"] },
+    { "path": "/GenerateJWT/PasswordKey/Id", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#passwordkey-child", "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/PasswordKey/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#passwordkey-child", "attributes": { "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#passwordkey-child" } } },
+    { "path": "/GenerateJWT/PasswordKey/SaltLength", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#passwordkey-child", "text": { "kind": "format", "format": "Use an integer number of bytes.", "pattern": "^[0-9]+$" } },
+    { "path": "/GenerateJWT/PasswordKey/PBKDF2Iterations", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#passwordkey-child", "text": { "kind": "format", "format": "Use an integer iteration count.", "pattern": "^[0-9]+$" } },
+    { "path": "/GenerateJWT/PrivateKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey", "children": ["Id", "Value", "Password"], "requiredChildren": ["Value"] },
+    { "path": "/GenerateJWT/PrivateKey/Id", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey-child", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey-child" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/PrivateKey/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey-child", "attributes": { "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey-child" } } },
+    { "path": "/GenerateJWT/PrivateKey/Password", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey-child", "attributes": { "ref": { "kind": "format", "required": true, "format": "Reference a private.* flow variable.", "pattern": "^private\\..+$", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#privatekey-child" } } },
+    { "path": "/GenerateJWT/PublicKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey", "children": ["Value", "Certificate", "JWKS", "Id"] },
+    { "path": "/GenerateJWT/PublicKey/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/PublicKey/Certificate", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/PublicKey/JWKS", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child" }, "uri": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child" }, "uriRef": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/PublicKey/Id", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#publickey-child" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/SecretKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#secretkey", "attributes": { "encoding": { "kind": "enum", "values": ["hex", "base16", "base64", "base64url"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#secretkey-child" } }, "children": ["Id", "Value"], "requiredChildren": ["Value"] },
+    { "path": "/GenerateJWT/SecretKey/Id", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#secretkey-child", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#secretkey-child" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/SecretKey/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#secretkey-child", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#secretkey-child" } } },
+    { "path": "/GenerateJWT/Subject", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#subject", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#subject" } }, "text": { "kind": "free" } },
+    { "path": "/GenerateJWT/Type", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy#type", "text": { "kind": "enum", "values": ["Signed", "Encrypted"] } }
+  ]
+}

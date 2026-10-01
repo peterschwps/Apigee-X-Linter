@@ -98,56 +98,64 @@
     "kind": "policy",
     "title": "delete oauth v2 info",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/delete-oauth-v2-info",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed documented Apigee elements and attributes. The example includes <Attributes/> but the page does not define its structure, so that context stays incomplete. AccessToken versus AuthorizationCode is an either/or requirement not represented by the current data model."
   },
   {
     "id": "external-callout-policy",
     "kind": "policy",
     "title": "external callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee gRPC callout elements, authentication options, required server and timeout, and fixed Property names. Configurations child requiredness is not enforced because the page's FlowVariable-only example conflicts with its required-child table."
   },
   {
     "id": "extract-variables-policy",
     "kind": "policy",
     "title": "extract variables policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed all documented Apigee element contexts, required attributes, and fixed variable types. At-least-one extraction source is an either/or constraint not expressible by the current rule model. Pattern and XPath expression semantics are not validated."
   },
   {
     "id": "flow-callout-policy",
     "kind": "policy",
     "title": "flow callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/flow-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee FlowCallout elements, required SharedFlowBundle, and Parameter attributes. The alternative parameter value sources (ref, value, or text) are documented but not cross-validated."
   },
   {
     "id": "generate-jws-policy",
     "kind": "policy",
     "title": "generate jws policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jws-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee GenerateJWS elements, algorithms, fixed header/key values, and key references. Exactly one key branch and its algorithm match are conditional and not enforced by the current rule model."
   },
   {
     "id": "generate-jwt-policy",
     "kind": "policy",
     "title": "generate jwt policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed signed and encrypted Apigee JWT elements, attributes, and documented algorithms. CustomClaims is inserted by the UI but ignored and not structurally specified; it remains incomplete. Exactly-one algorithm/key branches and conditional PublicKey/Id are not expressible by the current rule model."
   },
   {
     "id": "generate-saml-assertion-policy",
     "kind": "policy",
     "title": "generate saml assertion policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed documented Apigee SAML generation structure, example attributes, and fixed signature/message values. CanonicalizationAlgorithm is shown but no value set is specified; its value is left unvalidated. OutputVariable branches and template conditions are not cross-validated."
   },
   {
     "id": "get-oauth-v2-info-policy",
     "kind": "policy",
     "title": "get oauth v2 info policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/get-oauth-v2-info-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee token selectors, their ref/literal forms, common policy attributes, and IgnoreAccessTokenStatus boolean. At-least-one selector and the AccessToken-only condition for IgnoreAccessTokenStatus are not cross-validated."
   },
   {
     "id": "graphql-policy",

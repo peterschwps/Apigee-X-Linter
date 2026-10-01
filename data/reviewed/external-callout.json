@@ -1,0 +1,101 @@
+{
+  "kind": "policy",
+  "root": "ExternalCallout",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/ExternalCallout",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#elements",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#elements" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#elements" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#elements" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#elements" }
+      },
+      "children": ["DisplayName", "TimeoutMs", "GrpcConnection", "Configurations"],
+      "requiredChildren": ["TimeoutMs", "GrpcConnection"]
+    },
+    { "path": "/ExternalCallout/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#example-1", "text": { "kind": "free" } },
+    {
+      "path": "/ExternalCallout/TimeoutMs",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#timeoutms",
+      "text": { "kind": "format", "format": "Use a positive number of milliseconds.", "pattern": "^(?=.*[1-9])(?:[0-9]+(?:\\.[0-9]+)?|\\.[0-9]+)$" }
+    },
+    {
+      "path": "/ExternalCallout/GrpcConnection",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#grpcconnection",
+      "children": ["Server", "Authentication"],
+      "requiredChildren": ["Server"]
+    },
+    {
+      "path": "/ExternalCallout/GrpcConnection/Server",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#server",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#server" }
+      }
+    },
+    {
+      "path": "/ExternalCallout/GrpcConnection/Authentication",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication",
+      "children": ["HeaderName", "GoogleIDToken"],
+      "requiredChildren": ["GoogleIDToken"]
+    },
+    {
+      "path": "/ExternalCallout/GrpcConnection/Authentication/HeaderName",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication",
+      "attributes": {
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication" }
+      },
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/ExternalCallout/GrpcConnection/Authentication/GoogleIDToken",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication",
+      "children": ["Audience", "IncludeEmail"],
+      "requiredChildren": ["Audience"]
+    },
+    {
+      "path": "/ExternalCallout/GrpcConnection/Authentication/GoogleIDToken/Audience",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication",
+      "attributes": {
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication" },
+        "useTargetUrl": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication" }
+      },
+      "text": { "kind": "free" }
+    },
+    {
+      "path": "/ExternalCallout/GrpcConnection/Authentication/GoogleIDToken/IncludeEmail",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication",
+      "attributes": {
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#authentication" }
+      },
+      "text": { "kind": "enum", "values": ["true", "false"] }
+    },
+    {
+      "path": "/ExternalCallout/Configurations",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#configurations",
+      "children": ["Property", "FlowVariable"]
+    },
+    {
+      "path": "/ExternalCallout/Configurations/Property",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#property",
+      "attributes": {
+        "name": { "kind": "enum", "required": true, "values": ["with.request.content", "with.request.headers", "with.response.content", "with.response.headers"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#property" }
+      },
+      "text": { "kind": "enum", "values": ["true", "false"] }
+    },
+    { "path": "/ExternalCallout/Configurations/FlowVariable", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/external-callout-policy#flow-variable", "text": { "kind": "free" } }
+  ]
+}
