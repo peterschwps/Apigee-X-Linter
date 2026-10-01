@@ -51,7 +51,7 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
   for (const attribute of node.attributes) {
     const attributeRule = attributes[attribute.name];
     if (!attributeRule) {
-      if (definition.complete && attribute.name !== 'xmlns' && !attribute.name.startsWith('xmlns:')) {
+      if (definition.complete && !definition.allowAnyAttributes && attribute.name !== 'xmlns' && !attribute.name.startsWith('xmlns:')) {
         issues.push({ rule: 'AX103', message: `Unknown attribute "${attribute.name}" on <${node.name}>.`, start: attribute.start, end: attribute.end, source: definition.source });
       }
       continue;
@@ -113,6 +113,19 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
             issues.push({ rule: 'AX107', message: `At most ${textLimit.max} <${textLimit.child}> may have <${textLimit.descendant}>${textLimit.value}</${textLimit.descendant}>.`, start: nested.nameStart, end: nested.nameEnd, source: textLimit.source });
           }
         }
+      }
+    }
+    for (const condition of definition.conditionalRequiredChildren || []) {
+      let selected: XmlNode | undefined = node;
+      for (const name of condition.selector) selected = selected?.children.find(child => child.name === name);
+      if (!selected) continue;
+      if (condition.values) {
+        if (selected.startTagEnd === undefined || selected.endTagStart === undefined) continue;
+        const value = xml.slice(selected.startTagEnd, selected.endTagStart).trim();
+        if (!condition.values.includes(value)) continue;
+      }
+      if (!node.children.some(child => child.name === condition.required)) {
+        issues.push({ rule: 'AX104', message: `<${condition.required}> is required when <${condition.selector.join('/')}> has this value.`, start: node.nameStart, end: node.nameEnd, source: condition.source });
       }
     }
   }

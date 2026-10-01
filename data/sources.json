@@ -156,8 +156,8 @@
     "kind": "policy",
     "title": "generate jwt policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy",
-    "reviewStatus": "gap",
-    "reviewNotes": "Reviewed signed and encrypted Apigee JWT elements, attributes, and documented algorithms. CustomClaims is inserted by the UI but ignored and not structurally specified; it remains incomplete. Exactly-one algorithm/key branches and conditional PublicKey/Id are not expressible by the current rule model."
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed signed and encrypted Apigee JWT elements, attributes, algorithms, and static key selection. Exactly one Algorithm/Algorithms and one key element are required; documented algorithm-to-key dependencies and the PublicKey/JWKS-to-Id dependency are now checked. CustomClaims is explicitly ignored by Apigee and is represented as intentionally opaque content, not an unreviewed XML schema. Runtime key bytes, certificate validity, and referenced variables are outside static XML validation."
   },
   {
     "id": "generate-saml-assertion-policy",

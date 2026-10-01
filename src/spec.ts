@@ -30,6 +30,7 @@ export type ElementSpec = {
   path: string;
   complete: boolean;
   allowAnyChildren?: boolean;
+  allowAnyAttributes?: boolean;
   source: string;
   attributes?: Record<string, AttributeSpec>;
   children?: string[];
@@ -38,6 +39,7 @@ export type ElementSpec = {
   childGroups?: ChildGroup[];
   uniqueChildAttribute?: { child: string; attribute: string; source: string };
   childTextLimit?: { child: string; descendant: string; value: string; max: number; source: string };
+  conditionalRequiredChildren?: { selector: string[]; values?: string[]; required: string; source: string }[];
   text?: ValueSpec;
   textByAttribute?: { attribute: string; values: Record<string, ValueSpec> };
 };

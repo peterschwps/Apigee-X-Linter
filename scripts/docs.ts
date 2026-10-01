@@ -390,6 +390,9 @@ async function validate(): Promise<Map<string, boolean>> {
       if (element.allowAnyChildren !== undefined && (element.allowAnyChildren !== true || !element.complete)) {
         throw new Error(`${file}: ${element.path} has invalid arbitrary-child coverage.`);
       }
+      if (element.allowAnyAttributes !== undefined && (element.allowAnyAttributes !== true || !element.complete)) {
+        throw new Error(`${file}: ${element.path} has invalid arbitrary-attribute coverage.`);
+      }
       const source = canonical(element.source);
       coverage.set(source, (coverage.get(source) ?? true) && element.complete);
       const children = element.children || [];
@@ -415,6 +418,20 @@ async function validate(): Promise<Map<string, boolean>> {
           throw new Error(`${file}: ${element.path} has an invalid child text limit.`);
         }
         validateLink(limit.source, `${file}: ${element.path} child text limit`);
+      }
+      for (const condition of element.conditionalRequiredChildren || []) {
+        if (!condition.selector.length || !children.includes(condition.selector[0]) || !children.includes(condition.required)
+          || condition.values?.length === 0 || condition.values && new Set(condition.values).size !== condition.values.length) {
+          throw new Error(`${file}: ${element.path} has an invalid conditional child rule.`);
+        }
+        let selectedPath = element.path;
+        for (const name of condition.selector) {
+          const selected = document.elements.find(item => item.path === selectedPath);
+          if (!selected?.children?.includes(name)) throw new Error(`${file}: ${element.path} has an invalid conditional selector.`);
+          selectedPath += `/${name}`;
+        }
+        if (!document.elements.some(item => item.path === selectedPath)) throw new Error(`${file}: ${element.path} has an undefined conditional selector.`);
+        validateLink(condition.source, `${file}: ${element.path} conditional child rule`);
       }
       for (const group of element.childGroups || []) {
         if (!group.children.length || new Set(group.children).size !== group.children.length || group.children.some(child => !children.includes(child))) {
