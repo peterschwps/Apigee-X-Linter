@@ -18,6 +18,38 @@
     { "path": "/TargetEndpoint/EventFlow", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements" },
     { "path": "/TargetEndpoint/HTTPTargetConnection", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements", "children": ["URL", "LoadBalancer", "Properties", "SSLInfo", "Authentication"] },
     { "path": "/TargetEndpoint/HTTPTargetConnection/URL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/TargetEndpoint/HTTPTargetConnection/Properties", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#targetendpointtransportproperties", "children": ["Property"] },
+    {
+      "path": "/TargetEndpoint/HTTPTargetConnection/Properties/Property", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#targetendpointtransportpropertyspecification",
+      "attributes": { "name": { "kind": "enum", "required": true, "values": ["allow.post.without.content.length", "allow.put.without.content.length", "allow.tls.session.resumption", "keepalive.timeout.millis", "connect.timeout.millis", "ignore.allow.header.for.405", "io.timeout.millis", "supports.http11", "use.proxy.host.header.with.target.uri", "response.payload.parse.limit", "request.streaming.enabled", "response.streaming.enabled", "success.codes", "compression.algorithm", "request.retain.headers.enabled", "request.retain.headers", "response.retain.headers.enabled", "response.retain.headers", "retain.queryparams.enabled", "retain.queryparams"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#targetendpointtransportpropertyspecification" } },
+      "text": { "kind": "free" },
+      "textByAttribute": {
+        "attribute": "name",
+        "values": {
+          "allow.post.without.content.length": { "kind": "enum", "values": ["true", "false"] },
+          "allow.put.without.content.length": { "kind": "enum", "values": ["true", "false"] },
+          "allow.tls.session.resumption": { "kind": "enum", "values": ["true", "false"] },
+          "keepalive.timeout.millis": { "kind": "format", "format": "Timeout in non-negative milliseconds.", "pattern": "^[0-9]+$" },
+          "connect.timeout.millis": { "kind": "format", "format": "Timeout in non-negative milliseconds.", "pattern": "^[0-9]+$" },
+          "ignore.allow.header.for.405": { "kind": "enum", "values": ["true", "false"] },
+          "io.timeout.millis": { "kind": "format", "format": "Timeout in non-negative milliseconds.", "pattern": "^[0-9]+$" },
+          "supports.http11": { "kind": "enum", "values": ["true", "false"] },
+          "use.proxy.host.header.with.target.uri": { "kind": "enum", "values": ["true", "false"] },
+          "response.payload.parse.limit": { "kind": "format", "format": "Payload limit from 10M through 30M.", "pattern": "^(?:1[0-9]|2[0-9]|30)M$" },
+          "request.streaming.enabled": { "kind": "enum", "values": ["true", "false"] },
+          "response.streaming.enabled": { "kind": "enum", "values": ["true", "false"] },
+          "success.codes": { "kind": "format", "format": "Comma-separated HTTP status codes or 1xx-5xx ranges.", "pattern": "^(?:[1-5][0-9]{2}|[1-5][xX]{2})(?:\\s*,\\s*(?:[1-5][0-9]{2}|[1-5][xX]{2}))*$" },
+          "compression.algorithm": { "kind": "enum", "values": ["gzip", "deflate", "none"] },
+          "request.retain.headers.enabled": { "kind": "enum", "values": ["true", "false"] },
+          "request.retain.headers": { "kind": "free" },
+          "response.retain.headers.enabled": { "kind": "enum", "values": ["true", "false"] },
+          "response.retain.headers": { "kind": "free" },
+          "retain.queryparams.enabled": { "kind": "enum", "values": ["true", "false"] },
+          "retain.queryparams": { "kind": "free" }
+        }
+      }
+    },
     { "path": "/TargetEndpoint/LocalTargetConnection", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements", "children": ["APIProxy", "ProxyEndpoint", "Path"] },
     { "path": "/TargetEndpoint/ScriptTarget", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#targetendpoint-targetendpointconfigurationelements" },
     { "path": "/TargetEndpoint/FaultRules", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference" },

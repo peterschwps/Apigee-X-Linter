@@ -1,0 +1,26 @@
+{
+  "kind": "policy",
+  "root": "XSL",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/XSL", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl" }
+      },
+      "children": ["DisplayName", "OutputVariable", "Parameters", "ResourceURL", "Source"],
+      "requiredChildren": ["ResourceURL"]
+    },
+    { "path": "/XSL/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#xsl", "text": { "kind": "free" } },
+    { "path": "/XSL/OutputVariable", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#outputvariable", "text": { "kind": "format", "format": "A custom variable name, not message, request, or response.", "pattern": "^(?!(?:message|request|response)$).+$" } },
+    { "path": "/XSL/Parameters", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#parameters", "attributes": { "ignoreUnresolvedVariables": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#parameters" } }, "children": ["Parameter"] },
+    { "path": "/XSL/Parameters/Parameter", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#parameters", "attributes": { "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#parameters" }, "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#parameters" }, "value": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#parameters" } } },
+    { "path": "/XSL/ResourceURL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#resourceurl", "text": { "kind": "format", "format": "Reference an XSL resource as xsl://<filename>.", "pattern": "^xsl://.+$" } },
+    { "path": "/XSL/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy#source", "text": { "kind": "free" } }
+  ]
+}

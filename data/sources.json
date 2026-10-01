@@ -15,12 +15,13 @@
     "reviewStatus": "in-progress",
     "reviewNotes": "Flow child names are partly represented in endpoint specifications; nested flow contexts still need review."
   },
-  {
-    "id": "endpoint-properties-reference",
-    "kind": "core",
-    "title": "Endpoint properties reference",
-    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference",
-    "reviewStatus": "pending"
+    {
+      "id": "endpoint-properties-reference",
+      "kind": "core",
+      "title": "Endpoint properties reference",
+      "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference",
+      "reviewStatus": "reviewed",
+      "reviewNotes": "Apigee X TargetEndpoint and ProxyEndpoint transport property names and documented value types are modeled in their respective XML contexts. The hybrid-only use.proxy and use.proxy.tunneling properties are deliberately excluded. Property values are literals; enum and documented format checks depend on the Property name attribute."
   },
   {
     "id": "access-control-policy",
@@ -525,18 +526,20 @@
       "reviewStatus": "reviewed",
       "reviewNotes": "Apigee X XMLToJSON configuration is reviewed. Options and Format are mutually exclusive and one is required; this cross-field choice is not enforced by unconditional required-child rules. NamespaceBlockName requires its two companion options, also retained as a documented conditional constraint."
   },
-  {
-    "id": "xml-threat-protection-policy",
-    "kind": "policy",
-    "title": "xml threat protection policy",
-    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy",
-    "reviewStatus": "pending"
+    {
+      "id": "xml-threat-protection-policy",
+      "kind": "policy",
+      "title": "xml threat protection policy",
+      "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy",
+      "reviewStatus": "gap",
+      "reviewNotes": "Apigee X XML threat-protection paths and limit formats are reviewed. The reference headings say StructuralLimits but every configuration sample uses StructureLimits; only the sample spelling is modeled. ChildCount samples use includeProcessingInstruction while the attribute table says includeProcessingInstructions; both are provisionally accepted pending authoritative clarification."
   },
-  {
-    "id": "xsl-transform-policy",
-    "kind": "policy",
-    "title": "xsl transform policy",
-    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
-    "reviewStatus": "pending"
+    {
+      "id": "xsl-transform-policy",
+      "kind": "policy",
+      "title": "xsl transform policy",
+      "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
+      "reviewStatus": "gap",
+      "reviewNotes": "Apigee X XSL policy XML is reviewed; XSLT resource contents remain outside extension scope. The page lists only root name but common policy attributes are included provisionally to avoid false unknown-attribute diagnostics. Parameter ref/value are alternatives and cannot be simultaneously enforced by the current data schema."
   }
 ]

@@ -393,6 +393,11 @@ async function validate(): Promise<Map<string, boolean>> {
         if (value.source) validateLink(value.source, `${file}: ${element.path}@${name}`);
       }
       if (element.text) validateValue(element.text, `${file}: ${element.path} text`);
+      if (element.textByAttribute) {
+        const { attribute, values } = element.textByAttribute;
+        if (!element.attributes?.[attribute]) throw new Error(`${file}: ${element.path} has an unknown text selector attribute.`);
+        for (const [name, value] of Object.entries(values)) validateValue(value, `${file}: ${element.path} text for ${attribute}=${name}`);
+      }
       paths.add(element.path);
       elements++;
     }

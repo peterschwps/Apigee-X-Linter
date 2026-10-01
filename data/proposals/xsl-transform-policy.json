@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "xsl transform policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Apigee X XSL policy XML is reviewed; XSLT resource contents remain outside extension scope. The page lists only root name but common policy attributes are included provisionally to avoid false unknown-attribute diagnostics. Parameter ref/value are alternatives and cannot be simultaneously enforced by the current data schema."
   },
   "reviewStatus": "unreviewed",
   "sections": [

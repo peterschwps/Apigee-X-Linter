@@ -26,6 +26,7 @@ export type ElementSpec = {
   children?: string[];
   requiredChildren?: string[];
   text?: ValueSpec;
+  textByAttribute?: { attribute: string; values: Record<string, ValueSpec> };
 };
 
 export type DocumentSpec = {

@@ -4,7 +4,8 @@
     "kind": "core",
     "title": "Endpoint properties reference",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Apigee X TargetEndpoint and ProxyEndpoint transport property names and documented value types are modeled in their respective XML contexts. The hybrid-only use.proxy and use.proxy.tunneling properties are deliberately excluded. Property values are literals; enum and documented format checks depend on the Property name attribute."
   },
   "reviewStatus": "unreviewed",
   "sections": [

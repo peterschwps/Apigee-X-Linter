@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "xml threat protection policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Apigee X XML threat-protection paths and limit formats are reviewed. The reference headings say StructuralLimits but every configuration sample uses StructureLimits; only the sample spelling is modeled. ChildCount samples use includeProcessingInstruction while the attribute table says includeProcessingInstructions; both are provisionally accepted pending authoritative clarification."
   },
   "reviewStatus": "unreviewed",
   "sections": [

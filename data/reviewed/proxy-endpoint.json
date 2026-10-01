@@ -18,6 +18,26 @@
     { "path": "/ProxyEndpoint/PostClientFlow", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference", "children": ["Request", "Response"] },
     { "path": "/ProxyEndpoint/HTTPProxyConnection", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-proxyendpointconfigurationelements", "children": ["BasePath", "Properties", "VirtualHost"] },
     { "path": "/ProxyEndpoint/HTTPProxyConnection/BasePath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference#proxyendpoint-proxyendpointconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/ProxyEndpoint/HTTPProxyConnection/Properties", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#proxyendpointtransportproperties", "children": ["Property"] },
+    {
+      "path": "/ProxyEndpoint/HTTPProxyConnection/Properties/Property", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#proxyendpointtransportpropertyspecification",
+      "attributes": { "name": { "kind": "enum", "required": true, "values": ["X-Forwarded-For", "request.streaming.enabled", "request.payload.parse.limit", "response.streaming.enabled", "compression.algorithm", "api.timeout", "HTTPHeader.allowDuplicates", "HTTPHeader.multiValued"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference#proxyendpointtransportpropertyspecification" } },
+      "text": { "kind": "free" },
+      "textByAttribute": {
+        "attribute": "name",
+        "values": {
+          "X-Forwarded-For": { "kind": "enum", "values": ["true", "false"] },
+          "request.streaming.enabled": { "kind": "enum", "values": ["true", "false"] },
+          "request.payload.parse.limit": { "kind": "format", "format": "Payload limit from 10M through 30M.", "pattern": "^(?:1[0-9]|2[0-9]|30)M$" },
+          "response.streaming.enabled": { "kind": "enum", "values": ["true", "false"] },
+          "compression.algorithm": { "kind": "enum", "values": ["gzip", "deflate", "none"] },
+          "api.timeout": { "kind": "format", "format": "Timeout in milliseconds.", "pattern": "^[0-9]+$" },
+          "HTTPHeader.allowDuplicates": { "kind": "free" },
+          "HTTPHeader.multiValued": { "kind": "free" }
+        }
+      }
+    },
     { "path": "/ProxyEndpoint/FaultRules", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference" },
     { "path": "/ProxyEndpoint/DefaultFaultRule", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference" },
     {

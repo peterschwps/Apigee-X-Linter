@@ -71,13 +71,16 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
     }
   }
 
-  if (definition.text && node.startTagEnd !== undefined && node.endTagStart !== undefined && !node.children.length) {
+  const selector = definition.textByAttribute;
+  const selectorValue = node.attributes.find(attribute => attribute.name === selector?.attribute)?.value;
+  const textRule = selectorValue ? selector?.values[selectorValue] || definition.text : definition.text;
+  if (textRule && node.startTagEnd !== undefined && node.endTagStart !== undefined && !node.children.length) {
     const raw = xml.slice(node.startTagEnd, node.endTagStart);
     const value = raw.trim();
     if (value) {
       const relativeStart = raw.indexOf(value);
       const start = node.startTagEnd + relativeStart;
-      const issue = valueIssue(value, definition.text, start, start + value.length, definition.source);
+      const issue = valueIssue(value, textRule, start, start + value.length, definition.source);
       if (issue) issues.push(issue);
     }
   }

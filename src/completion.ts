@@ -115,9 +115,14 @@ export function complete(xml: string, offset: number, filePath: string, specs: D
   if (!spec) return [];
   const path = `/${context.stack.join('/')}`;
   const element = elementMap(spec).get(path);
-  if (element?.text?.kind !== 'enum' || !element.text.values) return [];
+  if (!element) return [];
+  const selector = element.textByAttribute;
+  const openingTag = before.slice(before.lastIndexOf(`<${context.stack.at(-1)}`));
+  const selectedValue = selector && openingTag.match(new RegExp(`\\b${selector.attribute}\\s*=\\s*["']([^"']+)["']`))?.[1];
+  const textRule = selectedValue ? selector?.values[selectedValue] || element.text : element.text;
+  if (textRule?.kind !== 'enum' || !textRule.values) return [];
   const typed = before.match(/([A-Za-z0-9_-]*)$/)?.[1] || '';
-  return element.text.values.filter(value => normalizeEnumValue(value, element.text!).startsWith(normalizeEnumValue(typed, element.text!))).map(value => ({
+  return textRule.values.filter(value => normalizeEnumValue(value, textRule).startsWith(normalizeEnumValue(typed, textRule))).map(value => ({
     label: value, kind: 'value', replaceStart: offset - typed.length, replaceEnd: offset,
     insertText: value, source: element.source,
   }));
