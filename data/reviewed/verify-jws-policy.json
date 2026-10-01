@@ -1,0 +1,56 @@
+{
+  "kind": "policy",
+  "root": "VerifyJWS",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/VerifyJWS",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#elementreference-attributesthatapplytothetoplevelelement",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#elementreference-attributesthatapplytothetoplevelelement" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#elementreference-attributesthatapplytothetoplevelelement" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#elementreference-attributesthatapplytothetoplevelelement" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#elementreference-attributesthatapplytothetoplevelelement" }
+      },
+      "children": ["DisplayName", "Algorithm", "AdditionalHeaders", "DetachedContent", "IgnoreCriticalHeaders", "IgnoreUnresolvedVariables", "KnownHeaders", "PublicKey", "SecretKey", "Source", "Type"],
+      "requiredChildren": ["Algorithm"]
+    },
+    { "path": "/VerifyJWS/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#displayname", "text": { "kind": "free" } },
+    {
+      "path": "/VerifyJWS/Algorithm",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#algorithm",
+      "text": {
+        "kind": "format",
+        "format": "Comma-separated supported JWS algorithms. HS and ES families cannot mix with other families; RS and PS may mix.",
+        "pattern": "^(?:(?:HS|ES|RS|PS)(?:256|384|512))(?:\\s*,\\s*(?:(?:HS|ES|RS|PS)(?:256|384|512)))*$"
+      }
+    },
+    { "path": "/VerifyJWS/AdditionalHeaders", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#additionalheadersclaim", "children": ["Claim"], "requiredChildren": ["Claim"] },
+    {
+      "path": "/VerifyJWS/AdditionalHeaders/Claim",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#additionalheadersclaim",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#additionalheadersclaim" },
+        "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#additionalheadersclaim" },
+        "type": { "kind": "enum", "values": ["string", "number", "boolean", "map"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#additionalheadersclaim" },
+        "array": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#additionalheadersclaim" }
+      },
+      "text": { "kind": "free" }
+    },
+    { "path": "/VerifyJWS/DetachedContent", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#detachedcontent", "text": { "kind": "free" } },
+    { "path": "/VerifyJWS/IgnoreCriticalHeaders", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#ignoreriticalheaders", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/VerifyJWS/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/VerifyJWS/KnownHeaders", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#knownheaders", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#knownheaders" } }, "text": { "kind": "free" } },
+    { "path": "/VerifyJWS/PublicKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#setting-the-key-elements", "children": ["JWKS", "Value"] },
+    { "path": "/VerifyJWS/PublicKey/JWKS", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#publickeyjwks", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#publickeyjwks" }, "uri": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#publickeyjwks" } }, "text": { "kind": "free" } },
+    { "path": "/VerifyJWS/PublicKey/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#publickeyvalue", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#publickeyvalue" } }, "text": { "kind": "free" } },
+    { "path": "/VerifyJWS/SecretKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#secretkey", "attributes": { "encoding": { "kind": "enum", "values": ["hex", "base16", "base64", "base64url"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#secretkey-child" } }, "children": ["Value"], "requiredChildren": ["Value"] },
+    { "path": "/VerifyJWS/SecretKey/Value", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#secretkey-child", "attributes": { "ref": { "kind": "format", "required": true, "format": "Reference a private.* flow variable.", "pattern": "^private\\..+$", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#secretkey-child" } } },
+    { "path": "/VerifyJWS/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#source", "text": { "kind": "free" } },
+    { "path": "/VerifyJWS/Type", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy#type", "text": { "kind": "enum", "values": ["Signed"] } }
+  ]
+}

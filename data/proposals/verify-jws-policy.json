@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "verify jws policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Apigee X policy. Documented configuration paths and attribute values are covered. Algorithm accepts comma-separated values; the format rule checks supported names, while family-mixing and the conditional PublicKey/SecretKey or JWKS/Value choice remain unmodeled cross-field constraints."
   },
   "reviewStatus": "unreviewed",
   "sections": [

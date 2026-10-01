@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "verify jwt policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jwt-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Apigee X signed and encrypted JWT forms are reviewed. PasswordKey and DirectKey are shown in the encrypted-key table but their complete verification-side child contracts are delegated or absent on this page; CustomClaims is explicitly ignored. Exactly-one Algorithm/Algorithms and algorithm-dependent key choices remain cross-field constraints, not unconditional required-child rules."
   },
   "reviewStatus": "unreviewed",
   "sections": [

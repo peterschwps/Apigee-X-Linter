@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "xml json policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-json-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Apigee X XMLToJSON configuration is reviewed. Options and Format are mutually exclusive and one is required; this cross-field choice is not enforced by unconditional required-child rules. NamespaceBlockName requires its two companion options, also retained as a documented conditional constraint."
   },
   "reviewStatus": "unreviewed",
   "sections": [

@@ -501,26 +501,29 @@
     "reviewStatus": "reviewed",
     "reviewNotes": "Apigee-only (not hybrid) policy. Reviewed all documented configuration elements, attributes, and optional CredentialSource behavior."
   },
-  {
-    "id": "verify-jws-policy",
-    "kind": "policy",
-    "title": "verify jws policy",
-    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy",
-    "reviewStatus": "pending"
+    {
+      "id": "verify-jws-policy",
+      "kind": "policy",
+      "title": "verify jws policy",
+      "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jws-policy",
+      "reviewStatus": "reviewed",
+      "reviewNotes": "Apigee X policy. Documented configuration paths and attribute values are covered. Algorithm accepts comma-separated values; the format rule checks supported names, while family-mixing and the conditional PublicKey/SecretKey or JWKS/Value choice remain unmodeled cross-field constraints."
   },
-  {
-    "id": "verify-jwt-policy",
-    "kind": "policy",
-    "title": "verify jwt policy",
-    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jwt-policy",
-    "reviewStatus": "pending"
+    {
+      "id": "verify-jwt-policy",
+      "kind": "policy",
+      "title": "verify jwt policy",
+      "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jwt-policy",
+      "reviewStatus": "gap",
+      "reviewNotes": "Apigee X signed and encrypted JWT forms are reviewed. PasswordKey and DirectKey are shown in the encrypted-key table but their complete verification-side child contracts are delegated or absent on this page; CustomClaims is explicitly ignored. Exactly-one Algorithm/Algorithms and algorithm-dependent key choices remain cross-field constraints, not unconditional required-child rules."
   },
-  {
-    "id": "xml-json-policy",
-    "kind": "policy",
-    "title": "xml json policy",
-    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-json-policy",
-    "reviewStatus": "pending"
+    {
+      "id": "xml-json-policy",
+      "kind": "policy",
+      "title": "xml json policy",
+      "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-json-policy",
+      "reviewStatus": "reviewed",
+      "reviewNotes": "Apigee X XMLToJSON configuration is reviewed. Options and Format are mutually exclusive and one is required; this cross-field choice is not enforced by unconditional required-child rules. NamespaceBlockName requires its two companion options, also retained as a documented conditional constraint."
   },
   {
     "id": "xml-threat-protection-policy",
