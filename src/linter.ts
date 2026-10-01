@@ -84,6 +84,16 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
         issues.push({ rule: 'AX107', message: `Expected at most ${group.max} of: ${group.children.join(', ')}.`, start: excess.nameStart, end: excess.nameEnd, source: group.source });
       }
     }
+    for (const group of definition.attributeGroups || []) {
+      const matching = node.attributes.filter(attribute => group.attributes.includes(attribute.name));
+      if (group.min !== undefined && matching.length < group.min) {
+        issues.push({ rule: 'AX107', message: `Expected at least ${group.min} of attributes: ${group.attributes.join(', ')}.`, start: node.nameStart, end: node.nameEnd, source: group.source });
+      }
+      if (group.max !== undefined && matching.length > group.max) {
+        const excess = matching[group.max];
+        issues.push({ rule: 'AX107', message: `Expected at most ${group.max} of attributes: ${group.attributes.join(', ')}.`, start: excess.start, end: excess.end, source: group.source });
+      }
+    }
     for (const name of definition.singleChildren || []) {
       const matching = node.children.filter(child => child.name === name);
       if (matching.length > 1) {

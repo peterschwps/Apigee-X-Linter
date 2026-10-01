@@ -26,6 +26,13 @@ export type ChildGroup = {
   source: string;
 };
 
+export type AttributeGroup = {
+  attributes: string[];
+  min?: number;
+  max?: number;
+  source: string;
+};
+
 export type ElementSpec = {
   path: string;
   complete: boolean;
@@ -37,6 +44,7 @@ export type ElementSpec = {
   requiredChildren?: string[];
   singleChildren?: string[];
   childGroups?: ChildGroup[];
+  attributeGroups?: AttributeGroup[];
   uniqueChildAttribute?: { child: string; attribute: string; source: string };
   childTextLimit?: { child: string; descendant: string; value: string; max: number; source: string };
   conditionalRequiredChildren?: { selector: string[]; values?: string[]; required: string; source: string }[];

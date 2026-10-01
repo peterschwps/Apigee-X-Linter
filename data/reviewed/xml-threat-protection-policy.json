@@ -13,9 +13,10 @@
         "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#xmlthreatprotectionattributes" },
         "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#xmlthreatprotectionattributes" }
       },
-      "children": ["DisplayName", "NameLimits", "Source", "StructureLimits", "ValueLimits"]
+      "children": ["DisplayName", "NameLimits", "Source", "StructureLimits", "StructuralLimits", "ValueLimits"]
     },
     { "path": "/XMLThreatProtection/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/XMLThreatProtection/StructuralLimits", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#structurallimitselement" },
     { "path": "/XMLThreatProtection/NameLimits", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#namelimitselement", "children": ["Element", "Attribute", "NamespacePrefix", "ProcessingInstructionTarget"] },
     { "path": "/XMLThreatProtection/NameLimits/Element", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#namelimitselementelement", "text": { "kind": "format", "format": "Integer limit; -1 means no limit.", "pattern": "^(?:-1|[0-9]+)$" } },
     { "path": "/XMLThreatProtection/NameLimits/Attribute", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy#namelimitsattributeelement", "text": { "kind": "format", "format": "Integer limit; -1 means no limit.", "pattern": "^(?:-1|[0-9]+)$" } },

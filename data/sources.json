@@ -405,7 +405,7 @@
     "title": "response cache policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed cache keys, expiry alternatives, scope, flags, conditions, and documented attributes. The element-reference sample includes Properties but gives no definition of its possible children or attributes, so that subtree remains incomplete. Text formats may instead come from ref at runtime; condition expressions are not parsed."
+    "reviewNotes": "Rechecked ResponseCache. CacheKey, ExpirySettings, scope, flags, and condition expressions remain modeled. Its sample-only Properties subtree still has no element contract. Multiple ExpirySettings children have documented precedence (TimeoutInSeconds overrides TimeOfDay and ExpiryDate), so exclusivity is not a valid error; an empty ExpirySettings has no explicit child-presence rule on this page. Ref values and response headers can alter expiry at runtime, while conditions require a separate expression parser outside this XML model."
   },
   {
     "id": "revoke-oauth-v2-policy",
@@ -453,7 +453,7 @@
     "title": "service callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed callout root, request/response/timeout, HTTP versus local targets, and Google authentication subtree. SSLInfo is now modeled from the explicitly referenced TargetEndpoint TLS contract, and LoadBalancer is supplemented by the separate load-balancing guide. Request Remove/Copy/Add/Set inherits AssignMessage syntax and remains incomplete; transport Properties is not fully documented for ServiceCallout, and root Properties appears only in a sample. HTTP/local target and authentication token alternatives are not enforceable by static requiredChildren."
+    "reviewNotes": "Rechecked ServiceCallout. Exactly one HTTP or local connection is now required, HTTP connection needs URL or LoadBalancer, local connection uses APIProxy plus ProxyEndpoint or Path, and Authentication requires one Google token type. HTTP Properties/Property now has a documented basic shape, but a complete ServiceCallout-specific property value set is not defined by the delegated endpoint reference. Request Remove/Copy/Add/Set inherits AssignMessage syntax and remains incomplete; root Properties appears only in a sample. The deployment error calls URL required while official load-balanced samples omit URL, so URL is not unconditionally required."
   },
   {
     "id": "set-dialogflow-response-policy",
@@ -485,7 +485,7 @@
     "title": "spike arrest policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed Rate syntax and ref, Identifier/MessageWeight references, and Apigee X-only UseEffectiveCount support. Although examples and documented default show false, the page explicitly states rate smoothing/false is unsupported for Apigee organizations, so only true is proposed for X. Properties appears in the default XML but has no element reference and remains incomplete. Rate ref-only is valid and does not need literal text."
+    "reviewNotes": "Rechecked SpikeArrest Rate syntax and ref, Identifier/MessageWeight references, and Apigee X-only UseEffectiveCount support. The page explicitly says false/rate smoothing is unsupported for Apigee organizations, so the reviewed X rule still accepts only true; the same page uses false in its default and examples, leaving a documented contradiction. Properties is still an unexplained example-only stub. Rate ref-only remains valid without literal text."
   },
   {
     "id": "trace-capture-policy",
@@ -493,7 +493,7 @@
     "title": "trace capture policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed trace variable names/references, defaults, and boolean flags. The root summary calls Variables optional but its detailed section calls it required; root requiredness is therefore not enforced. An unrelated MergeBehavior entry appears in the child summary with no syntax or detailed reference and is not proposed. The IgnoreUnresolvedVariables default is also contradictory on this page."
+    "reviewNotes": "Rechecked TraceCapture. The summary table lists MergeBehavior although no syntax, values, or detailed section follows; it is now a known but incomplete root child, avoiding a false unknown-element error. The same summary calls Variables optional while its detail calls it required, so root requiredness stays unenforced. IgnoreUnresolvedVariables defaults are stated as both true and false on this page. Runtime trace limits and flow-variable resolution are not static XML errors."
   },
   {
     "id": "validate-saml-assertion-policy",
@@ -501,7 +501,7 @@
     "title": "validate saml assertion policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/validate-saml-assertion-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed root options, Source name choices, namespace/XPath configuration, required TrustStore, and RemoveAssertion. The page gives only a field table rather than full element/attribute descriptions; its SourceNotConfigured deployment error still names deprecated XPath even though the sample uses AssertionXPath and SignedElementXPath. Those child requiredness rules and namespace prefix requiredness are left conservative."
+    "reviewNotes": "Rechecked ValidateSAMLAssertion. Source and TrustStore remain required. The page's current sample uses AssertionXPath plus SignedElementXPath, while SourceNotConfigured still names deprecated XPath and requires Namespaces/Namespace; the field table does not resolve how these alternatives interact. No stronger XPath or namespace requiredness was added. Several deployment errors on the page actually describe GenerateSAMLAssertion and are excluded. TrustStore existence and XPath results are runtime/environment concerns."
   },
   {
     "id": "verify-api-key-policy",
@@ -533,7 +533,7 @@
     "title": "verify jwt policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-jwt-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Apigee X signed and encrypted JWT forms are reviewed. PasswordKey and DirectKey are shown in the encrypted-key table but their complete verification-side child contracts are delegated or absent on this page; CustomClaims is explicitly ignored. Exactly-one Algorithm/Algorithms and algorithm-dependent key choices remain cross-field constraints, not unconditional required-child rules."
+    "reviewNotes": "Rechecked VerifyJWT signed and encrypted forms. Exactly one Algorithm or Algorithms is now required; encrypted Algorithms/Key selects DirectKey, PrivateKey, SecretKey, or PasswordKey as documented. Configured DirectKey/PasswordKey require Value. CustomClaims is explicitly ignored and now opaque rather than unreviewed. DirectKey and PasswordKey verification-side substructure remains incompletely specified; signed Algorithm can contain comma-separated families, so complete signed-key selection is not yet modeled. Runtime key strength and JWT contents are outside static XML linting."
   },
   {
     "id": "xml-json-policy",
@@ -549,7 +549,7 @@
     "title": "xml threat protection policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xml-threat-protection-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Apigee X XML threat-protection paths and limit formats are reviewed. The reference headings say StructuralLimits but every configuration sample uses StructureLimits; only the sample spelling is modeled. ChildCount samples use includeProcessingInstruction while the attribute table says includeProcessingInstructions; both are provisionally accepted pending authoritative clarification."
+    "reviewNotes": "Rechecked XMLThreatProtection. The reference headings say StructuralLimits while every configuration sample uses StructureLimits; the heading spelling is now a known but incomplete alias rather than an unknown-element error, while the sample spelling retains modeled children. ChildCount samples use includeProcessingInstruction and the attribute table uses includeProcessingInstructions; both remain accepted provisionally. Neither contradiction establishes a safe canonical spelling without deployment evidence or corrected documentation."
   },
   {
     "id": "xsl-transform-policy",
@@ -557,6 +557,6 @@
     "title": "xsl transform policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Apigee X XSL policy XML is reviewed; XSLT resource contents remain outside extension scope. The page lists only root name but common policy attributes are included provisionally to avoid false unknown-attribute diagnostics. Parameter ref/value are alternatives and cannot be simultaneously enforced by the current data schema."
+    "reviewNotes": "Rechecked the Apigee XSL policy XML. Parameter now requires exactly one of ref or value as explicitly documented; OutputVariable already rejects message, request, and response. The page lists only root name although common policy attributes are included provisionally to avoid false unknown-attribute diagnostics. XSLT stylesheet contents and their xsl:param matches remain outside the extension's proxy-XML scope."
   }
 ]

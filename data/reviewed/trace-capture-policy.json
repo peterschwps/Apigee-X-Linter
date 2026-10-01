@@ -4,11 +4,12 @@
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy",
   "reviewedAt": "2026-10-01",
   "elements": [
-    { "path": "/TraceCapture", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#tracecapture", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "Variables", "IgnoreUnresolvedVariables", "ThrowExceptionOnLimit"] },
+    { "path": "/TraceCapture", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#tracecapture", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "Variables", "IgnoreUnresolvedVariables", "ThrowExceptionOnLimit", "MergeBehavior"] },
     { "path": "/TraceCapture/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#displayname", "text": { "kind": "free" } },
     { "path": "/TraceCapture/Variables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#variables", "children": ["Variable"], "requiredChildren": ["Variable"] },
     { "path": "/TraceCapture/Variables/Variable", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#variable", "attributes": { "name": { "kind": "free", "required": true }, "ref": { "kind": "free", "required": true } }, "text": { "kind": "free" } },
     { "path": "/TraceCapture/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } },
-    { "path": "/TraceCapture/ThrowExceptionOnLimit", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#throwexceptiononlimit", "text": { "kind": "enum", "values": ["true", "false"] } }
+    { "path": "/TraceCapture/ThrowExceptionOnLimit", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy#throwexceptiononlimit", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/TraceCapture/MergeBehavior", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/trace-capture-policy" }
   ]
 }

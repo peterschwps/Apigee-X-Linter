@@ -454,6 +454,16 @@ async function validate(): Promise<Map<string, boolean>> {
         }
         validateLink(group.source, `${file}: ${element.path} child group`);
       }
+      for (const group of element.attributeGroups || []) {
+        if (!group.attributes.length || new Set(group.attributes).size !== group.attributes.length
+          || group.attributes.some(attribute => !element.attributes?.[attribute])
+          || group.min === undefined && group.max === undefined
+          || [group.min, group.max].some(limit => limit !== undefined && (!Number.isInteger(limit) || limit < 0))
+          || group.min !== undefined && group.max !== undefined && group.min > group.max) {
+          throw new Error(`${file}: ${element.path} has an invalid attribute group.`);
+        }
+        validateLink(group.source, `${file}: ${element.path} attribute group`);
+      }
       for (const [name, value] of Object.entries(element.attributes || {})) {
         if (!/^[A-Za-z_][\w:.-]*$/.test(name)) throw new Error(`${file}: ${element.path} has invalid attribute ${name}.`);
         validateValue(value, `${file}: ${element.path}@${name}`);
