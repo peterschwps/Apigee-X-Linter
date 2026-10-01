@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "hmac policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee HMAC required elements, algorithm aliases, case-insensitive encoding values, and optional verification. SecretKey ref must be a private variable at deployment, but flow-variable prefixes and message-template semantics are not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

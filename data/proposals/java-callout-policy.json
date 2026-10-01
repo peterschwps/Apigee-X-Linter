@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "java callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed JavaCallout required class and resource elements, common attributes, and literal Property names/values for Apigee. JAR existence, class loading, Java version, and runtime permissions are outside XML linting."
   },
   "reviewStatus": "unreviewed",
   "sections": [

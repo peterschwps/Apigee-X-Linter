@@ -1,0 +1,25 @@
+{
+  "kind": "policy",
+  "root": "JavaCallout",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/JavaCallout", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#elementreference",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#javacalloutattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#javacalloutattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#javacalloutattributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#javacalloutattributes" }
+      },
+      "children": ["DisplayName", "ClassName", "ResourceURL", "Properties"],
+      "requiredChildren": ["ClassName", "ResourceURL"]
+    },
+    { "path": "/JavaCallout/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/JavaCallout/ClassName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#classnameelement", "text": { "kind": "free" } },
+    { "path": "/JavaCallout/ResourceURL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#resourceurlelement", "text": { "kind": "free" } },
+    { "path": "/JavaCallout/Properties", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#Property", "children": ["Property"] },
+    { "path": "/JavaCallout/Properties/Property", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#Property", "attributes": { "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy#Property_attributes" } }, "text": { "kind": "free" } }
+  ]
+}

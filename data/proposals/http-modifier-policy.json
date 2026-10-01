@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "http modifier policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/http-modifier-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed Apigee Add/Remove/Set paths, AssignTo attributes, and documented HTTP verb/version values. UI template contains an unexplained Properties element, kept incomplete. Set/Path is documented as not working as designed. Context-dependent request/response constraints and templates are not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

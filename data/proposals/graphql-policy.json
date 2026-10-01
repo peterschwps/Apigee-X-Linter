@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "graphql policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed GraphQL elements and the documented Action and OperationType values. Conflicting requiredness for Source/OperationType and inconsistent units for MaxPayloadSizeInBytes are handled conservatively; conditional ResourceURL verification and GraphQL schema semantics are not linted."
   },
   "reviewStatus": "unreviewed",
   "sections": [

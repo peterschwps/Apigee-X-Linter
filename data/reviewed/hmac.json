@@ -1,0 +1,33 @@
+{
+  "kind": "policy",
+  "root": "HMAC",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/HMAC",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#element-reference-for-hmac",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#elementreferenceforhmac-attributesthatapplytothetoplevelelement" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#elementreferenceforhmac-attributesthatapplytothetoplevelelement" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#elementreferenceforhmac-attributesthatapplytothetoplevelelement" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#elementreferenceforhmac-attributesthatapplytothetoplevelelement" }
+      },
+      "children": ["Algorithm", "DisplayName", "Message", "Output", "SecretKey", "VerificationValue", "IgnoreUnresolvedVariables"],
+      "requiredChildren": ["Algorithm", "Message", "SecretKey"]
+    },
+    {
+      "path": "/HMAC/Algorithm",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#algorithm",
+      "text": { "kind": "enum", "values": ["SHA-1", "SHA-224", "SHA-256", "SHA-384", "SHA-512", "MD-5"], "caseInsensitive": true, "ignoreHyphens": true }
+    },
+    { "path": "/HMAC/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/HMAC/Message", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#message", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#message" } }, "text": { "kind": "free" } },
+    { "path": "/HMAC/Output", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#output", "attributes": { "encoding": { "kind": "enum", "values": ["hex", "base16", "base64", "base64url"], "caseInsensitive": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#output" } }, "text": { "kind": "free" } },
+    { "path": "/HMAC/SecretKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#secretkey", "attributes": { "ref": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#secretkey" }, "encoding": { "kind": "enum", "values": ["hex", "base16", "base64", "utf8"], "caseInsensitive": true, "ignoreHyphens": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#secretkey" } } },
+    { "path": "/HMAC/VerificationValue", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#verificationvalue", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#verificationvalue" }, "encoding": { "kind": "enum", "values": ["hex", "base16", "base64", "base64url"], "caseInsensitive": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#verificationvalue" } }, "text": { "kind": "free" } },
+    { "path": "/HMAC/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } }
+  ]
+}

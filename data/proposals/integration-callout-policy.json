@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "integration callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee IntegrationCallout children, required Request, and boolean execution/payload options. Preceding SetIntegrationRequest and IAM prerequisites are cross-policy/runtime conditions and are not linted."
   },
   "reviewStatus": "unreviewed",
   "sections": [

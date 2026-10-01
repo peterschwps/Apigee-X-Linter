@@ -1,0 +1,24 @@
+{
+  "kind": "policy",
+  "root": "IntegrationCallout",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/IntegrationCallout", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#integrationcallout",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#integrationcallout" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#integrationcallout" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#integrationcallout" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#integrationcallout" }
+      },
+      "children": ["DisplayName", "AsyncExecution", "Request", "Response"],
+      "requiredChildren": ["Request"]
+    },
+    { "path": "/IntegrationCallout/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/IntegrationCallout/AsyncExecution", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#asyncexecution", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/IntegrationCallout/Request", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#request", "attributes": { "clearPayload": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#request" } }, "text": { "kind": "free" } },
+    { "path": "/IntegrationCallout/Response", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy#response", "text": { "kind": "free" } }
+  ]
+}

@@ -162,42 +162,48 @@
     "kind": "policy",
     "title": "graphql policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed GraphQL elements and the documented Action and OperationType values. Conflicting requiredness for Source/OperationType and inconsistent units for MaxPayloadSizeInBytes are handled conservatively; conditional ResourceURL verification and GraphQL schema semantics are not linted."
   },
   {
     "id": "hmac-policy",
     "kind": "policy",
     "title": "hmac policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/hmac-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee HMAC required elements, algorithm aliases, case-insensitive encoding values, and optional verification. SecretKey ref must be a private variable at deployment, but flow-variable prefixes and message-template semantics are not cross-validated."
   },
   {
     "id": "http-modifier-policy",
     "kind": "policy",
     "title": "http modifier policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/http-modifier-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed Apigee Add/Remove/Set paths, AssignTo attributes, and documented HTTP verb/version values. UI template contains an unexplained Properties element, kept incomplete. Set/Path is documented as not working as designed. Context-dependent request/response constraints and templates are not cross-validated."
   },
   {
     "id": "integration-callout-policy",
     "kind": "policy",
     "title": "integration callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/integration-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee IntegrationCallout children, required Request, and boolean execution/payload options. Preceding SetIntegrationRequest and IAM prerequisites are cross-policy/runtime conditions and are not linted."
   },
   {
     "id": "invalidate-cache-policy",
     "kind": "policy",
     "title": "invalidate cache policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed InvalidateCache elements, CacheKey requiredness, Scope enumeration, and optional ref/boolean values for Apigee. Prefix-versus-Scope precedence and conditional CacheContext values are not cross-validated."
   },
   {
     "id": "java-callout-policy",
     "kind": "policy",
     "title": "java callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/java-callout-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed JavaCallout required class and resource elements, common attributes, and literal Property names/values for Apigee. JAR existence, class loading, Java version, and runtime permissions are outside XML linting."
   },
   {
     "id": "javascript-policy",

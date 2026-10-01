@@ -1,5 +1,5 @@
 import { chooseSpec, classifyDocument } from './linter';
-import { elementMap, type DocumentSpec } from './spec';
+import { elementMap, normalizeEnumValue, type DocumentSpec } from './spec';
 
 export type Suggestion = {
   label: string;
@@ -96,7 +96,7 @@ export function complete(xml: string, offset: number, filePath: string, specs: D
       const rule = element.attributes?.[valueMatch[1]];
       if (rule?.kind !== 'enum' || !rule.values) return [];
       const typed = valueMatch[3];
-      return rule.values.filter(value => value.startsWith(typed)).map(value => ({
+      return rule.values.filter(value => normalizeEnumValue(value, rule).startsWith(normalizeEnumValue(typed, rule))).map(value => ({
         label: value, kind: 'value', replaceStart: offset - typed.length, replaceEnd: offset,
         insertText: value, source: rule.source || element.source,
       }));
@@ -117,7 +117,7 @@ export function complete(xml: string, offset: number, filePath: string, specs: D
   const element = elementMap(spec).get(path);
   if (element?.text?.kind !== 'enum' || !element.text.values) return [];
   const typed = before.match(/([A-Za-z0-9_-]*)$/)?.[1] || '';
-  return element.text.values.filter(value => value.startsWith(typed)).map(value => ({
+  return element.text.values.filter(value => normalizeEnumValue(value, element.text!).startsWith(normalizeEnumValue(typed, element.text!))).map(value => ({
     label: value, kind: 'value', replaceStart: offset - typed.length, replaceEnd: offset,
     insertText: value, source: element.source,
   }));

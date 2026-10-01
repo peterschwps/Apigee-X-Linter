@@ -1,4 +1,4 @@
-import { elementMap, type DocumentSpec, type ElementSpec, type ValueSpec } from './spec';
+import { elementMap, normalizeEnumValue, type DocumentSpec, type ElementSpec, type ValueSpec } from './spec';
 import { parseXml, type XmlNode } from './xml';
 
 export type LintIssue = {
@@ -29,7 +29,7 @@ export function chooseSpec(filePath: string, rootName: string, specs: DocumentSp
 
 function valueIssue(value: string, rule: ValueSpec, start: number, end: number, source: string): LintIssue | undefined {
   if (rule.allowTemplate && /\{[^{}]+\}/.test(value)) return undefined;
-  if (rule.kind === 'enum' && rule.values && !rule.values.includes(value)) {
+  if (rule.kind === 'enum' && rule.values && !rule.values.some(candidate => normalizeEnumValue(candidate, rule) === normalizeEnumValue(value, rule))) {
     return { rule: 'AX105', message: `Expected one of: ${rule.values.join(', ')}.`, start, end, source };
   }
   if (rule.kind === 'format' && rule.pattern && !new RegExp(rule.pattern).test(value)) {

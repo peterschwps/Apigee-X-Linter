@@ -1,0 +1,28 @@
+{
+  "kind": "policy",
+  "root": "GraphQL",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/GraphQL",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#graphql",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#default-policy" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#default-policy" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#default-policy" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#default-policy" }
+      },
+      "children": ["DisplayName", "Action", "MaxCount", "MaxDepth", "MaxPayloadSizeInBytes", "OperationType", "ResourceURL", "Source"]
+    },
+    { "path": "/GraphQL/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#default-policy", "text": { "kind": "free" } },
+    { "path": "/GraphQL/Action", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#action", "text": { "kind": "enum", "values": ["parse", "verify", "parse_verify"] } },
+    { "path": "/GraphQL/MaxCount", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#maxcount", "text": { "kind": "free" } },
+    { "path": "/GraphQL/MaxDepth", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#maxdepth", "text": { "kind": "format", "format": "integer", "pattern": "^[0-9]+$" } },
+    { "path": "/GraphQL/MaxPayloadSizeInBytes", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#maxpayloadsize", "text": { "kind": "free" } },
+    { "path": "/GraphQL/OperationType", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#operationtype", "text": { "kind": "enum", "values": ["query", "mutation", "query_mutation"] } },
+    { "path": "/GraphQL/ResourceURL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#resourceurl", "text": { "kind": "free" } },
+    { "path": "/GraphQL/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/graphql-policy#source", "text": { "kind": "free" } }
+  ]
+}

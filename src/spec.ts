@@ -7,7 +7,14 @@ export type ValueSpec = {
   pattern?: string;
   format?: string;
   allowTemplate?: boolean;
+  caseInsensitive?: boolean;
+  ignoreHyphens?: boolean;
 };
+
+export function normalizeEnumValue(value: string, rule: ValueSpec): string {
+  const normalized = rule.ignoreHyphens ? value.replace(/-/g, '') : value;
+  return rule.caseInsensitive ? normalized.toLowerCase() : normalized;
+}
 
 export type AttributeSpec = ValueSpec & { required?: boolean; source?: string };
 

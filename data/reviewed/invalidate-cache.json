@@ -1,0 +1,31 @@
+{
+  "kind": "policy",
+  "root": "InvalidateCache",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/InvalidateCache", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#element_reference",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#invalidatecacheattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#invalidatecacheattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#invalidatecacheattributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#invalidatecacheattributes" }
+      },
+      "children": ["DisplayName", "CacheKey", "CacheResource", "Scope", "CacheContext", "PurgeChildEntries"],
+      "requiredChildren": ["CacheKey"]
+    },
+    { "path": "/InvalidateCache/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/InvalidateCache/CacheKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheKeyElement", "children": ["Prefix", "KeyFragment"] },
+    { "path": "/InvalidateCache/CacheKey/Prefix", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#PrefixElement", "text": { "kind": "free" } },
+    { "path": "/InvalidateCache/CacheKey/KeyFragment", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#KeyFragmentElement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachekeykeyfragmentelement-attributes" } }, "text": { "kind": "free" } },
+    { "path": "/InvalidateCache/CacheResource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheResourceElement", "text": { "kind": "free" } },
+    { "path": "/InvalidateCache/Scope", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#ScopeElement", "text": { "kind": "enum", "values": ["Global", "Application", "Proxy", "Target", "Exclusive"] } },
+    { "path": "/InvalidateCache/CacheContext", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheContextElement", "children": ["APIProxyName", "ProxyName", "TargetName"] },
+    { "path": "/InvalidateCache/CacheContext/APIProxyName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#APIProxyNameElement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachecontextapiproxynameelement-attributes" } }, "text": { "kind": "free" } },
+    { "path": "/InvalidateCache/CacheContext/ProxyName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#ProxyNameElement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachecontextproxynameelement-attributes" } }, "text": { "kind": "free" } },
+    { "path": "/InvalidateCache/CacheContext/TargetName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#TargetNameElement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachecontexttargetnameelement-attributes" } }, "text": { "kind": "free" } },
+    { "path": "/InvalidateCache/PurgeChildEntries", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#PurgeChildEntriesElement", "text": { "kind": "enum", "values": ["true", "false"] } }
+  ]
+}

@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { load } from 'cheerio';
-import type { DocumentSpec, ValueSpec } from '../src/spec';
+import { normalizeEnumValue, type DocumentSpec, type ValueSpec } from '../src/spec';
 
 type SourceKind = 'policy' | 'core';
 type Source = {
@@ -327,6 +327,12 @@ function validateValue(value: ValueSpec, label: string): void {
   if (!['free', 'enum', 'format', 'unknown'].includes(value.kind)) throw new Error(`${label}: invalid value kind.`);
   if (value.kind === 'enum' && (!value.values?.length || new Set(value.values).size !== value.values.length)) {
     throw new Error(`${label}: enum values must be present and unique.`);
+  }
+  if (value.caseInsensitive !== undefined && typeof value.caseInsensitive !== 'boolean') throw new Error(`${label}: caseInsensitive must be boolean.`);
+  if (value.ignoreHyphens !== undefined && typeof value.ignoreHyphens !== 'boolean') throw new Error(`${label}: ignoreHyphens must be boolean.`);
+  if ((value.caseInsensitive || value.ignoreHyphens) && value.kind !== 'enum') throw new Error(`${label}: enum normalization requires kind enum.`);
+  if (value.kind === 'enum' && value.values && new Set(value.values.map(item => normalizeEnumValue(item, value))).size !== value.values.length) {
+    throw new Error(`${label}: enum values must be unique after normalization.`);
   }
   if (value.pattern) {
     try { new RegExp(value.pattern); } catch { throw new Error(`${label}: invalid format pattern.`); }

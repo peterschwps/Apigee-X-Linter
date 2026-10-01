@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "invalidate cache policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed InvalidateCache elements, CacheKey requiredness, Scope enumeration, and optional ref/boolean values for Apigee. Prefix-versus-Scope precedence and conditional CacheContext values are not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [
