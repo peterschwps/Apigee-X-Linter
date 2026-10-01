@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "llm token quota policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Apigee-only policy. Reviewed documented quota types, nested Allow/Class/DefaultConfig structures, units, booleans, and sync interval. Examples conflict with prose about CountOnly/EnforceOnly and stepName requiredness, so these are not enforced; type-dependent and API-product conditions are not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

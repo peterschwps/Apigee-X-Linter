@@ -1,0 +1,40 @@
+{
+  "kind": "policy",
+  "root": "JSONToXML",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/JSONToXML", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#elements",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#jsontoxmlattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#jsontoxmlattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#jsontoxmlattributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#jsontoxmlattributes" }
+      },
+      "children": ["DisplayName", "Source", "OutputVariable", "Options"]
+    },
+    { "path": "/JSONToXML/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#source", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/OutputVariable", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#outputvariable", "text": { "kind": "free" } },
+    {
+      "path": "/JSONToXML/Options", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#elements",
+      "children": ["OmitXmlDeclaration", "NamespaceBlockName", "DefaultNamespaceNodeName", "NamespaceSeparator", "AttributeBlockName", "AttributePrefix", "ObjectRootElementName", "ArrayRootElementName", "ArrayItemElementName", "Indent", "TextNodeName", "NullValue", "InvalidCharsReplacement"]
+    },
+    { "path": "/JSONToXML/Options/OmitXmlDeclaration", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#omitxmldeclaration", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/JSONToXML/Options/NamespaceBlockName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#namespace", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/DefaultNamespaceNodeName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#namespace", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/NamespaceSeparator", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#namespace", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/AttributeBlockName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#attributes", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/AttributePrefix", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#attributes", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/ObjectRootElementName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#optionsobjectrootelementname", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/ArrayRootElementName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#array", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/ArrayItemElementName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#array", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/Indent", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#indentoption", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/JSONToXML/Options/TextNodeName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#textnodename", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/NullValue", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#nullvalue", "text": { "kind": "free" } },
+    { "path": "/JSONToXML/Options/InvalidCharsReplacement", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy#invalidcharsreplacement", "text": { "kind": "free" } }
+  ]
+}

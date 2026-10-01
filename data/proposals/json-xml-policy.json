@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "json xml policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed JSONToXML elements and conversion Options for Apigee. Source and OutputVariable may be custom flow variables, so their text remains free; OutputVariable requiredness depends on Source type and is not cross-validated."
   },
   "reviewStatus": "unreviewed",
   "sections": [

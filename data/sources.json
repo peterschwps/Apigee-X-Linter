@@ -210,35 +210,40 @@
     "kind": "policy",
     "title": "javascript policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee Javascript policy attributes, property/TLS children, and jsc resource URL format. ResourceURL-or-Source requiredness is an either/or constraint not represented by the current rule model; embedded JavaScript syntax and resource existence are not linted."
   },
   {
     "id": "json-threat-protection-policy",
     "kind": "policy",
     "title": "json threat protection policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee JSONThreatProtection limit elements, signed-integer semantics including negative values that disable limits, and Source values. Payload content type and actual JSON structure are runtime concerns."
   },
   {
     "id": "json-xml-policy",
     "kind": "policy",
     "title": "json xml policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-xml-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed JSONToXML elements and conversion Options for Apigee. Source and OutputVariable may be custom flow variables, so their text remains free; OutputVariable requiredness depends on Source type and is not cross-validated."
   },
   {
     "id": "key-value-map-operations-policy",
     "kind": "policy",
     "title": "key value map operations policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed Apigee KVM operations, scope, cache interval, and context-specific literal versus ref values. Deprecated ExclusiveCache has no documented structure and remains incomplete. At-least-one operation, mapIdentifier/MapName exclusivity, and ref-versus-literal conditions are not cross-validated."
   },
   {
     "id": "llm-token-quota-policy",
     "kind": "policy",
     "title": "llm token quota policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/llm-token-quota-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Apigee-only policy. Reviewed documented quota types, nested Allow/Class/DefaultConfig structures, units, booleans, and sync interval. Examples conflict with prose about CountOnly/EnforceOnly and stepName requiredness, so these are not enforced; type-dependent and API-product conditions are not cross-validated."
   },
   {
     "id": "lookup-cache-policy",

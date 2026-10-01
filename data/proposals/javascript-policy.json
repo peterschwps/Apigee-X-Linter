@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "javascript policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Apigee Javascript policy attributes, property/TLS children, and jsc resource URL format. ResourceURL-or-Source requiredness is an either/or constraint not represented by the current rule model; embedded JavaScript syntax and resource existence are not linted."
   },
   "reviewStatus": "unreviewed",
   "sections": [

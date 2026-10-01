@@ -1,0 +1,33 @@
+{
+  "kind": "policy",
+  "root": "Javascript",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/Javascript", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#elementreference",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#JavaScript" },
+        "timeLimit": { "kind": "format", "required": true, "format": "Expected an integer time limit in milliseconds.", "pattern": "^[0-9]+$", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#JavaScript" },
+        "languageVersion": { "kind": "enum", "values": ["VERSION_DEFAULT", "VERSION_1_0", "VERSION_1_1", "VERSION_1_2", "VERSION_1_3", "VERSION_1_4", "VERSION_1_5", "VERSION_1_6", "VERSION_1_7", "VERSION_1_8", "VERSION_ES6"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#JavaScript" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#JavaScript" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#JavaScript" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#JavaScript" }
+      },
+      "children": ["DisplayName", "Properties", "SSLInfo", "IncludeURL", "ResourceURL", "Source"]
+    },
+    { "path": "/Javascript/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/Javascript/Properties", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#Property", "children": ["Property"] },
+    { "path": "/Javascript/Properties/Property", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#Property", "attributes": { "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#Property_attributes" } }, "text": { "kind": "free" } },
+    { "path": "/Javascript/SSLInfo", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#SSLInfo", "children": ["Enabled", "ClientAuthEnabled", "KeyStore", "KeyAlias", "TrustStore"] },
+    { "path": "/Javascript/SSLInfo/Enabled", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#SSLInfo", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/Javascript/SSLInfo/ClientAuthEnabled", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#SSLInfo", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/Javascript/SSLInfo/KeyStore", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#SSLInfo", "text": { "kind": "free" } },
+    { "path": "/Javascript/SSLInfo/KeyAlias", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#SSLInfo", "text": { "kind": "free" } },
+    { "path": "/Javascript/SSLInfo/TrustStore", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#SSLInfo", "text": { "kind": "free" } },
+    { "path": "/Javascript/IncludeURL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#IncludeURL", "text": { "kind": "format", "format": "Expected jsc:// followed by a JavaScript file name ending in .js.", "pattern": "^jsc://.+\\.js$" } },
+    { "path": "/Javascript/ResourceURL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#ResourceURL", "text": { "kind": "format", "format": "Expected jsc:// followed by a JavaScript file name ending in .js.", "pattern": "^jsc://.+\\.js$" } },
+    { "path": "/Javascript/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/javascript-policy#Source", "text": { "kind": "free" } }
+  ]
+}

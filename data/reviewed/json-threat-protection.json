@@ -1,0 +1,26 @@
+{
+  "kind": "policy",
+  "root": "JSONThreatProtection",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    {
+      "path": "/JSONThreatProtection", "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#elementreference",
+      "attributes": {
+        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#jsonthreatprotectionattributes" },
+        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#jsonthreatprotectionattributes" },
+        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#jsonthreatprotectionattributes" },
+        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#jsonthreatprotectionattributes" }
+      },
+      "children": ["DisplayName", "ArrayElementCount", "ContainerDepth", "ObjectEntryCount", "ObjectEntryNameLength", "Source", "StringValueLength"]
+    },
+    { "path": "/JSONThreatProtection/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/JSONThreatProtection/ArrayElementCount", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#arrayelementcountelement", "text": { "kind": "format", "format": "Expected an integer; negative values disable this limit.", "pattern": "^-?[0-9]+$" } },
+    { "path": "/JSONThreatProtection/ContainerDepth", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#containerdepthelement", "text": { "kind": "format", "format": "Expected an integer; negative values disable this limit.", "pattern": "^-?[0-9]+$" } },
+    { "path": "/JSONThreatProtection/ObjectEntryCount", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#objectentrycountelement", "text": { "kind": "format", "format": "Expected an integer; negative values disable this limit.", "pattern": "^-?[0-9]+$" } },
+    { "path": "/JSONThreatProtection/ObjectEntryNameLength", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#objectentrynamelengthelement", "text": { "kind": "format", "format": "Expected an integer; negative values disable this limit.", "pattern": "^-?[0-9]+$" } },
+    { "path": "/JSONThreatProtection/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#sourceelement", "text": { "kind": "enum", "values": ["request", "response", "message"] } },
+    { "path": "/JSONThreatProtection/StringValueLength", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/json-threat-protection-policy#stringvaluelengthelement", "text": { "kind": "format", "format": "Expected an integer; negative values disable this limit.", "pattern": "^-?[0-9]+$" } }
+  ]
+}
