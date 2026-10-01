@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "prompt token limit policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Apigee-only policy. Reviewed Rate format, ref attributes, booleans, and prompt source. Properties appears in official examples without a structure. The page says UseEffectiveCount=false is unsupported for Apigee production while examples and defaults use false; this conflict is not enforced as a static error."
   },
   "reviewStatus": "unreviewed",
   "sections": [

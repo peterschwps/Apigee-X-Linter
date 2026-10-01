@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "publish message policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed Pub/Sub topic format, custom message attributes, source variants, regional endpoint, and booleans. Source/UseMessageAsSource either-or, unique attribute names, topic existence, and Google authentication are not cross-validated. Attributes requiredness differs between the overview and detail table, so it is not enforced."
   },
   "reviewStatus": "unreviewed",
   "sections": [

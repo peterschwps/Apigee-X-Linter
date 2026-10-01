@@ -1,0 +1,12 @@
+{
+  "kind": "policy",
+  "root": "ParsePayload",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/ParsePayload", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#parsepayload", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] } }, "children": ["Source", "PayloadType", "Protocol"], "requiredChildren": ["PayloadType", "Protocol"] },
+    { "path": "/ParsePayload/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#source", "text": { "kind": "enum", "values": ["request", "response"] } },
+    { "path": "/ParsePayload/PayloadType", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#payloadtype", "text": { "kind": "enum", "values": ["JSON-RPC-2.0"] } },
+    { "path": "/ParsePayload/Protocol", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy#protocol", "text": { "kind": "enum", "values": ["MCP"] } }
+  ]
+}

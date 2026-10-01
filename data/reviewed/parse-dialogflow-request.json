@@ -1,0 +1,12 @@
+{
+  "kind": "policy",
+  "root": "ParseDialogflowRequest",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/ParseDialogflowRequest", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#parsediagrequest", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "VariablePrefix", "DialogflowVersion"] },
+    { "path": "/ParseDialogflowRequest/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/ParseDialogflowRequest/VariablePrefix", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#varprefixelement", "text": { "kind": "free" } },
+    { "path": "/ParseDialogflowRequest/DialogflowVersion", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy#dfverelement", "text": { "kind": "enum", "values": ["CX"] } }
+  ]
+}

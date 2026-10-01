@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "parse dialogflow request policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-dialogflow-request-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed all documented XML elements and policy attributes. DialogflowVersion is restricted to CX by the documented deployment error; webhook JSON and generated flow variables are outside this XML schema."
   },
   "reviewStatus": "unreviewed",
   "sections": [

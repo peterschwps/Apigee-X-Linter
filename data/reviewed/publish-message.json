@@ -1,0 +1,18 @@
+{
+  "kind": "policy",
+  "root": "PublishMessage",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/PublishMessage", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#publishmessage", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["Attributes", "CloudPubSub", "DisplayName", "IgnoreUnresolvedVariables", "Source", "UseMessageAsSource"], "requiredChildren": ["CloudPubSub"] },
+    { "path": "/PublishMessage/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/PublishMessage/Attributes", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#attributes", "children": ["Attribute"] },
+    { "path": "/PublishMessage/Attributes/Attribute", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#attributes", "attributes": { "name": { "kind": "free", "required": true } }, "text": { "kind": "free" } },
+    { "path": "/PublishMessage/CloudPubSub", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#cloudpubsub", "children": ["Topic", "Endpoint"], "requiredChildren": ["Topic"] },
+    { "path": "/PublishMessage/CloudPubSub/Topic", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#topic", "text": { "kind": "format", "format": "Expected projects/{project-id}/topics/{topic-name} (message templates allowed).", "pattern": "^projects/[^/]+/topics/[^/]+$", "allowTemplate": true } },
+    { "path": "/PublishMessage/CloudPubSub/Endpoint", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#endpoint", "text": { "kind": "free" } },
+    { "path": "/PublishMessage/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#ignoreunresolvvars", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/PublishMessage/Source", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#source", "text": { "kind": "free" } },
+    { "path": "/PublishMessage/UseMessageAsSource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/publish-message-policy#umas", "text": { "kind": "free" } }
+  ]
+}

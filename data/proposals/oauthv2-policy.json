@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "oauthv2 policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed OAuthV2 operation and grant-type enums, attributes, token settings, JWT keys, and nested token/attribute structures. PublicKey Certificate/JWKS forms are mentioned but not structured here, so remain incomplete. ClientId prose conflicts with later examples using other variables; ResponseType names a variable rather than a literal code/token. Operation-specific requirements are not cross-validated. Hybrid-only revoke_reason flow variable excluded."
   },
   "reviewStatus": "unreviewed",
   "sections": [

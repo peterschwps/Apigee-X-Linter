@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "python script policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the actual Script XML root, required Python ResourceURL, repeatable IncludeURL, and common policy attributes. Jython runtime behavior, plan availability, and referenced resource existence are outside local XML validation."
   },
   "reviewStatus": "unreviewed",
   "sections": [

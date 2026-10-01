@@ -1,0 +1,16 @@
+{
+  "kind": "policy",
+  "root": "PromptTokenLimit",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/PromptTokenLimit", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#prompttokenlimit", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "Properties", "UserPromptSource", "Identifier", "Rate", "UseEffectiveCount", "IgnoreUnresolvedVariables"], "requiredChildren": ["Rate"] },
+    { "path": "/PromptTokenLimit/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#displayname", "text": { "kind": "free" } },
+    { "path": "/PromptTokenLimit/Properties", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#default-policy" },
+    { "path": "/PromptTokenLimit/UserPromptSource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#userpromptsource", "text": { "kind": "free" } },
+    { "path": "/PromptTokenLimit/Identifier", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#identifier", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/PromptTokenLimit/Rate", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#rate", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "format", "format": "Expected a positive integer followed by pm or ps.", "pattern": "^[1-9][0-9]*p[ms]$" } },
+    { "path": "/PromptTokenLimit/UseEffectiveCount", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#useeffectivecount", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/PromptTokenLimit/IgnoreUnresolvedVariables", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy#ignoreunresolvedvariables", "text": { "kind": "enum", "values": ["true", "false"] } }
+  ]
+}

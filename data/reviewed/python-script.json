@@ -1,0 +1,12 @@
+{
+  "kind": "policy",
+  "root": "Script",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy",
+  "reviewedAt": "2026-10-01",
+  "elements": [
+    { "path": "/Script", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#elements", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "ResourceURL", "IncludeURL"], "requiredChildren": ["ResourceURL"] },
+    { "path": "/Script/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#displaynameelement", "text": { "kind": "free" } },
+    { "path": "/Script/ResourceURL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#resourceurlelement", "text": { "kind": "format", "format": "Expected a py:// Python resource URL.", "pattern": "^py://.+\\.py$" } },
+    { "path": "/Script/IncludeURL", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/python-script-policy#includeurlelement", "text": { "kind": "format", "format": "Expected a py:// Python dependency resource URL.", "pattern": "^py://.+\\.py$" } }
+  ]
+}

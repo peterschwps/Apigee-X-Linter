@@ -4,7 +4,8 @@
     "kind": "policy",
     "title": "parse payload policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy",
-    "reviewStatus": "pending"
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Reviewed the Apigee-supported ParsePayload XML fields: request/response Source, JSON-RPC-2.0 PayloadType, and MCP Protocol. Message streaming and runtime version availability are deployment concerns, not XML value rules."
   },
   "reviewStatus": "unreviewed",
   "sections": [
