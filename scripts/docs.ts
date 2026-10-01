@@ -403,6 +403,16 @@ async function validate(): Promise<Map<string, boolean>> {
         }
         validateLink(unique.source, `${file}: ${element.path} unique child attribute`);
       }
+      if (element.childTextLimit) {
+        const limit = element.childTextLimit;
+        const childPath = `${element.path}/${limit.child}`;
+        if (!children.includes(limit.child)
+          || !document.elements.find(item => item.path === childPath)?.children?.includes(limit.descendant)
+          || !limit.value || !Number.isInteger(limit.max) || limit.max < 0) {
+          throw new Error(`${file}: ${element.path} has an invalid child text limit.`);
+        }
+        validateLink(limit.source, `${file}: ${element.path} child text limit`);
+      }
       for (const group of element.childGroups || []) {
         if (!group.children.length || new Set(group.children).size !== group.children.length || group.children.some(child => !children.includes(child))) {
           throw new Error(`${file}: ${element.path} has an invalid child group.`);

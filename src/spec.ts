@@ -36,6 +36,7 @@ export type ElementSpec = {
   singleChildren?: string[];
   childGroups?: ChildGroup[];
   uniqueChildAttribute?: { child: string; attribute: string; source: string };
+  childTextLimit?: { child: string; descendant: string; value: string; max: number; source: string };
   text?: ValueSpec;
   textByAttribute?: { attribute: string; values: Record<string, ValueSpec> };
 };

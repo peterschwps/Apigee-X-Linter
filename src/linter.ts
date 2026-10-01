@@ -101,6 +101,20 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
         seen.add(value.value);
       }
     }
+    const textLimit = definition.childTextLimit;
+    if (textLimit) {
+      let count = 0;
+      for (const child of node.children.filter(item => item.name === textLimit.child)) {
+        for (const nested of child.children.filter(item => item.name === textLimit.descendant)) {
+          if (nested.startTagEnd === undefined || nested.endTagStart === undefined) continue;
+          if (xml.slice(nested.startTagEnd, nested.endTagStart).trim() !== textLimit.value) continue;
+          count++;
+          if (count > textLimit.max) {
+            issues.push({ rule: 'AX107', message: `At most ${textLimit.max} <${textLimit.child}> may have <${textLimit.descendant}>${textLimit.value}</${textLimit.descendant}>.`, start: nested.nameStart, end: nested.nameEnd, source: textLimit.source });
+          }
+        }
+      }
+    }
   }
 
   const selector = definition.textByAttribute;
