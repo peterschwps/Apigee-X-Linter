@@ -29,6 +29,7 @@ export type ChildGroup = {
 export type ElementSpec = {
   path: string;
   complete: boolean;
+  allowAnyChildren?: boolean;
   source: string;
   attributes?: Record<string, AttributeSpec>;
   children?: string[];

@@ -69,7 +69,7 @@
     "title": "assign message policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Apigee X AssignMessage operations are modeled by path: Add, Copy, Remove, Set, AssignTo, and AssignVariable. The UI default example includes an undocumented Properties subtree; Set/Payload permits arbitrary XML and is deliberately open. An Add/FormParam direct-child example conflicts with the grouped FormParams syntax, so both documented forms are accepted. Google authentication examples contain malformed closing tags; the consistently described nested forms are modeled. Cross-field request/response restrictions and AssignVariable precedence remain contextual rules not enforced statically."
+    "reviewNotes": "Apigee X AssignMessage operations are modeled by path: Add, Copy, Remove, Set, AssignTo, and AssignVariable. Set/Payload now explicitly permits arbitrary XML without being classified as unreviewed; documented Payload attributes remain linted. AssignVariable/Name is single, and Set/Authentication requires exactly one documented Google token child. The UI default includes an undocumented Properties subtree. One example puts Payload directly under AssignMessage although the element reference nests it under Set; that example is accepted conservatively with an incomplete context. An Add/FormParam direct-child example also conflicts with grouped FormParams syntax, so both are accepted. Authentication examples contain malformed closing tags; the consistently described nested forms are modeled. Request/response runtime restrictions and AssignVariable precedence are not static XML errors."
   },
   {
     "id": "basic-authentication-policy",

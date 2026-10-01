@@ -387,6 +387,9 @@ async function validate(): Promise<Map<string, boolean>> {
       if (!(element.path === `/${document.root}` || element.path.startsWith(`/${document.root}/`)) || paths.has(element.path)) throw new Error(`${file}: invalid or duplicate path ${element.path}.`);
       validateLink(element.source, `${file}: ${element.path}`);
       if (typeof element.complete !== 'boolean') throw new Error(`${file}: ${element.path} has no review completeness flag.`);
+      if (element.allowAnyChildren !== undefined && (element.allowAnyChildren !== true || !element.complete)) {
+        throw new Error(`${file}: ${element.path} has invalid arbitrary-child coverage.`);
+      }
       const source = canonical(element.source);
       coverage.set(source, (coverage.get(source) ?? true) && element.complete);
       const children = element.children || [];

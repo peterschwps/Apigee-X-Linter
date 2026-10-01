@@ -134,7 +134,7 @@ function checkNode(node: XmlNode, spec: DocumentSpec, rules: Map<string, Element
   const knownNames = new Set(spec.elements.map(element => element.path.split('/').at(-1)));
   for (const child of node.children) {
     const childPath = `${path}/${child.name}`;
-    if (!rules.has(childPath) && definition.complete && !(definition.children || []).includes(child.name)) {
+    if (!rules.has(childPath) && definition.complete && !definition.allowAnyChildren && !(definition.children || []).includes(child.name)) {
       const misplaced = knownNames.has(child.name);
       issues.push({
         rule: misplaced ? 'AX102' : 'AX101',
