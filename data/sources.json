@@ -309,7 +309,7 @@
     "title": "oauthv2 policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed OAuthV2 operation and grant-type enums, attributes, token settings, JWT keys, and nested token/attribute structures. PublicKey Certificate/JWKS forms are mentioned but not structured here, so remain incomplete. ClientId prose conflicts with later examples using other variables; ResponseType names a variable rather than a literal code/token. Operation-specific requirements are not cross-validated. Hybrid-only revoke_reason flow variable excluded."
+    "reviewNotes": "Rechecked OAuthV2 and its linked JWT OAuth guide. JWT operations now require Algorithm, HMAC algorithms require SecretKey, and a configured PublicKey requires one of Value, Certificate, or JWKS. The PublicKey Certificate/JWKS child contracts are not detailed on this policy page, so stay incomplete. Operation is described as optional with defaults but deployment errors call it required; no unconditional requirement is linted. ClientId prose forbids other variables while official examples use headers/query params. RSA key choice depends jointly on operation and algorithm and is not yet modeled. ResponseType names a flow variable rather than a literal code/token. Hybrid-only revoke_reason excluded."
   },
   {
     "id": "parse-dialogflow-request-policy",
@@ -333,7 +333,7 @@
     "title": "populate cache policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed cache key, source, scope, and expiration options and formats. Properties appears in the official example without a described structure and remains incomplete. Exactly-one expiry option and configured cache existence are not cross-validated."
+    "reviewNotes": "Rechecked PopulateCache. CacheKey, Source, and ExpirySettings remain required, and ExpirySettings now requires at least one documented option. The reference says to use exactly one expiry child but also specifies precedence if multiple are present; excess children are not reported as invalid. Properties is an unexplained example-only stub, and cache existence is environment/runtime state."
   },
   {
     "id": "prompt-token-limit-policy",
@@ -341,7 +341,7 @@
     "title": "prompt token limit policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Apigee-only policy. Reviewed Rate format, ref attributes, booleans, and prompt source. Properties appears in official examples without a structure. The page says UseEffectiveCount=false is unsupported for Apigee production while examples and defaults use false; this conflict is not enforced as a static error."
+    "reviewNotes": "Rechecked this Apigee-only policy. Rate syntax and requiredness, ref attributes, and boolean values remain modeled. Properties appears as an empty example/default stub without a contract. The page explicitly says UseEffectiveCount=false is unsupported for Apigee production but repeatedly uses false in examples and defaults; both literal values remain accepted until Google resolves this conflict. Runtime distribution and prompt content are not static XML rules."
   },
   {
     "id": "publish-message-policy",
@@ -372,8 +372,8 @@
     "kind": "policy",
     "title": "raise fault policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy",
-    "reviewStatus": "gap",
-    "reviewNotes": "Reviewed RaiseFault response branches, headers, payload attributes, booleans, and ShortFaultReason. Payload deliberately allows arbitrary embedded XML and is left open to avoid false unknown-element errors; conditional fault behavior requires flow context."
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Rechecked RaiseFault response branches, headers, payload attributes, booleans, and ShortFaultReason. FaultResponse/Set/Payload is now explicitly complete with arbitrary nested XML, as shown in the current official examples. Flow-specific fault behavior and message-template resolution are runtime concerns, not gaps in the XML structure model."
   },
   {
     "id": "read-property-set-policy",
