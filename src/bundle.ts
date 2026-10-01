@@ -4,6 +4,7 @@ import type { LintIssue } from './linter';
 import { parseXml, type XmlNode } from './xml';
 
 const flowNameSource = 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#name';
+const resourceSource = 'https://docs.cloud.google.com/apigee/docs/api-platform/develop/resource-files#where-resources-are-stored';
 
 function findBundleRoot(filePath: string): string | undefined {
   let directory = path.dirname(filePath);
@@ -40,11 +41,35 @@ async function policyNames(directory: string): Promise<Set<string> | undefined> 
   }
 }
 
+async function localResourceIssue(root: XmlNode, xml: string, directory: string): Promise<LintIssue[]> {
+  const element = root.name === 'OASValidation' ? 'OASResource'
+    : root.name === 'MessageValidation' ? 'ResourceURL' : undefined;
+  if (!element) return [];
+  const reference = root.children.find(child => child.name === element);
+  const text = reference && childText(reference, xml);
+  if (!text || /\{[^{}]+\}/.test(text.value)) return [];
+  const match = /^(oas|xsd|wsdl):\/\/([^/\\]+)$/.exec(text.value);
+  if (!match || root.name === 'OASValidation' && match[1] !== 'oas'
+    || root.name === 'MessageValidation' && match[1] === 'oas') return [];
+  try {
+    const files = await readdir(path.join(directory, 'resources', match[1]));
+    if (files.includes(match[2])) return [];
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') return [];
+  }
+  return [{ rule: 'AX109', message: `Resource "${match[2]}" is not in this proxy bundle; it may exist at environment scope.`,
+    start: text.start, end: text.end, source: resourceSource, severity: 'warning' }];
+}
+
 export async function lintBundleReferences(xml: string, filePath: string): Promise<LintIssue[]> {
   const rootDirectory = findBundleRoot(filePath);
   if (!rootDirectory) return [];
   const document = parseXml(xml);
-  if (document.syntaxIssues.length || !document.root || !['ProxyEndpoint', 'TargetEndpoint'].includes(document.root.name)) return [];
+  if (document.syntaxIssues.length || !document.root) return [];
+  if (document.root.name === 'OASValidation' || document.root.name === 'MessageValidation') {
+    return localResourceIssue(document.root, xml, rootDirectory);
+  }
+  if (!['ProxyEndpoint', 'TargetEndpoint'].includes(document.root.name)) return [];
 
   const references: { value: string; start: number; end: number }[] = [];
   function visit(node: XmlNode, parent?: XmlNode): void {

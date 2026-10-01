@@ -8,6 +8,7 @@ export type LintIssue = {
   start: number;
   end: number;
   source?: string;
+  severity?: 'error' | 'warning';
 };
 
 export type DocumentKind = DocumentSpec['kind'];

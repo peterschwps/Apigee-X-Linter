@@ -39,7 +39,8 @@ export function activate(context: vscode.ExtensionContext): void {
     results.push(...bundleResults.filter(issue => !ignored.has(issue.rule)));
     diagnostics.set(document.uri, results.map(issue => {
       const range = new vscode.Range(document.positionAt(issue.start), document.positionAt(issue.end));
-      const diagnostic = new vscode.Diagnostic(range, issue.message, vscode.DiagnosticSeverity.Error);
+      const severity = issue.severity === 'warning' ? vscode.DiagnosticSeverity.Warning : vscode.DiagnosticSeverity.Error;
+      const diagnostic = new vscode.Diagnostic(range, issue.message, severity);
       diagnostic.source = 'Apigee X Linter';
       diagnostic.code = issue.source
         ? { value: issue.rule, target: vscode.Uri.parse(issue.source) }
@@ -60,18 +61,28 @@ export function activate(context: vscode.ExtensionContext): void {
   }
 
   const policyWatcher = vscode.workspace.createFileSystemWatcher('**/apiproxy/policies/*.xml');
+  const resourceWatcher = vscode.workspace.createFileSystemWatcher('**/apiproxy/resources/{oas,xsd,wsdl}/*');
   const refreshEndpoints = () => {
     for (const document of vscode.workspace.textDocuments) {
       const kind = classifyDocument(document.uri.fsPath);
       if (kind === 'proxyEndpoint' || kind === 'targetEndpoint') schedule(document);
     }
   };
+  const refreshResourcePolicies = () => {
+    for (const document of vscode.workspace.textDocuments) {
+      if (classifyDocument(document.uri.fsPath) === 'policy') schedule(document);
+    }
+  };
 
   context.subscriptions.push(
     policyWatcher,
+    resourceWatcher,
     policyWatcher.onDidCreate(refreshEndpoints),
     policyWatcher.onDidChange(refreshEndpoints),
     policyWatcher.onDidDelete(refreshEndpoints),
+    resourceWatcher.onDidCreate(refreshResourcePolicies),
+    resourceWatcher.onDidChange(refreshResourcePolicies),
+    resourceWatcher.onDidDelete(refreshResourcePolicies),
     vscode.workspace.onDidOpenTextDocument(document => schedule(document, 0)),
     vscode.workspace.onDidChangeTextDocument(event => schedule(event.document)),
     vscode.workspace.onDidSaveTextDocument(document => schedule(document, 0)),

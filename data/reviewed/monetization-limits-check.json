@@ -25,6 +25,6 @@
     { "path": "/MonetizationLimitsCheck/FaultResponse/Set/Headers", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#add", "children": ["Header"] },
     { "path": "/MonetizationLimitsCheck/FaultResponse/Set/Headers/Header", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#add", "attributes": { "name": { "kind": "free", "required": true } }, "text": { "kind": "free" } },
     { "path": "/MonetizationLimitsCheck/FaultResponse/Set/StatusCode", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set", "text": { "kind": "free" } },
-    { "path": "/MonetizationLimitsCheck/FaultResponse/Set/Payload", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set", "attributes": { "contentType": { "kind": "free" }, "variablePrefix": { "kind": "free" }, "variableSuffix": { "kind": "free" } }, "text": { "kind": "free" } }
+    { "path": "/MonetizationLimitsCheck/FaultResponse/Set/Payload", "complete": true, "allowAnyChildren": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set", "attributes": { "contentType": { "kind": "free" }, "variablePrefix": { "kind": "free" }, "variableSuffix": { "kind": "free" } }, "text": { "kind": "free" } }
   ]
 }

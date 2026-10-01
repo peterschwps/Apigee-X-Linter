@@ -285,15 +285,15 @@
     "title": "message validation policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/message-validation-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed MessageValidation root, Element namespace, SOAP versions, Source, and xsd/wsdl ResourceURL format. Properties appears in official default examples but has no described structure on this page, so it remains incomplete. Conditional SOAP/XSD requirements are not cross-validated."
+    "reviewNotes": "Rechecked the current MessageValidation reference. SOAP/WSDL, XSD, and well-formed-only modes use different child sets, so no unconditional ResourceURL or SOAPMessage requirement is valid. Properties appears in default examples but has no described structure. Literal xsd:// and wsdl:// references now receive a local-bundle warning when absent; environment-scoped resources can still satisfy them. Nested XSD imports and WSDL schema validity remain outside static policy-XML linting."
   },
   {
     "id": "monetization-limits-check-policy",
     "kind": "policy",
     "title": "monetization limits check policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy",
-    "reviewStatus": "gap",
-    "reviewNotes": "Reviewed MonetizationLimitsCheck and documented FaultResponse branches. Payload may contain arbitrary XML (shown in official examples), so its nested content is deliberately open rather than treated as unknown Apigee tags. Monetization enablement is an environment prerequisite, not a static XML rule."
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Rechecked MonetizationLimitsCheck and its documented FaultResponse branches. FaultResponse/Set/Payload is now explicitly complete with arbitrary embedded XML rather than an unreviewed subtree; documented Payload attributes remain linted. Monetization enablement is an environment prerequisite, not a static XML rule."
   },
   {
     "id": "oas-validation-policy",
@@ -301,7 +301,7 @@
     "title": "oas validation policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oas-validation-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Reviewed OASResource formats and template allowance, required OASResource, option booleans, and Source values. Properties appears in the official default example without a described structure, so it remains incomplete. Existence and validity of the referenced OAS file require bundle/runtime context."
+    "reviewNotes": "Rechecked OASResource formats, message-template allowance, requiredness, options, and Source values. A literal oas:// reference now receives a warning if its file is missing from this local bundle; the general Apigee resource guide allows environment-scoped resources, so local absence cannot be an error. Properties still appears only as an unexplained default-example stub. OpenAPI 3 compilation, schema semantics, and environment resources are outside static policy-XML linting."
   },
   {
     "id": "oauthv2-policy",
