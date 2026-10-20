@@ -33,4 +33,4 @@ See the [user guide](docs/index.md), [development guide](docs/development.md), a
 
 Report problems through [GitHub Issues](https://github.com/peterschwps/apigee-x-linter/issues), including a minimal XML example without credentials or private data.
 
-MIT licensed. An independent community project, not affiliated with Google.
+An independent community project, not affiliated with Google.
