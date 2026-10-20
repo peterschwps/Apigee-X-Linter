@@ -1,47 +1,36 @@
 # Apigee X Linter
 
-A TypeScript VS Code extension for Apigee X proxy bundle XML. It provides diagnostics and context-aware completions from reviewed facts in the [Google Cloud Apigee documentation](https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/reference-overview-policy).
+A small VS Code extension that checks Apigee X proxy XML and suggests elements, attributes, and documented values.
 
-The project is under development and has no public release yet. All 76 inventoried Apigee X documentation pages have been assessed, including supplemental guides and troubleshooting examples; 24 retain explicit documentation or modeling gaps in `data/sources.json`. Rules apply only to reviewed contexts, so an unsupported element is not automatically treated as invalid.
+**Alpha development:** no Marketplace release is available yet. Validation is based on reviewed Google documentation and is intentionally incomplete where the documentation is ambiguous.
 
-## Intended scope
+## Quick Start
 
-- Policy XML and proxy bundle base, proxy endpoint, target endpoint, and flow configuration.
-- XML syntax, unknown or misplaced elements, unknown or required attributes and children, verified fixed values or formats, and documented child cardinality.
-- Local policy references in flow steps are checked against policy XML names within the same proxy bundle.
-- Suggestions for child elements, attributes, and documented fixed attribute or element-text values.
+1. Install a locally built VSIX using **Extensions: Install from VSIX...** in VS Code.
+2. Open your proxy bundle and an XML file under `apiproxy/policies`, `apiproxy/proxies`, or `apiproxy/targets`.
+3. Check the **Problems** panel for diagnostics. Use **Ctrl+Space** for completion suggestions.
 
-Apigee Edge, hybrid-only behavior, XSLT resources, and arbitrary XML payloads are outside the scope.
+To build the alpha package from source:
 
-## Development
+```sh
+npm ci
+npm run check
+npm run release:check
+npm run package:alpha
+```
 
-Run `npm install`, then `npm run check` and `npm run build`. Press F5 in VS Code to launch the Extension Development Host. Open an Apigee proxy bundle and edit an XML file under `apiproxy`.
-
-Run `npm exec -- vsce package --no-dependencies` to create a local VSIX. The runtime is bundled into one file, so production dependencies are not copied into the package. This does not publish the extension. `npm run docs:status` shows review progress; `npm run release:check` verifies inventory status and reviewed-data integrity, but does not resolve documented gaps or replace final performance and editor checks. The extension never fetches documentation at runtime.
-
-## Documentation maintenance
-
-1. Run `npm run docs:refresh` to compare current Google documentation with the saved section hashes, then `npm run docs:discover` to add newly indexed pages.
-2. Run `npm run docs:extract` and `npm run docs:propose`. The extractor captures sections, tables, XML example names, and possible value or format hints. Raw candidates are local-only; proposals in `data/proposals` are explicitly unreviewed and never shipped in the VSIX.
-3. Review each proposal against its linked official page. Copy only confirmed Apigee X facts into `data/reviewed`, including element ancestry, attribute and child names, requiredness, fixed values or formats, and a source link. Set `complete` to `false` wherever that context is not exhaustively reviewed. Record page review status and gaps in `data/sources.json`.
-4. Run `npm run check`; with candidates present, it also checks documentation anchors. The section-hash baseline in `data/source-hashes.json` changes only on extraction, not on refresh.
-
-Official pages sometimes cover both Apigee and Apigee hybrid or link to Edge documentation. That does not imply a feature is valid for Apigee X. Archived policy schemas are supplementary, not authoritative.
-
-Diagnostic IDs: `AX001` XML syntax, `AX101` unknown element or wrong root, `AX102` misplaced element, `AX103` unknown attribute, `AX104` missing required attribute or child, `AX105` invalid fixed value, `AX106` invalid documented format, `AX107` invalid child cardinality or duplicate flow name, `AX108` missing local policy reference, `AX109` a warning when an OAS/XSD/WSDL resource is absent locally (it may exist at environment scope), and `AX110` a warning for deprecated elements or documented Apigee X compatibility concerns. Warnings do not claim that a contradictory or incomplete reference establishes a deployment error.
-
-## Comparison with apigeelint
-
-The [upstream comparison review](docs/apigeelint-review.md) records all 91 plugin dispositions, source-gap assessments, verified differences, and a reproducible eight-bundle comparison. The pinned apigeelint installation is an optional development/CI tool, not an extension runtime dependency. Run `npm run comparison:validate` to validate the mapping without installing it; follow the review's setup instructions before running `npm run compare:apigeelint`. Comparison output is local-only. No CI service or external publication is configured by this command.
+The package is written to `apigee-x-linter-0.1.0.vsix`. VS Code 1.96 or later is required.
 
 ## Settings
 
-| Setting | Default | Purpose |
-| --- | --- | --- |
-| `apigeeXLinter.enabled` | `true` | Turn diagnostics and completion on or off. |
-| `apigeeXLinter.exclude` | `[]` | Exclude matching XML paths. |
-| `apigeeXLinter.ignore` | `[]` | Suppress selected diagnostic rule IDs. |
+- `apigeeXLinter.enabled`: enable or disable the extension.
+- `apigeeXLinter.exclude`: ignore matching file paths.
+- `apigeeXLinter.ignore`: suppress selected diagnostic IDs, such as `AX110`.
 
-## License
+Apigee Edge, hybrid-only configuration, and validation of embedded payload content are outside scope. The extension reads local XML; it does not deploy proxies or fetch documentation at runtime. Current coverage includes 76 documentation sources, with 24 explicitly recorded gaps.
 
-MIT. This is an independent community project and is not affiliated with Google.
+See the [user guide](docs/index.md), [development guide](docs/development.md), and [apigeelint comparison](docs/apigeelint-review.md).
+
+Report problems through [GitHub Issues](https://github.com/peterschwps/apigee-x-linter/issues), including a minimal XML example without credentials or private data.
+
+MIT licensed. An independent community project, not affiliated with Google.

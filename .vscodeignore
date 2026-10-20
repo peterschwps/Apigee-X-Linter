@@ -1,5 +1,9 @@
 .git/**
 .gitignore
+.github/**
+.release-please-*.json
+mkdocs.yml
+site/**
 .vscode/**
 .cache/**
 src/**

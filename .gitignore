@@ -4,3 +4,4 @@ data/candidates/
 .cache/
 *.vsix
 *.tsbuildinfo
+site/

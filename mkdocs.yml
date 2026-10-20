@@ -1,0 +1,20 @@
+site_name: Apigee X Linter
+site_description: XML diagnostics and completion for Apigee X proxy bundles.
+repo_url: https://github.com/peterschwps/apigee-x-linter
+repo_name: peterschwps/apigee-x-linter
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+
+markdown_extensions:
+  - tables
+  - fenced_code
+
+nav:
+  - User guide: index.md
+  - Development: development.md
+  - apigeelint comparison: apigeelint-review.md
+  - Releases: releases.md

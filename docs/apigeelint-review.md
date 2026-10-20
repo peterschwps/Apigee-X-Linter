@@ -12,7 +12,7 @@ The upstream project uses Apache-2.0 and describes itself as not an officially s
 
 ## Pinned evidence and coverage
 
-[`data/comparison/apigeelint.json`](../data/comparison/apigeelint.json) records the published package version and npm integrity, SHA-256 hashes of every plugin source, the separately observed main commit, all rule dispositions, all current source-gap assessments, and the Google sample commit. The published package differs from the checked-out main version; the executable comparison uses the published package only.
+[`data/comparison/apigeelint.json`](https://github.com/peterschwps/apigee-x-linter/blob/main/data/comparison/apigeelint.json) records the published package version and npm integrity, SHA-256 hashes of every plugin source, the separately observed main commit, all rule dispositions, all current source-gap assessments, and the Google sample commit. The published package differs from the checked-out main version; the executable comparison uses the published package only.
 
 | Disposition | Plugins | Treatment |
 | --- | ---: | --- |
