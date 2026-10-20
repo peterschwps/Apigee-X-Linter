@@ -69,7 +69,7 @@
     "title": "assign message policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Apigee X AssignMessage operations are modeled by path: Add, Copy, Remove, Set, AssignTo, and AssignVariable. Set/Payload now explicitly permits arbitrary XML without being classified as unreviewed; documented Payload attributes remain linted. AssignVariable/Name is single, and Set/Authentication requires exactly one documented Google token child. The UI default includes an undocumented Properties subtree. One example puts Payload directly under AssignMessage although the element reference nests it under Set; that example is accepted conservatively with an incomplete context. An Add/FormParam direct-child example also conflicts with grouped FormParams syntax, so both are accepted. Authentication examples contain malformed closing tags; the consistently described nested forms are modeled. Request/response runtime restrictions and AssignVariable precedence are not static XML errors."
+    "reviewNotes": "Apigee X AssignMessage operations are modeled by path: Add, Copy, Remove, Set, AssignTo, and AssignVariable. Set/Payload now explicitly permits arbitrary XML without being classified as unreviewed; documented Payload attributes remain linted. AssignVariable/Name is single, and Set/Authentication requires exactly one documented Google token child. The UI default includes an undocumented Properties subtree. One example puts Payload directly under AssignMessage although the element reference nests it under Set; that example is accepted conservatively with an incomplete context. An Add/FormParam direct-child example also conflicts with grouped FormParams syntax, so both are accepted. Authentication examples contain malformed closing tags; the consistently described nested forms are modeled. Request/response runtime restrictions and AssignVariable precedence are not static XML errors. Set/ReasonPhrase is now supported by the current Model Armor tutorial and the delegated RaiseFault/AssignMessage contract."
   },
   {
     "id": "basic-authentication-policy",
@@ -133,7 +133,7 @@
     "title": "extract variables policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy",
     "reviewStatus": "reviewed",
-    "reviewNotes": "Reviewed all documented Apigee element contexts, required attributes, and fixed variable types. At-least-one extraction source is an either/or constraint not expressible by the current rule model. Pattern and XPath expression semantics are not validated."
+    "reviewNotes": "Reviewed all documented Apigee element contexts, required attributes, and fixed variable types. At-least-one extraction source is an either/or constraint not expressible by the current rule model. Pattern and XPath expression semantics are not validated. The supplemental deployment guide confirms an incomplete Properties stub."
   },
   {
     "id": "flow-callout-policy",
@@ -253,7 +253,7 @@
     "title": "key value map operations policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Rechecked the current Apigee KVM reference. At least one Get, Put, or Delete and the documented MapName conflicts with mapIdentifier and InitialEntries are now linted. Deprecated ExclusiveCache is named but has no documented structure or value contract, so remains incomplete. Literal-versus-ref resolution and KVM existence are runtime-dependent and are not statically enforced."
+    "reviewNotes": "Rechecked the current Apigee KVM reference. At least one Get, Put, or Delete and the documented MapName conflicts with mapIdentifier and InitialEntries are now linted. Deprecated ExclusiveCache is named but has no documented structure or value contract, so remains incomplete. Literal-versus-ref resolution and KVM existence are runtime-dependent and are not statically enforced. ExclusiveCache now emits AX110 deprecation guidance. PO038's missing-name warning is not treated as an error because the reference explicitly defaults to kvmap."
   },
   {
     "id": "llm-token-quota-policy",
@@ -309,7 +309,7 @@
     "title": "oauthv2 policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Rechecked OAuthV2 and its linked JWT OAuth guide. JWT operations now require Algorithm, HMAC algorithms require SecretKey, and a configured PublicKey requires one of Value, Certificate, or JWKS. The PublicKey Certificate/JWKS child contracts are not detailed on this policy page, so stay incomplete. Operation is described as optional with defaults but deployment errors call it required; no unconditional requirement is linted. ClientId prose forbids other variables while official examples use headers/query params. RSA key choice depends jointly on operation and algorithm and is not yet modeled. ResponseType names a flow variable rather than a literal code/token. Hybrid-only revoke_reason excluded."
+    "reviewNotes": "Rechecked OAuthV2 and its linked JWT OAuth guide. JWT operations now require Algorithm, HMAC algorithms require SecretKey, and a configured PublicKey requires one of Value, Certificate, or JWKS. The PublicKey Certificate/JWKS child contracts are not detailed on this policy page, so stay incomplete. Operation is described as optional with defaults but deployment errors call it required; no unconditional requirement is linted. ClientId prose forbids other variables while official examples use headers/query params. RSA key choice depends jointly on operation and algorithm and is not yet modeled. ResponseType names a flow variable rather than a literal code/token. Hybrid-only revoke_reason excluded. The supplemental access-token guide confirms an incomplete Properties stub."
   },
   {
     "id": "parse-dialogflow-request-policy",
@@ -341,7 +341,7 @@
     "title": "prompt token limit policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/prompt-token-limit-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Rechecked this Apigee-only policy. Rate syntax and requiredness, ref attributes, and boolean values remain modeled. Properties appears as an empty example/default stub without a contract. The page explicitly says UseEffectiveCount=false is unsupported for Apigee production but repeatedly uses false in examples and defaults; both literal values remain accepted until Google resolves this conflict. Runtime distribution and prompt content are not static XML rules."
+    "reviewNotes": "Rechecked this Apigee-only policy. Rate syntax and requiredness, ref attributes, and boolean values remain modeled. Properties appears as an empty example/default stub without a contract. The page explicitly says UseEffectiveCount=false is unsupported for Apigee production but repeatedly uses false in examples and defaults; both literal values remain accepted until Google resolves this conflict. Runtime distribution and prompt content are not static XML rules. Literal false now receives AX110 guidance from the unsupported-X-mode statement; it is not asserted to be a deployment error."
   },
   {
     "id": "publish-message-policy",
@@ -365,7 +365,7 @@
     "title": "quota policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy",
     "reviewStatus": "reviewed",
-    "reviewNotes": "Reviewed nested Class and API-product default quota structures, counter options, numeric formats, and documented enums. Type default appears in the deployment error table though omitted from the introductory type list; second TimeUnit is documented for non-distributed counters. StartTime examples allow unpadded month/day despite yyyy-MM-dd prose. Conditional calendar StartTime, Class/Identifier exclusivity, CountOnly/EnforceOnly relationships, and API-product overrides are not cross-validated."
+    "reviewNotes": "Reviewed nested Class and API-product default quota structures, counter options, numeric formats, and documented enums. Type default appears in the deployment error table though omitted from the introductory type list; second TimeUnit is documented for non-distributed counters. StartTime examples allow unpadded month/day despite yyyy-MM-dd prose. Conditional calendar StartTime, Class/Identifier exclusivity, CountOnly/EnforceOnly relationships, and API-product overrides are not cross-validated. The supplemental deployment guide confirms an incomplete Properties stub."
   },
   {
     "id": "raise-fault-policy",
@@ -485,7 +485,7 @@
     "title": "spike arrest policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Rechecked SpikeArrest Rate syntax and ref, Identifier/MessageWeight references, and Apigee X-only UseEffectiveCount support. The page explicitly says false/rate smoothing is unsupported for Apigee organizations, so the reviewed X rule still accepts only true; the same page uses false in its default and examples, leaving a documented contradiction. Properties is still an unexplained example-only stub. Rate ref-only remains valid without literal text."
+    "reviewNotes": "Rechecked SpikeArrest Rate syntax and ref, Identifier/MessageWeight references, and Apigee X-only UseEffectiveCount support. The page explicitly says false/rate smoothing is unsupported for Apigee organizations, so the reviewed X rule still accepts only true; the same page uses false in its default and examples, leaving a documented contradiction. Properties is still an unexplained example-only stub. Rate ref-only remains valid without literal text. On 2026-10-20, literal false was changed from AX105 to AX110 guidance because the reference calls it a default and uses it in examples despite documenting smoothing as unsupported for X."
   },
   {
     "id": "trace-capture-policy",
@@ -509,7 +509,7 @@
     "title": "verify api key policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy",
     "reviewStatus": "reviewed",
-    "reviewNotes": "Reviewed policy elements, attributes, requiredness, and the documented cache-expiry range for Apigee. The deprecated async attribute is recognized without validating an undocumented value set."
+    "reviewNotes": "Reviewed policy elements, attributes, requiredness, and the documented cache-expiry range for Apigee. The deprecated async attribute is recognized without validating an undocumented value set. The supplemental flow guide confirms an incomplete Properties stub."
   },
   {
     "id": "verify-iam-policy",
@@ -558,5 +558,53 @@
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/xsl-transform-policy",
     "reviewStatus": "reviewed",
     "reviewNotes": "Rechecked the Apigee XSL policy XML. Parameter requires exactly one of ref or value, and OutputVariable rejects message, request, and response. The XSL page lists only root name; enabled, continueOnError, and async are now sourced from Google's general Apigee policy-configuration reference instead of inferred. XSLT stylesheet contents and their xsl:param matches are outside the extension's proxy-XML scope."
+  },
+  {
+    "id": "model-armor-tutorial",
+    "kind": "core",
+    "title": "Get started with Apigee Model Armor policies",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies",
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Supplemental scope: the RaiseFault example confirms Set/ReasonPhrase text. RaiseFault delegates its settings to AssignMessage, and MonetizationLimitsCheck delegates FaultResponse to RaiseFault. Model Armor administration is outside XML linting."
+  },
+  {
+    "id": "responsecache-deployment-errors",
+    "kind": "core",
+    "title": "ResponseCache deployment errors",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors",
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Supplemental scope: corrected examples retain KeyFragment@type=\"string\". The shared cache-key contract applies to all four cache policies. Accept type with unspecified values; do not infer an enumeration."
+  },
+  {
+    "id": "oauth-access-tokens-guide",
+    "kind": "core",
+    "title": "Verifying access tokens",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/using-access-tokens",
+    "reviewStatus": "gap",
+    "reviewNotes": "Supplemental scope: UI-generated OAuthV2 includes Properties without defining its structure. Accept the incomplete stub. Its legacy FaultRules example conflicts with endpoint-only fault handling and is not promoted."
+  },
+  {
+    "id": "flow-basics-guide",
+    "kind": "core",
+    "title": "Controlling API proxies with flows",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/what-are-flows",
+    "reviewStatus": "gap",
+    "reviewNotes": "Supplemental scope: VerifyAPIKey examples include Properties without defining its structure. Accept the incomplete stub. Flow structure is covered separately by the flow configuration reference."
+  },
+  {
+    "id": "extractvariables-deployment-errors",
+    "kind": "core",
+    "title": "ExtractVariables deployment errors",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors",
+    "reviewStatus": "gap",
+    "reviewNotes": "Supplemental scope: corrected ExtractVariables examples include Properties without defining its structure. Accept the incomplete stub. Its mandatory-target list omits Variable, which is supported by the current policy reference, so it does not justify a narrower required-target group."
+  },
+  {
+    "id": "quota-deployment-errors",
+    "kind": "core",
+    "title": "Quota deployment errors",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors",
+    "reviewStatus": "gap",
+    "reviewNotes": "Supplemental scope: corrected Quota examples include Properties without defining its structure. Accept the incomplete stub. Older time-unit restrictions do not override the current policy reference."
   }
 ]

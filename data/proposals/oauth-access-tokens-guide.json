@@ -1,0 +1,42 @@
+{
+  "source": {
+    "id": "oauth-access-tokens-guide",
+    "kind": "core",
+    "title": "Verifying access tokens",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/using-access-tokens",
+    "reviewStatus": "gap",
+    "reviewNotes": "Supplemental scope: UI-generated OAuthV2 includes Properties without defining its structure. Accept the incomplete stub. Its legacy FaultRules example conflicts with endpoint-only fault handling and is not promoted."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Adding a VerifyAccessToken policy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/using-access-tokens#addingaverifyaccesstokenpolicy",
+      "elements": [],
+      "exampleElements": [
+        "Attributes",
+        "DisplayName",
+        "ExternalAuthorization",
+        "FaultRules",
+        "GenerateResponse",
+        "OAuthV2",
+        "Operation",
+        "Properties",
+        "SupportedGrantTypes",
+        "Tokens"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

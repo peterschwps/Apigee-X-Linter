@@ -1,0 +1,1065 @@
+{
+  "reviewedAt": "2026-10-20",
+  "upstream": {
+    "package": "apigeelint",
+    "version": "2.85.1",
+    "registry": "https://registry.npmjs.org",
+    "integrity": "sha512-hMwJ6FKzDq4dYYBPMw0m6ELi28oB2wLhtUi3sQgFAiBDkQlasRfmd5zt7vyKMf6QxjnYnc7nHDBB/QjqdsUuhg==",
+    "license": "Apache-2.0",
+    "repository": "https://github.com/apigee/apigeelint",
+    "observedMainCommit": "3bd862429e1c3bc71b9f7268529523192b6bd651",
+    "observedMainVersion": "2.85.0",
+    "note": "The executable review uses the published npm package. The independently fetched main checkout advertises a different version and is not substituted for that package."
+  },
+  "samples": {
+    "repository": "https://github.com/GoogleCloudPlatform/apigee-samples",
+    "commit": "2b1a9f00fabb4e837c39d80570ff50ebc3b1349e",
+    "bundles": [
+      "deploy-apigee-proxy",
+      "basic-caching",
+      "basic-quota",
+      "oauth-client-credentials",
+      "authorize-idp-access-tokens",
+      "json-web-tokens",
+      "cloud-run",
+      "llm-token-limits"
+    ]
+  },
+  "decision": {
+    "mode": "development-and-ci",
+    "profile": "apigeex",
+    "excludedRules": [
+      "PO013",
+      "PO025"
+    ],
+    "reason": "Keep apigeelint as an isolated optional comparison/CI tool. It reads saved whole bundles, shares its X/hybrid profile, contains verified catalogue/structure divergences, and adds dependencies unrelated to live XML completion. No runtime dependency or automatic on-save execution is added."
+  },
+  "ruleGroups": [
+    {
+      "id": "overlap",
+      "rules": [
+        "BN010",
+        "BN011",
+        "ST002",
+        "FE001",
+        "EP002",
+        "PD005",
+        "PD006",
+        "PO026",
+        "PO027",
+        "PO033",
+        "PO035",
+        "PO036",
+        "PO045",
+        "TD008"
+      ],
+      "decision": "Keep the position-aware local XML implementation. Upstream provides useful differential cases, but matching rule names do not imply identical coverage or severity."
+    },
+    {
+      "id": "bundle-candidate",
+      "rules": [
+        "BN001",
+        "BN003",
+        "CC005",
+        "CC006",
+        "CC007",
+        "CC008",
+        "EP001",
+        "FL001",
+        "FR001",
+        "FR002",
+        "PD001",
+        "PD002",
+        "PD003",
+        "PO019",
+        "PO020",
+        "PO023",
+        "PO040",
+        "ST001",
+        "TD009",
+        "TD010",
+        "TD013",
+        "TD014",
+        "TD016",
+        "TD017"
+      ],
+      "decision": "Candidate for a future explicit bundle-validation command or independently documented local rule. Review each behavior against current X documentation before promotion; condition parsing and whole-bundle graph analysis are not added to the typing loop."
+    },
+    {
+      "id": "advisory",
+      "rules": [
+        "BN005",
+        "BN006",
+        "BN007",
+        "BN009",
+        "BN012",
+        "BN013",
+        "BN014",
+        "CC001",
+        "CC003",
+        "CC004",
+        "FR003",
+        "PD004",
+        "PO006",
+        "PO007",
+        "PO008",
+        "PO012",
+        "PO018",
+        "PO022",
+        "PO031",
+        "PO032",
+        "PO037",
+        "PO039",
+        "PO041",
+        "ST003",
+        "ST004",
+        "ST005",
+        "ST006",
+        "ST007",
+        "ST008",
+        "TD001",
+        "TD002",
+        "TD003",
+        "TD004",
+        "TD005",
+        "TD006",
+        "TD007",
+        "TD011",
+        "TD012",
+        "TD015"
+      ],
+      "decision": "Advice, naming conventions, maintainability, security guidance, or runtime-dependent checks. Do not present these findings as proof of invalid XML. PO041 informed the documented AX110 deprecation warning."
+    },
+    {
+      "id": "divergence",
+      "rules": [
+        "PO024",
+        "PO028",
+        "PO029",
+        "PO030",
+        "PO034",
+        "PO038",
+        "PO042",
+        "PO043",
+        "PO044"
+      ],
+      "decision": "Known coverage or authority differences. Keep a documented exception and do not import the upstream result as a local hard error; see detailed findings."
+    },
+    {
+      "id": "out-of-scope",
+      "rules": [
+        "PO013",
+        "PO025",
+        "DC001",
+        "DC002"
+      ],
+      "decision": "JavaScript resource linting and Edge-only deprecated policy types are outside this X XML extension. PO013/PO025 are excluded from executable comparisons, including any local resource-linter configuration."
+    },
+    {
+      "id": "disabled-upstream",
+      "rules": [
+        "BN004"
+      ],
+      "decision": "Disabled by upstream; no maintained unused-variable analysis is assumed."
+    }
+  ],
+  "sourceGaps": [
+    {
+      "sourceId": "api-proxy-configuration-reference",
+      "rules": [
+        "PD005",
+        "PD006",
+        "TD009",
+        "TD010",
+        "TD013",
+        "TD014",
+        "TD016",
+        "TD017"
+      ],
+      "assessment": "Endpoint rules supply comparison candidates, not the missing Resources/TargetServers manifest or ScriptTarget contracts. TLS advice does not resolve the reference's undocumented dependency details."
+    },
+    {
+      "sourceId": "flow-configuration-reference",
+      "rules": [
+        "ST001",
+        "ST002",
+        "CC007",
+        "FR001",
+        "FR002"
+      ],
+      "assessment": "ST002 overlaps singleton Name/Condition but also tolerates a FaultRules UI artifact. It does not settle contradictory Name requiredness or Description placement. Condition parsing is a separate future bundle feature."
+    },
+    {
+      "sourceId": "load-balancing-across-backend-servers",
+      "rules": [
+        "TD008",
+        "TD009",
+        "TD010",
+        "TD014",
+        "TD015"
+      ],
+      "assessment": "Fallback overlaps; server cardinality and duplicates are future candidates. Upstream does not resolve weight attribute versus Weight child or Path placement."
+    },
+    {
+      "sourceId": "assign-message-policy",
+      "rules": [
+        "PO026",
+        "PO034",
+        "FE001"
+      ],
+      "assessment": "PO034 omits documented Set/Authentication and treats Properties as empty; this is not an exhaustive current-X schema. The current Google tutorial confirms ReasonPhrase through the shared RaiseFault settings."
+    },
+    {
+      "sourceId": "delete-oauth-v2-info",
+      "rules": [],
+      "assessment": "No dedicated rule defines the undocumented Attributes stub; known-policy metadata is not a child schema."
+    },
+    {
+      "sourceId": "generate-saml-assertion-policy",
+      "rules": [],
+      "assessment": "No dedicated rule resolves CanonicalizationAlgorithm or the conflicting OutputVariable sample."
+    },
+    {
+      "sourceId": "http-modifier-policy",
+      "rules": [],
+      "assessment": "No dedicated rule defines the Properties stub or fixes context-dependent Set/Path behavior."
+    },
+    {
+      "sourceId": "key-value-map-operations-policy",
+      "rules": [
+        "PO038",
+        "PO041"
+      ],
+      "assessment": "PO038 warns when neither name source is specified, but current documentation explicitly defaults to kvmap. PO041 confirms deprecation guidance only; ExclusiveCache contents remain unspecified."
+    },
+    {
+      "sourceId": "message-validation-policy",
+      "rules": [
+        "BN013"
+      ],
+      "assessment": "Resource-use checks do not define the Properties stub or conditional SOAP/XSD schema. Environment resources cannot be proven missing from a local bundle."
+    },
+    {
+      "sourceId": "oas-validation-policy",
+      "rules": [
+        "BN013"
+      ],
+      "assessment": "Resource-use checks do not define Properties or validate all OpenAPI semantics; environment resolution remains possible."
+    },
+    {
+      "sourceId": "oauthv2-policy",
+      "rules": [
+        "PO028",
+        "PO029"
+      ],
+      "assessment": "Metadata recognizes OAuthV2 without defining operation-dependent RSA key, JWKS, or Certificate contracts. A supplemental access-token guide supports the known incomplete Properties stub."
+    },
+    {
+      "sourceId": "populate-cache-policy",
+      "rules": [
+        "PO030"
+      ],
+      "assessment": "PO030 warns about multiple expiry options; local requiredness remains separate from documented precedence. Properties contents and deployed-cache existence remain unknown."
+    },
+    {
+      "sourceId": "prompt-token-limit-policy",
+      "rules": [
+        "PO042"
+      ],
+      "assessment": "PO042 allows UserPromptSource but omits IgnoreUnresolvedVariables from its allowed-child map despite checking its boolean value later. It accepts false without the X-mode warning; AX110 supplies current documentation guidance."
+    },
+    {
+      "sourceId": "response-cache-policy",
+      "rules": [
+        "PO024",
+        "PO030"
+      ],
+      "assessment": "PO024 assumes older error-response defaults. PO030 is advisory and cannot override documented expiry precedence. The supplemental corrected example confirms KeyFragment@type but gives no enumeration."
+    },
+    {
+      "sourceId": "service-callout-policy",
+      "rules": [
+        "PO019",
+        "PO020",
+        "PO036",
+        "PO043",
+        "FE001"
+      ],
+      "assessment": "Response and authentication checks overlap or provide candidates. PO043 uses a helper lacking documented CommonName. Request inheritance, Properties contents, and URL/load-balancer ambiguities remain open."
+    },
+    {
+      "sourceId": "spike-arrest-policy",
+      "rules": [
+        "PO042"
+      ],
+      "assessment": "PO042 accepts true/false. Current X documentation calls false unsupported yet uses it in defaults/examples; local AX110 warns without treating the contradictory mode as invalid syntax."
+    },
+    {
+      "sourceId": "trace-capture-policy",
+      "rules": [],
+      "assessment": "No dedicated rule resolves Variables requiredness, IgnoreUnresolvedVariables defaults, or the summary-only MergeBehavior."
+    },
+    {
+      "sourceId": "validate-saml-assertion-policy",
+      "rules": [],
+      "assessment": "No dedicated rule resolves deprecated XPath versus current XPath fields or Namespace requiredness."
+    },
+    {
+      "sourceId": "verify-jwt-policy",
+      "rules": [],
+      "assessment": "PO044 targets GenerateJWT only. VerifyJWT PasswordKey/DirectKey detail and signed algorithm-list key selection are not resolved upstream."
+    },
+    {
+      "sourceId": "xml-threat-protection-policy",
+      "rules": [
+        "ST007"
+      ],
+      "assessment": "ST007 checks policy attachment/content conditions, not StructuralLimits/StructureLimits or ChildCount attribute spelling."
+    },
+    {
+      "sourceId": "oauth-access-tokens-guide",
+      "rules": [
+        "PO028",
+        "PO029"
+      ],
+      "assessment": "Supplemental Properties stub is accepted but its child/attribute structure is still unknown."
+    },
+    {
+      "sourceId": "flow-basics-guide",
+      "rules": [],
+      "assessment": "Supplemental VerifyAPIKey Properties stub has no documented child/attribute structure."
+    },
+    {
+      "sourceId": "extractvariables-deployment-errors",
+      "rules": [
+        "PO033"
+      ],
+      "assessment": "Extraction hygiene does not define the supplemental Properties stub."
+    },
+    {
+      "sourceId": "quota-deployment-errors",
+      "rules": [
+        "PO035"
+      ],
+      "assessment": "PO035 accepts empty Properties but does not establish a general Properties content contract."
+    }
+  ],
+  "findings": [
+    {
+      "id": "expiry-advice",
+      "rules": [
+        "PO030"
+      ],
+      "decision": "Keep upstream warnings separate from AX107 configuration errors.",
+      "evidence": [
+        "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/populate-cache-policy#ExpirySettingsElement",
+        "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/response-cache-policy#expirysettingselement"
+      ],
+      "detail": "The implementation's severity is warning; multiple expiry options have documented precedence."
+    },
+    {
+      "id": "kvm-default",
+      "rules": [
+        "PO038"
+      ],
+      "decision": "Do not require an explicit map name as a local error.",
+      "evidence": [
+        "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#keyvaluemapoperations_attributes"
+      ],
+      "detail": "When both mapIdentifier and MapName are absent, current documentation says kvmap is used."
+    },
+    {
+      "id": "generate-jwt-incomplete-allowlist",
+      "rules": [
+        "PO044"
+      ],
+      "decision": "Keep the reviewed local shape.",
+      "evidence": [
+        "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-jwt-policy"
+      ],
+      "detail": "The published plugin's allowedChildren omits DirectKey, Compress, Type, and ignored CustomClaims. It is not a complete current GenerateJWT schema."
+    },
+    {
+      "id": "policy-catalogue",
+      "rules": [
+        "PO028",
+        "PO029"
+      ],
+      "decision": "Do not use upstream policy metadata as the authoritative X inventory.",
+      "evidence": [
+        "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/parse-payload-policy"
+      ],
+      "detail": "The pinned package's policyMetaData.json lacks ParsePayload, which the current X reference and local rules support."
+    },
+    {
+      "id": "documented-tokens",
+      "rules": [
+        "PO034"
+      ],
+      "decision": "Retain AssignMessage/Set/Authentication.",
+      "evidence": [
+        "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/assign-message-policy"
+      ],
+      "detail": "The plugin's Set allowlist omits Authentication; the current reference documents it."
+    },
+    {
+      "id": "ssl-common-name",
+      "rules": [
+        "PO043"
+      ],
+      "decision": "Retain documented SSLInfo/CommonName.",
+      "evidence": [
+        "https://docs.cloud.google.com/apigee/docs/api-platform/reference/api-proxy-configuration-reference"
+      ],
+      "detail": "The shared upstream SSLInfo helper omits CommonName, which is present in the current TargetEndpoint TLS reference."
+    },
+    {
+      "id": "sample-whitespace",
+      "rules": [],
+      "decision": "Retain the documented flow-name format error and record the sample discrepancy.",
+      "evidence": [
+        "https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference"
+      ],
+      "detail": "json-web-tokens/proxies/default.xml uses Flow name='unknown request'. The current name reference forbids whitespace; passing apigeelint is not deployment evidence."
+    }
+  ],
+  "inventory": [
+    {
+      "id": "BN001",
+      "file": "BN001-checkBundleStructure.js",
+      "sha256": "0a3de095d8d994ac32af2ddc7630e0f57161aa85edb0c4eabe1cb89d4e210e9e",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "BN003",
+      "file": "BN003-checkCacheCoherence.js",
+      "sha256": "d9108457b11637247e5681b5e43a426964768c0355f4fb254baa5cddf939adef",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "BN004",
+      "file": "BN004-unusedVariables.js",
+      "sha256": "47678530af0812a9bc46e22f5c241fcb5cdb2d7b17606705f7a43d899f7d6ba1",
+      "severity": "warning",
+      "enabled": false
+    },
+    {
+      "id": "BN005",
+      "file": "BN005-checkUnattachedPolicies.js",
+      "sha256": "6abdd3623fcb9c156d8ed6fefa34fd78e46fd8c758345b64e2a973c15e54f839",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "BN006",
+      "file": "BN006-policyCount.js",
+      "sha256": "aee5e04aad38dc553741de497e24fecdb877891b13681ea4666cd0bea712d9e5",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "BN007",
+      "file": "BN007-bundleSizeResourceCount.js",
+      "sha256": "6e4b4bdc91def1465d6f0c0d1bc0b5c12db1085957963b3dc53a13b08a5af2bd",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "BN009",
+      "file": "BN009-checkForMultipleStatsCollectorPolicies.js",
+      "sha256": "7ed78f184c74ad504bb8e0d2cad6468c937913414f14355643825f7498cb9875",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "BN010",
+      "file": "BN010-missingPolicies.js",
+      "sha256": "2c0ecdb03f25b75c768b216577f443712d2bee4977c403e427395bd106b07fd7",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "BN011",
+      "file": "BN011-wellFormedXml.js",
+      "sha256": "fbaf4155004be54981d5ae7223cf9cfd3abc430cd5999c92f050db1d5f1e04ec",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "BN012",
+      "file": "BN012-unreferencedTargets.js",
+      "sha256": "db2c7f92bb53f03b7c275dcedfce2efd557165937b8674c9b46e8456c358f02e",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "BN013",
+      "file": "BN013-unreferenced-resources.js",
+      "sha256": "f1672505f1ef36ee570826b1ead484aba4c122248e6a281695167201a1501845",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "BN014",
+      "file": "BN014-duplicate-policies.js",
+      "sha256": "db8a3f3fef786819a365c31b7e2aecf3917554ae5cbd9aff9edf69f54a39e2ef",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "CC001",
+      "file": "CC001-checkConditionForLiterals.js",
+      "sha256": "9216f89afd04e5feab6f504a8e4170bcebf730a014e21892e9242e33a281a61b",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "CC003",
+      "file": "CC003-checkConditionLength.js",
+      "sha256": "6abdf43dcebf011c07400a0f683d1eab9603e0c6d86e9f073d294f844d5b71a0",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "CC004",
+      "file": "CC004-checkConditionComplexity.js",
+      "sha256": "f933f6e77978641d1a6b7843a01e4464afb2501c0aa8d1b08b8b1156c4ecb9a4",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "CC005",
+      "file": "CC005-unterminatedStrings.js",
+      "sha256": "ce2143b70d2299cde9d9e4f2f6852052eec818844a5b568237bebf0679999b86",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "CC006",
+      "file": "CC006-checkConditionTruth.js",
+      "sha256": "0346e2a7b876ed2f0718103028aed720e88d14dd78d82418c7ebca0d80153787",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "CC007",
+      "file": "CC007-ConditionSyntax.js",
+      "sha256": "8590d5f5177dfc28420e52f147edcb09b27052b48b7a9ca24bb5a78581dfd1b9",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "CC008",
+      "file": "CC008-conditional-flows-unique-conditions.js",
+      "sha256": "83dc3e60382102856479bf7516d65631bc01f5b0f396dc73798744ab4faa9ba9",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "DC001",
+      "file": "DC001-deprecationConcurrentRateLimit.js",
+      "sha256": "d3f3d6f2075c5b81095a4852178e16339045f96b8c98b71f64857b0dcb22469b",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "DC002",
+      "file": "DC002-deprecationOAuthV1.js",
+      "sha256": "1055d81234572fcea83120dd657c9efe1d401099dc76fe7494065cfe56cd6c64",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "EP001",
+      "file": "EP001-corsPolicyAttachment.js",
+      "sha256": "6e8121be48faf4ff50e6c3ae75c4e7f52b0f2b9f41a82e917c3312679890b0b3",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "EP002",
+      "file": "EP002-misplacedElements.js",
+      "sha256": "f56378c74230709fbe777caaec79d037fd5036e98b5f43446275fb146813d1cb",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "FE001",
+      "file": "FE001-authentication.js",
+      "sha256": "c33ec52ccaf37201c1200167febe1e025e411f3ab78152f4cb1e84f8e9c83238",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "FL001",
+      "file": "FL001-unconditionalFlows.js",
+      "sha256": "e81ae81bfe64a224feded3b7ba9c6e8e91ca73629a3568a8c7ec9f0f928ff888",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "FR001",
+      "file": "FR001-checkFaultRuleCondition.js",
+      "sha256": "844b23765d3f01616e8aacc09fc65a5c3ebf42eb84d2d277c3412a2a2199d378",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "FR002",
+      "file": "FR002-checkDefaultFaultRule.js",
+      "sha256": "b43d6026de506b1ba32d964df7f646edb982c4ab038e459118d05470765a0e2e",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "FR003",
+      "file": "FR003-singleFaultRule.js",
+      "sha256": "133edb5295a286f5c3180a66d3cb8d0a8ea503b12eff826c1b047d76f4c5d7e5",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PD001",
+      "file": "PD001-missingTargets.js",
+      "sha256": "d7674e40acff957215e5201bb6cde2f04abf90357c86e2c1470ac10ab6d649cd",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PD002",
+      "file": "PD002-emptyRouteRules.js",
+      "sha256": "27bc02fd1759ae4eef149157ffa3582bbfa9faf9dd4f8293c0677b26c2968e7f",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PD003",
+      "file": "PD003-emptyRouteRuleLast.js",
+      "sha256": "73a0468cc329ebfd50adb67f8962017e011982820daed814074114d83f8dabe1",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PD004",
+      "file": "PD004-proxyNameAttr.js",
+      "sha256": "a95e00231e8a809bb1e57b63c5435ece716ad9b51ab4a8a01b5de05d7a2ceada",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PD005",
+      "file": "PD005-unnecessaryVirtualHost.js",
+      "sha256": "0f719b25bce96401b45ae56e057ee246a8dd3e036040a3a3f94b1e8be6d148d4",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PD006",
+      "file": "PD006-proxy-endpoint-hygiene.js",
+      "sha256": "0e597e23347422b589d8584532f7f0db66232d77291c3c6041220fb6be2cffca",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO006",
+      "file": "PO006-checkPolicyNameAttribute.js",
+      "sha256": "feccd5acf1f060602e2b4a8b5856b5e38391314640c8428f022a682454d949ff",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO007",
+      "file": "PO007-policyNameConventions.js",
+      "sha256": "18899f1f4559c6b1db9ae52a89e71b9222ec3f3e48468ab5efe1adf915682de1",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO008",
+      "file": "PO008-checkPolicyDisplayName.js",
+      "sha256": "eabd5b087683e4e7d6c2acaf27494cc5df41ea64ae01b4e61c60feb2fa40d055",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO012",
+      "file": "PO012-assignMessageAssignTo.js",
+      "sha256": "8719cc7fad91c2d9a2ce281bc39d3dadcadcdd231f5051beab06959d9114a9f5",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO013",
+      "file": "PO013-jsHint.js",
+      "sha256": "1e045b0f9b91374390599c2be52228c7569f886e2f22f2e7185ce2f5f6083890",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO018",
+      "file": "PO018-checkRegexLookAround.js",
+      "sha256": "dd5f79597223f42ab4654f77434803429fd2770ff4abf400b44e52f005f4555a",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO019",
+      "file": "PO019-serviceCalloutRequestName.js",
+      "sha256": "9e53adb68a6d50b8355a1cf4552b1b91185cd9f09c9a821a90b6ba3697e13623",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO020",
+      "file": "PO020-serviceCalloutResponseName.js",
+      "sha256": "466943f69fde6b0d94def51ece78a5ebc26e39f3e6546a92ec02e8aaae4c6698",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO022",
+      "file": "PO022-distributedQuotaCheck.js",
+      "sha256": "149ef1a462ada4253ff6a8d5a51e98d718a2a2a961c48ce1323ff2b0e87329e2",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO023",
+      "file": "PO023-quotaPolicyReuseCheck.js",
+      "sha256": "7f66937a59aadefce90e3a15102fb2416cae0368853f2fe3409bf02ed80c3d85",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO024",
+      "file": "PO024-responseCacheErrorResponseCheck.js",
+      "sha256": "b386ae8ed0f4d6b5686461921f0aef516c947afe1d6a10940d30a986165680f8",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO025",
+      "file": "PO025-eslint.js",
+      "sha256": "977baada62862ac57fef027c0f8eea3470449f63d876191cb6893e228d31624a",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO026",
+      "file": "PO026-assignVariableUsage.js",
+      "sha256": "9783bcbaa529e58ce67ed9730d20d296076ad32003d76577718aaab43617d8e9",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO027",
+      "file": "PO027-hmacPolicy.js",
+      "sha256": "ac507960688a1abafdf87f1626665b155666a5b7ca1e45230c84d1942dc13519",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO028",
+      "file": "PO028-policyAvailabilityInProfile.js",
+      "sha256": "403205e416ee5ef9869f146454b97096ae59a67a6b078786db2a593be4a6d680",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO029",
+      "file": "PO029-unknownPolicyTypes.js",
+      "sha256": "faa8384f1d22376462a494682644fbe1712963471b18a1a654ed571ed8acca34",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO030",
+      "file": "PO030-ExpirySettings.js",
+      "sha256": "6f56b73b2e2bcdecee07e3d2ff21364880634db238ba3afe1db49314ad3cdc9d",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO031",
+      "file": "PO031-assignMessage-ContentType.js",
+      "sha256": "098249bcab0b23e8f7fa4c4c902dbfa78d6aa02c299b856af1c7e49352a3c73b",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO032",
+      "file": "PO032-CORS-hygiene.js",
+      "sha256": "9f20cff76f3fe176e480422f6d9209e566f3dce414fd3e302bb7962bd60eefbd",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO033",
+      "file": "PO033-extractVariables-hygiene.js",
+      "sha256": "d6b3c0205cf7e5f528d4da9d7b1144dff5b6f643851f5a6b0326641dcc9a399e",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO034",
+      "file": "PO034-am-hygiene.js",
+      "sha256": "9fa450509664c6ddb34084eae4daa1e5167d70139af05839eb23e21ef818e1e2",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO035",
+      "file": "PO035-quota-hygiene.js",
+      "sha256": "842b3067680a91a6c159b7e7661115cdbfa87920e9078794d2254407e2c00c33",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO036",
+      "file": "PO036-serviceCallout-response-element.js",
+      "sha256": "940b28b734d1ae65e37b54f547559af7deaf45eeb361f92e93c6fc4bd4d18af0",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO037",
+      "file": "PO037-DataCapture-hygiene-checks.js",
+      "sha256": "98e9ee6fac86cd738b06e4b17a0d2b4a4fb00fc4d84ae2c0dc66311621d6962e",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO038",
+      "file": "PO038-kvm-mapname.js",
+      "sha256": "94c6821b34a8ff9c126019d49b12a634c675e161237b4011653efaafefa400cb",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO039",
+      "file": "PO039-messageLogging-responseType.js",
+      "sha256": "850cfc5f4bcad6d8d2d722f1c31b83d1816d82e917732f93c4dfa2339e38bd63",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO040",
+      "file": "PO040-extractVariables-jsonpath.js",
+      "sha256": "12b32edbc101e7f71e0c95a7de24e1e21677f1ad52737d689b46c164e07065b6",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO041",
+      "file": "PO041-kvm-exclusive-cache.js",
+      "sha256": "b290ef177d231cc33e595dd34c03217982cd9ecdb155e189d89680ae56678721",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "PO042",
+      "file": "PO042-spikearrest-hygiene.js",
+      "sha256": "8ef6847e2af8ba8dabe64c35894293239b57bbd7d243af788ab04edcebe69ad2",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO043",
+      "file": "PO043-serviceCallout-sslinfo.js",
+      "sha256": "b841737ae58e61692e41a5fcc2f9adf96279a212f197c06e842d793cc08bec89",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO044",
+      "file": "PO044-jwt-hygiene.js",
+      "sha256": "850c4a8f38c31f0d366e179130cc1e7fd95d709b58a94063f88d94a98a11df87",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "PO045",
+      "file": "PO045-SetOAuthV2Info-hygiene.js",
+      "sha256": "6adc1cd677b1f3d4c3bb0e10dfcd5ed4fdbdbb145fe477853c5436ae9b9f6dc1",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "ST001",
+      "file": "ST001-checkForEmptySteps.js",
+      "sha256": "c70c9b7a98f6272fdc8e2865e852c3e525f7d5464765283ccfc34718d1e553ba",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "ST002",
+      "file": "ST002-checkStepStructure.js",
+      "sha256": "aaaebed26d136b6c4956cb5130f5d08f2613f0eed083c5199971f299352669de",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "ST003",
+      "file": "ST003-extractJSONConditionCheck.js",
+      "sha256": "4469efafd13de4b275b7b0b4f8ebd9b83350c00b9e3c032aa008781ab62b5781",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "ST004",
+      "file": "ST004-extractXMLConditionCheck.js",
+      "sha256": "f0dd38d75bfc9e58657363af8737ddd75ac71f2a0269d61d8ec92a132dfc447e",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "ST005",
+      "file": "ST005-extractFormParamConditionCheck.js",
+      "sha256": "3762f6546e2ec26b56968184b31aa0914e45c3bde970aaf8790bd75df14d6c88",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "ST006",
+      "file": "ST006-threatProtectionJSONConditionCheck.js",
+      "sha256": "cd9d0e4e2f2a3a2e163e3f07955c2782601757a962d3aa865d3b04cc23a00fb8",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "ST007",
+      "file": "ST007-threatProtectionXMLConditionCheck.js",
+      "sha256": "8ef6db3abaae74d0d5b55b04c10867f25dbb3713235c066cc554f57085fbbc7c",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "ST008",
+      "file": "ST008-unreachable-policies-after-raisefault.js",
+      "sha256": "5122843fcceed9cb30e6f62836a7d39f63ce208281404cdd4d7ce9dba4f2d2e4",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD001",
+      "file": "TD001-mgmtServerTargetEndpointCheck.js",
+      "sha256": "103a02a9364d5b9f2698cc6537d72b13bde259199fe36c7c3f56df5ef36f2872",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "TD002",
+      "file": "TD002-useTargetServers.js",
+      "sha256": "84c4b825312877108f4973cb64937fc9255e3ac50f5b0d75dfe05be7ad6e5989",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD003",
+      "file": "TD003-targetNameAttr.js",
+      "sha256": "18306834c39395cc8c9546bb5924e326ba314110c737e7ded4a32cac444d261c",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "TD004",
+      "file": "TD004-targetSslInfo-enabled-and-enforce.js",
+      "sha256": "06c1e3c237db3766e7f6540447d45b1e6b3c3b696d76d84e8e4ec063c80c79ee",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD005",
+      "file": "TD005-targetSslReferences.js",
+      "sha256": "6734fa4189b0ebb4687205e0f9d96e5ba9f0a2ff02427f8b18cd4f8387d5491c",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD006",
+      "file": "TD006-target-LoadBalancer-SslInfo.js",
+      "sha256": "d2dd13dd2ac20acaa76de4e67446e59e53a5987d7554cc43705ae3ac61442e1e",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD007",
+      "file": "TD007-targetSslInfo-Truststore.js",
+      "sha256": "3f0e9b06ccd6eb84d6483955e8bd5e8875c680e235d761366818a491d6a16555",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD008",
+      "file": "TD008-target-LB-multiple-fallbacks.js",
+      "sha256": "df3989135884ff90a5201dfb08fe2f1b85e7b6808c97d8b09bd1a75548346b27",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD009",
+      "file": "TD009-target-LB-multiple-LB.js",
+      "sha256": "2b552997d06d17551ec1b61ecb2a3672ea263acbd3be54c43a6bc9934f8e15f9",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD010",
+      "file": "TD010-target-LB-duplicate-servers.js",
+      "sha256": "0264c37e48595bd00cb5de4e5353e3f334543673e9b92d2be8bf1fc7df170b07",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD011",
+      "file": "TD011-targetSslInfo-no-ignoreValidationErrors.js",
+      "sha256": "c3c55b33a17b746af9409ee56683f73ebbdd945ab3c0d3083e46eebdac23f120",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD012",
+      "file": "TD012-targetSslInfo-exactly-one-SSLInfo.js",
+      "sha256": "9433ee03f7f15676e9646f425adaf0464e44ff31bd09f2ef9ec9ac949b8484af",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD013",
+      "file": "TD013-targetSslInfo-clientAuthEnabled.js",
+      "sha256": "145359b2a0afd33bb959a52e7bbde6231c89a724b98a68ca8fb64d5f409c85c8",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD014",
+      "file": "TD014-target-exactly-one-URL-or-LoadBalancer.js",
+      "sha256": "7d252d52dba302c7f619e7bc42779dbdc3dc75aece1364b8325d19b7bccd310f",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD015",
+      "file": "TD015-target-LB-no-MaxFailures.js",
+      "sha256": "37e6ebaa1c071d428f2440e7e73e179859496b5a24414956e6074de0f43bc166",
+      "severity": "warning",
+      "enabled": true
+    },
+    {
+      "id": "TD016",
+      "file": "TD016-healthmon-but-no-loadbalancer.js",
+      "sha256": "85f8d8b782cfabd9f1c8fe7a8d8f3239391b2a12c679270b631c0c75db32197d",
+      "severity": "error",
+      "enabled": true
+    },
+    {
+      "id": "TD017",
+      "file": "TD017-target-non-empty-URL.js",
+      "sha256": "65814cfb36727b5f4819f36ed3784853631218be52da5f77d617bdb68babf9ff",
+      "severity": "error",
+      "enabled": true
+    }
+  ]
+}

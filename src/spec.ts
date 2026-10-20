@@ -10,6 +10,7 @@ export type ValueSpec = {
   allowTemplate?: boolean;
   caseInsensitive?: boolean;
   ignoreHyphens?: boolean;
+  warningValues?: Record<string, string>;
 };
 
 export function normalizeEnumValue(value: string, rule: ValueSpec): string {
@@ -36,6 +37,7 @@ export type AttributeGroup = {
 export type ElementSpec = {
   path: string;
   complete: boolean;
+  warning?: string;
   allowAnyChildren?: boolean;
   allowAnyAttributes?: boolean;
   source: string;

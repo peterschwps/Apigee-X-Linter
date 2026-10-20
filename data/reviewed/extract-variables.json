@@ -2,19 +2,53 @@
   "kind": "policy",
   "root": "ExtractVariables",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
     {
       "path": "/ExtractVariables",
       "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#elementreference",
       "attributes": {
-        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes" },
-        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes" },
-        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes" },
-        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes" }
+        "name": {
+          "kind": "free",
+          "required": true,
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes"
+        },
+        "continueOnError": {
+          "kind": "enum",
+          "values": [
+            "true",
+            "false"
+          ],
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes"
+        },
+        "enabled": {
+          "kind": "enum",
+          "values": [
+            "true",
+            "false"
+          ],
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes"
+        },
+        "async": {
+          "kind": "unknown",
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#extractvariablesattributes"
+        }
       },
-      "children": ["DisplayName", "Source", "VariablePrefix", "IgnoreUnresolvedVariables", "URIPath", "QueryParam", "Header", "FormParam", "Variable", "JSONPayload", "XMLPayload"]
+      "children": [
+        "DisplayName",
+        "Source",
+        "VariablePrefix",
+        "IgnoreUnresolvedVariables",
+        "URIPath",
+        "QueryParam",
+        "Header",
+        "FormParam",
+        "Variable",
+        "JSONPayload",
+        "XMLPayload",
+        "Properties"
+      ]
     },
     { "path": "/ExtractVariables/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#displaynameelement", "text": { "kind": "free" } },
     {
@@ -132,6 +166,7 @@
       "children": ["XPath"],
       "requiredChildren": ["XPath"]
     },
-    { "path": "/ExtractVariables/XMLPayload/Variable/XPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#xmlpayloadelement-xmlpayloadvariablexpathelement", "text": { "kind": "free" } }
+    { "path": "/ExtractVariables/XMLPayload/Variable/XPath", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/extract-variables-policy#xmlpayloadelement-xmlpayloadvariablexpathelement", "text": { "kind": "free" } },
+    { "path": "/ExtractVariables/Properties", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors" }
   ]
 }

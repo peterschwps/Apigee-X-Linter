@@ -57,14 +57,16 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json --noEmit && esbuild src/extension.ts --bundle --platform=node --format=cjs --target=node18 --external:vscode --outfile=dist/extension.js",
-    "check": "tsc -p tsconfig.json --noEmit && npm run data:validate",
+    "check": "tsc -p tsconfig.json --noEmit && npm run data:validate && npm run comparison:validate",
+    "comparison:validate": "tsx scripts/compare-apigeelint.ts --validate",
+    "compare:apigeelint": "tsx scripts/compare-apigeelint.ts",
     "data:validate": "tsx scripts/docs.ts validate",
     "docs:discover": "tsx scripts/docs.ts discover",
     "docs:extract": "tsx scripts/docs.ts extract",
     "docs:propose": "tsx scripts/docs.ts propose",
     "docs:refresh": "tsx scripts/docs.ts refresh",
     "docs:status": "tsx scripts/docs.ts status",
-    "release:check": "tsx scripts/docs.ts release-check",
+    "release:check": "tsx scripts/docs.ts release-check && npm run comparison:validate",
     "vscode:prepublish": "npm run build"
   },
   "dependencies": {

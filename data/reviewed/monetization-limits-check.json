@@ -2,7 +2,7 @@
   "kind": "policy",
   "root": "MonetizationLimitsCheck",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
     { "path": "/MonetizationLimitsCheck", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#monetizationlimitscheck", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "FaultResponse", "IgnoreUnresolvedVariables"] },
     { "path": "/MonetizationLimitsCheck/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#displayname", "text": { "kind": "free" } },
@@ -21,10 +21,11 @@
     { "path": "/MonetizationLimitsCheck/FaultResponse/Remove", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#remove", "children": ["Headers"] },
     { "path": "/MonetizationLimitsCheck/FaultResponse/Remove/Headers", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#remove", "children": ["Header"] },
     { "path": "/MonetizationLimitsCheck/FaultResponse/Remove/Headers/Header", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#remove", "attributes": { "name": { "kind": "free", "required": true } } },
-    { "path": "/MonetizationLimitsCheck/FaultResponse/Set", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set", "children": ["Headers", "Payload", "StatusCode"] },
+    { "path": "/MonetizationLimitsCheck/FaultResponse/Set", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set", "children": ["Headers", "Payload", "StatusCode", "ReasonPhrase"] },
     { "path": "/MonetizationLimitsCheck/FaultResponse/Set/Headers", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#add", "children": ["Header"] },
     { "path": "/MonetizationLimitsCheck/FaultResponse/Set/Headers/Header", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#add", "attributes": { "name": { "kind": "free", "required": true } }, "text": { "kind": "free" } },
     { "path": "/MonetizationLimitsCheck/FaultResponse/Set/StatusCode", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set", "text": { "kind": "free" } },
-    { "path": "/MonetizationLimitsCheck/FaultResponse/Set/Payload", "complete": true, "allowAnyChildren": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set", "attributes": { "contentType": { "kind": "free" }, "variablePrefix": { "kind": "free" }, "variableSuffix": { "kind": "free" } }, "text": { "kind": "free" } }
+    { "path": "/MonetizationLimitsCheck/FaultResponse/Set/Payload", "complete": true, "allowAnyChildren": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/monetization-limits-check-policy#set", "attributes": { "contentType": { "kind": "free" }, "variablePrefix": { "kind": "free" }, "variableSuffix": { "kind": "free" } }, "text": { "kind": "free" } },
+    { "path": "/MonetizationLimitsCheck/FaultResponse/Set/ReasonPhrase", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies", "text": { "kind": "free" } }
   ]
 }

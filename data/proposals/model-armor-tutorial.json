@@ -1,0 +1,182 @@
+{
+  "source": {
+    "id": "model-armor-tutorial",
+    "kind": "core",
+    "title": "Get started with Apigee Model Armor policies",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies",
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Supplemental scope: the RaiseFault example confirms Set/ReasonPhrase text. RaiseFault delegates its settings to AssignMessage, and MonetizationLimitsCheck delegates FaultResponse to RaiseFault. Model Armor administration is outside XML linting."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Add Google authentication to the API proxy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies#add-auth",
+      "elements": [],
+      "exampleElements": [
+        "Authentication",
+        "GoogleAccessToken",
+        "Scope",
+        "Scopes"
+      ],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Default model detection and prompt extraction",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies#default-model-detection-and-prompt-extraction",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "ModelArmor",
+        "SanitizeUserPrompt",
+        "TemplateName",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Disable a Model Armor policy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies#disable-policy",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "LLMResponseSource",
+        "ModelArmor",
+        "SanitizeModelResponse",
+        "TemplateName",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Use regional templates across multiple Apigee instances",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies#regional-templates-usage",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "IgnoreUnresolvedVariables",
+        "LLMResponseSource",
+        "ModelArmor",
+        "SanitizeModelResponse",
+        "TemplateName",
+        "UserPromptSource"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Model Armor response processing",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies#extract-variable-policy",
+      "elements": [],
+      "exampleElements": [
+        "ExtractVariables",
+        "FaultRules",
+        "IgnoreUnresolvedVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Add a Model Armor response error code and error message with the RaiseFault policy",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies#raise-fault-policy",
+      "elements": [],
+      "exampleElements": [
+        "Error",
+        "ErrorResponse",
+        "FaultResponse",
+        "IgnoreUnresolvedVariables",
+        "Message",
+        "Payload",
+        "RaiseFault",
+        "ReasonPhrase",
+        "Set",
+        "Status",
+        "StatusCode"
+      ],
+      "exampleAttributes": [
+        "contentType",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of these services, reach out to Google Cloud support."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Increase quotas for dependent services",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies#increase-quotas",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of these services, reach out to Google Cloud support."
+      ],
+      "formatHints": []
+    }
+  ]
+}

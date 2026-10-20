@@ -2,7 +2,7 @@
   "kind": "policy",
   "root": "SpikeArrest",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
     { "path": "/SpikeArrest", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy#messagevalidation", "attributes": { "name": { "kind": "free", "required": true }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "Properties", "Identifier", "MessageWeight", "Rate", "UseEffectiveCount"], "requiredChildren": ["Rate"] },
     { "path": "/SpikeArrest/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy#displayname", "text": { "kind": "free" } },
@@ -10,6 +10,6 @@
     { "path": "/SpikeArrest/Identifier", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy#identifier", "attributes": { "ref": { "kind": "free" } } },
     { "path": "/SpikeArrest/MessageWeight", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy#messageweight", "attributes": { "ref": { "kind": "free", "required": true } } },
     { "path": "/SpikeArrest/Rate", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy#rate", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "format", "format": "Expected a positive integer followed by ps or pm.", "pattern": "^[1-9][0-9]*p[sm]$" } },
-    { "path": "/SpikeArrest/UseEffectiveCount", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy#useeffectivecount", "text": { "kind": "enum", "values": ["true"] } }
+    { "path": "/SpikeArrest/UseEffectiveCount", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/spike-arrest-policy#useeffectivecount", "text": { "kind": "enum", "values": ["true", "false"], "warningValues": { "false": "Google documents rate smoothing as unsupported for Apigee X. Set UseEffectiveCount to true; the documented false default and examples are contradictory." } } }
   ]
 }

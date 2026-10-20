@@ -41,6 +41,12 @@ const coreSources: Source[] = [
   { id: 'endpoint-properties-reference', kind: 'core', title: 'Endpoint properties reference', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/endpoint-properties-reference' },
   { id: 'load-balancing-across-backend-servers', kind: 'core', title: 'Load balancing across backend servers', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/deploy/load-balancing-across-backend-servers' },
   { id: 'semantic-caching-psc-tutorial', kind: 'core', title: 'Semantic caching with a private endpoint', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-semantic-caching-policies-psc' },
+  { id: 'model-armor-tutorial', kind: 'core', title: 'Get started with Apigee Model Armor policies', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/tutorials/using-model-armor-policies' },
+  { id: 'responsecache-deployment-errors', kind: 'core', title: 'ResponseCache deployment errors', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors' },
+  { id: 'oauth-access-tokens-guide', kind: 'core', title: 'Verifying access tokens', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/using-access-tokens' },
+  { id: 'flow-basics-guide', kind: 'core', title: 'Controlling API proxies with flows', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/what-are-flows' },
+  { id: 'extractvariables-deployment-errors', kind: 'core', title: 'ExtractVariables deployment errors', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors' },
+  { id: 'quota-deployment-errors', kind: 'core', title: 'Quota deployment errors', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors' },
 ];
 const supplementalPolicies: Source[] = [
   { id: 'generate-saml-assertion-policy', kind: 'policy', title: 'generate saml assertion policy', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy' },
@@ -332,6 +338,10 @@ function validateValue(value: ValueSpec, label: string): void {
   }
   if (value.caseInsensitive !== undefined && typeof value.caseInsensitive !== 'boolean') throw new Error(`${label}: caseInsensitive must be boolean.`);
   if (value.ignoreHyphens !== undefined && typeof value.ignoreHyphens !== 'boolean') throw new Error(`${label}: ignoreHyphens must be boolean.`);
+  if (value.warningValues && (value.kind !== 'enum' || !Object.keys(value.warningValues).length
+    || Object.entries(value.warningValues).some(([key, message]) => !value.values?.includes(key) || typeof message !== 'string' || !message.trim()))) {
+    throw new Error(`${label}: warnings must describe documented enum values.`);
+  }
   if ((value.caseInsensitive || value.ignoreHyphens) && value.kind !== 'enum') throw new Error(`${label}: enum normalization requires kind enum.`);
   if (value.kind === 'enum' && value.values && new Set(value.values.map(item => normalizeEnumValue(item, value))).size !== value.values.length) {
     throw new Error(`${label}: enum values must be unique after normalization.`);
@@ -387,6 +397,9 @@ async function validate(): Promise<Map<string, boolean>> {
       if (!(element.path === `/${document.root}` || element.path.startsWith(`/${document.root}/`)) || paths.has(element.path)) throw new Error(`${file}: invalid or duplicate path ${element.path}.`);
       validateLink(element.source, `${file}: ${element.path}`);
       if (typeof element.complete !== 'boolean') throw new Error(`${file}: ${element.path} has no review completeness flag.`);
+      if (element.warning !== undefined && (typeof element.warning !== 'string' || !element.warning.trim())) {
+        throw new Error(`${file}: ${element.path} has an invalid warning.`);
+      }
       if (element.allowAnyChildren !== undefined && (element.allowAnyChildren !== true || !element.complete)) {
         throw new Error(`${file}: ${element.path} has invalid arbitrary-child coverage.`);
       }

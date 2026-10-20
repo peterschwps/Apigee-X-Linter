@@ -1,0 +1,843 @@
+{
+  "source": {
+    "id": "extractvariables-deployment-errors",
+    "kind": "core",
+    "title": "ExtractVariables deployment errors",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors",
+    "reviewStatus": "gap",
+    "reviewNotes": "Supplemental scope: corrected ExtractVariables examples include Properties without defining its structure. Accept the incomplete stub. Its mandatory-target list omits Variable, which is supported by the current policy reference, so it does not justify a narrower required-target group."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Error message",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#error_message",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [
+        "URIPath",
+        "QueryParam",
+        "Header",
+        "FormParam",
+        "XMLPayload",
+        "JSONPayload"
+      ],
+      "valueHints": [
+        "one of URIPath, QueryParam, Header, FormParam, XMLPayload, JSONPayload is mandatory."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Cause",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#cause",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of these elements included within the policy: URIPath, QueryParam, Header, FormParam, XMLPayload, or JSONPayload."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Properties"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following elements: URIPath, QueryParam, Header, FormParam, XMLPayload, or JSONPayload, then that's the cause of the error.",
+        "one of the mandatory elements are present in the Extract Variables policy, the deployment of the API proxy fails."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespaces",
+        "Properties",
+        "Source",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of these mandatory elements: URIPath, QueryParam, Header, FormParam, XMLPayload, JSONPayload."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_2",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespace",
+        "Namespaces",
+        "Source",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "prefix",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_2",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespace",
+        "Namespaces",
+        "Source",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "prefix",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Cause",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#cause_3",
+      "elements": [],
+      "exampleElements": [
+        "Namespace"
+      ],
+      "exampleAttributes": [
+        "prefix"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_3",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespace",
+        "Namespaces",
+        "Source",
+        "Variable",
+        "XMLPayload"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "prefix",
+        "stopPayloadProcessing"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_3",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespace",
+        "Namespaces",
+        "Source",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "prefix",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_4",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespaces",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_4",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespaces",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_5",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespaces",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_5",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespaces",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_6",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "JSONPayload",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_6",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_7",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_7",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "JSONPath",
+        "JSONPayload",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_8",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Pattern",
+        "Properties",
+        "Variable"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>{isAccountActive}</Pattern> </Variable> </ExtractVariables> Notice that the name attribute is missing in the Variable element, so the deployment of the API Proxy fails.",
+        "Pattern>{isAccountActive}</Pattern> </Variable> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_8",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Pattern",
+        "Properties",
+        "Variable"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern>{isAccountActive}</Pattern> </Variable> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Error message",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#error_message_9",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern [pattern] should have at least one variable in ExtractVariables stepDefinition [policy_name]",
+        "Pattern /a/b/ should have at least one variable in ExtractVariables stepDefinition ExtractVariables-1."
+      ]
+    },
+    {
+      "heading": "Cause",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#cause_9",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> element, then the deployment of the API proxy fails.",
+        "Pattern> element requires the name of the variable in which extracted data will be stored."
+      ]
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_9",
+      "elements": [],
+      "exampleElements": [
+        "ExtractVariables",
+        "Pattern",
+        "Source",
+        "URIPath",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern for which the Variable is missing.",
+        "Pattern /a/b/ should have at least one variable in ExtractVariables stepDefinition ExtractVariables-1.",
+        "pattern set in the <Pattern> element matches the pattern identified in the error message (step #1 above).",
+        "pattern /a/b, which matches what's in the error message: For example, here's an Extract Variables policy that has three <Pattern> elements: <?xml version=\"1.",
+        "Pattern ignoreCase=\"true\">/a/{pathSeg}</Pattern> <Pattern ignoreCase=\"true\">/a/b/</Pattern> <Pattern ignoreCase=\"true\">/a/b/c/{pathSeg}</Pattern> </URIPath> <VariablePrefix>urirequest</VariablePrefix> </ExtractVariables> Check if the <Pattern> element identified in step #2 does not have a variable.",
+        "pattern does not have a variable, then that is the cause of the error.",
+        "Pattern> element having the pattern /a/b does not include a variable; therefore, the deployment of the API Proxy fails <Pattern ignoreCase=\"true\">/a/b/</Pattern>",
+        "pattern /a/b, which matches what's in the error message:",
+        "Pattern> elements:",
+        "Pattern ignoreCase=\"true\">/a/{pathSeg}</Pattern> <Pattern ignoreCase=\"true\">/a/b/</Pattern> <Pattern ignoreCase=\"true\">/a/b/c/{pathSeg}</Pattern> </URIPath> <VariablePrefix>urirequest</VariablePrefix> </ExtractVariables>",
+        "Pattern> element identified in step #2 does not have a variable.",
+        "Pattern> element having the pattern /a/b does not include a variable; therefore, the deployment of the API Proxy fails",
+        "Pattern ignoreCase=\"true\">/a/b/</Pattern>"
+      ]
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_9",
+      "elements": [],
+      "exampleElements": [
+        "ExtractVariables",
+        "Pattern",
+        "Source",
+        "URIPath",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> elements include a variable (a name enclosed in curly braces).",
+        "Pattern ignoreCase=\"true\">/a/{pathSeg}</Pattern> <Pattern ignoreCase=\"true\">/a/b/{pathSeg}</Pattern> <Pattern ignoreCase=\"true\">/a/b/c/{pathSeg}</Pattern> </URIPath> <VariablePrefix>urirequest</VariablePrefix> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_10",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespaces",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_10",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespaces",
+        "Properties",
+        "Source",
+        "Variable",
+        "VariablePrefix",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Error message",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#error_message_11",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern [pattern] is invalid in ExtractVariables stepDefinition [policy_name]",
+        "Pattern {*} is invalid in ExtractVariables stepDefinition ExtractVariables-2."
+      ]
+    },
+    {
+      "heading": "Cause",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#cause_11",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> element definition is invalid in any of the elements like URIPath, QueryParam, Header, FormParam, XMLPayload or JSONPayload within the Extract Variables Policy, then the deployment of the API proxy fails."
+      ]
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_11",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Pattern",
+        "QueryParam",
+        "Source",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern {*} is invalid in ExtractVariables stepDefinition ExtractVariables-2.",
+        "Pattern> element.",
+        "Pattern> element within <QueryParam> element: <?xml version=\"1.",
+        "Pattern ignoreCase=\"true\">{*}</Pattern> </QueryParam> <VariablePrefix>queryinfo</VariablePrefix> </ExtractVariables> Examine the definition of each of the <Pattern> elements.",
+        "Pattern> element with an invalid definition, then that is the cause of the error.",
+        "Pattern> definition within the <QueryParam> element is invalid; therefore, the deployment of the API Proxy fails.",
+        "Pattern ignoreCase=\"true\">{*}</Pattern>",
+        "Pattern> element within <QueryParam> element:",
+        "Pattern ignoreCase=\"true\">{*}</Pattern> </QueryParam> <VariablePrefix>queryinfo</VariablePrefix> </ExtractVariables>",
+        "Pattern> elements."
+      ]
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_11",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Pattern",
+        "QueryParam",
+        "Source",
+        "VariablePrefix"
+      ],
+      "exampleAttributes": [
+        "ignoreCase",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "Pattern> element definition within the elements URIPath, QueryParam, Header, FormParam, XMLPayload or JSONPayload in the Extract Variables policy is valid.",
+        "Pattern ignoreCase=\"true\">{code}</Pattern> </QueryParam> <VariablePrefix>queryinfo</VariablePrefix> </ExtractVariables>"
+      ]
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#diagnosis_12",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespace",
+        "Namespaces",
+        "Source",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "prefix",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors#resolution_12",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "ExtractVariables",
+        "Namespace",
+        "Namespaces",
+        "Source",
+        "Variable",
+        "XMLPayload",
+        "XPath"
+      ],
+      "exampleAttributes": [
+        "async",
+        "clearPayload",
+        "continueOnError",
+        "enabled",
+        "name",
+        "prefix",
+        "stopPayloadProcessing",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

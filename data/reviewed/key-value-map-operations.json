@@ -2,7 +2,7 @@
   "kind": "policy",
   "root": "KeyValueMapOperations",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
     {
       "path": "/KeyValueMapOperations", "complete": true,
@@ -24,7 +24,7 @@
     { "path": "/KeyValueMapOperations/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#displaynameelement", "text": { "kind": "free" } },
     { "path": "/KeyValueMapOperations/Scope", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#ScopeElement", "text": { "kind": "enum", "values": ["organization", "environment", "apiproxy", "policy"] } },
     { "path": "/KeyValueMapOperations/ExpiryTimeInSecs", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#ExpiryTimeInSecsElement", "text": { "kind": "format", "format": "Expected an integer cache refresh interval in seconds.", "pattern": "^-?[0-9]+$" } },
-    { "path": "/KeyValueMapOperations/ExclusiveCache", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#exclusivecacheelement" },
+    { "path": "/KeyValueMapOperations/ExclusiveCache", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#exclusivecacheelement", "warning": "ExclusiveCache is deprecated. Use Scope instead." },
     { "path": "/KeyValueMapOperations/MapName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#MapName", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#MapName" } }, "text": { "kind": "free" } },
     { "path": "/KeyValueMapOperations/InitialEntries", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#InitialEntriesElement", "children": ["Entry"] },
     { "path": "/KeyValueMapOperations/InitialEntries/Entry", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy#InitialEntries_EntryElement", "children": ["Key", "Value"], "requiredChildren": ["Key", "Value"] },

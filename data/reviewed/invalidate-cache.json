@@ -2,7 +2,7 @@
   "kind": "policy",
   "root": "InvalidateCache",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
     {
       "path": "/InvalidateCache", "complete": true,
@@ -19,7 +19,7 @@
     { "path": "/InvalidateCache/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#displaynameelement", "text": { "kind": "free" } },
     { "path": "/InvalidateCache/CacheKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheKeyElement", "children": ["Prefix", "KeyFragment"] },
     { "path": "/InvalidateCache/CacheKey/Prefix", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#PrefixElement", "text": { "kind": "free" } },
-    { "path": "/InvalidateCache/CacheKey/KeyFragment", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#KeyFragmentElement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachekeykeyfragmentelement-attributes" } }, "text": { "kind": "free" } },
+    { "path": "/InvalidateCache/CacheKey/KeyFragment", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#cachekeykeyfragmentelement-attributes" }, "type": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors" } }, "text": { "kind": "free" } },
     { "path": "/InvalidateCache/CacheResource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheResourceElement", "text": { "kind": "free" } },
     { "path": "/InvalidateCache/Scope", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#ScopeElement", "text": { "kind": "enum", "values": ["Global", "Application", "Proxy", "Target", "Exclusive"] } },
     { "path": "/InvalidateCache/CacheContext", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/invalidate-cache-policy#CacheContextElement", "children": ["APIProxyName", "ProxyName", "TargetName"] },

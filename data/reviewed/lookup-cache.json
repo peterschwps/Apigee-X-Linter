@@ -2,7 +2,7 @@
   "kind": "policy",
   "root": "LookupCache",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
     {
       "path": "/LookupCache", "complete": true,
@@ -20,7 +20,7 @@
     { "path": "/LookupCache/AssignTo", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#LookupCache_AssignTo", "text": { "kind": "free" } },
     { "path": "/LookupCache/CacheKey", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#CacheKeyElement", "children": ["Prefix", "KeyFragment"] },
     { "path": "/LookupCache/CacheKey/Prefix", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#PrefixElement", "text": { "kind": "free" } },
-    { "path": "/LookupCache/CacheKey/KeyFragment", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#KeyFragmentElement", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#cachekeykeyfragmentelement-attributes" } }, "text": { "kind": "free" } },
+    { "path": "/LookupCache/CacheKey/KeyFragment", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors", "attributes": { "ref": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#cachekeykeyfragmentelement-attributes" }, "type": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors" } }, "text": { "kind": "free" } },
     { "path": "/LookupCache/CacheResource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#cacheresourceelement", "text": { "kind": "free" } },
     { "path": "/LookupCache/CacheLookupTimeoutInSeconds", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#CacheLookupTimeoutInSeconds", "text": { "kind": "format", "format": "Expected a nonnegative integer timeout in seconds.", "pattern": "^[0-9]+$" } },
     { "path": "/LookupCache/Scope", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/lookup-cache-policy#ScopeElement", "text": { "kind": "enum", "values": ["Global", "Application", "Proxy", "Target", "Exclusive"] } }

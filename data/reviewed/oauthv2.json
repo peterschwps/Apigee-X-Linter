@@ -2,12 +2,101 @@
   "kind": "policy",
   "root": "OAuthV2",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
-    { "path": "/OAuthV2", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#elementreference", "attributes": { "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#oauthv2attributes" }, "continueOnError": { "kind": "enum", "values": ["true", "false"] }, "enabled": { "kind": "enum", "values": ["true", "false"] }, "async": { "kind": "unknown" } }, "children": ["DisplayName", "AccessToken", "AccessTokenPrefix", "Algorithm", "AppEndUser", "Attributes", "CacheExpiryInSeconds", "ClientId", "Code", "ExpiresIn", "ExternalAccessToken", "ExternalAuthorization", "ExternalAuthorizationCode", "ExternalRefreshToken", "GenerateResponse", "GenerateErrorResponse", "GrantType", "Operation", "PassWord", "PrivateKey", "PublicKey", "RedirectUri", "RefreshToken", "RefreshTokenExpiresIn", "ResponseType", "ReuseRefreshToken", "RFCCompliantRequestResponse", "SecretKey", "Scope", "State", "StoreToken", "SupportedGrantTypes", "Tokens", "UserName"], "conditionalRequiredChildren": [
-      { "selector": ["Operation"], "values": ["GenerateJWTAccessToken", "GenerateJWTAccessTokenImplicitGrant", "VerifyJWTAccessToken", "RefreshJWTAccessToken"], "required": "Algorithm", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#jwt-token-specific-deployment-errors" },
-      { "selector": ["Algorithm"], "values": ["HS256", "HS384", "HS512"], "required": "SecretKey", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#secretkeyvalue" }
-    ] },
+    {
+      "path": "/OAuthV2",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#elementreference",
+      "attributes": {
+        "name": {
+          "kind": "free",
+          "required": true,
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#oauthv2attributes"
+        },
+        "continueOnError": {
+          "kind": "enum",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        "enabled": {
+          "kind": "enum",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        "async": {
+          "kind": "unknown"
+        }
+      },
+      "children": [
+        "DisplayName",
+        "AccessToken",
+        "AccessTokenPrefix",
+        "Algorithm",
+        "AppEndUser",
+        "Attributes",
+        "CacheExpiryInSeconds",
+        "ClientId",
+        "Code",
+        "ExpiresIn",
+        "ExternalAccessToken",
+        "ExternalAuthorization",
+        "ExternalAuthorizationCode",
+        "ExternalRefreshToken",
+        "GenerateResponse",
+        "GenerateErrorResponse",
+        "GrantType",
+        "Operation",
+        "PassWord",
+        "PrivateKey",
+        "PublicKey",
+        "RedirectUri",
+        "RefreshToken",
+        "RefreshTokenExpiresIn",
+        "ResponseType",
+        "ReuseRefreshToken",
+        "RFCCompliantRequestResponse",
+        "SecretKey",
+        "Scope",
+        "State",
+        "StoreToken",
+        "SupportedGrantTypes",
+        "Tokens",
+        "UserName",
+        "Properties"
+      ],
+      "conditionalRequiredChildren": [
+        {
+          "selector": [
+            "Operation"
+          ],
+          "values": [
+            "GenerateJWTAccessToken",
+            "GenerateJWTAccessTokenImplicitGrant",
+            "VerifyJWTAccessToken",
+            "RefreshJWTAccessToken"
+          ],
+          "required": "Algorithm",
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#jwt-token-specific-deployment-errors"
+        },
+        {
+          "selector": [
+            "Algorithm"
+          ],
+          "values": [
+            "HS256",
+            "HS384",
+            "HS512"
+          ],
+          "required": "SecretKey",
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#secretkeyvalue"
+        }
+      ]
+    },
     { "path": "/OAuthV2/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#displaynameelement", "text": { "kind": "free" } },
     { "path": "/OAuthV2/AccessToken", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#accesstokenelement", "text": { "kind": "free" } },
     { "path": "/OAuthV2/AccessTokenPrefix", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#accesstokenprefixelement", "text": { "kind": "free" } },
@@ -49,6 +138,7 @@
     { "path": "/OAuthV2/SupportedGrantTypes/GrantType", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#supportedgranttypesgranttypeelement", "text": { "kind": "enum", "values": ["client_credentials", "authorization_code", "password", "implicit"] } },
     { "path": "/OAuthV2/Tokens", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#tokenstokenelement", "children": ["Token"] },
     { "path": "/OAuthV2/Tokens/Token", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#tokenstokenelement", "text": { "kind": "free" } },
-    { "path": "/OAuthV2/UserName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#usernameelement", "text": { "kind": "free" } }
+    { "path": "/OAuthV2/UserName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/oauthv2-policy#usernameelement", "text": { "kind": "free" } },
+    { "path": "/OAuthV2/Properties", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/security/oauth/using-access-tokens" }
   ]
 }

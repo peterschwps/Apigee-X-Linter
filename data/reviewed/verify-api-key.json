@@ -2,20 +2,48 @@
   "kind": "policy",
   "root": "VerifyAPIKey",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
     {
       "path": "/VerifyAPIKey",
       "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#elements",
       "attributes": {
-        "name": { "kind": "free", "required": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes" },
-        "continueOnError": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes" },
-        "enabled": { "kind": "enum", "values": ["true", "false"], "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes" },
-        "async": { "kind": "unknown", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes" }
+        "name": {
+          "kind": "free",
+          "required": true,
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes"
+        },
+        "continueOnError": {
+          "kind": "enum",
+          "values": [
+            "true",
+            "false"
+          ],
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes"
+        },
+        "enabled": {
+          "kind": "enum",
+          "values": [
+            "true",
+            "false"
+          ],
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes"
+        },
+        "async": {
+          "kind": "unknown",
+          "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/verify-api-key-policy#verifyapikeyattributes"
+        }
       },
-      "children": ["DisplayName", "APIKey", "CacheExpiryInSeconds"],
-      "requiredChildren": ["APIKey"]
+      "children": [
+        "DisplayName",
+        "APIKey",
+        "CacheExpiryInSeconds",
+        "Properties"
+      ],
+      "requiredChildren": [
+        "APIKey"
+      ]
     },
     {
       "path": "/VerifyAPIKey/DisplayName",
@@ -43,6 +71,7 @@
         "format": "Use an integer from 1 to 180 seconds.",
         "pattern": "^(?:[1-9]|[1-9][0-9]|1[0-7][0-9]|180)$"
       }
-    }
+    },
+    { "path": "/VerifyAPIKey/Properties", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/what-are-flows" }
   ]
 }

@@ -11,6 +11,8 @@ data/candidates/**
 data/proposals/**
 data/sources.json
 data/source-hashes.json
+data/comparison/**
+docs/**
 tsconfig.json
 *.vsix
 *.tsbuildinfo

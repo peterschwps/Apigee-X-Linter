@@ -2,20 +2,61 @@
   "kind": "policy",
   "root": "Quota",
   "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-20",
   "elements": [
     {
       "path": "/Quota",
       "complete": true,
       "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#quota",
       "attributes": {
-        "name": { "kind": "free", "required": true },
-        "type": { "kind": "enum", "values": ["default", "calendar", "rollingwindow", "flexi"] },
-        "continueOnError": { "kind": "enum", "values": ["true", "false"] },
-        "enabled": { "kind": "enum", "values": ["true", "false"] },
-        "async": { "kind": "unknown" }
+        "name": {
+          "kind": "free",
+          "required": true
+        },
+        "type": {
+          "kind": "enum",
+          "values": [
+            "default",
+            "calendar",
+            "rollingwindow",
+            "flexi"
+          ]
+        },
+        "continueOnError": {
+          "kind": "enum",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        "enabled": {
+          "kind": "enum",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        "async": {
+          "kind": "unknown"
+        }
       },
-      "children": ["DisplayName", "Allow", "Interval", "TimeUnit", "StartTime", "Distributed", "Synchronous", "AsynchronousConfiguration", "Identifier", "MessageWeight", "UseQuotaConfigInAPIProduct", "SharedName", "CountOnly", "EnforceOnly"]
+      "children": [
+        "DisplayName",
+        "Allow",
+        "Interval",
+        "TimeUnit",
+        "StartTime",
+        "Distributed",
+        "Synchronous",
+        "AsynchronousConfiguration",
+        "Identifier",
+        "MessageWeight",
+        "UseQuotaConfigInAPIProduct",
+        "SharedName",
+        "CountOnly",
+        "EnforceOnly",
+        "Properties"
+      ]
     },
     { "path": "/Quota/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#displaynameelement", "text": { "kind": "free" } },
     {
@@ -45,6 +86,7 @@
     { "path": "/Quota/UseQuotaConfigInAPIProduct/DefaultConfig/TimeUnit", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#defaultconfig", "attributes": { "ref": { "kind": "free" } }, "text": { "kind": "enum", "values": ["second", "minute", "hour", "day", "week", "month", "year"] } },
     { "path": "/Quota/SharedName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#sharedname", "text": { "kind": "free" } },
     { "path": "/Quota/CountOnly", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#countonly", "text": { "kind": "enum", "values": ["true", "false"] } },
-    { "path": "/Quota/EnforceOnly", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#enforceonly", "text": { "kind": "enum", "values": ["true", "false"] } }
+    { "path": "/Quota/EnforceOnly", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/quota-policy#enforceonly", "text": { "kind": "enum", "values": ["true", "false"] } },
+    { "path": "/Quota/Properties", "complete": false, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors" }
   ]
 }

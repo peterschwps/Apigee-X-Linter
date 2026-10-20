@@ -1,0 +1,513 @@
+{
+  "source": {
+    "id": "quota-deployment-errors",
+    "kind": "core",
+    "title": "Quota deployment errors",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors",
+    "reviewStatus": "gap",
+    "reviewNotes": "Supplemental scope: corrected Quota examples include Properties without defining its structure. Accept the incomplete stub. Older time-unit restrictions do not override the current policy reference."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#diagnosis",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "Properties",
+        "Quota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#resolution",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "Properties",
+        "Quota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#diagnosis_2",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "Properties",
+        "Quota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#resolution_2",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "Properties",
+        "Quota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#diagnosis_3",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "MessageWeight",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#resolution_3",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "MessageWeight",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Error message",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#error_message_4",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format yyyy-MM-dd HH:mm:ss."
+      ]
+    },
+    {
+      "heading": "Cause",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#cause_4",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format of the time specified in the <StartTime> element of the Quota policy is invalid, then the deployment of the API proxy fails.",
+        "format is yyyy-MM-dd HH:mm:ss, which is the ISO 8601 date and time format."
+      ]
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#diagnosis_4",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format yyyy-MM-dd HH:mm:ss.",
+        "format, the deployment of the API Proxy fails with the error: Invalid Starttime:7-16-2017 12:00:00; Start Time should be of the format yyyy-MM-dd HH:mm:ss.",
+        "format, the deployment of the API Proxy fails with the error:"
+      ]
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#resolution_4",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "format of the start time specified in the <StartTime> element of the Quota policy is valid according to the required format yyyy-MM-dd HH:mm:ss."
+      ]
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#diagnosis_5",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#resolution_5",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Interval",
+        "Properties",
+        "Quota",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#diagnosis_6",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Distributed",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "Synchronous",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#resolution_6",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Distributed",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "Synchronous",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "allowed values - minute, hour, day, week,ormonth."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#diagnosis_7",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "AsynchronousConfiguration",
+        "DisplayName",
+        "Distributed",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "SyncIntervalInSeconds",
+        "Synchronous",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#resolution_7",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "AsynchronousConfiguration",
+        "DisplayName",
+        "Distributed",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "SyncIntervalInSeconds",
+        "Synchronous",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#diagnosis_8",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "AsynchronousConfiguration",
+        "DisplayName",
+        "Distributed",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "SyncIntervalInSeconds",
+        "Synchronous",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors#resolution_8",
+      "elements": [],
+      "exampleElements": [
+        "Allow",
+        "DisplayName",
+        "Distributed",
+        "Interval",
+        "Properties",
+        "Quota",
+        "StartTime",
+        "Synchronous",
+        "TimeUnit"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "count",
+        "enabled",
+        "name",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

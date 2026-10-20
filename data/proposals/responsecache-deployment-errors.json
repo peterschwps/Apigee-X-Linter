@@ -1,0 +1,296 @@
+{
+  "source": {
+    "id": "responsecache-deployment-errors",
+    "kind": "core",
+    "title": "ResponseCache deployment errors",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors",
+    "reviewStatus": "reviewed",
+    "reviewNotes": "Supplemental scope: corrected examples retain KeyFragment@type=\"string\". The shared cache-key contract applies to all four cache policies. Accept type with unspecified values; do not infer an enumeration."
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#diagnosis",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "CacheLookupTimeoutInSeconds",
+        "DisplayName",
+        "ExpiryDate",
+        "ExpirySettings",
+        "KeyFragment",
+        "Prefix",
+        "Properties",
+        "ResponseCache",
+        "Scope",
+        "TimeOfDay",
+        "TimeoutInSec"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#resolution",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "CacheLookupTimeoutInSeconds",
+        "DisplayName",
+        "ExpiryDate",
+        "ExpirySettings",
+        "KeyFragment",
+        "Prefix",
+        "Properties",
+        "ResponseCache",
+        "Scope",
+        "TimeOfDay",
+        "TimeoutInSec"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#diagnosis_2",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "CacheResource",
+        "DisplayName",
+        "ExpiryDate",
+        "ExpirySettings",
+        "KeyFragment",
+        "Prefix",
+        "Properties",
+        "ResponseCache",
+        "Scope",
+        "SkipCacheLookup",
+        "SkipCachePopulation",
+        "TimeOfDay",
+        "TimeoutInSec"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#diagnosis_3",
+      "elements": [],
+      "exampleElements": [
+        "Description",
+        "FaultRules",
+        "Name",
+        "PostFlow",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Response",
+        "Step",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#resolution_3",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the two request flows."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#diagnosis_4",
+      "elements": [],
+      "exampleElements": [
+        "Description",
+        "FaultRules",
+        "Name",
+        "PostFlow",
+        "PreFlow",
+        "ProxyEndpoint",
+        "Request",
+        "Response",
+        "Step",
+        "TargetEndpoint"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#resolution_4",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the two response paths."
+      ],
+      "formatHints": []
+    },
+    {
+      "heading": "Error Message",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#error_message_5",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern found for error code steps."
+      ]
+    },
+    {
+      "heading": "Example Error Message",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#example_error_message_5",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern found for error code steps."
+      ]
+    },
+    {
+      "heading": "Diagnosis",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#diagnosis_5",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "CacheLookupTimeoutInSeconds",
+        "DisplayName",
+        "ExpiryDate",
+        "ExpirySettings",
+        "KeyFragment",
+        "Prefix",
+        "Properties",
+        "ResponseCache",
+        "Scope",
+        "SkipCacheLookup",
+        "TimeOfDay",
+        "TimeoutInSec"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": [
+        "pattern found for error code steps."
+      ]
+    },
+    {
+      "heading": "Resolution",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/responsecache-deployment-errors#resolution_5",
+      "elements": [],
+      "exampleElements": [
+        "CacheKey",
+        "CacheLookupTimeoutInSeconds",
+        "DisplayName",
+        "ExpiryDate",
+        "ExpirySettings",
+        "KeyFragment",
+        "Prefix",
+        "Properties",
+        "ResponseCache",
+        "Scope",
+        "SkipCacheLookup",
+        "TimeOfDay",
+        "TimeoutInSec"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref",
+        "type"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

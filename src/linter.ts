@@ -40,6 +40,9 @@ function valueIssue(value: string, rule: ValueSpec, start: number, end: number, 
   if (rule.kind === 'format' && rule.formatType === 'ip' && isIP(value) === 0) {
     return { rule: 'AX106', message: rule.format || 'Value is not a valid IP address.', start, end, source };
   }
+  if (rule.warningValues?.[value]) {
+    return { rule: 'AX110', message: rule.warningValues[value], start, end, source, severity: 'warning' };
+  }
   return undefined;
 }
 
@@ -48,6 +51,9 @@ function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: R
   if (!definition) return;
   const attributes = definition.attributes || {};
   const presentAttributes = new Set(node.attributes.map(attribute => attribute.name));
+  if (definition.warning) {
+    issues.push({ rule: 'AX110', message: definition.warning, start: node.nameStart, end: node.nameEnd, source: definition.source, severity: 'warning' });
+  }
 
   for (const attribute of node.attributes) {
     const attributeRule = attributes[attribute.name];
