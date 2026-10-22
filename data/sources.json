@@ -253,7 +253,7 @@
     "title": "key value map operations policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/key-value-map-operations-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Rechecked the current Apigee KVM reference. At least one Get, Put, or Delete and the documented MapName conflicts with mapIdentifier and InitialEntries are now linted. Deprecated ExclusiveCache is named but has no documented structure or value contract, so remains incomplete. Literal-versus-ref resolution and KVM existence are runtime-dependent and are not statically enforced. ExclusiveCache now emits AX110 deprecation guidance. PO038's missing-name warning is not treated as an error because the reference explicitly defaults to kvmap."
+    "reviewNotes": "Rechecked the current Apigee KVM reference. At least one Get, Put, or Delete and the documented MapName conflicts with mapIdentifier and InitialEntries are now linted. Deprecated ExclusiveCache is named but has no documented structure or value contract, so remains incomplete. Literal-versus-ref resolution and KVM existence are runtime-dependent and are not statically enforced. ExclusiveCache now emits AX110 deprecation guidance. PO038's missing-name warning is not treated as an error because the reference explicitly defaults to kvmap. On 2026-10-22, Properties was checked after official Model Armor sample bundles used an empty <Properties/>: neither this reference, the KVM guides, nor the KVM deployment/runtime troubleshooting pages show or define it, so it remains an unknown element (AX101)."
   },
   {
     "id": "llm-token-quota-policy",
@@ -373,7 +373,7 @@
     "title": "raise fault policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/raise-fault-policy",
     "reviewStatus": "reviewed",
-    "reviewNotes": "Rechecked RaiseFault response branches, headers, payload attributes, booleans, and ShortFaultReason. FaultResponse/Set/Payload is now explicitly complete with arbitrary nested XML, as shown in the current official examples. Flow-specific fault behavior and message-template resolution are runtime concerns, not gaps in the XML structure model."
+    "reviewNotes": "Rechecked RaiseFault response branches, headers, payload attributes, booleans, and ShortFaultReason. FaultResponse/Set/Payload is now explicitly complete with arbitrary nested XML, as shown in the current official examples. Flow-specific fault behavior and message-template resolution are runtime concerns, not gaps in the XML structure model. On 2026-10-22, Properties in RaiseFault was checked after official GoogleCloudPlatform/apigee-samples Model Armor bundles used an empty <Properties/>: neither this reference, the fault-handling guide, nor the Model Armor tutorial shows or defines it for RaiseFault, so it remains an unknown element (AX101)."
   },
   {
     "id": "read-property-set-policy",
@@ -453,7 +453,7 @@
     "title": "service callout policy",
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/service-callout-policy",
     "reviewStatus": "gap",
-    "reviewNotes": "Rechecked ServiceCallout. Exactly one HTTP or local connection is now required, HTTP connection needs URL or LoadBalancer, local connection uses APIProxy plus ProxyEndpoint or Path, and Authentication requires one Google token type. HTTP Properties/Property now has a documented basic shape, but a complete ServiceCallout-specific property value set is not defined by the delegated endpoint reference. Request Remove/Copy/Add/Set inherits AssignMessage syntax and remains incomplete; root Properties appears only in a sample. The deployment error calls URL required while official load-balanced samples omit URL, so URL is not unconditionally required."
+    "reviewNotes": "Rechecked ServiceCallout. Exactly one HTTP or local connection is now required, HTTP connection needs URL or LoadBalancer, local connection uses APIProxy plus ProxyEndpoint or Path, and Authentication requires one Google token type. HTTP Properties/Property now has a documented basic shape, but a complete ServiceCallout-specific property value set is not defined by the delegated endpoint reference. Request Remove/Copy/Add/Set inherits AssignMessage syntax and remains incomplete; root Properties appears only in a sample. The deployment error calls URL required while official load-balanced samples omit URL, so URL is not unconditionally required. On 2026-10-22, a Model Armor sample placing Verb under HTTPTargetConnection was checked: this reference and its troubleshooting pages document Verb only under Request Set, Copy, and Remove, and the delegated TargetEndpoint connection lists no Verb, so HTTPTargetConnection/Verb remains an unknown element (AX101); Request/Set/Verb is the documented form."
   },
   {
     "id": "set-dialogflow-response-policy",

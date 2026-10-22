@@ -32,6 +32,10 @@ const cases: { name: string; xml: string; file?: string; rules: string[] }[] = [
   { name: 'shared flow manifest with an invalid version', xml: '<SharedFlowBundle name="shared"><ConfigurationVersion majorVersion="5" minorVersion="0"/></SharedFlowBundle>', file: sharedFlowManifest, rules: ['AX105'] },
   { name: 'shared flow manifest without a name', xml: '<SharedFlowBundle><SharedFlows><SharedFlow>default</SharedFlow></SharedFlows></SharedFlowBundle>', file: sharedFlowManifest, rules: ['AX104'] },
   { name: 'policy in a shared flow bundle', xml: '<SpikeArrest name="SA" bogus="1"><Rate>10ps</Rate></SpikeArrest>', file: sharedFlowPolicyFile, rules: ['AX103'] },
+  { name: 'RaiseFault with an undocumented Properties stub', xml: '<RaiseFault name="RF"><Properties/><FaultResponse><Set><StatusCode>500</StatusCode></Set></FaultResponse></RaiseFault>', rules: ['AX101'] },
+  { name: 'KVM with an undocumented Properties stub', xml: '<KeyValueMapOperations name="K" mapIdentifier="m"><Properties/><Get assignTo="v"><Key><Parameter>k</Parameter></Key></Get><Scope>environment</Scope></KeyValueMapOperations>', rules: ['AX101'] },
+  { name: 'ServiceCallout Verb in the request', xml: '<ServiceCallout name="SC"><Request><Set><Verb>POST</Verb></Set></Request><HTTPTargetConnection><URL>https://example.com</URL></HTTPTargetConnection></ServiceCallout>', rules: [] },
+  { name: 'ServiceCallout Verb in the connection', xml: '<ServiceCallout name="SC"><HTTPTargetConnection><Verb>POST</Verb><URL>https://example.com</URL></HTTPTargetConnection></ServiceCallout>', rules: ['AX101'] },
   { name: 'comment inside a format value', xml: '<SpikeArrest name="SA"><Rate><!-- per second -->10ps</Rate></SpikeArrest>', rules: [] },
 ];
 
