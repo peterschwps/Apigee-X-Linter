@@ -4,6 +4,7 @@ import { complete } from './completion';
 import { lintBundleReferences } from './bundle';
 import { classifyDocument, lint } from './linter';
 import { loadSpecifications, type DocumentSpec } from './spec';
+import { rootElementName } from './xml';
 
 const setting = 'apigeeXLinter';
 const delayMs = 250;
@@ -15,7 +16,7 @@ function applicable(document: vscode.TextDocument, specs: DocumentSpec[]): boole
   const relative = vscode.workspace.asRelativePath(document.uri, false).replace(/\\/g, '/');
   if (config.get<string[]>('exclude', []).some(pattern => minimatch(relative, pattern, { dot: true }))) return false;
   if (classifyDocument(document.uri.fsPath)) return true;
-  const root = document.getText().match(/^\s*(?:<\?xml[^>]*>\s*)?<([A-Za-z_][\w:.-]*)/)?.[1];
+  const root = rootElementName(document.getText());
   return Boolean(root && specs.some(spec => spec.root === root));
 }
 

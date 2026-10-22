@@ -103,6 +103,11 @@ function toNode(cst: ElementCstNode): XmlNode | undefined {
   };
 }
 
+/** Returns the root element name, skipping a leading declaration, processing instructions, and comments. */
+export function rootElementName(xml: string): string | undefined {
+  return xml.match(/^\s*(?:(?:<\?[\s\S]*?\?>|<!--[\s\S]*?-->)\s*)*<([A-Za-z_][\w:.-]*)/)?.[1];
+}
+
 export function parseXml(text: string): XmlDocument {
   const result = parse(text);
   const document = result.cst as DocumentCstNode;

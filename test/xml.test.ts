@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { decodeEntities, parseXml } from '../src/xml';
+import { decodeEntities, parseXml, rootElementName } from '../src/xml';
 
 function rootText(xml: string) {
   const text = parseXml(xml).root?.text;
@@ -36,4 +36,14 @@ test('attribute values are decoded while ranges keep raw offsets', () => {
   const attribute = parseXml(xml).root?.attributes[0];
   assert.equal(attribute?.value, 'x & y');
   assert.equal(xml.slice(attribute?.valueStart, attribute?.valueEnd), 'x &amp; y');
+});
+
+test('rootElementName skips the declaration, processing instructions, and comments', () => {
+  assert.equal(rootElementName('<Quota name="q"/>'), 'Quota');
+  assert.equal(rootElementName('<?xml version="1.0"?>\n<!-- a -->\n<?pi x?><!-- b --><Quota>'), 'Quota');
+});
+
+test('rootElementName is absent without a root element', () => {
+  assert.equal(rootElementName(''), undefined);
+  assert.equal(rootElementName('<!-- unterminated <Quota>'), undefined);
 });
