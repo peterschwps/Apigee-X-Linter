@@ -22,8 +22,9 @@ function applicable(document: vscode.TextDocument, specs: DocumentSpec[]): boole
 export function activate(context: vscode.ExtensionContext): void {
   const specs = loadSpecifications(context.extensionPath);
   const diagnostics = vscode.languages.createDiagnosticCollection('apigee-x');
+  const log = vscode.window.createOutputChannel('Apigee X Linter', { log: true });
   const timers = new Map<string, ReturnType<typeof setTimeout>>();
-  context.subscriptions.push(diagnostics);
+  context.subscriptions.push(diagnostics, log);
 
   async function update(document: vscode.TextDocument): Promise<void> {
     if (!applicable(document, specs)) {
@@ -35,7 +36,8 @@ export function activate(context: vscode.ExtensionContext): void {
     const xml = document.getText();
     const results = lint(xml, document.uri.fsPath, specs, ignored);
     const bundleResults = await lintBundleReferences(xml, document.uri.fsPath);
-    if (document.version !== version || !applicable(document, specs)) return;
+    // The document may have changed, closed, or become excluded while bundle files were read.
+    if (document.isClosed || document.version !== version || !applicable(document, specs)) return;
     results.push(...bundleResults.filter(issue => !ignored.has(issue.rule)));
     diagnostics.set(document.uri, results.map(issue => {
       const range = new vscode.Range(document.positionAt(issue.start), document.positionAt(issue.end));
@@ -56,7 +58,8 @@ export function activate(context: vscode.ExtensionContext): void {
     const version = document.version;
     timers.set(key, setTimeout(() => {
       timers.delete(key);
-      if (document.version === version) void update(document);
+      if (document.version !== version) return;
+      update(document).catch((error: unknown) => log.error(`Linting ${document.uri.fsPath} failed:`, error));
     }, delay));
   }
 
