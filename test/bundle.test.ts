@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { test } from 'node:test';
-import { lintBundleReferences } from '../src/bundle';
+import { bundlePolicyNames, lintBundleReferences } from '../src/bundle';
 import { classifyDocument, lint } from '../src/linter';
 import { fixtureBundle, policyFile, proxyFile, sharedFlowBundle, sharedFlowFile, sharedFlowPolicyFile, specs } from './support';
 
@@ -48,4 +48,17 @@ test('AX109 resolves resources against the shared flow bundle', async () => {
   const missing = '<OASValidation name="t"><OASResource>oas://hello.yaml</OASResource></OASValidation>';
   assert.deepEqual(await lintBundleReferences(present, sharedFlowPolicyFile), []);
   assert.deepEqual((await lintBundleReferences(missing, sharedFlowPolicyFile)).map(issue => issue.rule), ['AX109']);
+});
+
+test('AX111 reports a route rule referencing a missing target endpoint', async () => {
+  const routes = ['default', 'backend', 'backend-v2', 'missing', '{dynamic}'].map(target => `<RouteRule name="${target}"><TargetEndpoint>${target}</TargetEndpoint></RouteRule>`);
+  const xml = `<ProxyEndpoint name="t">${routes.join('')}</ProxyEndpoint>`;
+  const issues = await lintBundleReferences(xml, proxyFile);
+  assert.deepEqual(issues.map(issue => [issue.rule, xml.slice(issue.start, issue.end)]), [['AX111', 'missing']]);
+});
+
+test('bundlePolicyNames lists sorted policy names of the containing bundle', async () => {
+  assert.deepEqual(await bundlePolicyNames(proxyFile), ['OAS-Validate', 'SA-Limit']);
+  assert.deepEqual(await bundlePolicyNames(sharedFlowFile), ['OAS-Shared', 'SA-Shared']);
+  assert.deepEqual(await bundlePolicyNames(path.join(path.dirname(fixtureBundle), 'loose.xml')), []);
 });

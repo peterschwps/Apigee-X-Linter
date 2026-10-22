@@ -1,13 +1,14 @@
 import * as vscode from 'vscode';
 import { minimatch } from 'minimatch';
 import { complete } from './completion';
-import { lintBundleReferences } from './bundle';
-import { classifyDocument, lint } from './linter';
+import { bundlePolicyNames, lintBundleReferences } from './bundle';
+import { classifyDocument, lint, type DocumentKind } from './linter';
 import { loadSpecifications, type DocumentSpec } from './spec';
 import { rootElementName } from './xml';
 
 const setting = 'apigeeXLinter';
 const delayMs = 250;
+const stepDocuments: ReadonlySet<DocumentKind | undefined> = new Set(['proxyEndpoint', 'targetEndpoint', 'sharedFlow']);
 
 function applicable(document: vscode.TextDocument, specs: DocumentSpec[]): boolean {
   if (document.languageId !== 'xml' || document.uri.scheme !== 'file') return false;
@@ -64,12 +65,11 @@ export function activate(context: vscode.ExtensionContext): void {
     }, delay));
   }
 
-  const policyWatcher = vscode.workspace.createFileSystemWatcher('**/{apiproxy,sharedflowbundle}/policies/*.xml');
+  const referenceWatcher = vscode.workspace.createFileSystemWatcher('**/{apiproxy,sharedflowbundle}/{policies,targets}/*.xml');
   const resourceWatcher = vscode.workspace.createFileSystemWatcher('**/{apiproxy,sharedflowbundle}/resources/{oas,xsd,wsdl}/*');
   const refreshEndpoints = () => {
     for (const document of vscode.workspace.textDocuments) {
-      const kind = classifyDocument(document.uri.fsPath);
-      if (kind === 'proxyEndpoint' || kind === 'targetEndpoint' || kind === 'sharedFlow') schedule(document);
+      if (stepDocuments.has(classifyDocument(document.uri.fsPath))) schedule(document);
     }
   };
   const refreshResourcePolicies = () => {
@@ -79,11 +79,11 @@ export function activate(context: vscode.ExtensionContext): void {
   };
 
   context.subscriptions.push(
-    policyWatcher,
+    referenceWatcher,
     resourceWatcher,
-    policyWatcher.onDidCreate(refreshEndpoints),
-    policyWatcher.onDidChange(refreshEndpoints),
-    policyWatcher.onDidDelete(refreshEndpoints),
+    referenceWatcher.onDidCreate(refreshEndpoints),
+    referenceWatcher.onDidChange(refreshEndpoints),
+    referenceWatcher.onDidDelete(refreshEndpoints),
     resourceWatcher.onDidCreate(refreshResourcePolicies),
     resourceWatcher.onDidChange(refreshResourcePolicies),
     resourceWatcher.onDidDelete(refreshResourcePolicies),
@@ -103,9 +103,13 @@ export function activate(context: vscode.ExtensionContext): void {
       }
     }),
     vscode.languages.registerCompletionItemProvider({ language: 'xml', scheme: 'file' }, {
-      provideCompletionItems(document, position) {
+      async provideCompletionItems(document, position) {
         if (!applicable(document, specs)) return [];
-        return complete(document.getText(), document.offsetAt(position), document.uri.fsPath, specs).map(suggestion => {
+        const xml = document.getText();
+        const offset = document.offsetAt(position);
+        // ponytail: reads the policies directory per request; cache per bundle if large bundles feel slow.
+        const policyNames = stepDocuments.has(classifyDocument(document.uri.fsPath)) ? await bundlePolicyNames(document.uri.fsPath) : [];
+        return complete(xml, offset, document.uri.fsPath, specs, policyNames).map(suggestion => {
           const kind = suggestion.kind === 'element' ? vscode.CompletionItemKind.Class
             : suggestion.kind === 'attribute' ? vscode.CompletionItemKind.Property
               : vscode.CompletionItemKind.Value;

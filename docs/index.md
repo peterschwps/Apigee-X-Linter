@@ -4,7 +4,7 @@ Apigee X Linter provides XML diagnostics and context-aware completion in VS Code
 
 ## Getting started
 
-Install the local VSIX using **Extensions: Install from VSIX...**, then open a proxy or shared flow bundle. XML files under `apiproxy` or `sharedflowbundle` are recognized by their location; supported policy roots can also be recognized in standalone XML files. Use the Problems panel for diagnostics and Ctrl+Space for suggestions.
+Install the local VSIX using **Extensions: Install from VSIX...**, then open a proxy or shared flow bundle. XML files under `apiproxy` or `sharedflowbundle` are recognized by their location; supported policy roots can also be recognized in standalone XML files. Use the Problems panel for diagnostics and Ctrl+Space for suggestions. Inside `<Step><Name>`, suggestions list the policies of the same bundle.
 
 ## Diagnostics
 
@@ -21,6 +21,7 @@ Install the local VSIX using **Extensions: Install from VSIX...**, then open a p
 | AX108 | Missing bundle-local policy reference |
 | AX109 | Resource absent locally; it may exist at environment scope (warning) |
 | AX110 | Deprecated element or documented X compatibility concern (warning) |
+| AX111 | RouteRule target endpoint missing from the proxy bundle |
 
 Checks for unknown elements and attributes apply only to complete reviewed contexts. Some references are incomplete or contradictory. A clean result therefore does not prove that Apigee will accept or correctly execute the proxy.
 
@@ -40,6 +41,6 @@ Add a diagnostic ID to `ignore` to suppress it. Source links on diagnostics poin
 
 ## Scope and limitations
 
-The extension covers proxy and shared flow manifests, endpoints, flows, shared flows, and policy XML for Apigee X. FlowCallout references to deployed shared flows are not checked. Edge, hybrid-only features, XSLT resource contents, and arbitrary XML payload contents are excluded. Local resource and policy references use saved bundle files. Runtime variables, environment resources, and deployment behavior cannot be fully validated statically.
+The extension covers proxy and shared flow manifests, endpoints, flows, shared flows, and policy XML for Apigee X. FlowCallout references to deployed shared flows are not checked. Edge, hybrid-only features, XSLT resource contents, and arbitrary XML payload contents are excluded. Local resource, policy, and target endpoint references use saved bundle files. A RouteRule target matches a target endpoint's name attribute or its file name. Runtime variables, environment resources, and deployment behavior cannot be fully validated statically.
 
 The source inventory currently has 25 documented gaps. Fixtures checked only by this linter cannot establish the platform's actual behavior.

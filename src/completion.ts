@@ -60,7 +60,7 @@ function candidateSpec(filePath: string, stack: string[], specs: DocumentSpec[])
   return chooseSpec(filePath, stack[0], specs);
 }
 
-export function complete(xml: string, offset: number, filePath: string, specs: DocumentSpec[]): Suggestion[] {
+export function complete(xml: string, offset: number, filePath: string, specs: DocumentSpec[], policyNames: readonly string[] = []): Suggestion[] {
   const before = xml.slice(0, offset);
   const context = scanToCursor(xml, offset);
   const partial = context.partialTag;
@@ -116,6 +116,12 @@ export function complete(xml: string, offset: number, filePath: string, specs: D
   const path = `/${context.stack.join('/')}`;
   const element = elementMap(spec).get(path);
   if (!element) return [];
+  if (context.stack.at(-2) === 'Step' && context.stack.at(-1) === 'Name') {
+    const typed = before.match(/([A-Za-z0-9._$%-]*)$/)?.[1] || '';
+    return policyNames.filter(name => name.startsWith(typed)).map(name => ({
+      label: name, kind: 'value', replaceStart: offset - typed.length, replaceEnd: offset, insertText: name, source: element.source,
+    }));
+  }
   const selector = element.textByAttribute;
   const openingTag = before.slice(before.lastIndexOf(`<${context.stack.at(-1)}`));
   const selectedValue = selector && openingTag.match(new RegExp(`\\b${selector.attribute}\\s*=\\s*["']([^"']+)["']`))?.[1];
