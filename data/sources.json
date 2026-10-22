@@ -606,5 +606,20 @@
     "url": "https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors",
     "reviewStatus": "gap",
     "reviewNotes": "Supplemental scope: corrected Quota examples include Properties without defining its structure. Accept the incomplete stub. Older time-unit restrictions do not override the current policy reference."
+  },
+  {
+    "id": "shared-flows-guide",
+    "kind": "core",
+    "title": "Creating reusable shared flows",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/shared-flows",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "shared-flow-bundle-configuration-reference",
+    "kind": "core",
+    "title": "Shared flow bundle configuration reference",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference",
+    "reviewStatus": "gap",
+    "reviewNotes": "Reviewed the bundle layout, SharedFlowBundle manifest, and SharedFlow sequence. Manifest and shared flow names use the documented A-Za-z0-9_- character set; ConfigurationVersion accepts only 4.0. The element table marks SharedFlows required, but most current GoogleCloudPlatform/apigee-samples manifests omit it, and exported manifests contain an undocumented subType child; the manifest root therefore stays incomplete and SharedFlows is not required. The table also marks Step required, but an empty SharedFlow is a normal starting state and has not been confirmed as a deployment error, so Step presence is not enforced; Step/Name is required. Step/Condition is supported by the shared flows guide, which describes a shared flow as a sequence of conditional steps. Consistency between the manifest lists and bundle files, and FlowCallout references to deployed shared flows, are environment or packaging concerns and are not linted."
   }
 ]

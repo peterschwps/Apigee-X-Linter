@@ -1,0 +1,31 @@
+{
+  "kind": "sharedFlowBundle",
+  "root": "SharedFlowBundle",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference",
+  "reviewedAt": "2026-10-22",
+  "elements": [
+    {
+      "path": "/SharedFlowBundle",
+      "complete": false,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements",
+      "attributes": {
+        "name": { "kind": "format", "required": true, "format": "Use only letters, digits, underscores, and hyphens.", "pattern": "^[A-Za-z0-9_-]+$", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationattributes" },
+        "revision": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationattributes" }
+      },
+      "children": ["ConfigurationVersion", "CreatedAt", "CreatedBy", "Description", "DisplayName", "LastModifiedAt", "LastModifiedBy", "Policies", "Resources", "SharedFlows"]
+    },
+    { "path": "/SharedFlowBundle/ConfigurationVersion", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements", "attributes": { "majorVersion": { "kind": "enum", "values": ["4"] }, "minorVersion": { "kind": "enum", "values": ["0"] } } },
+    { "path": "/SharedFlowBundle/CreatedAt", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/SharedFlowBundle/CreatedBy", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/SharedFlowBundle/Description", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/SharedFlowBundle/DisplayName", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/SharedFlowBundle/LastModifiedAt", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/SharedFlowBundle/LastModifiedBy", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements", "text": { "kind": "free" } },
+    { "path": "/SharedFlowBundle/Policies", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfig", "children": ["Policy"] },
+    { "path": "/SharedFlowBundle/Policies/Policy", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfig", "text": { "kind": "free" } },
+    { "path": "/SharedFlowBundle/Resources", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfig", "children": ["Resource"] },
+    { "path": "/SharedFlowBundle/Resources/Resource", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfig", "text": { "kind": "free" } },
+    { "path": "/SharedFlowBundle/SharedFlows", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfig", "children": ["SharedFlow"] },
+    { "path": "/SharedFlowBundle/SharedFlows/SharedFlow", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfig", "text": { "kind": "free" } }
+  ]
+}

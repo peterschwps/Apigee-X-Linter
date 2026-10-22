@@ -1,0 +1,184 @@
+{
+  "source": {
+    "id": "shared-flow-bundle-configuration-reference",
+    "kind": "core",
+    "title": "Shared flow bundle configuration reference",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Base configuration",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfig",
+      "elements": [],
+      "exampleElements": [
+        "ConfigurationVersion",
+        "CreatedAt",
+        "CreatedBy",
+        "Description",
+        "DisplayName",
+        "LastModifiedAt",
+        "LastModifiedBy",
+        "Policies",
+        "Policy",
+        "Resource",
+        "Resources",
+        "SharedFlow",
+        "SharedFlowBundle",
+        "SharedFlows"
+      ],
+      "exampleAttributes": [
+        "majorVersion",
+        "minorVersion",
+        "name",
+        "revision"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Base configuration attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationattributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "SharedFlowBundle",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "revision",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Base configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#baseconfiguration-baseconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "SharedFlowBundle",
+          "required": false
+        },
+        {
+          "name": "ConfigurationVersion",
+          "required": false
+        },
+        {
+          "name": "Description",
+          "required": false
+        },
+        {
+          "name": "DisplayName",
+          "required": false
+        },
+        {
+          "name": "Policies",
+          "required": false
+        },
+        {
+          "name": "Resources",
+          "required": false
+        },
+        {
+          "name": "SharedFlows",
+          "required": true
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Shared flows",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#sharedflows",
+      "elements": [],
+      "exampleElements": [
+        "Name",
+        "SharedFlow",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "name"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Shared flow configuration attributes",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#sharedflows-sharedflowconfigurationattributes",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "SharedFlow",
+          "required": false
+        },
+        {
+          "name": "name",
+          "required": true
+        },
+        {
+          "name": "revision",
+          "required": false
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Shared flow configuration elements",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#sharedflows-sharedflowconfigurationelements",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [
+        {
+          "name": "SharedFlow",
+          "required": true
+        },
+        {
+          "name": "Step",
+          "required": true
+        },
+        {
+          "name": "Name",
+          "required": true
+        }
+      ],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    }
+  ]
+}

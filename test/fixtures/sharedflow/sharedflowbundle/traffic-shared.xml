@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Exported manifests contain the undocumented subType child; it must not cause findings. -->
+<SharedFlowBundle revision="1" name="traffic-shared">
+  <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+  <Description>Fixture shared flow bundle that must lint without findings.</Description>
+  <DisplayName>traffic-shared</DisplayName>
+  <Policies>
+    <Policy>SA-Shared</Policy>
+    <Policy>OAS-Shared</Policy>
+  </Policies>
+  <SharedFlows>
+    <SharedFlow>default</SharedFlow>
+  </SharedFlows>
+  <subType>SharedFlow</subType>
+</SharedFlowBundle>

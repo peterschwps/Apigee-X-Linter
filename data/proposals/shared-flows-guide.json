@@ -1,0 +1,58 @@
+{
+  "source": {
+    "id": "shared-flows-guide",
+    "kind": "core",
+    "title": "Creating reusable shared flows",
+    "url": "https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/shared-flows",
+    "reviewStatus": "pending"
+  },
+  "reviewStatus": "unreviewed",
+  "sections": [
+    {
+      "heading": "Developing a shared flow",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/shared-flows#developing-a-shared-flow",
+      "elements": [],
+      "exampleElements": [
+        "DisplayName",
+        "FlowCallout",
+        "Identifier",
+        "MessageWeight",
+        "Name",
+        "Properties",
+        "Rate",
+        "SharedFlow",
+        "SharedFlowBundle",
+        "SpikeArrest",
+        "Step"
+      ],
+      "exampleAttributes": [
+        "async",
+        "continueOnError",
+        "enabled",
+        "name",
+        "ref"
+      ],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [],
+      "formatHints": []
+    },
+    {
+      "heading": "Calling a shared flow from an API proxy or shared flow",
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/shared-flows#calling-a-shared-flow",
+      "elements": [],
+      "exampleElements": [],
+      "exampleAttributes": [],
+      "syntaxAttributeValues": {},
+      "attributes": [],
+      "namedRows": [],
+      "possibleValues": [],
+      "valueHints": [
+        "one of the following: In the Google Cloud console, go to the Apigee > Proxy development > API proxies page."
+      ],
+      "formatHints": []
+    }
+  ]
+}

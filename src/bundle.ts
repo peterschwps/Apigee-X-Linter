@@ -9,7 +9,7 @@ const resourceSource = 'https://docs.cloud.google.com/apigee/docs/api-platform/d
 function findBundleRoot(filePath: string): string | undefined {
   let directory = path.dirname(filePath);
   while (path.dirname(directory) !== directory) {
-    if (path.basename(directory).toLowerCase() === 'apiproxy') return directory;
+    if (['apiproxy', 'sharedflowbundle'].includes(path.basename(directory).toLowerCase())) return directory;
     directory = path.dirname(directory);
   }
   return undefined;
@@ -48,7 +48,7 @@ async function localResourceIssue(root: XmlNode, directory: string): Promise<Lin
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code !== 'ENOENT') return [];
   }
-  return [{ rule: 'AX109', message: `Resource "${match[2]}" is not in this proxy bundle; it may exist at environment scope.`,
+  return [{ rule: 'AX109', message: `Resource "${match[2]}" is not in this bundle; it may exist at environment scope.`,
     start: text.start, end: text.end, source: resourceSource, severity: 'warning' }];
 }
 
@@ -60,7 +60,7 @@ export async function lintBundleReferences(xml: string, filePath: string): Promi
   if (document.root.name === 'OASValidation' || document.root.name === 'MessageValidation') {
     return localResourceIssue(document.root, rootDirectory);
   }
-  if (!['ProxyEndpoint', 'TargetEndpoint'].includes(document.root.name)) return [];
+  if (!['ProxyEndpoint', 'TargetEndpoint', 'SharedFlow'].includes(document.root.name)) return [];
 
   const references: XmlText[] = [];
   function visit(node: XmlNode, parent?: XmlNode): void {
@@ -76,7 +76,7 @@ export async function lintBundleReferences(xml: string, filePath: string): Promi
   const names = await policyNames(path.join(rootDirectory, 'policies'));
   if (!names) return [];
   return references.filter(reference => !names.has(reference.value)).map(reference => ({
-    rule: 'AX108', message: `Policy "${reference.value}" was not found in this proxy bundle.`,
+    rule: 'AX108', message: `Policy "${reference.value}" was not found in this bundle.`,
     start: reference.start, end: reference.end, source: flowNameSource,
   }));
 }

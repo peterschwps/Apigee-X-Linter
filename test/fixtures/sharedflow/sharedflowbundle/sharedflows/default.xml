@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharedFlow name="default">
+  <Step>
+    <Name>SA-Shared</Name>
+  </Step>
+  <Step>
+    <Condition>request.verb = "POST"</Condition>
+    <Name>OAS-Shared</Name>
+  </Step>
+</SharedFlow>

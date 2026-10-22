@@ -15,11 +15,13 @@ export type DocumentKind = DocumentSpec['kind'];
 
 export function classifyDocument(filePath: string): DocumentKind | undefined {
   const normalized = filePath.replace(/\\/g, '/').toLowerCase();
-  if (/\/apiproxy\/policies\/[^/]+\.xml$/.test(normalized)) return 'policy';
+  if (/\/(?:apiproxy|sharedflowbundle)\/policies\/[^/]+\.xml$/.test(normalized)) return 'policy';
   if (/\/apiproxy\/proxies\/[^/]+\.xml$/.test(normalized)) return 'proxyEndpoint';
   if (/\/apiproxy\/targets\/[^/]+\.xml$/.test(normalized)) return 'targetEndpoint';
   if (/\/apiproxy\/integration-endpoints\/[^/]+\.xml$/.test(normalized)) return 'integrationEndpoint';
   if (/\/apiproxy\/[^/]+\.xml$/.test(normalized)) return 'apiProxy';
+  if (/\/sharedflowbundle\/sharedflows\/[^/]+\.xml$/.test(normalized)) return 'sharedFlow';
+  if (/\/sharedflowbundle\/[^/]+\.xml$/.test(normalized)) return 'sharedFlowBundle';
   return undefined;
 }
 
@@ -187,6 +189,7 @@ export function lint(xml: string, filePath: string, specs: DocumentSpec[], ignor
   if (!spec) {
     const expectedRoot: Partial<Record<DocumentKind, string>> = {
       apiProxy: 'APIProxy', proxyEndpoint: 'ProxyEndpoint', targetEndpoint: 'TargetEndpoint', integrationEndpoint: 'IntegrationEndpoint',
+      sharedFlowBundle: 'SharedFlowBundle', sharedFlow: 'SharedFlow',
     };
     if (kind && expectedRoot[kind]) {
       issues.push({ rule: 'AX101', message: `Expected <${expectedRoot[kind]}> as the document root.`, start: root.nameStart, end: root.nameEnd });

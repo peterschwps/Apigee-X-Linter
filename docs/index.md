@@ -4,7 +4,7 @@ Apigee X Linter provides XML diagnostics and context-aware completion in VS Code
 
 ## Getting started
 
-Install the local VSIX using **Extensions: Install from VSIX...**, then open a proxy bundle. XML files under `apiproxy` are recognized by their location; supported policy roots can also be recognized in standalone XML files. Use the Problems panel for diagnostics and Ctrl+Space for suggestions.
+Install the local VSIX using **Extensions: Install from VSIX...**, then open a proxy or shared flow bundle. XML files under `apiproxy` or `sharedflowbundle` are recognized by their location; supported policy roots can also be recognized in standalone XML files. Use the Problems panel for diagnostics and Ctrl+Space for suggestions.
 
 ## Diagnostics
 
@@ -40,6 +40,6 @@ Add a diagnostic ID to `ignore` to suppress it. Source links on diagnostics poin
 
 ## Scope and limitations
 
-The extension covers proxy manifests, endpoints, flows, and policy XML for Apigee X. Edge, hybrid-only features, XSLT resource contents, and arbitrary XML payload contents are excluded. Local resource and policy references use saved bundle files. Runtime variables, environment resources, and deployment behavior cannot be fully validated statically.
+The extension covers proxy and shared flow manifests, endpoints, flows, shared flows, and policy XML for Apigee X. FlowCallout references to deployed shared flows are not checked. Edge, hybrid-only features, XSLT resource contents, and arbitrary XML payload contents are excluded. Local resource and policy references use saved bundle files. Runtime variables, environment resources, and deployment behavior cannot be fully validated statically.
 
-The source inventory currently has 24 documented gaps. Fixtures checked only by this linter cannot establish the platform's actual behavior.
+The source inventory currently has 25 documented gaps. Fixtures checked only by this linter cannot establish the platform's actual behavior.

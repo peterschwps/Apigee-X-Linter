@@ -23,7 +23,7 @@ The upstream project uses Apache-2.0 and describes itself as not an officially s
 | Out of scope | 4 | JavaScript source linting and legacy-policy deprecation checks. |
 | Disabled upstream | 1 | Do not enable implicitly. |
 
-All 91 plugins received catalogue triage. This does **not** mean every candidate's implementation has been exhaustively verified. The original 20 source gaps are mapped to relevant plugins or explicit absence; four newly inventoried guides add Properties-contract gaps, bringing the current total to 24. apigeelint does not resolve these documentation gaps. For example, it has no dedicated complete VerifyJWT, SAML, or TraceCapture contract.
+All 91 plugins received catalogue triage. This does **not** mean every candidate's implementation has been exhaustively verified. The original 20 source gaps are mapped to relevant plugins or explicit absence; four newly inventoried guides add Properties-contract gaps, bringing the total to 24. The shared flow bundle reference adds a 25th gap for its manifest and step requiredness. apigeelint does not resolve these documentation gaps. For example, it has no dedicated complete VerifyJWT, SAML, or TraceCapture contract.
 
 ## Confirmed differences and corrections
 

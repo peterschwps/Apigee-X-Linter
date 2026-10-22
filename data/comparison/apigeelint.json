@@ -342,6 +342,15 @@
         "PO035"
       ],
       "assessment": "PO035 accepts empty Properties but does not establish a general Properties content contract."
+    },
+    {
+      "sourceId": "shared-flow-bundle-configuration-reference",
+      "rules": [
+        "BN001",
+        "BN010",
+        "ST002"
+      ],
+      "assessment": "BN001 requires a sharedflows directory, BN010 checks step references, and ST002 checks step structure, but no plugin defines the SharedFlowBundle manifest contract, its undocumented subType child, or whether SharedFlows and Step are mandatory."
     }
   ],
   "findings": [

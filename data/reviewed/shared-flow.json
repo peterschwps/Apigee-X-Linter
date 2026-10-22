@@ -1,0 +1,28 @@
+{
+  "kind": "sharedFlow",
+  "root": "SharedFlow",
+  "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference",
+  "reviewedAt": "2026-10-22",
+  "elements": [
+    {
+      "path": "/SharedFlow",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#sharedflows-sharedflowconfigurationelements",
+      "attributes": {
+        "name": { "kind": "format", "required": true, "format": "Use only letters, digits, underscores, and hyphens.", "pattern": "^[A-Za-z0-9_-]+$", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#sharedflows-sharedflowconfigurationattributes" },
+        "revision": { "kind": "free", "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#sharedflows-sharedflowconfigurationattributes" }
+      },
+      "children": ["Step"]
+    },
+    {
+      "path": "/SharedFlow/Step",
+      "complete": true,
+      "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#sharedflows-sharedflowconfigurationelements",
+      "children": ["Condition", "Name"],
+      "requiredChildren": ["Name"],
+      "singleChildren": ["Condition", "Name"]
+    },
+    { "path": "/SharedFlow/Step/Condition", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/shared-flows#developing-a-shared-flow", "text": { "kind": "free" } },
+    { "path": "/SharedFlow/Step/Name", "complete": true, "source": "https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference#sharedflows-sharedflowconfigurationelements", "text": { "kind": "free" } }
+  ]
+}

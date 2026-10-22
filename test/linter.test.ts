@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { lint } from '../src/linter';
-import { policyFile, proxyFile, specs } from './support';
+import { classifyDocument, lint } from '../src/linter';
+import { policyFile, proxyFile, sharedFlowFile, sharedFlowManifest, sharedFlowPolicyFile, specs } from './support';
 
 const flowCallout = (body: string, attributes = 'name="FC"') => `<FlowCallout ${attributes}>${body}</FlowCallout>`;
 const spikeArrest = (body: string) => `<SpikeArrest name="SA"><Rate>10ps</Rate>${body}</SpikeArrest>`;
@@ -22,6 +22,16 @@ const cases: { name: string; xml: string; file?: string; rules: string[] }[] = [
   { name: 'comment inside an enum value', xml: spikeArrest('<UseEffectiveCount><!-- x -->true</UseEffectiveCount>'), rules: [] },
   { name: 'CDATA enum value', xml: spikeArrest('<UseEffectiveCount><![CDATA[true]]></UseEffectiveCount>'), rules: [] },
   { name: 'character reference in an enum attribute', xml: flowCallout('<SharedFlowBundle>s</SharedFlowBundle>', 'name="FC" enabled="tr&#117;e"'), rules: [] },
+  { name: 'valid shared flow', xml: '<SharedFlow name="default"><Step><Condition>true</Condition><Name>P</Name></Step></SharedFlow>', file: sharedFlowFile, rules: [] },
+  { name: 'empty shared flow', xml: '<SharedFlow name="default"/>', file: sharedFlowFile, rules: [] },
+  { name: 'shared flow step without a name', xml: '<SharedFlow name="default"><Step><Condition>true</Condition></Step></SharedFlow>', file: sharedFlowFile, rules: ['AX104'] },
+  { name: 'shared flow name with invalid characters', xml: '<SharedFlow name="my flow"><Step><Name>P</Name></Step></SharedFlow>', file: sharedFlowFile, rules: ['AX106'] },
+  { name: 'shared flow with an unknown child', xml: '<SharedFlow name="default"><FaultRules/></SharedFlow>', file: sharedFlowFile, rules: ['AX101'] },
+  { name: 'shared flow file with a wrong root', xml: '<ProxyEndpoint name="default"/>', file: sharedFlowFile, rules: ['AX101'] },
+  { name: 'shared flow manifest without SharedFlows', xml: '<SharedFlowBundle name="shared"><Description>d</Description></SharedFlowBundle>', file: sharedFlowManifest, rules: [] },
+  { name: 'shared flow manifest with an invalid version', xml: '<SharedFlowBundle name="shared"><ConfigurationVersion majorVersion="5" minorVersion="0"/></SharedFlowBundle>', file: sharedFlowManifest, rules: ['AX105'] },
+  { name: 'shared flow manifest without a name', xml: '<SharedFlowBundle><SharedFlows><SharedFlow>default</SharedFlow></SharedFlows></SharedFlowBundle>', file: sharedFlowManifest, rules: ['AX104'] },
+  { name: 'policy in a shared flow bundle', xml: '<SpikeArrest name="SA" bogus="1"><Rate>10ps</Rate></SpikeArrest>', file: sharedFlowPolicyFile, rules: ['AX103'] },
   { name: 'comment inside a format value', xml: '<SpikeArrest name="SA"><Rate><!-- per second -->10ps</Rate></SpikeArrest>', rules: [] },
 ];
 
@@ -30,6 +40,13 @@ for (const { name, xml, file, rules } of cases) {
     assert.deepEqual(lint(xml, file ?? policyFile, specs).map(issue => issue.rule), rules);
   });
 }
+
+test('classifyDocument recognizes shared flow bundle files', () => {
+  assert.equal(classifyDocument('/w/SharedFlowBundle/traffic.xml'), 'sharedFlowBundle');
+  assert.equal(classifyDocument('/w/sharedflowbundle/sharedflows/default.xml'), 'sharedFlow');
+  assert.equal(classifyDocument('/w/sharedflowbundle/policies/SA.xml'), 'policy');
+  assert.equal(classifyDocument('/w/sharedflowbundle/resources/xsl/t.xml'), undefined);
+});
 
 test('lint marks warnings and links Google documentation', () => {
   const [issue] = lint(spikeArrest('<UseEffectiveCount>false</UseEffectiveCount>'), policyFile, specs);

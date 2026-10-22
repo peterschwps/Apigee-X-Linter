@@ -47,6 +47,8 @@ const coreSources: Source[] = [
   { id: 'flow-basics-guide', kind: 'core', title: 'Controlling API proxies with flows', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/what-are-flows' },
   { id: 'extractvariables-deployment-errors', kind: 'core', title: 'ExtractVariables deployment errors', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/extract-variables-deployment-errors' },
   { id: 'quota-deployment-errors', kind: 'core', title: 'Quota deployment errors', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/troubleshoot/policies/deployment/quota-deployment-errors' },
+  { id: 'shared-flows-guide', kind: 'core', title: 'Creating reusable shared flows', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/fundamentals/shared-flows' },
+  { id: 'shared-flow-bundle-configuration-reference', kind: 'core', title: 'Shared flow bundle configuration reference', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/shared-flow-bundle-configuration-reference' },
 ];
 const supplementalPolicies: Source[] = [
   { id: 'generate-saml-assertion-policy', kind: 'policy', title: 'generate saml assertion policy', url: 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/policies/generate-saml-assertion-policy' },
@@ -388,7 +390,7 @@ async function validate(): Promise<Map<string, boolean>> {
     const document = JSON.parse(await readFile(path.join(reviewedDir, file), 'utf8')) as DocumentSpec;
     validateLink(document.source, file);
     if (!/^[A-Za-z_][\w.-]*$/.test(document.root || '') || !document.elements?.length) throw new Error(`${file}: missing or invalid root or elements.`);
-    if (!['policy', 'apiProxy', 'proxyEndpoint', 'targetEndpoint', 'integrationEndpoint'].includes(document.kind)) throw new Error(`${file}: invalid document kind.`);
+    if (!['policy', 'apiProxy', 'proxyEndpoint', 'targetEndpoint', 'integrationEndpoint', 'sharedFlowBundle', 'sharedFlow'].includes(document.kind)) throw new Error(`${file}: invalid document kind.`);
     const rootKey = `${document.kind}:${document.root}`;
     if (documentRoots.has(rootKey)) throw new Error(`${file}: duplicate document root ${rootKey}.`);
     documentRoots.add(rootKey);

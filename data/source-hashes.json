@@ -2582,5 +2582,22 @@
     "cause_8": "52b7c1e03d84cd5d89470be35fe0b35a840e65b3f1f562a45a920debecdad10a",
     "diagnosis_8": "7c5280a4afad4b7cdaf476d253270634edc1b148aba06dcb2533f74515150825",
     "resolution_8": "49ebb33a5b5e482798b1ab0d56bb8de1e099f5bb5885fc897837e05acfdc1055"
+  },
+  "shared-flows-guide": {
+    "developing-a-shared-flow": "80e97c830417e8103713137f58675aadc10594f785d8ddc7f465ec0e222fdb48",
+    "creating-a-shared-flow": "99c2b5d001e2213476acf14d3e6c4ad76eb94832232fbecc5d3ce6e8c0277f48",
+    "calling-a-shared-flow": "21e0cc5e75a54613bdccb6c5ad61ac11a4580b7702f045c01447dc731c3260f1",
+    "see-also": "88053f2fb7dc56ee6581aaf1aebb375c1c0cae8880963837776ce2297b99126e"
+  },
+  "shared-flow-bundle-configuration-reference": {
+    "sharedflowbundlestructure": "2012488908123bcb7bbf7c9edd77e4e21f8bd2ea44e652c1f67a989a4a423e9f",
+    "baseconfig": "21ebf5b5e49c5a91231bc48314f100ecfe2bdbad0e8c58b830601f5ec236aa69",
+    "baseconfiguration-baseconfigurationattributes": "1603e8fbe9c928dbdaba99906bf265fe7f3d100c1558e0721f71337638905d71",
+    "baseconfiguration-baseconfigurationelements": "1235ae5fb04b42ee1e3a5dbd0c55670cfc8d2c2e39aaa40113806aafe556504d",
+    "policies": "dfa61c007f59e45a5c8ebedd072971f1dc5b1e5625e0615550079f23fc3f88c4",
+    "resources": "1d72ee47caa86ef39dab9a400c2708f7ee371a62d4e1ec0e8632a30d5efd8070",
+    "sharedflows": "35b9aa8b0dd35f410df40a809a465c6ae28588052f5350f1cf0bb68a6a555089",
+    "sharedflows-sharedflowconfigurationattributes": "518dd8daedf6bf043780378bfcaf2bf173937ade91d891252f2d1b2c23cfcfd9",
+    "sharedflows-sharedflowconfigurationelements": "669b9dfe2825a42264706fb557b28c03bdbe1772565f8408889d088691059efa"
   }
 }

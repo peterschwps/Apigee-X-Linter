@@ -56,7 +56,7 @@ export type ElementSpec = {
 };
 
 export type DocumentSpec = {
-  kind: 'policy' | 'apiProxy' | 'proxyEndpoint' | 'targetEndpoint' | 'integrationEndpoint';
+  kind: 'policy' | 'apiProxy' | 'proxyEndpoint' | 'targetEndpoint' | 'integrationEndpoint' | 'sharedFlowBundle' | 'sharedFlow';
   root: string;
   source: string;
   reviewedAt: string;

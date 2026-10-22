@@ -64,12 +64,12 @@ export function activate(context: vscode.ExtensionContext): void {
     }, delay));
   }
 
-  const policyWatcher = vscode.workspace.createFileSystemWatcher('**/apiproxy/policies/*.xml');
-  const resourceWatcher = vscode.workspace.createFileSystemWatcher('**/apiproxy/resources/{oas,xsd,wsdl}/*');
+  const policyWatcher = vscode.workspace.createFileSystemWatcher('**/{apiproxy,sharedflowbundle}/policies/*.xml');
+  const resourceWatcher = vscode.workspace.createFileSystemWatcher('**/{apiproxy,sharedflowbundle}/resources/{oas,xsd,wsdl}/*');
   const refreshEndpoints = () => {
     for (const document of vscode.workspace.textDocuments) {
       const kind = classifyDocument(document.uri.fsPath);
-      if (kind === 'proxyEndpoint' || kind === 'targetEndpoint') schedule(document);
+      if (kind === 'proxyEndpoint' || kind === 'targetEndpoint' || kind === 'sharedFlow') schedule(document);
     }
   };
   const refreshResourcePolicies = () => {
