@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Comments, CDATA, and character references in values must not cause findings. -->
+<SpikeArrest name="SA-Limit" enabled="tr&#117;e">
+  <DisplayName>SA &amp; Limit</DisplayName>
+  <Rate><!-- per second -->30ps</Rate>
+  <UseEffectiveCount><![CDATA[true]]></UseEffectiveCount>
+</SpikeArrest>

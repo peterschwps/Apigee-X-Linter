@@ -10,6 +10,7 @@ src/**
 scripts/**
 dist/scripts/**
 dist/src/**
+test/**
 node_modules/**
 data/candidates/**
 data/proposals/**

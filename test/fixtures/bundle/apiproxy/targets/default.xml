@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TargetEndpoint name="default">
+  <HTTPTargetConnection>
+    <URL>https://example.com/hello</URL>
+  </HTTPTargetConnection>
+</TargetEndpoint>

@@ -66,6 +66,7 @@
     "docs:propose": "tsx scripts/docs.ts propose",
     "docs:refresh": "tsx scripts/docs.ts refresh",
     "docs:status": "tsx scripts/docs.ts status",
+    "test": "node --import tsx --test \"test/**/*.test.ts\"",
     "release:check": "tsx scripts/docs.ts release-check && npm run comparison:validate",
     "package:alpha": "vsce package --no-dependencies --pre-release",
     "vscode:prepublish": "npm run build"

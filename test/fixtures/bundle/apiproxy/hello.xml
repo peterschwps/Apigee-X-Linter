@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<APIProxy name="hello">
+  <Description>Fixture bundle that must lint without findings.</Description>
+</APIProxy>

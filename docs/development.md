@@ -1,6 +1,6 @@
 # Development
 
-Run `npm ci`, `npm run check`, and `npm run build`. Press F5 to launch an Extension Development Host. `npm run package:alpha` builds a local pre-release VSIX without publishing it.
+Run `npm ci`, `npm run check`, `npm test`, and `npm run build`. Press F5 to launch an Extension Development Host. `npm run package:alpha` builds a local pre-release VSIX without publishing it.
 
 ## Code structure
 
@@ -10,6 +10,7 @@ Run `npm ci`, `npm run check`, and `npm run build`. Press F5 to launch an Extens
 - `src/completion.ts` generates suggestions for incomplete XML.
 - `src/bundle.ts` checks saved bundle-local references.
 - `src/extension.ts` handles VS Code settings, events, and diagnostics.
+- `test/` contains `node:test` suites; `test/fixtures/bundle` is a proxy bundle that must lint without findings.
 
 TypeScript strict mode is enabled. Rule data stays separate from behavior, and documentation tooling stays outside the runtime package. Keep code, comments, diagnostics, documentation, and commit messages in English.
 
@@ -32,4 +33,6 @@ Build the pages locally with an isolated MkDocs 1.x environment:
 uv tool run --with "mkdocs-material>=9,<10" "mkdocs>=1.6,<2" build --strict
 ```
 
-No permanent test suite is currently maintained. Temporary checks should verify observable behavior and be removed after their results are recorded.
+## Tests
+
+`npm test` runs the suites with Node's built-in test runner. Add a failing case before fixing a bug, and extend the fixture bundle only with XML that Apigee X accepts. CI runs `check`, `test`, and `build` on pushes to `main` and on pull requests. `src/extension.ts` is not covered because it needs a VS Code host.
