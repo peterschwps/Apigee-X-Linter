@@ -44,6 +44,11 @@ test('lint ranges cover the value without surrounding comments', () => {
   assert.equal(xml.slice(issue.start, issue.end), 'maybe');
 });
 
+test('lint reports nothing for an empty or whitespace-only file', () => {
+  assert.deepEqual(lint('', policyFile, specs), []);
+  assert.deepEqual(lint(' \n\t', policyFile, specs), []);
+});
+
 test('lint omits ignored rules', () => {
   const xml = spikeArrest('<UseEffectiveCount>false</UseEffectiveCount>');
   assert.deepEqual(lint(xml, policyFile, specs, new Set(['AX110'])), []);

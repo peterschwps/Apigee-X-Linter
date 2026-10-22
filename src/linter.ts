@@ -176,6 +176,8 @@ function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: R
 }
 
 export function lint(xml: string, filePath: string, specs: DocumentSpec[], ignoredRules: ReadonlySet<string> = new Set()): LintIssue[] {
+  // A newly created file is empty until its root element is typed.
+  if (!xml.trim()) return [];
   const parsed = parseXml(xml);
   const issues: LintIssue[] = parsed.syntaxIssues.map(issue => ({ rule: 'AX001', ...issue }));
   const root = parsed.root;
