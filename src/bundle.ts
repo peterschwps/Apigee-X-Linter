@@ -1,7 +1,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import type { LintIssue } from './linter';
-import { parseXml, type XmlNode } from './xml';
+import { parseXml, type XmlNode, type XmlText } from './xml';
 
 const flowNameSource = 'https://docs.cloud.google.com/apigee/docs/api-platform/reference/flow-configuration-reference#name';
 const resourceSource = 'https://docs.cloud.google.com/apigee/docs/api-platform/develop/resource-files#where-resources-are-stored';
@@ -13,15 +13,6 @@ function findBundleRoot(filePath: string): string | undefined {
     directory = path.dirname(directory);
   }
   return undefined;
-}
-
-function childText(node: XmlNode, xml: string): { value: string; start: number; end: number } | undefined {
-  if (node.startTagEnd === undefined || node.endTagStart === undefined || node.children.length) return undefined;
-  const raw = xml.slice(node.startTagEnd, node.endTagStart);
-  const value = raw.trim();
-  if (!value) return undefined;
-  const start = node.startTagEnd + raw.indexOf(value);
-  return { value, start, end: start + value.length };
 }
 
 async function policyNames(directory: string): Promise<Set<string> | undefined> {
@@ -41,12 +32,12 @@ async function policyNames(directory: string): Promise<Set<string> | undefined> 
   }
 }
 
-async function localResourceIssue(root: XmlNode, xml: string, directory: string): Promise<LintIssue[]> {
+async function localResourceIssue(root: XmlNode, directory: string): Promise<LintIssue[]> {
   const element = root.name === 'OASValidation' ? 'OASResource'
     : root.name === 'MessageValidation' ? 'ResourceURL' : undefined;
   if (!element) return [];
   const reference = root.children.find(child => child.name === element);
-  const text = reference && childText(reference, xml);
+  const text = reference?.text;
   if (!text || /\{[^{}]+\}/.test(text.value)) return [];
   const match = /^(oas|xsd|wsdl):\/\/([^/\\]+)$/.exec(text.value);
   if (!match || root.name === 'OASValidation' && match[1] !== 'oas'
@@ -67,14 +58,14 @@ export async function lintBundleReferences(xml: string, filePath: string): Promi
   const document = parseXml(xml);
   if (document.syntaxIssues.length || !document.root) return [];
   if (document.root.name === 'OASValidation' || document.root.name === 'MessageValidation') {
-    return localResourceIssue(document.root, xml, rootDirectory);
+    return localResourceIssue(document.root, rootDirectory);
   }
   if (!['ProxyEndpoint', 'TargetEndpoint'].includes(document.root.name)) return [];
 
-  const references: { value: string; start: number; end: number }[] = [];
+  const references: XmlText[] = [];
   function visit(node: XmlNode, parent?: XmlNode): void {
     if (node.name === 'Name' && parent?.name === 'Step') {
-      const reference = childText(node, xml);
+      const reference = node.text;
       if (reference && /^[A-Za-z0-9._$ %\-]+$/.test(reference.value)) references.push(reference);
     }
     for (const child of node.children) visit(child, node);

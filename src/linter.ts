@@ -46,7 +46,7 @@ function valueIssue(value: string, rule: ValueSpec, start: number, end: number, 
   return undefined;
 }
 
-function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: ReadonlySet<string>, path: string, xml: string, checkRequired: boolean, issues: LintIssue[]): void {
+function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: ReadonlySet<string>, path: string, checkRequired: boolean, issues: LintIssue[]): void {
   const definition = rules.get(path);
   if (!definition) return;
   const attributes = definition.attributes || {};
@@ -123,8 +123,7 @@ function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: R
       let count = 0;
       for (const child of node.children.filter(item => item.name === textLimit.child)) {
         for (const nested of child.children.filter(item => item.name === textLimit.descendant)) {
-          if (nested.startTagEnd === undefined || nested.endTagStart === undefined) continue;
-          if (xml.slice(nested.startTagEnd, nested.endTagStart).trim() !== textLimit.value) continue;
+          if (nested.text?.value !== textLimit.value) continue;
           count++;
           if (count > textLimit.max) {
             issues.push({ rule: 'AX107', message: `At most ${textLimit.max} <${textLimit.child}> may have <${textLimit.descendant}>${textLimit.value}</${textLimit.descendant}>.`, start: nested.nameStart, end: nested.nameEnd, source: textLimit.source });
@@ -136,11 +135,7 @@ function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: R
       let selected: XmlNode | undefined = node;
       for (const name of condition.selector) selected = selected?.children.find(child => child.name === name);
       if (!selected) continue;
-      if (condition.values) {
-        if (selected.startTagEnd === undefined || selected.endTagStart === undefined) continue;
-        const value = xml.slice(selected.startTagEnd, selected.endTagStart).trim();
-        if (!condition.values.includes(value)) continue;
-      }
+      if (condition.values && !condition.values.includes(selected.text?.value ?? '')) continue;
       if (!node.children.some(child => child.name === condition.required)) {
         issues.push({ rule: 'AX104', message: `<${condition.required}> is required when <${condition.selector.join('/')}> has this value.`, start: node.nameStart, end: node.nameEnd, source: condition.source });
       }
@@ -160,15 +155,9 @@ function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: R
   const selector = definition.textByAttribute;
   const selectorValue = node.attributes.find(attribute => attribute.name === selector?.attribute)?.value;
   const textRule = selectorValue ? selector?.values[selectorValue] || definition.text : definition.text;
-  if (textRule && node.startTagEnd !== undefined && node.endTagStart !== undefined && !node.children.length) {
-    const raw = xml.slice(node.startTagEnd, node.endTagStart);
-    const value = raw.trim();
-    if (value) {
-      const relativeStart = raw.indexOf(value);
-      const start = node.startTagEnd + relativeStart;
-      const issue = valueIssue(value, textRule, start, start + value.length, definition.source);
-      if (issue) issues.push(issue);
-    }
+  if (textRule && node.text) {
+    const issue = valueIssue(node.text.value, textRule, node.text.start, node.text.end, definition.source);
+    if (issue) issues.push(issue);
   }
 
   for (const child of node.children) {
@@ -181,7 +170,7 @@ function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: R
         start: child.nameStart, end: child.nameEnd, source: definition.source,
       });
     } else {
-      checkNode(child, rules, knownNames, childPath, xml, checkRequired, issues);
+      checkNode(child, rules, knownNames, childPath, checkRequired, issues);
     }
   }
 }
@@ -204,6 +193,6 @@ export function lint(xml: string, filePath: string, specs: DocumentSpec[], ignor
   }
   const rules = elementMap(spec);
   const knownNames = new Set(spec.elements.map(element => element.path.slice(element.path.lastIndexOf('/') + 1)));
-  checkNode(root, rules, knownNames, `/${root.name}`, xml, !parsed.syntaxIssues.length, issues);
+  checkNode(root, rules, knownNames, `/${root.name}`, !parsed.syntaxIssues.length, issues);
   return issues.filter(issue => !ignoredRules.has(issue.rule));
 }
