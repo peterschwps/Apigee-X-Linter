@@ -8,8 +8,7 @@ site/**
 .cache/**
 src/**
 scripts/**
-dist/scripts/**
-dist/src/**
+dist/**/*.map
 test/**
 node_modules/**
 data/candidates/**
