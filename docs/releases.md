@@ -19,6 +19,10 @@ npm run package:alpha
 
 VS Code pre-releases use numeric versions and the `--pre-release` packaging flag, rather than a version suffix such as `-alpha.1`. Inspect and install the final VSIX before uploading it under publisher `peterschwps`.
 
+## Extension release
+
+The manual `Publish VS Code extension` workflow is gated by the `EXTENSION_PUBLISH_ENABLED` repository variable. It runs all checks and the integration tests, packages one pre-release VSIX, and publishes that same file to the Visual Studio Marketplace with the `VSCE_PAT` secret and to Open VSX with the `OVSX_PAT` secret. Versions that already exist are skipped, so a failed run can be repeated. The manifest's `preview` flag marks the alpha in both stores.
+
 ## npm package
 
 The CLI is published as `@peterschwps/apigee-x-linter`. VS Code rejects scoped extension names, so `npm run package:npm` builds the extension and CLI, then stages a separate manifest, `dist/cli.js`, `data/reviewed`, `npm/README.md`, and the license in `.cache/npm-package`. It packs the stage, rejects unexpected files, installs the tarball into a temporary project, and checks the installed command's exit codes. CI runs this check on every push. The npm version follows the root `package.json` version managed by release-please.

@@ -4,7 +4,7 @@ Apigee X Linter provides XML diagnostics and context-aware completion in VS Code
 
 ## Getting started
 
-Install the local VSIX using **Extensions: Install from VSIX...**, then open a proxy or shared flow bundle. XML files under `apiproxy` or `sharedflowbundle` are recognized by their location; supported policy roots can also be recognized in standalone XML files. Use the Problems panel for diagnostics and Ctrl+Space for suggestions. Inside `<Step><Name>`, suggestions list the policies of the same bundle.
+Install **Apigee X Linter** from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=peterschwps.apigee-x-linter) or [Open VSX](https://open-vsx.org/extension/peterschwps/apigee-x-linter), then open a proxy or shared flow bundle. XML files under `apiproxy` or `sharedflowbundle` are recognized by their location; supported policy roots can also be recognized in standalone XML files. Use the Problems panel for diagnostics and Ctrl+Space for suggestions. Inside `<Step><Name>`, suggestions list the policies of the same bundle.
 
 ## Diagnostics
 

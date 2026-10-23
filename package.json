@@ -8,7 +8,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/peterschwps/apigee-x-linter.git"
+    "url": "https://github.com/peterschwps/Apigee-X-Linter.git"
+  },
+  "homepage": "https://github.com/peterschwps/Apigee-X-Linter#readme",
+  "bugs": {
+    "url": "https://github.com/peterschwps/Apigee-X-Linter/issues"
   },
   "engines": {
     "vscode": "^1.96.0"
@@ -17,9 +21,14 @@
     "Linters",
     "Programming Languages"
   ],
+  "preview": true,
   "keywords": [
     "apigee",
     "apigee x",
+    "api proxy",
+    "shared flow",
+    "google cloud",
+    "api management",
     "xml",
     "linter"
   ],

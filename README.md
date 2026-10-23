@@ -2,24 +2,15 @@
 
 Apigee X linter for VS Code and the terminal. It checks proxy and shared flow XML against Google's Apigee documentation and adds completion and quick fixes in the editor.
 
-**Alpha development:** no Marketplace release is available yet. Validation is based on reviewed Google documentation and is intentionally incomplete where the documentation is ambiguous.
+**Alpha:** validation is based on reviewed Google documentation and is intentionally incomplete where the documentation is ambiguous. A clean result does not prove that Apigee will deploy or correctly execute a proxy.
 
 ## Quick Start
 
-1. Install a locally built VSIX using **Extensions: Install from VSIX...** in VS Code.
+1. Install **Apigee X Linter** from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=peterschwps.apigee-x-linter) or, for VSCodium and other editors, from [Open VSX](https://open-vsx.org/extension/peterschwps/apigee-x-linter). VS Code 1.96 or later is required.
 2. Open a proxy or shared flow bundle and an XML file under `apiproxy/` or `sharedflowbundle/`.
-3. Check the **Problems** panel for diagnostics. Use **Ctrl+Space** for completion suggestions.
+3. Check the **Problems** panel for diagnostics. Use **Ctrl+Space** for completion suggestions and **Ctrl+.** for quick fixes.
 
-To build the alpha package from source:
-
-```sh
-npm ci
-npm run check
-npm run release:check
-npm run package:alpha
-```
-
-The package is written to `apigee-x-linter-0.1.0.vsix`. VS Code 1.96 or later is required.
+To build a VSIX from source, see the [development guide](docs/development.md).
 
 ## Settings
 
@@ -35,6 +26,6 @@ For CI, the same checks run from the command line: `npx @peterschwps/apigee-x-li
 
 See the [user guide](docs/index.md), [development guide](docs/development.md), and [apigeelint comparison](docs/apigeelint-review.md).
 
-Report problems through [GitHub Issues](https://github.com/peterschwps/apigee-x-linter/issues), including a minimal XML example without credentials or private data.
+Report problems through [GitHub Issues](https://github.com/peterschwps/Apigee-X-Linter/issues), including a minimal XML example without credentials or private data.
 
 An independent community project, not affiliated with Google.
