@@ -1,6 +1,6 @@
 # Apigee X Linter
 
-A small VS Code extension that checks Apigee X proxy XML and suggests elements, attributes, and documented values.
+A linter for Apigee X proxy and shared flow XML, based on Google's Apigee documentation. It runs as a VS Code extension with diagnostics, completion, and quick fixes, and as a command-line tool for CI.
 
 **Alpha development:** no Marketplace release is available yet. Validation is based on reviewed Google documentation and is intentionally incomplete where the documentation is ambiguous.
 

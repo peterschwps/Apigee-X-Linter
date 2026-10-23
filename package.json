@@ -2,7 +2,7 @@
   "name": "apigee-x-linter",
   "displayName": "Apigee X Linter",
   "publisher": "peterschwps",
-  "description": "Lint and complete Apigee X proxy bundle XML using reviewed Google documentation.",
+  "description": "Diagnostics, completion, and quick fixes for Apigee X proxy and shared flow XML, based on Google's documentation.",
   "version": "0.1.0",
   "private": false,
   "license": "MIT",
