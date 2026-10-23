@@ -18,3 +18,17 @@ npm run package:alpha
 ```
 
 VS Code pre-releases use numeric versions and the `--pre-release` packaging flag, rather than a version suffix such as `-alpha.1`. Inspect and install the final VSIX before uploading it under publisher `peterschwps`.
+
+## npm package
+
+The CLI is published as `@peterschwps/apigee-x-linter`. VS Code rejects scoped extension names, so `npm run package:npm` builds the extension and CLI, then stages a separate manifest, `dist/cli.js`, `data/reviewed`, `npm/README.md`, and the license in `.cache/npm-package`. It packs the stage, rejects unexpected files, installs the tarball into a temporary project, and checks the installed command's exit codes. CI runs this check on every push. The npm version follows the root `package.json` version managed by release-please.
+
+The first version must be published manually because npm trusted publishing can only be configured for an existing package:
+
+```sh
+npm ci
+npm run package:npm
+npm publish .cache/npm-package
+```
+
+Later versions use the manual `Publish npm package` workflow. It is gated by the `NPM_PUBLISH_ENABLED` repository variable, needs no npm token, and authenticates through npm trusted publishing with the GitHub OIDC token. npm then attaches a provenance attestation, which requires the repository and package to be public. After the trusted publisher is configured, set the package's publishing access to require two-factor authentication and disallow tokens.

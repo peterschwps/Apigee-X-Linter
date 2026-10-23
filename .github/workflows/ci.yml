@@ -24,7 +24,8 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm test
-      - run: npm run build
+      - name: Build and check the npm package
+        run: npm run package:npm
 
   integration:
     runs-on: ubuntu-latest

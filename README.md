@@ -31,7 +31,7 @@ To suppress a diagnostic at one location, add `<!-- apigee-x-linter disable=AX10
 
 Apigee Edge, hybrid-only configuration, and validation of embedded payload content are outside scope. The extension reads local XML; it does not deploy proxies or fetch documentation at runtime. Current coverage includes 78 documentation sources, with 25 explicitly recorded gaps.
 
-For CI, `npm run build` also produces a command-line linter: `node dist/cli.js path/to/bundles` exits with 1 when errors are found. See the [command-line section](docs/index.md#command-line).
+For CI, the same checks run from the command line: `npx @peterschwps/apigee-x-linter path/to/bundles` exits with 1 when errors are found. See the [command-line section](docs/index.md#command-line).
 
 See the [user guide](docs/index.md), [development guide](docs/development.md), and [apigeelint comparison](docs/apigeelint-review.md).
 

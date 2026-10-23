@@ -11,6 +11,7 @@ scripts/**
 dist/**/*.map
 dist/cli.js
 test/**
+npm/**
 node_modules/**
 data/candidates/**
 data/proposals/**

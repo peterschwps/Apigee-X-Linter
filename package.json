@@ -73,6 +73,7 @@
     "test:integration": "npm run build && tsx test/integration/run.ts",
     "release:check": "tsx scripts/docs.ts release-check && npm run comparison:validate",
     "package:alpha": "vsce package --no-dependencies --pre-release",
+    "package:npm": "npm run build && tsx scripts/npm-package.ts check",
     "vscode:prepublish": "npm run build"
   },
   "dependencies": {
