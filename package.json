@@ -24,6 +24,9 @@
     "linter"
   ],
   "main": "./dist/extension.js",
+  "bin": {
+    "apigee-x-linter": "dist/cli.js"
+  },
   "activationEvents": [
     "onLanguage:xml"
   ],
@@ -56,7 +59,7 @@
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json --noEmit && esbuild src/extension.ts --bundle --platform=node --format=cjs --target=node18 --external:vscode --sourcemap --outfile=dist/extension.js",
+    "build": "tsc -p tsconfig.json --noEmit && esbuild src/extension.ts src/cli.ts --bundle --platform=node --format=cjs --target=node20 --external:vscode --sourcemap --outdir=dist",
     "check": "tsc -p tsconfig.json --noEmit && npm run data:validate && npm run comparison:validate",
     "comparison:validate": "tsx scripts/compare-apigeelint.ts --validate",
     "compare:apigeelint": "tsx scripts/compare-apigeelint.ts",

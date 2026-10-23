@@ -59,6 +59,26 @@ Use the light bulb or **Ctrl+.** on a diagnostic:
 - **Change to "…"** replaces an AX105 value with the single documented value closest to it, such as `flase` with `false`. No fix is offered when no value is close enough or several are equally close; the diagnostic message names the suggestion.
 - **Disable … for this line** inserts the inline suppression comment above the reported line, or extends an existing directive there. It is not offered where a comment cannot be placed, such as inside a multi-line start tag or on the XML declaration line.
 
+## Command line
+
+The same checks run outside VS Code with the bundled CLI. It is not published to npm; build it from a checkout of this repository with Node.js 20 or later:
+
+```sh
+npm ci
+npm run build
+node dist/cli.js path/to/apiproxy path/to/sharedflowbundle
+```
+
+Directories are searched recursively for XML under `apiproxy` and `sharedflowbundle`, skipping `node_modules` and `.git`; files given explicitly are always linted. Each finding is printed as `file:line:column: severity rule message`, followed by a summary on standard error. Use `--ignore AX110,AX101` like the `ignore` setting; inline `apigee-x-linter disable` comments also apply.
+
+| Exit code | Meaning |
+| --- | --- |
+| 0 | No errors; warnings may have been reported |
+| 1 | At least one error |
+| 2 | Invalid option or unreadable path |
+
+`npm link` installs the `apigee-x-linter` command from the checkout.
+
 ## Scope and limitations
 
 The extension covers proxy and shared flow manifests, endpoints, flows, shared flows, and policy XML for Apigee X. FlowCallout references to deployed shared flows are not checked. Edge, hybrid-only features, XSLT resource contents, and arbitrary XML payload contents are excluded. Local resource, policy, and target endpoint references use saved bundle files. A RouteRule target matches a target endpoint's name attribute or its file name. Runtime variables, environment resources, and deployment behavior cannot be fully validated statically.

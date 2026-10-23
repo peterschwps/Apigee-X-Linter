@@ -9,6 +9,7 @@ site/**
 src/**
 scripts/**
 dist/**/*.map
+dist/cli.js
 test/**
 node_modules/**
 data/candidates/**

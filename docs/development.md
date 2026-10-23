@@ -12,6 +12,7 @@ Run `npm ci`, `npm run check`, `npm test`, and `npm run build`. Press F5 to laun
 - `src/directives.ts` applies inline `apigee-x-linter disable` comments.
 - `src/fixes.ts` computes quick-fix edits without depending on VS Code.
 - `src/extension.ts` handles VS Code settings, events, and diagnostics.
+- `src/cli.ts` runs the same checks from the command line; it is built to `dist/cli.js` and excluded from the VSIX.
 - `test/` contains `node:test` suites; `test/fixtures/bundle` and `test/fixtures/sharedflow` are a proxy and a shared flow bundle that must lint without findings.
 
 TypeScript strict mode is enabled. Rule data stays separate from behavior, and documentation tooling stays outside the runtime package. Keep code, comments, diagnostics, documentation, and commit messages in English.
