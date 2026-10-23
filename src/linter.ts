@@ -1,6 +1,7 @@
 import { isIP } from 'node:net';
 import { elementMap, normalizeEnumValue, type DocumentSpec, type ElementSpec, type ValueSpec } from './spec';
 import { applyDirectives } from './directives';
+import { closestValue } from './fixes';
 import { parseXml, type XmlDocument, type XmlNode } from './xml';
 
 export type LintIssue = {
@@ -10,6 +11,8 @@ export type LintIssue = {
   end: number;
   source?: string;
   severity?: 'error' | 'warning';
+  /** Documented value that likely replaces a mistyped one. */
+  replacement?: string;
 };
 
 export type DocumentKind = DocumentSpec['kind'];
@@ -35,7 +38,9 @@ export function chooseSpec(filePath: string, rootName: string, specs: DocumentSp
 function valueIssue(value: string, rule: ValueSpec, start: number, end: number, source: string): LintIssue | undefined {
   if (rule.allowTemplate && /\{[^{}]+\}/.test(value)) return undefined;
   if (rule.kind === 'enum' && rule.values && !rule.values.some(candidate => normalizeEnumValue(candidate, rule) === normalizeEnumValue(value, rule))) {
-    return { rule: 'AX105', message: `Expected one of: ${rule.values.join(', ')}.`, start, end, source };
+    const replacement = closestValue(value, rule.values, text => normalizeEnumValue(text, rule));
+    const hint = replacement ? ` Did you mean "${replacement}"?` : '';
+    return { rule: 'AX105', message: `Expected one of: ${rule.values.join(', ')}.${hint}`, start, end, source, replacement };
   }
   if (rule.kind === 'format' && rule.pattern && !new RegExp(rule.pattern).test(value)) {
     return { rule: 'AX106', message: rule.format || 'Value does not match the documented format.', start, end, source };

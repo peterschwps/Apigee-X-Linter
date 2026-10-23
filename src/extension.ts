@@ -2,11 +2,13 @@ import * as vscode from 'vscode';
 import { minimatch } from 'minimatch';
 import { complete } from './completion';
 import { bundlePolicyNames, lintBundleReferences } from './bundle';
-import { classifyDocument, lint, type DocumentKind } from './linter';
+import { disableDirectiveEdit } from './fixes';
+import { classifyDocument, lint, type DocumentKind, type LintIssue } from './linter';
 import { loadSpecifications, type DocumentSpec } from './spec';
 import { rootElementName } from './xml';
 
 const setting = 'apigeeXLinter';
+const diagnosticSource = 'Apigee X Linter';
 const delayMs = 250;
 const stepDocuments: ReadonlySet<DocumentKind | undefined> = new Set(['proxyEndpoint', 'targetEndpoint', 'sharedFlow']);
 
@@ -26,11 +28,18 @@ export function activate(context: vscode.ExtensionContext): void {
   const diagnostics = vscode.languages.createDiagnosticCollection('apigee-x');
   const log = vscode.window.createOutputChannel('Apigee X Linter', { log: true });
   const timers = new Map<string, ReturnType<typeof setTimeout>>();
+  // Published issues keep fix data that VS Code diagnostics cannot carry.
+  const published = new Map<string, { version: number; issues: LintIssue[] }>();
   context.subscriptions.push(diagnostics, log);
+
+  function clear(uri: vscode.Uri): void {
+    diagnostics.delete(uri);
+    published.delete(uri.toString());
+  }
 
   async function update(document: vscode.TextDocument): Promise<void> {
     if (!applicable(document, specs)) {
-      diagnostics.delete(document.uri);
+      clear(document.uri);
       return;
     }
     const ignored = new Set(vscode.workspace.getConfiguration(setting, document.uri).get<string[]>('ignore', []));
@@ -45,12 +54,37 @@ export function activate(context: vscode.ExtensionContext): void {
       const range = new vscode.Range(document.positionAt(issue.start), document.positionAt(issue.end));
       const severity = issue.severity === 'warning' ? vscode.DiagnosticSeverity.Warning : vscode.DiagnosticSeverity.Error;
       const diagnostic = new vscode.Diagnostic(range, issue.message, severity);
-      diagnostic.source = 'Apigee X Linter';
+      diagnostic.source = diagnosticSource;
       diagnostic.code = issue.source
         ? { value: issue.rule, target: vscode.Uri.parse(issue.source) }
         : issue.rule;
       return diagnostic;
     }));
+    published.set(document.uri.toString(), { version, issues: results });
+  }
+
+  function quickFixes(document: vscode.TextDocument, diagnostic: vscode.Diagnostic, issues: LintIssue[]): vscode.CodeAction[] {
+    const rule = typeof diagnostic.code === 'object' ? String(diagnostic.code.value) : String(diagnostic.code);
+    const issue = issues.find(item => item.rule === rule && item.start === document.offsetAt(diagnostic.range.start));
+    if (!issue) return [];
+    const actions: vscode.CodeAction[] = [];
+    if (issue.replacement) {
+      const action = new vscode.CodeAction(`Change to "${issue.replacement}"`, vscode.CodeActionKind.QuickFix);
+      action.edit = new vscode.WorkspaceEdit();
+      action.edit.replace(document.uri, diagnostic.range, issue.replacement);
+      action.diagnostics = [diagnostic];
+      action.isPreferred = true;
+      actions.push(action);
+    }
+    const directive = disableDirectiveEdit(document.getText(), issue.start, issue.rule);
+    if (directive) {
+      const action = new vscode.CodeAction(`Disable ${issue.rule} for this line`, vscode.CodeActionKind.QuickFix);
+      action.edit = new vscode.WorkspaceEdit();
+      action.edit.replace(document.uri, new vscode.Range(document.positionAt(directive.start), document.positionAt(directive.end)), directive.text);
+      action.diagnostics = [diagnostic];
+      actions.push(action);
+    }
+    return actions;
   }
 
   function schedule(document: vscode.TextDocument, delay = delayMs): void {
@@ -95,7 +129,7 @@ export function activate(context: vscode.ExtensionContext): void {
       const timer = timers.get(key);
       if (timer) clearTimeout(timer);
       timers.delete(key);
-      diagnostics.delete(document.uri);
+      clear(document.uri);
     }),
     vscode.workspace.onDidChangeConfiguration(event => {
       if (event.affectsConfiguration(setting)) {
@@ -123,6 +157,15 @@ export function activate(context: vscode.ExtensionContext): void {
         });
       },
     }, '<', ' ', '=', '"', "'", '>'),
+    vscode.languages.registerCodeActionsProvider({ language: 'xml', scheme: 'file' }, {
+      provideCodeActions(document, _range, codeActionContext) {
+        const current = published.get(document.uri.toString());
+        if (!current || current.version !== document.version) return [];
+        return codeActionContext.diagnostics
+          .filter(diagnostic => diagnostic.source === diagnosticSource)
+          .flatMap(diagnostic => quickFixes(document, diagnostic, current.issues));
+      },
+    }, { providedCodeActionKinds: [vscode.CodeActionKind.QuickFix] }),
     { dispose: () => { for (const timer of timers.values()) clearTimeout(timer); timers.clear(); } },
   );
 
