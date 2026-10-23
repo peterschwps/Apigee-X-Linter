@@ -38,4 +38,6 @@ uv tool run --with "mkdocs-material>=9,<10" "mkdocs>=1.6,<2" build --strict
 
 ## Tests
 
-`npm test` runs the suites with Node's built-in test runner. Add a failing case before fixing a bug, and extend the fixture bundle only with XML that Apigee X accepts. CI runs `check`, `test`, and `build` on pushes to `main` and on pull requests. `src/extension.ts` is not covered because it needs a VS Code host.
+`npm test` runs the suites with Node's built-in test runner. Add a failing case before fixing a bug, and extend the fixture bundle only with XML that Apigee X accepts. CI runs `check`, `test`, and `build` on pushes to `main` and on pull requests.
+
+`npm run test:integration` builds the extension, downloads VS Code 1.96.0 (the engine floor) into `.cache/vscode-test`, and runs `test/integration/suite.ts` in a real extension host against a temporary workspace. It covers diagnostics, quick fixes, and Step/Name completion through the VS Code API. CI runs it in a separate job under `xvfb-run`; locally on Linux without a display, prefix the command with `xvfb-run -a`.
