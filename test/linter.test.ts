@@ -52,6 +52,13 @@ test('classifyDocument recognizes shared flow bundle files', () => {
   assert.equal(classifyDocument('/w/sharedflowbundle/resources/xsl/t.xml'), undefined);
 });
 
+test('classifyDocument recognizes paths relative to the bundle parent', () => {
+  assert.equal(classifyDocument('apiproxy/policies/SA.xml'), 'policy');
+  assert.equal(classifyDocument('apiproxy\\proxies\\default.xml'), 'proxyEndpoint');
+  assert.equal(classifyDocument('sharedflowbundle/shared.xml'), 'sharedFlowBundle');
+  assert.equal(classifyDocument('notapiproxy/policies/SA.xml'), undefined);
+});
+
 test('lint marks warnings and links Google documentation', () => {
   const [issue] = lint(spikeArrest('<UseEffectiveCount>false</UseEffectiveCount>'), policyFile, specs);
   assert.equal(issue.severity, 'warning');

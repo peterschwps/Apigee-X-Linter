@@ -18,7 +18,8 @@ export type LintIssue = {
 export type DocumentKind = DocumentSpec['kind'];
 
 export function classifyDocument(filePath: string): DocumentKind | undefined {
-  const normalized = filePath.replace(/\\/g, '/').toLowerCase();
+  // The leading slash lets relative paths such as apiproxy/policies/A.xml match like absolute ones.
+  const normalized = `/${filePath.replace(/\\/g, '/').toLowerCase()}`;
   if (/\/(?:apiproxy|sharedflowbundle)\/policies\/[^/]+\.xml$/.test(normalized)) return 'policy';
   if (/\/apiproxy\/proxies\/[^/]+\.xml$/.test(normalized)) return 'proxyEndpoint';
   if (/\/apiproxy\/targets\/[^/]+\.xml$/.test(normalized)) return 'targetEndpoint';
