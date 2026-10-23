@@ -25,8 +25,9 @@ export type XmlNode = {
   children: XmlNode[];
 };
 
+export type XmlComment = { text: string; start: number; end: number };
 export type SyntaxIssue = { message: string; start: number; end: number };
-export type XmlDocument = { root?: XmlNode; syntaxIssues: SyntaxIssue[] };
+export type XmlDocument = { root?: XmlNode; comments: XmlComment[]; syntaxIssues: SyntaxIssue[] };
 
 const predefinedEntities: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" };
 
@@ -64,7 +65,11 @@ function leafText(content: ContentCstNode[]): XmlText | undefined {
   return { value, start, end };
 }
 
-function toNode(cst: ElementCstNode): XmlNode | undefined {
+function toComment(token: Token): XmlComment {
+  return { text: token.image.slice('<!--'.length, -'-->'.length), start: token.startOffset, end: tokenEnd(token) };
+}
+
+function toNode(cst: ElementCstNode, comments: XmlComment[]): XmlNode | undefined {
   const name = cst.children.Name?.[0];
   if (!name) return undefined;
   const open = cst.children.OPEN?.[0];
@@ -85,10 +90,11 @@ function toNode(cst: ElementCstNode): XmlNode | undefined {
     }];
   });
   const content = cst.children.content || [];
+  comments.push(...content.flatMap(item => item.children.Comment || []).map(toComment));
   const children = content
     .flatMap(item => item.children.element || [])
     .flatMap(child => {
-      const parsed = toNode(child);
+      const parsed = toNode(child, comments);
       return parsed ? [parsed] : [];
     });
   return {
@@ -122,6 +128,8 @@ export function parseXml(text: string): XmlDocument {
       return { message: error.message, start, end: Math.min(start + 1, text.length) };
     }),
   ];
+  const comments = (document.children.misc || []).flatMap(misc => misc.children.Comment || []).map(toComment);
   const rootCst = document.children.element?.[0];
-  return { root: rootCst ? toNode(rootCst) : undefined, syntaxIssues };
+  const root = rootCst ? toNode(rootCst, comments) : undefined;
+  return { root, comments: comments.sort((a, b) => a.start - b.start), syntaxIssues };
 }

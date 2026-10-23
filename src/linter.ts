@@ -1,6 +1,7 @@
 import { isIP } from 'node:net';
 import { elementMap, normalizeEnumValue, type DocumentSpec, type ElementSpec, type ValueSpec } from './spec';
-import { parseXml, type XmlNode } from './xml';
+import { applyDirectives } from './directives';
+import { parseXml, type XmlDocument, type XmlNode } from './xml';
 
 export type LintIssue = {
   rule: string;
@@ -177,13 +178,10 @@ function checkNode(node: XmlNode, rules: Map<string, ElementSpec>, knownNames: R
   }
 }
 
-export function lint(xml: string, filePath: string, specs: DocumentSpec[], ignoredRules: ReadonlySet<string> = new Set()): LintIssue[] {
-  // A newly created file is empty until its root element is typed.
-  if (!xml.trim()) return [];
-  const parsed = parseXml(xml);
+function lintDocument(parsed: XmlDocument, filePath: string, specs: DocumentSpec[]): LintIssue[] {
   const issues: LintIssue[] = parsed.syntaxIssues.map(issue => ({ rule: 'AX001', ...issue }));
   const root = parsed.root;
-  if (!root) return issues.filter(issue => !ignoredRules.has(issue.rule));
+  if (!root) return issues;
   const kind = classifyDocument(filePath);
   const spec = chooseSpec(filePath, root.name, specs);
   if (!spec) {
@@ -194,10 +192,17 @@ export function lint(xml: string, filePath: string, specs: DocumentSpec[], ignor
     if (kind && expectedRoot[kind]) {
       issues.push({ rule: 'AX101', message: `Expected <${expectedRoot[kind]}> as the document root.`, start: root.nameStart, end: root.nameEnd });
     }
-    return issues.filter(issue => !ignoredRules.has(issue.rule));
+    return issues;
   }
   const rules = elementMap(spec);
   const knownNames = new Set(spec.elements.map(element => element.path.slice(element.path.lastIndexOf('/') + 1)));
   checkNode(root, rules, knownNames, `/${root.name}`, !parsed.syntaxIssues.length, issues);
-  return issues.filter(issue => !ignoredRules.has(issue.rule));
+  return issues;
+}
+
+export function lint(xml: string, filePath: string, specs: DocumentSpec[], ignoredRules: ReadonlySet<string> = new Set()): LintIssue[] {
+  // A newly created file is empty until its root element is typed.
+  if (!xml.trim()) return [];
+  const parsed = parseXml(xml);
+  return applyDirectives(xml, parsed.comments, lintDocument(parsed, filePath, specs)).filter(issue => !ignoredRules.has(issue.rule));
 }

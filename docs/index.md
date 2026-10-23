@@ -37,7 +37,20 @@ Use VS Code settings or a workspace settings file:
 }
 ```
 
-Add a diagnostic ID to `ignore` to suppress it. Source links on diagnostics point to the relevant Google documentation.
+Add a diagnostic ID to `ignore` to suppress it everywhere. Source links on diagnostics point to the relevant Google documentation.
+
+## Inline suppression
+
+To suppress diagnostics at one location, put a comment on the line before the reported line:
+
+```xml
+<RaiseFault name="RF-Fault">
+  <!-- apigee-x-linter disable=AX101 -->
+  <Properties/>
+</RaiseFault>
+```
+
+The comment lists one or more IDs separated by commas, such as `disable=AX101,AX103`. It applies only to the line after the comment ends; other rules on that line are still reported. For a diagnostic on the root element, place the comment before the root. The semantics match apigeelint's `<!-- apigeelint disable=... -->` directive, but each tool only reads its own directive and rule IDs.
 
 ## Scope and limitations
 

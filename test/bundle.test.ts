@@ -58,7 +58,7 @@ test('AX111 reports a route rule referencing a missing target endpoint', async (
 });
 
 test('bundlePolicyNames lists sorted policy names of the containing bundle', async () => {
-  assert.deepEqual(await bundlePolicyNames(proxyFile), ['OAS-Validate', 'SA-Limit']);
+  assert.deepEqual(await bundlePolicyNames(proxyFile), ['OAS-Validate', 'RF-Fault', 'SA-Limit']);
   assert.deepEqual(await bundlePolicyNames(sharedFlowFile), ['OAS-Shared', 'SA-Shared']);
   assert.deepEqual(await bundlePolicyNames(path.join(path.dirname(fixtureBundle), 'loose.xml')), []);
 });

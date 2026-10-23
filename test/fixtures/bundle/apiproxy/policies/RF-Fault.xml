@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RaiseFault name="RF-Fault">
+  <!-- UI-generated stub that the RaiseFault reference does not document. -->
+  <!-- apigee-x-linter disable=AX101 -->
+  <Properties/>
+  <FaultResponse>
+    <Set>
+      <StatusCode>500</StatusCode>
+    </Set>
+  </FaultResponse>
+</RaiseFault>

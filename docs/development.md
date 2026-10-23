@@ -9,6 +9,7 @@ Run `npm ci`, `npm run check`, `npm test`, and `npm run build`. Press F5 to laun
 - `src/linter.ts` validates XML without depending on VS Code.
 - `src/completion.ts` generates suggestions for incomplete XML.
 - `src/bundle.ts` checks saved bundle-local references.
+- `src/directives.ts` applies inline `apigee-x-linter disable` comments.
 - `src/extension.ts` handles VS Code settings, events, and diagnostics.
 - `test/` contains `node:test` suites; `test/fixtures/bundle` and `test/fixtures/sharedflow` are a proxy and a shared flow bundle that must lint without findings.
 

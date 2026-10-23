@@ -1,5 +1,6 @@
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
+import { applyDirectives } from './directives';
 import type { LintIssue } from './linter';
 import { parseXml, type XmlNode, type XmlText } from './xml';
 
@@ -70,7 +71,7 @@ export async function lintBundleReferences(xml: string, filePath: string): Promi
   const document = parseXml(xml);
   if (document.syntaxIssues.length || !document.root) return [];
   if (document.root.name === 'OASValidation' || document.root.name === 'MessageValidation') {
-    return localResourceIssue(document.root, rootDirectory);
+    return applyDirectives(xml, document.comments, await localResourceIssue(document.root, rootDirectory));
   }
   if (!['ProxyEndpoint', 'TargetEndpoint', 'SharedFlow'].includes(document.root.name)) return [];
 
@@ -99,5 +100,5 @@ export async function lintBundleReferences(xml: string, filePath: string): Promi
     issues.push({ rule: 'AX111', message: `Target endpoint "${reference.value}" was not found in this proxy bundle.`,
       start: reference.start, end: reference.end, source: routeTargetSource });
   }
-  return issues;
+  return applyDirectives(xml, document.comments, issues);
 }

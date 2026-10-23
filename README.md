@@ -27,6 +27,8 @@ The package is written to `apigee-x-linter-0.1.0.vsix`. VS Code 1.96 or later is
 - `apigeeXLinter.exclude`: ignore matching file paths.
 - `apigeeXLinter.ignore`: suppress selected diagnostic IDs, such as `AX110`.
 
+To suppress a diagnostic at one location, add `<!-- apigee-x-linter disable=AX101 -->` on the line before it.
+
 Apigee Edge, hybrid-only configuration, and validation of embedded payload content are outside scope. The extension reads local XML; it does not deploy proxies or fetch documentation at runtime. Current coverage includes 78 documentation sources, with 25 explicitly recorded gaps.
 
 See the [user guide](docs/index.md), [development guide](docs/development.md), and [apigeelint comparison](docs/apigeelint-review.md).
