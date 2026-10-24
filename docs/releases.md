@@ -2,7 +2,7 @@
 
 ## Changelog automation
 
-release-please owns future changelog entries and version updates. Configuration uses the Node strategy, an initial version of `0.1.0`, numeric versions compatible with VS Code, and regular GitHub releases. The VS Code stores mark the alpha separately through the pre-release package flag and the manifest's `preview` flag. Do not append release entries manually.
+release-please owns future changelog entries and version updates. Configuration uses the Node strategy, numeric versions compatible with VS Code, and regular GitHub releases. Before 1.0, features and fixes both bump the patch version, so releases stay at 0.1.x; a breaking change would bump to 1.0.0. The VS Code stores mark the alpha separately through the pre-release package flag and the manifest's `preview` flag. Do not append release entries manually.
 
 The workflow is manual and gated by `RELEASE_PLEASE_ENABLED`. It requires a dedicated `RELEASE_PLEASE_TOKEN`; there is no fallback to the GitHub Actions bot token.
 
