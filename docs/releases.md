@@ -1,14 +1,22 @@
 # Releases
 
-## Changelog automation
+## Versions and changelog
 
-release-please owns future changelog entries and version updates. Configuration uses the Node strategy, numeric versions compatible with VS Code, and regular GitHub releases. Before 1.0, features and fixes both bump the patch version, so releases stay at 0.1.x; a breaking change would bump to 1.0.0. The VS Code stores mark the alpha separately through the pre-release package flag and the manifest's `preview` flag. Do not append release entries manually.
+release-please owns changelog entries and version updates. Configuration uses the Node strategy, numeric versions compatible with VS Code, and regular GitHub releases. Before 1.0, features and fixes both bump the patch version, so releases stay at 0.1.x; a breaking change would bump to 1.0.0. The VS Code stores mark the alpha separately through the pre-release package flag and the manifest's `preview` flag. Do not append release entries manually.
 
-The workflow is manual and gated by `RELEASE_PLEASE_ENABLED`. It requires a dedicated `RELEASE_PLEASE_TOKEN`; there is no fallback to the GitHub Actions bot token.
+The `release-please` workflow runs on every push to `main` and keeps a release pull request up to date. It uses the `RELEASE_PLEASE_TOKEN` secret, a personal access token, so release commits and tags carry the owner's identity and the created tag can start the release workflow. Merging the release pull request creates the tag `v<version>` and the GitHub release.
 
-Once configured, run the workflow to propose the release PR. Review and merge release changes deliberately, preserving the commit convention. Run it again to create the GitHub release after the release PR has been merged. This workflow does not publish to the Marketplace or deploy the documentation.
+## Release workflow
 
-## Alpha packaging
+The `Release` workflow runs for every `v*` tag. It can also be started manually on an existing tag; started on a branch, it stops before building. One workflow file with separate jobs keeps a single workflow name for every store's trusted-publishing configuration.
+
+1. `build` checks that the tag matches `package.json`, runs `check`, `release:check`, the unit tests, and the integration tests, then packages the pre-release VSIX and the npm tarball once. Every later job uses these exact files.
+2. `publish-marketplace`, `publish-openvsx`, and `publish-npm` each run only when their repository variable is `true`: `MARKETPLACE_PUBLISH_ENABLED`, `OPENVSX_PUBLISH_ENABLED`, and `NPM_PUBLISH_ENABLED`. They use the `release` environment, whose required reviewer approves publication, and authenticate through trusted publishing with the GitHub OIDC token. No store token is stored in the repository. Versions that already exist are skipped, so a failed job can be repeated.
+3. `github-assets` attaches the VSIX to the GitHub release.
+
+Each store needs a trusted-publisher entry for repository `peterschwps/Apigee-X-Linter`, workflow `release.yml`, and environment `release` before its variable is enabled. npm only allows this for an existing package, and its provenance attestation requires a public repository. After configuring npm, set the package's publishing access to require two-factor authentication and disallow tokens.
+
+## Local packaging
 
 ```sh
 npm ci
@@ -17,22 +25,8 @@ npm run release:check
 npm run package:alpha
 ```
 
-VS Code pre-releases use numeric versions and the `--pre-release` packaging flag, rather than a version suffix such as `-alpha.1`. Inspect and install the final VSIX before uploading it under publisher `peterschwps`.
-
-## Extension release
-
-The manual `Publish VS Code extension` workflow is gated by the `EXTENSION_PUBLISH_ENABLED` repository variable. It runs all checks and the integration tests, packages one pre-release VSIX, and publishes that same file to the Visual Studio Marketplace with the `VSCE_PAT` secret and to Open VSX with the `OVSX_PAT` secret. Versions that already exist are skipped, so a failed run can be repeated. The manifest's `preview` flag marks the alpha in both stores.
+VS Code pre-releases use numeric versions and the `--pre-release` packaging flag, rather than a version suffix such as `-alpha.1`. A locally built VSIX can be uploaded manually under publisher `peterschwps` if a store's trusted publishing is not available.
 
 ## npm package
 
 The CLI is published as `@peterschwps/apigee-x-linter`. VS Code rejects scoped extension names, so `npm run package:npm` builds the extension and CLI, then stages a separate manifest, `dist/cli.js`, `data/reviewed`, `npm/README.md`, and the license in `.cache/npm-package`. It packs the stage, rejects unexpected files, installs the tarball into a temporary project, and checks the installed command's exit codes. CI runs this check on every push. The npm version follows the root `package.json` version managed by release-please.
-
-The first version must be published manually because npm trusted publishing can only be configured for an existing package:
-
-```sh
-npm ci
-npm run package:npm
-npm publish .cache/npm-package
-```
-
-Later versions use the manual `Publish npm package` workflow. It is gated by the `NPM_PUBLISH_ENABLED` repository variable, needs no npm token, and authenticates through npm trusted publishing with the GitHub OIDC token. npm then attaches a provenance attestation, which requires the repository and package to be public. After the trusted publisher is configured, set the package's publishing access to require two-factor authentication and disallow tokens.

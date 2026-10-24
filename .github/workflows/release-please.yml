@@ -1,30 +1,30 @@
-name: Release please
+name: release-please
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [main]
 
 permissions:
   contents: write
   pull-requests: write
-  issues: write
 
 concurrency:
   group: release-please
   cancel-in-progress: false
 
 jobs:
-  release:
-    if: github.ref == 'refs/heads/main' && vars.RELEASE_PLEASE_ENABLED == 'true'
+  release-please:
     runs-on: ubuntu-latest
+    env:
+      RELEASE_PLEASE_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
     steps:
       - name: Require the release token
-        env:
-          RELEASE_PLEASE_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+        if: env.RELEASE_PLEASE_TOKEN == ''
         run: |
-          if [ -z "$RELEASE_PLEASE_TOKEN" ]; then
-            echo "::error::Configure RELEASE_PLEASE_TOKEN before enabling releases."
-            exit 1
-          fi
+          echo "::error::Add the RELEASE_PLEASE_TOKEN secret; release commits must not fall back to the bot identity."
+          exit 1
+      # The personal token makes release commits and tags appear under the owner's identity
+      # and lets the created tag trigger the release workflow.
       - uses: googleapis/release-please-action@8b8fd2cc23b2e18957157a9d923d75aa0c6f6ad5 # v4
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
