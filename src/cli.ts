@@ -2,11 +2,12 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
+import { version } from '../package.json';
 import { lintBundleReferences } from './bundle';
 import { classifyDocument, lint } from './linter';
 import { loadSpecifications } from './spec';
 
-const usage = `Usage: apigee-x-linter [--ignore AX110,AX101] [path ...]
+const usage = `Usage: apigee-x-linter [--ignore AX110,AX101] [--version] [path ...]
 
 Lints Apigee X proxy and shared flow bundle XML below each path (default: the current directory).
 Files given explicitly are linted even outside apiproxy or sharedflowbundle directories.
@@ -15,7 +16,7 @@ Exit codes: 0 without errors, 1 when errors were found, 2 for invalid usage or u
 
 const argumentConfig = {
   allowPositionals: true,
-  options: { ignore: { type: 'string', multiple: true }, help: { type: 'boolean', short: 'h' } },
+  options: { ignore: { type: 'string', multiple: true }, help: { type: 'boolean', short: 'h' }, version: { type: 'boolean', short: 'v' } },
 } as const;
 
 export type Output = { out: (line: string) => void; err: (line: string) => void };
@@ -60,6 +61,10 @@ export async function run(args: string[], output: Output = consoleOutput): Promi
   }
   if (options.values.help) {
     output.out(usage);
+    return 0;
+  }
+  if (options.values.version) {
+    output.out(version);
     return 0;
   }
   const ignored = new Set((options.values.ignore ?? []).flatMap(value => value.split(',')).map(rule => rule.trim().toUpperCase()).filter(Boolean));

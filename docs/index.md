@@ -69,7 +69,7 @@ npx @peterschwps/apigee-x-linter path/to/apiproxy path/to/sharedflowbundle
 
 In GitHub Actions, run `npx --yes @peterschwps/apigee-x-linter apiproxy` after `actions/setup-node`. From a checkout of this repository, `npm ci && npm run build && node dist/cli.js path/to/bundles` runs the same command.
 
-Directories are searched recursively for XML under `apiproxy` and `sharedflowbundle`, skipping `node_modules` and `.git`; files given explicitly are always linted. Each finding is printed as `file:line:column: severity rule message`, followed by a summary on standard error. Use `--ignore AX110,AX101` like the `ignore` setting; inline `apigee-x-linter disable` comments also apply.
+Directories are searched recursively for XML under `apiproxy` and `sharedflowbundle`, skipping `node_modules` and `.git`; files given explicitly are always linted. Each finding is printed as `file:line:column: severity rule message`, followed by a summary on standard error. Use `--ignore AX110,AX101` like the `ignore` setting; inline `apigee-x-linter disable` comments also apply. `--version` prints the installed version.
 
 | Exit code | Meaning |
 | --- | --- |

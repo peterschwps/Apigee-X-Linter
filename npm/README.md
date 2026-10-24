@@ -27,7 +27,7 @@ apiproxy/policies/FC.xml:2:12: error AX105 Expected one of: true, false. Did you
 | 1 | At least one error |
 | 2 | Invalid option or unreadable path |
 
-Use `--ignore AX110,AX101` to skip rules. To suppress a finding at one location, put `<!-- apigee-x-linter disable=AX101 -->` on the line before it.
+Use `--ignore AX110,AX101` to skip rules and `--version` to print the installed version. To suppress a finding at one location, put `<!-- apigee-x-linter disable=AX101 -->` on the line before it.
 
 ## GitHub Actions
 

@@ -4,6 +4,7 @@ import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { after, before, test } from 'node:test';
+import { version } from '../package.json';
 import { run } from '../src/cli';
 import { fixtureBundle, repositoryRoot, sharedFlowBundle } from './support';
 
@@ -76,6 +77,12 @@ test('cli --help prints usage', async () => {
   const result = await capture(['--help']);
   assert.equal(result.code, 0);
   assert.match(result.out[0], /^Usage: apigee-x-linter/);
+});
+
+test('cli --version prints the package version', async () => {
+  const result = await capture(['--version']);
+  assert.equal(result.code, 0);
+  assert.deepEqual(result.out, [version]);
 });
 
 test('cli process sets the exit code', () => {
