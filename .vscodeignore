@@ -12,6 +12,7 @@ dist/**/*.map
 dist/cli.js
 test/**
 npm/**
+images/icon.svg
 node_modules/**
 data/candidates/**
 data/proposals/**
