@@ -5,7 +5,6 @@
   "pull-request-title-pattern": "chore: release ${version}",
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
-  "prerelease": true,
   "packages": {
     ".": {
       "initial-version": "0.1.0",
