@@ -1,0 +1,80 @@
+name: Bug report
+description: Report something in the extension or CLI that doesn't work as expected.
+title: "bug: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report.
+        For a wrong or missing diagnostic, use the **Rule report** template instead.
+
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Where do you use the linter?
+      options:
+        - VS Code extension (Visual Studio Marketplace)
+        - VS Code-compatible editor (Open VSX)
+        - Command line (npm)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Extension version from the Extensions view, or output of `apigee-x-linter --version`.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: editor
+    attributes:
+      label: Editor and version
+      description: For example VS Code 1.105.0, Cursor, or VSCodium. Leave empty for the CLI.
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Linux
+        - Windows
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: xml
+    attributes:
+      label: Minimal XML example
+      description: The smallest XML that shows the problem.
+      render: xml
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the diagnostic message, CLI output, or error from the "Apigee X Linter" output channel.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: The example contains no credentials, keys, or private data.
+          required: true

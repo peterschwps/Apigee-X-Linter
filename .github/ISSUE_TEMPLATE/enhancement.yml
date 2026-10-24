@@ -1,0 +1,39 @@
+name: Enhancement
+description: Suggest a new feature, rule, improvement, or other change.
+title: "enhancement: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of enhancement
+      options:
+        - New rule
+        - Completion or quick fix
+        - Command line
+        - Improvement
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Problem or motivation
+      description: What triggers this request? What use case does it address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What should change? For a new rule, link the Google documentation it is based on.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
