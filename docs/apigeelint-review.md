@@ -54,7 +54,7 @@ Eight bundles from [GoogleCloudPlatform/apigee-samples](https://github.com/Googl
 
 Seventeen compatibility findings were eliminated by source-backed additions. The remaining AX106 is the JWT example's Flow name `unknown request`: Google's flow reference forbids spaces. Do not weaken a documented rule merely to match a sample. The nine upstream findings are TD002/TD012 deployment advice, not additional confirmed XML errors.
 
-Initial measurements on this machine were approximately 1–12 ms of local lint/reference work per bundle and 254–364 ms per cold upstream CLI process. These are different workloads and include different startup/IO costs; they are **not** a comparable speed ratio or a production performance guarantee. The generated report records current timings, slowest documents, and every finding. An isolated VS Code 1.141.0 host loaded the installed VSIX and passed warning severity/suppression, invalid-value error, ReasonPhrase/boolean completion, and valid-XML checks. One edit-to-diagnostic measurement was 325 ms including the configured 250 ms debounce and polling overhead. Large enterprise bundles and deployment behavior remain outside this sample's coverage.
+Initial measurements were approximately 1–12 ms of local lint/reference work per bundle and 254–364 ms per cold upstream CLI process. These are different workloads and include different startup/IO costs; they are **not** a comparable speed ratio or a production performance guarantee. The generated report records current timings, slowest documents, and every finding. Large enterprise bundles and deployment behavior remain outside this sample's coverage.
 
 ## Reproduce
 
