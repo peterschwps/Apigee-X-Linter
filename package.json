@@ -3,7 +3,7 @@
   "displayName": "Apigee X Linter",
   "publisher": "peterschwps",
   "description": "Diagnostics, completion, and quick fixes for Apigee X proxy and shared flow XML, based on Google's documentation.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "license": "MIT",
   "icon": "images/icon.png",
